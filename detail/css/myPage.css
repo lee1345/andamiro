@@ -46,3 +46,8 @@ header button{
 .selected{
     color:blue;
 }
+
+/* 더보기기능 */
+.hidden{
+    display: none;
+}

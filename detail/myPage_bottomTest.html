@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3조_안다미로</title>       
+        <link rel="stylesheet" href="./css/myPage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            table{
+                width: 1200px;
+                border-collapse: collapse;
+            }
+            th{
+                background-color: rgb(190, 190, 190);
+                height: 40px;
+            }
+            .gift th:nth-child(1){width: 15%;}
+            .gift th:nth-child(2){width: 50%;}
+            .gift th:nth-child(3){width: 20%;}
+            .gift th:nth-child(4){width: 15%;}
+            .gift tr{
+                border-bottom: 1px solid rgb(184, 184, 184); 
+
+            }
+            td{
+                text-align: center;
+            }
+            td img{
+                width:60px;
+                margin-left: 10%;
+                margin-right: 30px;
+            }
+
+        </style>
+        <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>
+                    <img src="./img/logo.png" style="width:180px">
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <button type="button" onclick="location.href='./gift_detail.html'">착한선물</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="location.href='./together_detail.html'">같이가치</button>
+                        </li>
+                    </ul>
+                </nav>
+            <div>
+                <button>로그인</button> /
+                <button>회원가입</button>
+            </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="mypageContent">
+                <br>
+                <h2>1. 선물 후원 조회</h2>
+                <br>
+                <table class="gift">
+                    <tr>
+                        <th>결제날짜</th>
+                        <th>품명</th>
+                        <th>후원금액</th>
+                        <th>진행상황</th>
+                    </tr>
+                    <tr>
+                        <td>2024-11-01</td>
+                        <td style="text-align: left; display: flex; align-items: center;">
+                            <img src="./img/gift/gift1.jpg">
+                            <span>삼성 TV 100인치짜리</span>
+                        </td>
+                        <td>10,000원</td>
+                        <td>진행중</td>
+                    </tr>
+                    <tr>
+                        <td>2024-11-02</td>
+                        <td style="text-align: left; display: flex; align-items: center;">
+                            <img src="./img/gift/gift1.jpg">
+                            <span>삼성 TV 100인치짜리</span>
+                        </td>
+                        <td>20,000원</td>
+                        <td>진행중</td>
+                    </tr>
+                    <tr class="hidden" id="add">
+                        <td>2024-11-03</td>
+                        <td style="text-align: left; display: flex; align-items: center;">
+                            <img src="./img/gift/gift1.jpg">
+                            <span>삼성 TV 100인치짜리</span>
+                        </td>
+                        <td>30,000원</td>
+                        <td>진행중</td>
+                    </tr>
+                    <tr class="hidden" id="add">
+                        <td>2024-11-04</td>
+                        <td style="text-align: left; display: flex; align-items: center;">
+                            <img src="./img/gift/gift1.jpg">
+                            <span>삼성 TV 100인치짜리</span>
+                        </td>
+                        <td>30,000원</td>
+                        <td>진행중</td>
+                    </tr>
+                </table>
+                <button id="moreButton1">더보기</button>
+                <button id="closeButton1">닫기</button>
+<!-- 
+                <br>
+                <h2>1. 선물 후원 조회</h2>
+                <br>
+                <table class="gift">
+                    <tr>
+                        <th>결제날짜</th>
+                        <th>지역</th>
+                        <th>후원기관</th>
+                        <th>후원금액</th>
+                        <th>진행상황</th>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                    <tr class="hidden" id="add">
+                        
+                    </tr>
+                    <tr class="hidden" id="add">
+                        
+                    </tr>
+                </table>
+                <button id="moreButton1">더보기</button>
+                <button id="closeButton1">닫기</button>
+            </div> -->
+        </div>
+
+        <script src="./script/myPage.js"></script>
+
+    </body>
+</html>
+
