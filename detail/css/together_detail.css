@@ -42,10 +42,13 @@ header button{
     font-style: normal;
     align-content: center;
     font-size: 18pt;
-
+}
+.selected{
+    color:blue;
+}
 /* 상단 세부정보 레이아웃 */
 
-}.ctn{
+.ctn{
     display: flex; /* Flexbox 사용 */
     justify-content: space-between; /* 아이템을 좌우로 균등하게 배치 */
 }div .rs{/*리워드 선택(reworld selector)*/
