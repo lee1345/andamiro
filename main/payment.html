@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>3조_안다미로</title>       
+       <link rel="stylesheet" href="./css/payment.css">
+       
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
+        </style>
+</head>
+    <body>
+        <script src="./script/payment.js"></script>
+        <!-- 메뉴 -->
+        <header>
+            <div class="container">
+                <h1>
+                    <img src="./img/logo.png" style="width:180px">
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <button>착한선물</button>
+                        </li>
+                        <li>
+                            <button>행복나르미</button>
+                        </li>
+                        <li>
+                            <button>같이가치</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <button>로그인</button> /
+                    <button>회원가입</button>
+               </div>
+            </div>
+        </header>
+        <h1>후원하기</h1>
+        <!-- 상품 정보 영역-->
+        <div class="payment-container">
+            <p>주문 상품 정보</p>
+            <img src="./img/piano.jpg" width="400px" height="400px"><br>
+            <h3>전자 피아노</h3>
+            <p>결제 금액</p>
+            <select id="amount">
+                <option value="3000won">3000원</option>
+                <option value="5000won">5000원</option>
+            </select>
+            <!-- 결제 방법 영역-->
+            <p>결제 방법</p>
+            <div id="payment-method"></div>
+            <div id="agreement"></div>
+            <button id="payment-button">결제하기</button>
+        </div>
+    </body>
+</html>

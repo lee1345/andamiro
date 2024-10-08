@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>메인화면</title>       
+       <link rel="stylesheet" href="./css/happy-giver-main.css">
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
+        </style>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>
+                    <a href="#"><img src="./img/logo.png" style="width: 180px;"></a>
+                </h1>
+                <nav>
+                    <ul class="btn-cr">
+                        <li>
+                            <a href="#1"><button>착한선물</button></a>
+                        </li>
+                        <li>
+                            <a href="#2"><button>행복나르미</button></a>
+                        </li>
+                        <li>
+                            <a href="#3"><button>같이가치</button></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn-cr">
+                    <a href="/html/login.html"><button>로그인 /</button> </a>
+                    <a href=""><button>회원가입</button></a>
+               </div>
+            </div>
+        </header>
+        <!-- 메인이미지-->
+        <body>
+            
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+        
+                <div class="slidewrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <label for="slide03" class="left" ></label>
+                                <img src="/img/main.png"> 
+                                <label for="slide02" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide01" class="left"></label>
+                                <img src="/img/main2.png">
+                                <label for="slide03" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide02" class="left"></label>
+                                <img src="/img/main3.png.webp">
+                                <label for="slide01" class="right"></label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br></br>
+
+            <div class="select-area">
+                <h2>행복나르미</h2>
+                <select id="city" onchange="updateDistricts()">
+                    <option value="">선택하세요</option>
+                    <option value="천안">천안</option>
+                    <option value="아산">아산</option>
+                </select>
+                <select id="district">
+                    <option value=""></option>
+                </select>
+                <button type="submit">행복나르미 신청하기</button>
+            </div>
+                <h2 id="천안시 서북구" class="city-title">천안시 서북구</h2>
+                <div class ="new">
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            
+                            
+                        </li>
+                        <li>
+                            <img src = "./img/agent1.PNG"></li>
+                        <li class ="subject">
+                            <span class="area">천안보육원</span>
+                            <span class="date">D-21
+                            </span>
+                            <h3>김길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <strong class="achieved-percent">90%</strong>
+                            <div class="progressbar">
+                                <span class="progress">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            <span class="area">성정 어린이집</span>
+                            <span class="date">D-45</span>
+                        </li>
+                        <li>
+                            <img src = "./img/agent2.PNG"></li>
+                        <li class ="subject">
+                            <h3>박길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <span class="achieved">달성률</span><br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                            <strong class="achieved-percent">90%</strong>
+                        </li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            <span class="area">쌍용도서관</span>
+                            <span class="date">D-7</span>
+                        </li>
+                            <img src = "./img/agent3.PNG"></li>
+                        <li class ="subject">
+                            <h3>홍길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <span class="achieved">달성률</span><br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                            <strong class="achieved-percent">90%</strong>
+                        </li>
+                    </ul>
+                </a>
+                    <div class ="clear"></div>
+                </div>
+                <h2 class="city-title">천안시 동남구</h2>
+                <div class="new">
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            <span class="area">쌍용도서관</span>
+                            <span class="date">D-7</span>
+                        </li>
+                        <li>
+                            <img src = "./img/agent4.PNG"></li>
+                        <li class ="subject">
+                            <h3>김길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <span class="achieved">달성률</span><br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                            <strong class="achieved-percent">90%</strong>
+                        </li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            <span class="area">쌍용도서관</span>
+                            <span class="date">D-7</span>
+                        </li>
+                        <li>
+                            <img src = "./img/agent5.PNG"></li>
+                        <li class ="subject">
+                            <h3>김길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <span class="achieved">달성률</span><br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                            <strong class="achieved-percent">90%</strong>
+                        </li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class = "item1">
+                        <li class="subject">
+                            <span class="area">쌍용도서관</span>
+                            <span class="date">D-7</span>
+                        </li>
+                        <li>
+                            <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                        <li class ="subject">
+                            <h3>김길동님</h3>
+                        </li>
+                        <li class = "price">
+                            <span class="target">목표금액</span>
+                            <span class="funding">모금금액</span>
+                            <span class="achieved">달성률</span><br>
+                            <strong class="target-amt">300,000원</strong>
+                            <strong class="funding-amt">250,000원</strong>
+                            <strong class="achieved-percent">90%</strong>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <h2 class="city-title">아산시 탕정면</h2>
+            <div class="new">
+            <a href="#">
+                <ul class = "item1">
+                    <li class="subject">
+                        <span class="area">쌍용도서관</span>
+                        <span class="date">D-7</span>
+                    </li>
+                    <li>
+                        <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                    <li class ="subject">
+                        <h3>김길동님</h3>
+                    </li>
+                    <li class = "price">
+                        <span class="target">목표금액</span>
+                        <span class="funding">모금금액</span>
+                        <span class="achieved">달성률</span><br>
+                        <strong class="target-amt">300,000원</strong>
+                        <strong class="funding-amt">250,000원</strong>
+                        <strong class="achieved-percent">90%</strong>
+                    </li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class = "item1">
+                    <li class="subject">
+                        <span class="area">쌍용도서관</span>
+                        <span class="date">D-7</span>
+                    </li>
+                    <li>
+                        <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                    <li class ="name">
+                        <h3>김길동님</h3>
+                    </li>
+                    <li class = "price">
+                        <span class="target">목표금액</span>
+                        <span class="funding">모금금액</span>
+                        <span class="achieved">달성률</span><br>
+                        <strong class="target-amt">300,000원</strong>
+                        <strong class="funding-amt">250,000원</strong>
+                        <strong class="achieved-percent">90%</strong>
+                    </li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class = "item1">
+                    <li class="subject">
+                        <span class="area">쌍용도서관</span>
+                        <span class="date">D-7</span>
+                    </li>
+                    <li>
+                        <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                    <li class ="subject">
+                        <h3>김길동님</h3>
+                    </li>
+                    <li class = "price">
+                        <span class="target">목표금액</span>
+                        <span class="funding">모금금액</span>
+                        <span class="achieved">달성률</span><br>
+                        <strong class="target-amt">300,000원</strong>
+                        <strong class="funding-amt">250,000원</strong>
+                        <strong class="achieved-percent">90%</strong>
+                    </li>
+                </ul>
+            </a>
+        </div>
+        <h2 class="city-title">아산시 배방읍</h2>
+        <div class="new">
+        <a href="#">
+            <ul class = "item1">
+                <li class="subject">
+                    <span class="area">쌍용도서관</span>
+                    <span class="date">D-7</span>
+                </li>
+                <li>
+                    <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                <li class ="subject">
+                    <h3>김길동님</h3>
+                </li>
+                <li class = "price">
+                    <span class="target">목표금액</span>
+                    <span class="funding">모금금액</span>
+                    <span class="achieved">달성률</span><br>
+                    <strong class="target-amt">300,000원</strong>
+                    <strong class="funding-amt">250,000원</strong>
+                    <strong class="achieved-percent">90%</strong>
+                </li>
+            </ul>
+        </a>
+        <a href="#">
+            <ul class = "item1">
+                <li class="subject">
+                    <span class="area">쌍용도서관</span>
+                    <span class="date">D-7</span>
+                </li>
+                <li>
+                    <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                <li class ="subject">
+                    <h3>김길동님</h3>
+                </li>
+                <li class = "price">
+                    <span class="target">목표금액</span>
+                    <span class="funding">모금금액</span>
+                    <span class="achieved">달성률</span><br>
+                    <strong class="target-amt">300,000원</strong>
+                    <strong class="funding-amt">250,000원</strong>
+                    <strong class="achieved-percent">90%</strong>
+                </li>
+            </ul>
+        </a>
+        <a href="#">
+            <ul class = "item1">
+                <li class="subject">
+                    <span class="area">쌍용도서관</span>
+                    <span class="date">D-7</span>
+                </li>
+                <li>
+                    <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                <li class ="subject">
+                    <h3>김길동님</h3>
+                </li>
+                <li class = "price">
+                    <span class="target">목표금액</span>
+                    <span class="funding">모금금액</span>
+                    <span class="achieved">달성률</span><br>
+                    <strong class="target-amt">300,000원</strong>
+                    <strong class="funding-amt">250,000원</strong>
+                    <strong class="achieved-percent">90%</strong>
+                </li>
+            </ul>
+        </a>
+    </div>
+        <h2 class="city-title">아산시 음봉면</h2>
+        <div class="new">
+            <a href="#">
+                <ul class = "item1">
+                    <li class="subject">
+                        <span class="area">쌍용도서관</span>
+                        <span class="date">D-7</span>
+                    </li>
+                    <li>
+                        <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+                    <li class ="subject">
+                        <h3>김길동님</h3>
+                    </li>
+                    <li class = "price">
+                        <span class="target">목표금액</span>
+                        <span class="funding">모금금액</span>
+                        <span class="achieved">달성률</span><br>
+                        <strong class="target-amt">300,000원</strong>
+                        <strong class="funding-amt">250,000원</strong>
+                        <strong class="achieved-percent">90%</strong>
+                    </li>
+                </ul>
+            </a>
+        <a href="#">
+        <ul class = "item1">
+            <li class="subject">
+                <span class="area">쌍용도서관</span>
+                <span class="date">D-7</span>
+            </li>
+            <li>
+                <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+            <li class ="subject">
+                <h3>김길동님</h3>
+            </li>
+            <li class = "price">
+                <span class="target">목표금액</span>
+                <span class="funding">모금금액</span>
+                <span class="achieved">달성률</span><br>
+                <strong class="target-amt">300,000원</strong>
+                <strong class="funding-amt">250,000원</strong>
+                <strong class="achieved-percent">90%</strong>
+            </li>
+        </ul>
+    </a>
+    <a href="#">
+        <ul class = "item1">
+            <li class="subject">
+                <span class="area">쌍용도서관</span>
+                <span class="date">D-7</span>
+            </li>
+            <li>
+                <img src = "./img/Photo_of_a_Western_person’s_face.png"></li>
+            <li class ="subject">
+                <h3>김길동님</h3>
+            </li>
+            <li class = "price">
+                <span class="target">목표금액</span>
+                <span class="funding">모금금액</span>
+                <span class="achieved">달성률</span><br>
+                <strong class="target-amt">300,000원</strong>
+                <strong class="funding-amt">250,000원</strong>
+                <strong class="achieved-percent">90%</strong>
+            </li>
+        </ul>
+    </a>
+</div>
+<br></br>
+
+    <!--footer-->
+<div class="main-footer">
+    <div><img src="/img/logo.png" style="width:180px" alt=""></div>
+    <ul>
+        <li>대표 : 홍길동</li>
+        <li>주소 : 충남 천안시 동남구 대흥로 215, 7층 </li>
+        <li>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234  </li>
+        <li>이메일 : human@naver.com </li>
+        <a href=""><li>개인정보 처리방침 </li></a>
+    
+    </ul>
+
+    </div>
+
+
+
+
+        </body>
+
+
+        
+        <!-- 착한선물 -->
+
+        <!-- 행복나르미 -->
+
+        <!-- 같이가치 -->
+
+        <!-- 로그인/회원가입 -->
+        
+        <!-- 마이페이지 -->
+
+
+
+
+    <script src="./script/happy-giver-main.js"></script>
+    </body>
+</html>
