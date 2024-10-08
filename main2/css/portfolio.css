@@ -1,0 +1,66 @@
+section .portfolio-me::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+section .portfolio-me .portfolio-inner{
+
+    width: 30%;
+    margin-right: 5%;
+    background-color: #fff;
+    float: left;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border:1px solid #acc;
+    margin-bottom: 3rem;
+}
+section .portfolio-me .portfolio-inner:nth-child(3n){
+    margin-right: 0%;
+}
+
+section .portfolio-me .portfolio-inner img{
+    width: 100%;
+    display: block;
+}
+section .portfolio-me .portfolio-inner strong{
+    color: #fa6a6a;
+    margin: 0,5rem 0;
+    display: block;
+}
+section .portfolio-me .portfolio-inner h3{
+    font-size: 1.75rem;
+}
+
+
+
+
+ 
+
+/* width: 30%; -> 각속성의 넓이 
+    margin-right: 5%; -> 간격
+    background-color: #fff; ->배경색
+    float: left; ->나란히 
+    padding: 1rem 1rem 1.5rem 1rem; ->  위 어른쪽 아래 왼쪽 패딩 값
+    
+    이미지 넓이 100% 는 딱맞게 조정
+    이미지는 블록속성이 아닌데 블록으로 줌 
+
+
+    이상태까지 보면 세개가 나란히가 아닌 두개만 나란히임 세번쨰는 마진 오른쪽이 없어야함 
+ margin-right: 0%; 초기화 시켜줌 
+
+
+margin: 0,5rem 0; 위아래,오른쪽 왼쪽 
+display: block; -> 스트롱 태그는 블록 성격이 아니기때문에 마진 적용이 안됨 따라서 블록으로 바꿔줌 
+
+
+
+section .portfolio-me::after{
+    content:"";
+    display: block;
+    clear: both;
+} 
+
+float left 시 높이값 위해 초기화해줌 해당 태그의 부모요소에
+
+
+    */ 
