@@ -98,3 +98,102 @@ for(let i=0; i< scrollMoveEl.length; i++){
         alert("회원가입이 완료 되었습니다.");
         return false; // 실제 제출 방지 (테스트 용도)
     }
+
+
+
+    // //결제
+    // function toggleDescription(selectedPayment) {
+    //     // 설명 요소 가져오기
+    //     const creditCardDescription = document.getElementById("credit-card-description");
+    //     const bankTransferDescription = document.getElementById("bank-transfer-description");
+    
+    //     // 모든 설명 숨기기
+    //     creditCardDescription.style.display = 'none';
+    //     bankTransferDescription.style.display = 'none';
+    
+    //     // 체크된 결제 방법의 설명만 보이기
+    //     if (selectedPayment === 'credit-card' && document.getElementById("credit-card").checked) {
+    //         creditCardDescription.style.display = 'block';
+    //     } else if (selectedPayment === 'bank-transfer' && document.getElementById("bank-transfer").checked) {
+    //         bankTransferDescription.style.display = 'block';
+    //     }
+    // }
+
+    function togglePaymentOptions(selectedPayment) {
+        // 각 설명 및 입력 필드 요소 가져오기
+        const creditCardDescription = document.getElementById("credit-card-description");
+        const cardType = document.getElementById("card-type");
+        const bankTransferDescription = document.getElementById("bank-transfer-description");
+        const bankInfo = document.getElementById("bank-info");
+    
+        // 모든 설명 및 입력 필드 숨기기
+        creditCardDescription.style.display = 'none';
+        cardType.style.display = 'none';
+        bankTransferDescription.style.display = 'none';
+        bankInfo.style.display = 'none';
+    
+        // 선택된 결제 방법의 설명 및 입력 필드 보이기
+        if (selectedPayment === 'credit-card' && document.getElementById("credit-card").checked) {
+            creditCardDescription.style.display = 'block';
+            cardType.style.display = 'block'; // 카드 종류 입력 필드 보이기
+        } else if (selectedPayment === 'bank-transfer' && document.getElementById("bank-transfer").checked) {
+            bankTransferDescription.style.display = 'block';
+            bankInfo.style.display = 'block'; // 은행 입력 필드 보이기
+        }
+    }
+    
+    //결제 확인 및 동의 체크박스
+
+    // function validateCheckboxes() {
+    //     const agreeAll = document.getElementById('agree-all').checked;
+    //     const agreeTerms = document.getElementById('agree-terms').checked;
+    
+    //     if (!agreeAll && !agreeTerms) {
+    //         alert('둘 다 필수로 선택해야 합니다.');
+    //     } else if (!agreeAll) {
+    //         alert('전체 동의에 체크해 주세요.');
+    //     } else if (!agreeTerms) {
+    //         alert('구매 조건 확인 및 결제신청동의에 체크해 주세요.');
+    //     } else {
+    //         alert('결제가 진행됩니다!');
+    //     }
+    // }
+    // function validateCheckboxes() {
+    //     const agreeAll = document.getElementById('agree-all');
+    //     const agreeTerms = document.getElementById('agree-terms');
+    
+    //     // 전체 동의 체크박스가 체크되면 조건 동의도 체크
+    //     if (agreeAll.checked) {
+    //         agreeTerms.checked = true;
+    //     }
+    
+    //     if (!agreeAll.checked && !agreeTerms.checked) {
+    //         alert('둘 다 필수로 선택해야 합니다.');
+    //     } else if (!agreeAll.checked) {
+    //         alert('전체 동의에 체크해 주세요.');
+    //     } else if (!agreeTerms.checked) {
+    //         alert('구매 조건 확인 및 결제신청동의에 체크해 주세요.');
+    //     } else {
+    //         alert('결제가 진행됩니다!');
+    //     }
+    // }
+
+
+    function toggleTerms() {
+        const agreeAll = document.getElementById('agree-all');
+        const agreeTerms = document.getElementById('agree-terms');
+        
+        // 전체 동의 체크박스가 체크되면 조건 동의도 체크
+        agreeTerms.checked = agreeAll.checked;
+    }
+    
+    function validateCheckboxes() {
+        const agreeAll = document.getElementById('agree-all').checked;
+        const agreeTerms = document.getElementById('agree-terms').checked;
+    
+        if (!agreeAll || !agreeTerms) {
+            alert('전체동의시에 결제가 진행됩니다.');
+        } else {
+            alert('결제가 진행됩니다.');
+        }
+    }
