@@ -84,12 +84,15 @@ th{
     background-color: rgb(190, 190, 190);
     height: 40px;
 }
-
 tr{
     border-bottom: 1px solid rgb(184, 184, 184); 
 }
 td{
     text-align: center;
+    height: 40px; 
+}
+table.gift td{
+    height:60px;
 }
 td img{
     width:60px;
@@ -109,6 +112,19 @@ button.more {
     color: gray ;
     padding-left: 10px;
 }
+.narmiPayment th:nth-child(1) { width: 15%; }
+.narmiPayment th:nth-child(2) { width: 15%; }
+.narmiPayment th:nth-child(3) { width: 25%; }
+.narmiPayment th:nth-child(4) { width: 15%; }
+.narmiPayment th:nth-child(5) { width: 15%; }
+.narmiPayment th:nth-child(6) { width: 15%; }
+
+.together th:nth-child(1) { width: 20%; }
+.together th:nth-child(1) { width: 20%; }
+.together th:nth-child(1) { width: 30%; }
+.together th:nth-child(1) { width: 15%; }
+.together th:nth-child(1) { width: 15%; }
+
 
 .narmi th:nth-child(1) { width: 14%; }
 .narmi th:nth-child(2) { width: 6%; }
@@ -118,7 +134,3 @@ button.more {
 .narmi th:nth-child(6) { width: 10%; }
 .narmi th:nth-child(7) { width: 10%; }
 .narmi th:nth-child(8) { width: 10%; }
-
-.narmi tr{
-    border-bottom: 1px solid rgb(184, 184, 184); 
-}

@@ -13,12 +13,12 @@
             background-color: rgb(233, 233, 233);
             color: rgb(70, 70, 70);
             text-align: center;
-            font-size: 15pt;            
+            font-size: 12pt;            
         }
         td {
             border: 1px solid black;
             padding: 5px;
-            height: 40px;
+            height: 20px;
             vertical-align: middle;
 
         }
@@ -26,6 +26,7 @@
             width: 90%;
             height: 100%;
         }
+  
         textarea {
             font-size: 13pt;
             width: 90%;
@@ -59,6 +60,13 @@
         }
         #data-table td:nth-child(8) { /* 비고 */
             width: 8%px; 
+        }
+        .more{
+            border:0; 
+            background-color: white; 
+            color:gray; 
+            margin-left: 740px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -108,7 +116,7 @@
                 <td><input type="file"></td>
             </tr>
         </table>
-        <h4>산출내역</h4>
+        <h2>산출내역</h2>
         <div class="input-area">
             <table id="data-table" >
                 <tr>
@@ -122,37 +130,37 @@
                     <th>비고</th>                                
                 </tr>
                 <tr>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text" maxlength="10"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
                 </tr>
                 <tr>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text" maxlength="10"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
                 </tr>
                 <tr>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text"></td>
-                    <td><input type="number"></td>
-                    <td><input type="number"></td>
-                    <td><input type="text" maxlength="10"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
                 </tr>
             </table>
-            <button id="add-row">행 추가</button>
+            <button id="add-row" class="more">+ 행 추가</button>
         </div>
 
         <br>
@@ -216,14 +224,14 @@
             const cell7 = newRow.insertCell(6); 
             const cell8 = newRow.insertCell(7); 
 
-            cell1.innerHTML = '<input type="number">';
-            cell2.innerHTML = '<input type="text">';
-            cell3.innerHTML = '<input type="text">';
-            cell4.innerHTML = '<input type="number">';
-            cell5.innerHTML = '<input type="text">';
-            cell6.innerHTML = '<input type="number">';
-            cell7.innerHTML = '<input type="number">';
-            cell8.innerHTML = '<input type="text" maxlength="10">';
+            cell1.innerHTML = '<input type="number" style="border:0;">';
+            cell2.innerHTML = '<input type="text" style="border:0;">';
+            cell3.innerHTML = '<input type="text" style="border:0;">';
+            cell4.innerHTML = '<input type="number" style="border:0;">';
+            cell5.innerHTML = '<input type="text" style="border:0;">';
+            cell6.innerHTML = '<input type="number" style="border:0;">';
+            cell7.innerHTML = '<input type="number" style="border:0;">';
+            cell8.innerHTML = '<input type="text" maxlength="10" style="border:0;">';
         });
     </script>
     <script>
