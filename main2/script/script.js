@@ -74,9 +74,18 @@ for(let i=0; i< scrollMoveEl.length; i++){
     });
 }
 
-
-
-
+//회원가입 
+function sgshowAlert() {
+    const rememberCheck = document.getElementById('remember-check');
+    
+    if (!rememberCheck.checked) {
+        alert('개인정보 활용 동의를 체크해야 회원가입이 가능합니다.');
+        return false; // 제출불가.
+    }
+    
+    alert('회원가입이 완료되었습니다.'); // 회원가입 완료 메시지
+    return true; // 체크되었으면 제출.
+}
 
 
 //비밀번호,아이디 찾기 알림창 
@@ -84,41 +93,18 @@ for(let i=0; i< scrollMoveEl.length; i++){
     function showAlert() {
         // 알림창 표시
         alert("해당 이메일로 아이디를 전송하였습니다.");
-        return false; // 실제 제출 방지 (테스트 용도)
+        return false; // 실제 제출 방지 
     }
 
     function pwshowAlert() {
         // 알림창 표시
         alert("해당 이메일로 비밀번호 변경이 가능한 링크를  전송하였습니다.");
-        return false; // 실제 제출 방지 (테스트 용도)
+        return false; // 실제 제출 방지 
     }
 
-    function  sgshowAlert() {
-        // 알림창 표시
-        alert("회원가입이 완료 되었습니다.");
-        return false; // 실제 제출 방지 (테스트 용도)
-    }
+   
 
-
-
-    // //결제
-    // function toggleDescription(selectedPayment) {
-    //     // 설명 요소 가져오기
-    //     const creditCardDescription = document.getElementById("credit-card-description");
-    //     const bankTransferDescription = document.getElementById("bank-transfer-description");
-    
-    //     // 모든 설명 숨기기
-    //     creditCardDescription.style.display = 'none';
-    //     bankTransferDescription.style.display = 'none';
-    
-    //     // 체크된 결제 방법의 설명만 보이기
-    //     if (selectedPayment === 'credit-card' && document.getElementById("credit-card").checked) {
-    //         creditCardDescription.style.display = 'block';
-    //     } else if (selectedPayment === 'bank-transfer' && document.getElementById("bank-transfer").checked) {
-    //         bankTransferDescription.style.display = 'block';
-    //     }
-    // }
-
+//후원하기 
     function togglePaymentOptions(selectedPayment) {
         // 각 설명 및 입력 필드 요소 가져오기
         const creditCardDescription = document.getElementById("credit-card-description");
@@ -142,58 +128,45 @@ for(let i=0; i< scrollMoveEl.length; i++){
         }
     }
     
-    //결제 확인 및 동의 체크박스
 
-    // function validateCheckboxes() {
-    //     const agreeAll = document.getElementById('agree-all').checked;
-    //     const agreeTerms = document.getElementById('agree-terms').checked;
-    
-    //     if (!agreeAll && !agreeTerms) {
-    //         alert('둘 다 필수로 선택해야 합니다.');
-    //     } else if (!agreeAll) {
-    //         alert('전체 동의에 체크해 주세요.');
-    //     } else if (!agreeTerms) {
-    //         alert('구매 조건 확인 및 결제신청동의에 체크해 주세요.');
-    //     } else {
-    //         alert('결제가 진행됩니다!');
-    //     }
-    // }
-    // function validateCheckboxes() {
-    //     const agreeAll = document.getElementById('agree-all');
-    //     const agreeTerms = document.getElementById('agree-terms');
-    
-    //     // 전체 동의 체크박스가 체크되면 조건 동의도 체크
-    //     if (agreeAll.checked) {
-    //         agreeTerms.checked = true;
-    //     }
-    
-    //     if (!agreeAll.checked && !agreeTerms.checked) {
-    //         alert('둘 다 필수로 선택해야 합니다.');
-    //     } else if (!agreeAll.checked) {
-    //         alert('전체 동의에 체크해 주세요.');
-    //     } else if (!agreeTerms.checked) {
-    //         alert('구매 조건 확인 및 결제신청동의에 체크해 주세요.');
-    //     } else {
-    //         alert('결제가 진행됩니다!');
-    //     }
-    // }
+function toggleTerms() {
+    const agreeAll = document.getElementById('agree-all');
+    const agreeTerms = document.getElementById('agree-terms');
+    agreeTerms.checked = agreeAll.checked; // 전체 동의에 따라 개별 동의 체크
+}
 
+// 결제 버튼 클릭 시 결제 수단과 동의 여부를 확인
+function validateCheckboxes() {
+    const creditCardChecked = document.getElementById('credit-card').checked;
+    const bankTransferChecked = document.getElementById('bank-transfer').checked;
+    const agreeAllChecked = document.getElementById('agree-all').checked;
+    const agreeTermsChecked = document.getElementById('agree-terms').checked;
 
-    function toggleTerms() {
-        const agreeAll = document.getElementById('agree-all');
-        const agreeTerms = document.getElementById('agree-terms');
-        
-        // 전체 동의 체크박스가 체크되면 조건 동의도 체크
-        agreeTerms.checked = agreeAll.checked;
+    // 결제 수단이 모두 선택되었는지 확인
+    if (creditCardChecked && bankTransferChecked) {
+        alert("결제 수단은 하나만 선택할 수 있습니다.");
+        return;
     }
-    
-    function validateCheckboxes() {
-        const agreeAll = document.getElementById('agree-all').checked;
-        const agreeTerms = document.getElementById('agree-terms').checked;
-    
-        if (!agreeAll || !agreeTerms) {
-            alert('전체동의시에 결제가 진행됩니다.');
-        } else {
-            alert('결제가 진행됩니다.');
-        }
+
+    // 결제 수단이 선택되었는지 확인
+    if (!creditCardChecked && !bankTransferChecked) {
+        alert("결제 수단을 선택하세요.");
+        return;
     }
+
+    // 전체 동의가 체크되었는지 확인
+    if (!agreeAllChecked) {
+        alert("전체 동의를 선택해야 결제가 진행됩니다.");
+        return;
+    }
+
+    // 구매 조건 확인 및 결제 동의가 체크되었는지 확인
+    if (!agreeTermsChecked) {
+        alert("구매 조건 확인 및 결제 진행 동의를 선택해야 합니다.");
+        return;
+    }
+
+    // 모든 체크가 완료되었으므로 결제 진행
+    alert("결제가 진행됩니다.");
+   
+}

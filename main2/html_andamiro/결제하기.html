@@ -4,7 +4,7 @@
        <meta charset="UTF-8">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>로그인</title>       
+       <title>후원하기</title>       
        <link rel="stylesheet" href="/andamiro/main2/css/1차 프로젝트.css">
        <style>
         @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
@@ -12,21 +12,53 @@
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
     <body>
-        <div class="right-item1">
-            <h3>결제수단</h3>
-            <div>
+        <div class="container-grid">
+            <h1 class="title">후원하기</h1> <!-- 제목 추가 -->
+            <div class="left">
+                <div class="spe">
+                    <p><h3>주문상품정보</h3></p>
+                    <div class="product-info"> <!-- 플렉스 컨테이너 추가 -->
+                        <img src="/andamiro/main2/img/피아노.webp" width="170px" alt="">
+                        <div class="details"> <!-- 세부 정보를 위한 추가 div -->
+                            <span>상품명</span><br>
+                            <span>상품 내용</span><br>
+                            <span>가격</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-item">
+                    <p><h3>주문자 정보</h3></p>
+                    <div class="details"> <!-- 세부 정보를 위한 추가 div -->
+                        <span>주문자 이름</span><br>
+                        <span>전화번호</span><br>
+                        <span>주소</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h3>후원금액</h3>
+        <div class="amount-ot">
+            <label for="donation-amount">금액선택</label>
+            <select id="donation-amount">
+                <option value="10000">10,000원</option>
+                <option value="20000">20,000원</option>
+                <option value="50000">50,000원</option>
+                <option value="100000">100,000원</option>
+            </select>
+        </div>
+                <h3>결제방법</h3>
+            <div id="card-area">
             <input type="checkbox" id="credit-card" onclick="togglePaymentOptions('credit-card')">
             <span class="c-card">신용카드</span>
         </div>
             <div id="credit-card-description" class="description" style="display: none;">
             </div>
-            
             <div id="card-type" class="options" style="display: none;">
-                <label for="card-selector">카드 종류:</label>
+                <label for="card-selector">결제카드:</label>
                 <select id="card-selector">
-                    <option value="visa">비자</option>
-                    <option value="mastercard">마스터카드</option>
-                    <option value="amex">아메리칸 익스프레스</option>
+                    <option value="visa">삼성카드</option>
+                    <option value="mastercard">BC카드</option>
+                    <option value="amex">신한카드</option>
                 </select>
             </div>
             <div>
@@ -34,16 +66,22 @@
             <span class="bn-trans">무통장입금</span>
             </div>
             <div id="bank-transfer-description" class="description" style="display: none;">
-               
             </div>
-            
             <div id="bank-info" class="options" style="display: none;">
-                <label for="bank-name">입금할 은행:</label>
+                <label for="bank-name">입금은행:</label>
                 <select id="card-selector">
-                    <option value="visa">비자</option>
-                    <option value="mastercard">마스터카드</option>
-                    <option value="amex">아메리칸 익스프레스</option>
+                    <option value="visa">농협은행</option>
+                    <option value="mastercard">국민은행</option>
+                    <option value="amex">기업은행</option>
                 </select>
+            </div>
+                <div class="right-item2">
+                    <input type="checkbox" id="agree-all" onchange="toggleTerms()"> 전체 동의<br>
+                    <span class="floor-symbol">&#76;</span> <input type="checkbox" size="" id="agree-terms">구매 조건 확인 및 결제진행동의
+                </div>
+                <button class="payment-button" onclick="validateCheckboxes()">결제하기</button>
+               
+                </div>
             </div>
         </div>
         <script src="/andamiro/main2/script/script.js"></script>
