@@ -216,6 +216,16 @@ li > img{
     background:skyblue;
     animation: progress5 5s ease forwards;
   }
+  #progressbar6::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    height: 15px;
+    width:0;
+    background:skyblue;
+    animation: progress6 5s ease forwards;
+  }
   @keyframes progress1{
     0%{width: 0px}
     100%{width: 90%;}
@@ -235,6 +245,10 @@ li > img{
   @keyframes progress5{
     0%{width: 0px}
     100%{width: 25%;}
+  }
+  @keyframes progress6{
+    0%{width: 0px}
+    100%{width: 48%;}
   }
   .progress{
     position: absolute;

@@ -19,3 +19,13 @@ function updateDistricts() {
         });
     }
 }
+$({ val : 0 }).animate({ val : 90 }, {
+    duration:5000,
+    step: function() {
+      $(".progress").text(Math.floor(this.val));
+    },
+    complete: function() {
+      $(".progress").text(Math.floor(this.val));
+      $(".progress").css("color","#fff");
+    }
+  });
