@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>단계</title>
         <style>
+            .item{
+                align-items: center;
+                justify-content: center;/*가로정렬*/
+                padding-left: 29%;   
+            }
             body{
                 margin:30px;
             }
@@ -19,7 +24,7 @@
         </style>
     </head>
     <body>
-        
+        <div class="item">
         <h2>나르미 단계등록</h2>
         <br>
         <!-- 만약 백데이터가 있다면 selected로 이전 단계 저장된 정보로 최초출력-->
@@ -33,7 +38,7 @@
         <br><br><br>
         <button onclick="regist()">등록</button>
         <button onclick="window.close()">취소</button>
-
+        </div>
         <script>
             function regist(){
                 const question = confirm("등록하시겠습니까?");
