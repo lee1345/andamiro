@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="login" name="login">
+        id: <input type="text" id="id">
+        pw: <input type="password" id="pw">
+        <button type="submit" onclick="CheckForm()">제출</button>
+    </form>
+
+    <script>
+        function CheckForm() {
+            event.preventDefault(); // 기본 제출 동작 막기
+            
+            var id = document.getElementById("id");
+            var pw = document.getElementById("pw");
+
+            if (id.value == "abc" && pw.value == "123") { 
+                window.location.href = 'http://www.naver.com';
+            } else {
+                alert("아이디와 비밀번호를 확인하세요");
+            }
+        }
+    </script>
+</body>
+</html>

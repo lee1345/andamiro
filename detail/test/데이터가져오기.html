@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            img{
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="hi"></h1>
+        <img class="hiImg"><br>
+        <br>
+        <div>
+            <span class="giftName"></span>
+            <span class="giftPrice"></span>
+            <img class="giftImg">
+        </div>
+        <div>
+            <span class="giftName"></span>
+            <span class="giftPrice"></span>
+            <img class="giftImg">
+        </div>
+
+
+        <button type="button" onclick="aa()">sd</button>
+
+        <script type="module">
+            import {agent, gift, abc} from './dataSample.js';
+            document.querySelector('.hi').innerHTML = agent.name;
+            document.querySelector('.hiImg').src = agent.image;
+
+            window.aa = function (){
+                abc();
+            }
+
+
+            const giftNames = document.querySelectorAll(".giftName");
+            const giftPrices = document.querySelectorAll(".giftPrice")
+            const giftImages = document.querySelectorAll(".giftImg");
+            
+
+            for(let i=0;i<gift.length;i++){
+                giftNames[i].innerHTML = gift[i].name;
+                giftPrices[i].innerHTML = gift[i].price;
+                giftImages[i].src = gift[i].image;
+
+            }
+            
+
+
+
+  </script>     
+    </body>
+</html>
