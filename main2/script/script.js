@@ -75,6 +75,18 @@
 // }
 
 //회원가입 
+// function sgshowAlert() {
+//     const rememberCheck = document.getElementById('remember-check');
+    
+//     if (!rememberCheck.checked) {
+//         alert('개인정보 활용 동의를 체크해야 회원가입이 가능합니다.');
+//         return false; // 제출불가.
+//     }
+    
+//     alert('회원가입이 완료되었습니다.'); // 회원가입 완료 메시지
+//     return true; // 체크되었으면 제출.
+// }
+
 function sgshowAlert() {
     const rememberCheck = document.getElementById('remember-check');
     
@@ -84,8 +96,14 @@ function sgshowAlert() {
     }
     
     alert('회원가입이 완료되었습니다.'); // 회원가입 완료 메시지
+    window.location.href = '../maim.html'; // 메인 화면으로 이동
     return true; // 체크되었으면 제출.
 }
+
+
+
+
+
 
 
 //비밀번호,아이디 찾기 알림창 
