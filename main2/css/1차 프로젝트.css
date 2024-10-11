@@ -263,6 +263,41 @@ div.item{
     color: darkblue; /* 마우스 오버 시 색상 변경 */
 }
 
+/* 메인 */
+/* General Reset */
+
+
+/* Body Styling */
+body {
+   
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.main-footer {
+    background-color: #e6f0ff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.main-footer li {
+    margin: 5px 0;
+}
+
 
 /* 
 슬라이드 */
@@ -688,3 +723,5 @@ input[type="checkbox"] {
 .payment-button:hover {
     background-color: #2c6ce0;
 }
+
+
