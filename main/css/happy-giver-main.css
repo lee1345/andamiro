@@ -31,7 +31,9 @@ header nav ul{
 header nav ul li{
     padding-right: 70px;
 }
-
+.menu-btn:active {
+    color:skyblue;
+}
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
     border-radius: 50px;           /* 둥근 모서리 */
@@ -60,6 +62,7 @@ header button{
 }
 .search{
     width:40px;
+    border-style: none;
 }
 .search, .apply{
     border-radius: 0;
@@ -67,6 +70,7 @@ header button{
 }
 .apply{
     background-color: lightskyblue;
+    border-style: none;
 }
 .btn-cr button:focus {
     background-color: #ececec; /* 클릭 시 배경색 */
@@ -228,7 +232,7 @@ li > img{
   }
   @keyframes progress1{
     0%{width: 0px}
-    100%{width: 90%;}
+    100%{width: 83%;}
   }
   @keyframes progress2{
     0%{width: 0px}

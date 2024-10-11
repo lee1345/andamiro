@@ -31,7 +31,9 @@ header nav ul{
 header nav ul li{
     padding-right: 70px;
 }
-
+.menu-btn:active {
+    color:skyblue;
+}
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
     border-radius: 50px;           /* 둥근 모서리 */
@@ -182,7 +184,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress1 5s ease forwards;
   }
   #progressbar2::after{
@@ -192,7 +194,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress2 5s ease forwards;
   }
   #progressbar3::after{
@@ -202,7 +204,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress3 5s ease forwards;
   }
   #progressbar4::after{
@@ -212,7 +214,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress4 5s ease forwards;
   }
   #progressbar5::after{
@@ -222,7 +224,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress5 5s ease forwards;
   }
   #progressbar6::after{
@@ -232,7 +234,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:rgb(255, 246, 127);
+    background:lightskyblue;
     animation: progress5 5s ease forwards;
   }
   @keyframes progress1{
