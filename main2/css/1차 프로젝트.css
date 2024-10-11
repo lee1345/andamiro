@@ -68,6 +68,12 @@ header button{
  
 
 
+.btn-cr-b1{
+    margin-right: 30px;
+}
+.btn-cr-b1 button:hover {
+    background-color: #ececec;
+}
 
 
 
