@@ -105,5 +105,5 @@ const  Narmi= [
     {id: 6, N_region: "아산시", N_city: "음봉면", N_location: "음봉면 어린이 지원 센터", N_location_img: "../img/narmi/narmi6.png", agent_name: "Daniel Choi", agent_img: "../img/narmi/agent6.png", N_Target_amount: 700000, N_funding_achievement: 700000, D_day: "0", End_date: "2024-12-01", N_funding_progress: 100, N_head_count: 10,
     agent_introduce: `안녕하세요 여러분! I’m Daniel Choi, 주한미군 취사병이에요. 요리를 정말 잘해요! 그래서 생각했어요—아이들을 정말 좋아하는 제가 근처 어린이들에게 맛있는 미국 음식을 만들어 주면 얼마나 좋을까요? 
     햄버거, 핫도그, 피자 같은 맛있는 것들로 아이들과 함께 즐거운 시간을 보내고 싶어요! 🍔🌭🍕 하지만 이 멋진 계획을 위해 재료가 필요해요. 
-    여러분의 도움이 필요합니다! 작은 후원이나 재료 지원이 큰 힘이 될 거예요. 함께 아이들에게 사랑을 나눌 수 있을까요?여러분의 관심과 참여 부탁드려요! 고맙습니다! Let’s make some yummy food together!`},
+    여러분의 도움이 필요합니다! 작은 후원이나 재료 지원이 큰 힘이 될 거예요. 함께 아이들에게 사랑을 나눌 수 있을까요?여러분의 관심과 참여 부탁드려요! 고맙습니다! Let’s make some yummy food together!!`},
 ];
