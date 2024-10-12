@@ -468,6 +468,12 @@ li > img{
     color:  #6A24FE; /* 마우스 오버 시 색상 변경 */
 }
 
+.select-area {
+    margin-bottom: 50px;
+    margin-left: 450px;
+}
+
+
 .select-area h2 {
     color: #004080; /* 다크 블루 */
 }
