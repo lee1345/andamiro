@@ -136,10 +136,10 @@
         </div>
     </div>
     <script>
-        fetch('./header.html')  /*헤더 있는 폴더*/
+        fetch('./header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('navbar').innerHTML = data; /*navbar는 내비게이션바 넣을 곳의 div 클래스명*/
+                document.getElementById('navbar').innerHTML = data;
             });
     </script>
 </body>
