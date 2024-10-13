@@ -337,10 +337,11 @@ table {
     text-align: center;
 }
 td, th {
-    border: solid 1px black;
+    
+    border: solid 1px #9E9E9E;
 }
 .invoice th {
-    background-color: gray;
+    background-color: #c7def1;
 }
 .invoice th:nth-child(1) { width: 60px; }
 .invoice th:nth-child(2) { width: 80px; }
@@ -360,20 +361,37 @@ td, th {
 }
 
 .step {
+    background-color: #4A90E2; /* 푸른색 */
+    transition: background-color 0.3s;
     border-radius: 50%;
     width: 30px;
     height: 30px;    
-    border: 1px solid black;   
+    border: 1px solid #e2e2e2;
     margin: 0 auto; /* 가운데 정렬을 위한 margin */
 }
+
 .arrowRight{
     width:30px;
     height:20px;
 }
+span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.arrowRight:hover {
+    opacity: 0.7; /* 호버시 투명도 변화 */
+}
+
+
+
+
 
 /* 4.정산내역 */
 .settlementTable th {
-    background-color: gray;
+    background-color: #c7def1;
 }
 .settlementTable th:nth-child(1) { width: 60px; }
 .settlementTable th:nth-child(2) { width: 80px; }

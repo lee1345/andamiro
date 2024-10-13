@@ -20,13 +20,13 @@
                 <nav>
                     <ul>
                         <li>
-                            <button>착한선물</button>
+                            <a href="./kind-gift-main.html" ><button class="menu-btn">착한선물</button></a>
                         </li>
                         <li>
-                            <button>행복나르미</button>
+                            <a href="./happy-giver-main.html"><button class="menu-btn">행복나르미</button></a>
                         </li>
                         <li>
-                            <button>같이가치</button>
+                            <a href="#2"><button class="menu-btn">같이가치</button></a>
                         </li>
                     </ul>
                 </nav>
@@ -39,181 +39,189 @@
         <article>
             <img src="./img/volunteerBanner.jpg" width="100%" height="900px">
         </article>
-        <h2>같이가치</h2>
-            <div class="cardbox">
-                <ul>
-                    <div class="card">
+        <h2 class="title">같이가치</h2>
+            <div class="new">
+                <ul class = "item1">
+                    <a href="./with-value-detail.html">
                         <li>
-                            <a href="#">
-                                <table>
-                                    <tr>
-                                        <td>자원봉사</td>
-                                        <td>아산시</td>
-                                        <td>D-21</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><img src="./img/volunteer2.jpg" width="200px" height="200px"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">헌신의 식기세척</td>
-                                    </tr>
-                                    <tr>
-                                        <td>목표인원<br>
-                                        <h4>80명</h4></td>
-                                        <td>신청인원<br>
-                                        <h4>80명</h4></td>
-                                        <td>달성률<br>
-                                        <h4 style="color:green">100%</h4></td>
-                                    </tr>
-                                </table>
-                            </a>
+                            <img src = "./img/volunteer.jpg">
                         </li>
-                    </div>
-                    <div class="card">
-                        <li>
-                        <a href="#">
-                            <table>
-                                <tr>
-                                    <td>환경보호</td>
-                                    <td>천안시</td>
-                                    <td>D-27</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><img src="./img/volunteer.jpg" width="200px" height="200px"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">사랑의 쓰레기줍기</td>
-                                </tr>
-                                <tr>
-                                    <td>목표인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>신청인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>달성률<br>
-                                    <h4 style="color:green">100%</h4></td>
-                                </tr>
-                            </table>
-                        </a>
+                        <li class ="subject">
+                            <p style="display:inline" class="city">천안시</p>
+                            <h2 style="display:inline" class="date1">D-27</h2><br>
+                            <h2 style="display:inline">사랑의 쓰레기줍기</h2>
+                            
                         </li>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <table>
-                                <tr>
-                                    <td>자원봉사</td>
-                                    <td>세종시</td>
-                                    <td>D-9</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><img src="./img/volunteer3.jpg" width="200px" height="200px"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">사랑의 연탄나눔</td>
-                                </tr>
-                                <tr>
-                                    <td>목표인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>신청인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>달성률<br>
-                                    <h4 style="color:green">100%</h4></td>
-                                </tr>
-                            </table>
-                        </a>
-                    </div>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">80명</strong>
+                            <strong class="funding-amt">80명</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <h1>100%</h1>
+                            <div class="progressbar" id="progressbar1">
+                                <span class="progress"></span>
+                            </div>
+                        </li>
+                    </a>
                 </ul>
+                <ul class = "item1">
+                    <a href="#">
+                        <li>
+                            <img src = "./img/volunteer2.jpg">
+                        </li>
+                        <li class ="subject">
+                            <p style="display:inline" class="city">아산시</p>
+                            <h2 style="display:inline" class="date2">D-21</h2><br>
+                            <h2 style="display:inline">헌신의 식기세척</h2>
+                            
+                        </li>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">50명</strong>
+                            <strong class="funding-amt">20명</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <h1>40%</h1>
+                            <div class="progressbar" id="progressbar2">
+                                <span class="progress2"></span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <div class="new">
+                    <ul class = "item1">
+                        <a href="#">
+                            <li>
+                                <img src = "./img/volunteer3.jpg">
+                            </li>
+                            <li class ="subject">
+                                <p style="display:inline" class="city">세종시</p>
+                                <h2 style="display:inline" class="date3">D-9</h2><br>
+                                <h2 style="display:inline">사랑의 연탄나눔</h2>
+                                
+                            </li>
+                            <li class="price">
+                                <span class="target">목표인원</span>
+                                <span class="funding">신청인원</span>
+                            </li>
+                            <li class="amount">
+                                <strong class="target-amt">30명</strong>
+                                <strong class="funding-amt">25명</strong>
+                            </li>
+                            <li class="achieved"><span>달성률</span>
+                                <h1>83%</h1>
+                                <div class="progressbar" id="progressbar3">
+                                    <span class="progress3"></span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="cardbox2">
-                <ul>
-                    <div class="card">
+            <div class="new">
+                <ul class = "item1">
+                    <a href="#">
                         <li>
-                            <a href="#">
-                                <table>
-                                    <tr>
-                                        <td>자원봉사</td>
-                                        <td>대전시</td>
-                                        <td>D-9</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"><img src="./img/volunteer4.jpg" width="200px" height="200px"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">장애아동시설 봉사활동</td>
-                                    </tr>
-                                    <tr>
-                                        <td>목표인원<br>
-                                        <h4>80명</h4></td>
-                                        <td>신청인원<br>
-                                        <h4>80명</h4></td>
-                                        <td>달성률<br>
-                                        <h4 style="color:green">100%</h4></td>
-                                    </tr>
-                                </table>
-                            </a>
+                            <img src = "./img/volunteer4.jpg">
                         </li>
-                    </div>
-                    <div class="card">
+                        <li class ="subject">
+                            <p style="display:inline" class="city">대전시</p>
+                            <h2 style="display:inline" class="date4">D-18</h2><br>
+                            <h2 style="display:inline">장애아동 봉사</h2>
+                            
+                        </li>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">10명</strong>
+                            <strong class="funding-amt">3명</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <h1>30%</h1>
+                            <div class="progressbar" id="progressbar4">
+                                <span class="progress4"></span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <ul class = "item1">
+                    <a href="#">
                         <li>
-                        <a href="#">
-                            <table>
-                                <tr>
-                                    <td>환경보호</td>
-                                    <td>서산시</td>
-                                    <td>D-15</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><img src="./img/volunteer5.jpg" width="200px" height="200px"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">깨끗한 바다 만들기</td>
-                                </tr>
-                                <tr>
-                                    <td>목표인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>신청인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>달성률<br>
-                                    <h4 style="color:green">100%</h4></td>
-                                </tr>
-                            </table>
-                        </a>
+                            <img src = "./img/volunteer5.jpg">
                         </li>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <table>
-                                <tr>
-                                    <td>환경보호</td>
-                                    <td>당진시</td>
-                                    <td>D-9</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3"><img src="./img/volunteer6.jpg" width="200px" height="200px"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">수달 서식지 보호</td>
-                                </tr>
-                                <tr>
-                                    <td>목표인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>신청인원<br>
-                                    <h4>80명</h4></td>
-                                    <td>달성률<br>
-                                    <h4 style="color:green">100%</h4></td>
-                                </tr>
-                            </table>
-                        </a>
-                    </div>
+                        <li class ="subject">
+                            <p style="display:inline" class="city">서산시</p>
+                            <h2 style="display:inline" class="date5">D-15</h2><br>
+                            <h2 style="display:inline">깨끗한 바다만들기</h2>
+                            
+                        </li>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">100명</strong>
+                            <strong class="funding-amt">80명</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <h1>80%</h1>
+                            <div class="progressbar" id="progressbar5">
+                                <span class="progress5"></span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <ul class = "item1">
+                    <a href="#">
+                        <li>
+                            <img src = "./img/volunteer6.jpg">
+                        </li>
+                        <li class ="subject">
+                            <p style="display:inline" class="city">당진시</p>
+                            <h2 style="display:inline" class="date6">D-9</h2><br>
+                            <h2 style="display:inline">수달 서식지 보호</h2>
+                            
+                        </li>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">40명</strong>
+                            <strong class="funding-amt">30명</strong>
+                        </li>
+                        <li class="achieved"><span>달성률</span>
+                            <h1>75%</h1>
+                            <div class="progressbar" id="progressbar6">
+                                <span class="progress6"></span>
+                            </div>
+                        </li>
+                    </a>
                 </ul>
             </div>
             <footer>
-                <nav>
-                    <img src="./img/logo.png" width="30%">
-                    <p>대표 : 홍길동</p>
-                    <p>주소 : 충남 천안시 동남구 대흥로 215, 7층</p>
-                    <p>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234</p>
-                    <p>이메일 : human@naver.com</p>
-                </nav>
+                <div class="main-footer">
+                    <div><img src="./img/logo.png" style="width:180px" alt=""></div>
+                    <ul>
+                        <li>대표 : 홍길동</li>
+                        <li>주소 : 충남 천안시 동남구 대흥로 215, 7층 </li>
+                        <li>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234  </li>
+                        <li>이메일 : human@naver.com </li>
+                        <a href=""><li>개인정보 처리방침 </li></a>
+                    
+                    </ul>
+                
+                    </div>
             </footer>
     </body>
 </html>

@@ -242,3 +242,10 @@ function validateCheckboxes() {
     alert("결제가 진행됩니다.");
    
 }
+
+//header
+fetch('./header.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('navbar').innerHTML = data;
+});
