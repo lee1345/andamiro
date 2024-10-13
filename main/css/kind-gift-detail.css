@@ -65,9 +65,13 @@ header button{
     margin: 0;
     border: 1px solid black;
 }
-.btn{
+.btn {
+    margin-right: -50px;
+    border: none;
+    font-weight: bold;
+    color: steelblue;
     width: 150px;
-    height:35px;
+    height: 35px;
 }
 .like{
     cursor:pointer;
@@ -76,9 +80,13 @@ header button{
     background-color: transparent;
 
 }
-.bigbtn{
+.bigbtn {
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: steelblue;
     width: 300px;
-    height:50px;
+    height: 50px;
 }
 .rewardbtn{
     width: 150px;
@@ -92,6 +100,9 @@ header button{
     text-align: center; /* 텍스트 중앙 정렬 */      
     align-items: center;
 }
+
+
+
 .item2{
     padding-top: 8%;
     padding-left:10%; /* 아이템 안쪽 여백 */
@@ -101,23 +112,28 @@ header button{
 .p1{
     text-align: left
 }
-h4{
+h4 {
+    margin-top: 5px;
+    color: darkgray;
     text-align: left;
+
 }
 h2{
+    color: steelblue;
     text-align: left;
+    margin-bottom: 10px;
 }
 .button {
     padding: 10px 20px;
     font-size: 16px;
-    border: 1px solid black;
+    border: none;
     cursor: pointer;
     transition: background-color 0.01s;
 }
 
 /*리워드 선택 버튼*/
 .button.active {
-    background-color: rgb(152, 150, 150); /* 클릭된 버튼의 색깔 */
+    background-color: #e7e7e7; /* 클릭된 버튼의 색깔 */
 }
 .button.inactive {
     background-color: white; /* 기본 버튼 색깔 */
@@ -277,7 +293,7 @@ ul {
     border: 5px solid #f9f9f9;
 }
 .tabmenu input:checked ~ label {
-    background: #ccc;
+    background: #99bcd9;
 }
 .tabmenu input:checked ~ .tabCon {
     display: block;
@@ -327,6 +343,7 @@ img.secondImg {
     padding-left: 150px;
 }
 .comment-card img {
+    background-color: #333;
     width: 50px;
     padding-right: 15px;
 }

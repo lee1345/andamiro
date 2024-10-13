@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<<<<<<< HEAD
     <head>
        <meta charset="UTF-8">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -295,3 +296,37 @@
 </html>
 
 
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복나르미 상세 페이지</title>
+</head>
+<body>
+    <h1>행복나르미 상세 페이지</h1>
+    <div id="profileDetail"></div>
+
+    <script src="./script/test.js"></script>
+    <script>
+        // localStorage에서 저장된 ID 가져오기
+        const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+        const narmi = Narmi.find(item => item.id === selectedNarmiId);
+
+        const profileDetail = document.getElementById('profileDetail');
+
+        if (narmi) {
+            profileDetail.innerHTML = `
+                <h2>${narmi.agent_name}</h2>
+                <img src="${narmi.agent_img}" alt="${narmi.agent_name} 프로필 사진">
+                <p>지역: ${narmi.N_location}</p>
+                <p>목표 금액: ${narmi.N_Target_amount.toLocaleString()}원</p>
+                <p>모금 금액: ${narmi.N_funding_achievement.toLocaleString()}원</p>
+                <p>달성률: ${Math.round(narmi.N_funding_progress)}%</p>
+            `;
+        } else {
+            profileDetail.innerHTML = '<p>해당 프로필을 찾을 수 없습니다.</p>';
+        }
+    </script>
+</body>
+</html>
+>>>>>>> e68943b4156827d97ffc3a9cd3883c2912d397bf
