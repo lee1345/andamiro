@@ -4,11 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* 
-body{
-    width: 1280px;
-} */
-
+body {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+}
 a, a:link, a:visited{
     color: inherit;
     text-decoration: none;
@@ -57,40 +56,32 @@ header nav ul li{
 }
 
 header button{
+    color: #a3a1a8;
     background: transparent;
     border: 0;
     cursor: pointer;
-    font-family: "Do Hyeon", sans-serif;
+    font-family: "Gowun Dodum", sans-serif;
     font-weight: 100;
     font-style: normal;
     align-content: center;
     font-size: 18pt;
 }
-
-
- 
-
-
-
-
-
-
 .btn-cr button:hover {
     background-color: #ececec; /* 마우스 오버 시 배경색 */
     
 }
 
-div.item{
-    float: left;
-    margin: 0 50px;
-    padding: 20px;
-    border: 1px solid #65db7f;
-    border-radius: 26px;
-    font-family: 'Do Hyeon';
-    text-align: center;
-    font-size: large;
-    color: #00ab33;
-}
+
+    div.item {
+        float: left;
+        margin: 0 50px;
+        padding: 20px;
+        border: 1px solid #a2cef1;
+        border-radius: 26px;
+        text-align: center;
+        font-size: large;
+        color: #3F51B5;
+    }
 
 
 .card-area {
@@ -101,7 +92,6 @@ div.item{
 .card-area h2 {
     color: #A9A9A9;
     display: inline;
-    font-family: 'Do Hyeon'; 
     padding : 30px;    /* 블록 요소가 아닌 인라인으로 설정 */
 }
 
@@ -132,13 +122,9 @@ div.item{
     border: 1px solid rgb(188, 182, 182) ;
 }
 
-
-
-
-
 .new .subject{
     margin-top: -5px;
-    color:black;
+    color: #3F51B5;
     border: 1px solid rgb(188, 182, 182) ;
 }
 
@@ -175,14 +161,11 @@ div.item{
  
 }
 
-
-
-
-
 .product-title {
+    color:steelblue ;
     margin-top: 50px;
     margin-left : 100px ;
-    font-family: 'Do Hyeon'; 
+   
 }
 
 
@@ -195,11 +178,12 @@ div.item{
     
 }
 .sung{
+   
     margin-right: 20px;
 }
 
-.percent{
-    color: #00ab33;
+.percent {
+    color: #3F51B5;
 }
 
 .divider {

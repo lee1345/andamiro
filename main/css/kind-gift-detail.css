@@ -100,6 +100,9 @@ header button{
     text-align: center; /* 텍스트 중앙 정렬 */      
     align-items: center;
 }
+
+
+
 .item2{
     padding-top: 8%;
     padding-left:10%; /* 아이템 안쪽 여백 */
@@ -130,7 +133,7 @@ h2{
 
 /*리워드 선택 버튼*/
 .button.active {
-    background-color: rgb(152, 150, 150); /* 클릭된 버튼의 색깔 */
+    background-color: #e7e7e7; /* 클릭된 버튼의 색깔 */
 }
 .button.inactive {
     background-color: white; /* 기본 버튼 색깔 */
