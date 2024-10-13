@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>세부 페이지</title>
+    <script src="data.js"></script> <!-- 데이터 파일 불러오기 -->
+</head>
+<body>
+    <h1>세부 페이지</h1>
+    <div id="itemDetail"></div> <!-- 아이템 세부 정보를 보여줄 공간 -->
+
+    <script>
+        const itemDetail = document.getElementById('itemDetail'); // 세부 정보를 담을 요소 가져오기
+        const itemId = parseInt(window.localStorage.getItem('selectedItemId'), 10); // 저장된 아이템 ID 가져오기
+
+        // ID와 일치하는 아이템 찾기
+        const item = items.find(i => i.id === itemId);
+        if (item) {
+            // 아이템이 존재할 경우 제목과 설명을 표시
+            itemDetail.innerHTML = `<h2>${item.title}</h2><pre>${item.description}</pre>`;
+        } else {
+            // 아이템이 없을 경우 에러 메시지 표시
+            itemDetail.innerHTML = '<p>아이템을 찾을 수 없습니다.</p>';
+        }
+
+        // 필요에 따라 선택된 아이템 ID를 localStorage에서 삭제할 수 있음
+        // window.localStorage.removeItem('selectedItemId');
+    </script>
+</body>
+</html>
