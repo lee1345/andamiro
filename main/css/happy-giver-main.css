@@ -144,7 +144,7 @@ li > img{
 
 .new .subject{
     margin-top: -5px;
-    color: #5b6977;
+    color: #483d3d;
     padding: 10px;
     text-align: left;
 }
@@ -513,7 +513,7 @@ li > img{
 
 .select-area button {
     width: 100px;
-    background-color: #4979ad;
+    background-color: #0c63ba;
     color: white; /* 흰색 글씨 */
     border: none; /* 테두리 없음 */
     border-radius: 5px; /* 모서리 둥글게 */
