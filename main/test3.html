@@ -48,7 +48,7 @@
                 profile.classList.add('item1');
 
                 profile.innerHTML = `
- <li>
+                            <li>
                                 <img src="${narmi.agent_img}" alt="${narmi.agent_name} 프로필 사진">
                             </li>
                             <li class="subject">
@@ -76,7 +76,7 @@
                 profile.onclick = () => {
                     // 클릭한 프로필의 ID를 localStorage에 저장
                     localStorage.setItem('selectedNarmiId', narmi.id);
-                    window.location.href = './test4.html'; // 세부 페이지로 이동
+                    window.location.href = './test2.html'; // 세부 페이지로 이동
                 };
 
                 return profile;
