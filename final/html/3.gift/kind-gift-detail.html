@@ -12,48 +12,13 @@
         </style>
     </head>
     <body>
-<<<<<<< HEAD
-        <header>
-            <div class="container">
-                <h1>
-                    <img src="../../img/logo.png" style="width:180px">
-                </h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <button type="button" onclick="location.href='./gift_detail.html'" class="selected">착한선물</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./together_detail.html'">같이가치</button>
-                        </li>
-                    </ul>
-                </nav>
-            <div>
-                <button>로그인</button> /
-                <button>회원가입</button>
-            </div>
-            </div>
-            <div>
-            </div>
-        </header>
-        <div class="ctn"> 
-            <div class="item1">
-                <h4>영창피아노</h4>
-                <h2>전자피아노</h2>
-                <img src="../../img/piano.jpg" width="400px" height="400px"> 
-=======
-        <!-- 헤더 -->
-
-
+        <!-- 헤더영역 -->
+        <header id="navbar"></header>
         <div class="ctn"> 
             <div class="item1">
                 <h4 id="gift_maker"></h4>
                 <h2 id="gift_product_name"></h2>
                 <img id="gift_product_sample" src=""> 
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
                 <h4>리워드 선택</h4>
             <div class="rs">    
                 <button class="button inactive" id="button1">리워드1<br>마일리지10%</button>
@@ -66,19 +31,11 @@
                 3000원,5000원 중<br>
                 선택하여 후원이 <br>
                 가능합니다.</p></i></p>
-<<<<<<< HEAD
-            <h2>70000원 후원중</h4>
-                <br>
-                <p class="p1">달성률 46.6%    목표 금액 150,000</p>
-                <br>
-                <p class="p1">참여인원:30명</p>
-=======
             <h2><span id="gift_funding_achievement"></span>원 후원중</h4>
                 <br>
                 <p class="p1">달성률 <span id="gift_funding_progress"></span>    /  목표 금액 <span id="gift_target_amount"></span></p>
                 <br>
                 <p class="p1">참여인원: <span id="gift_head_count"></span></p>
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
                 <br>
                 <button class="bigbtn" onclick="goPayment()">후원하기</button>
                 <br>
@@ -96,17 +53,10 @@
                     <h3>공유하기</h3><br>
                     <p>이 후원을 널리 알려주세요~!</p><br>
                     <div class="share">
-<<<<<<< HEAD
-                            <img src="./img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
-                            <img src="./img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
-                            <img src="./img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
-                            <img src="./img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
-=======
                             <img src="../../img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
                             <img src="../../img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
                             <img src="../../img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
                             <img src="../../img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
                     </div>
                 </div>
             </div>
@@ -120,11 +70,7 @@
                         <input type="radio" checked name="tabmenu" id="tabmenu1" style="display: none;">
                         <label for="tabmenu1">상품상세</label>
                         <div class="tabCon">
-<<<<<<< HEAD
-                            <img style="text-align: center;" src="../../img/saga700 상세.jpg">
-=======
                             <img style="text-align: center;" src="" id="gift_product_sample_detail">
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
                         </div>
                     </li>
                     <li id="tab2" class="btnCon">
@@ -173,14 +119,6 @@
                 </ul>
             </div>
 
-<<<<<<< HEAD
-        <script src="./script/kind-gift-detail.js"></script>
-        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
-        <script>
-            Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
-        </script>
-=======
             <!-- 푸터 -->
 
 
@@ -192,6 +130,13 @@
                 Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
             </script>
             <script>
+                //헤더 삽입
+                fetch('../1.navbar/header_Login.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+
                 document.addEventListener('DOMContentLoaded', () => {
                     const selectedGiftId = parseInt(localStorage.getItem('selectedGiftId'), 10);
                     const gift = Gift.find(item => item.id === selectedGiftId);
@@ -255,6 +200,5 @@
                 }
 
             </script>
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
     </body>
 </html>
