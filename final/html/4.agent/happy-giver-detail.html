@@ -5,14 +5,10 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>3조_안다미로</title>       
-       <link rel="stylesheet" href="./css/testNarmi.css">
+       <link rel="stylesheet" href="../../css/happy-giver-detail.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <style>
         @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
-        .confirm{
-            position: absolute; /* 절대 위치로 설정 */
-            transform: translate(-50%, -140%); /* 이미지 중심 조정 */
-        }
         </style>
     </head>
     <body>
@@ -127,28 +123,28 @@
                                 <div class="stepBox">
                                     
                                     <div class="circle">
-                                        <img src="./img/confirm.png" style="width:70px;" class="confirm">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="f_start"></div>
                                         <span>모금시작</span>
                                     </div>
-                                    <img src="./img/arrow_right.PNG" class="arrowRight">
+                                    <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
-                                        <img src="./img/confirm.png" style="width:70px;" class="confirm">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="f_complete"></div>
                                         <span>모금완료</span>
                                     </div>
-                                    <img src="./img/arrow_right.PNG" class="arrowRight">
+                                    <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
-                                        <img src="./img/confirm.png" style="width:70px;" class="confirm">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="purchase"></div>
                                         <span>물품구매</span>
                                     </div>
-                                    <img src="./img/arrow_right.PNG" class="arrowRight">
+                                    <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
                                         <div class="step" id="activity"></div>
                                         <span>봉사활동</span>
                                     </div>
-                                    <img src="./img/arrow_right.PNG" class="arrowRight">
+                                    <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
                                         <div class="step" id="settlement"></div>
                                         <span>정산</span>
@@ -198,100 +194,100 @@
                     </li>
                 </ul>
             </div>
-        <script src="./script/test.js"></script>
 
-        <script src="../detail/script/narmi_detail.js"></script>
-        <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+        <script src="./script/happy-giver-detail.js"></script>
+        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
         integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
         <script>
             Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
-        </script> -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
-                const narmi = Narmi.find(item => item.id === selectedNarmiId);
-                
-                console.log('Selected Narmi ID:', selectedNarmiId);
-                console.log('Narmi Data:', narmi);
-                
-                if (narmi) { 
-                    showAgentImage(narmi.agent_img);
-                    showLocation(narmi.N_location);
-                    showRegionAndCity(narmi.N_region, narmi.N_city); 
-                    showTargetAmount(narmi.N_Target_amount);
-                    showFundingAchievement(narmi.N_funding_achievement);
-                    showFundingProgress(narmi.N_funding_progress);
-                    showHeadCount(narmi.N_head_count);
-                    showDaysLeft(narmi.D_day);
-                    showEndDate(narmi.End_date);
-                    showAgentIntroduce(narmi.agent_Introduce);
-                    showLocationImage(narmi.N_location_img);
-
-                } else {
-                    console.error('오류');
-                }
-            });
-        
-            function showRegionAndCity(region, city) {
-                const regionCityElement = document.getElementById('N_region_city');
-                regionCityElement.textContent = `${region} ${city}`; // 공백으로 구분
-            }
-        
-            function showAgentName(name) {
-                const agentName = document.getElementById('agent_name');
-                agentName.textContent = name;
-            }
-        
-            function showAgentImage(imgSrc) {
-                const agentImage = document.getElementById('agent_image');
-                agentImage.src = imgSrc;
-            }
-            function showLocationImage(imgSrc) {
-                const locationImageElement = document.getElementById('N_location_img');
-                locationImageElement.src = imgSrc;
-            }   
-        
-            function showLocation(location) {
-                const locationElement = document.getElementById('N_location');
-                locationElement.textContent = location;
-            }
-        
-            function showTargetAmount(amount) {
-                const targetAmountElement = document.getElementById('N_Target_amount');
-                targetAmountElement.textContent = `${amount.toLocaleString()}`;
-            }
-        
-            function showFundingAchievement(achievement) {
-                const fundingAchievementElement = document.getElementById('N_funding_achievement');
-                fundingAchievementElement.textContent = `${achievement.toLocaleString()}`;
-            }
-        
-            function showFundingProgress(progress) {
-                const fundingProgressElement = document.getElementById('N_funding_progress');
-                fundingProgressElement.textContent = `${progress}`;
-            }
-        
-            function showHeadCount(count) {
-                const headCountElement = document.getElementById('N_head_count');
-                headCountElement.textContent = `${count}명`;
-            }
-        
-            function showDaysLeft(days) {
-                const daysLeftElement = document.getElementById('D_day');
-                daysLeftElement.textContent = `${days}일`;
-            }
-        
-            function showEndDate(endDate) {
-                const endDateElement = document.getElementById('End_date');
-                endDateElement.textContent = `${endDate}`;
-            }
-        
-            function showAgentIntroduce(introduce) {
-                const introduceElement = document.getElementById('agent_Introduce');
-                introduceElement.textContent = introduce;
-            }
         </script>
+                <script src="../../script/test.js"></script>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+                        const narmi = Narmi.find(item => item.id === selectedNarmiId);
+                        
+                        console.log('Selected Narmi ID:', selectedNarmiId);
+                        console.log('Narmi Data:', narmi);
+                        
+                        if (narmi) { 
+                            showAgentImage(narmi.agent_img);
+                            showLocation(narmi.N_location);
+                            showRegionAndCity(narmi.N_region, narmi.N_city); 
+                            showTargetAmount(narmi.N_Target_amount);
+                            showFundingAchievement(narmi.N_funding_achievement);
+                            showFundingProgress(narmi.N_funding_progress);
+                            showHeadCount(narmi.N_head_count);
+                            showDaysLeft(narmi.D_day);
+                            showEndDate(narmi.End_date);
+                            showAgentIntroduce(narmi.agent_Introduce);
+                            showLocationImage(narmi.N_location_img);
+        
+                        } else {
+                            console.error('오류');
+                        }
+                    });
+                
+                    function showRegionAndCity(region, city) {
+                        const regionCityElement = document.getElementById('N_region_city');
+                        regionCityElement.textContent = `${region} ${city}`; // 공백으로 구분
+                    }
+                
+                    function showAgentName(name) {
+                        const agentName = document.getElementById('agent_name');
+                        agentName.textContent = name;
+                    }
+                
+                    function showAgentImage(imgSrc) {
+                        const agentImage = document.getElementById('agent_image');
+                        agentImage.src = imgSrc;
+                    }
+                    function showLocationImage(imgSrc) {
+                        const locationImageElement = document.getElementById('N_location_img');
+                        locationImageElement.src = imgSrc;
+                    }   
+                
+                    function showLocation(location) {
+                        const locationElement = document.getElementById('N_location');
+                        locationElement.textContent = location;
+                    }
+                
+                    function showTargetAmount(amount) {
+                        const targetAmountElement = document.getElementById('N_Target_amount');
+                        targetAmountElement.textContent = `${amount.toLocaleString()}`;
+                    }
+                
+                    function showFundingAchievement(achievement) {
+                        const fundingAchievementElement = document.getElementById('N_funding_achievement');
+                        fundingAchievementElement.textContent = `${achievement.toLocaleString()}`;
+                    }
+                
+                    function showFundingProgress(progress) {
+                        const fundingProgressElement = document.getElementById('N_funding_progress');
+                        fundingProgressElement.textContent = `${progress}`;
+                    }
+                
+                    function showHeadCount(count) {
+                        const headCountElement = document.getElementById('N_head_count');
+                        headCountElement.textContent = `${count}명`;
+                    }
+                
+                    function showDaysLeft(days) {
+                        const daysLeftElement = document.getElementById('D_day');
+                        daysLeftElement.textContent = `${days}일`;
+                    }
+                
+                    function showEndDate(endDate) {
+                        const endDateElement = document.getElementById('End_date');
+                        endDateElement.textContent = `${endDate}`;
+                    }
+                
+                    function showAgentIntroduce(introduce) {
+                        const introduceElement = document.getElementById('agent_Introduce');
+                        introduceElement.textContent = introduce;
+                    }
+                </script>
+   
     </body>
 </html>
-
-

@@ -50,7 +50,7 @@ header button{
 
 .ctn{
     display: flex; /* Flexbox 사용 */
-    justify-content: flex-start; /* 아이템을 좌우로 균등하게 배치 */
+    justify-content: space-between; /* 아이템을 좌우로 균등하게 배치 */
 }div .rs{/*리워드 선택(reworld selector)*/
     display: flex;
     padding-top: 10px;
@@ -65,13 +65,9 @@ header button{
     margin: 0;
     border: 1px solid black;
 }
-.btn {
-    margin-right: -50px;
-    border: none;
-    font-weight: bold;
-    color: steelblue;
+.btn{
     width: 150px;
-    height: 35px;
+    height:35px;
 }
 .like{
     cursor:pointer;
@@ -80,14 +76,9 @@ header button{
     background-color: transparent;
 
 }
-.bigbtn {
-    background-color: #2390ef;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
+.bigbtn{
     width: 300px;
-    height: 50px;
+    height:50px;
 }
 .rewardbtn{
     width: 150px;
@@ -96,78 +87,34 @@ header button{
     border: solid black 1px;
 }
 .item1{
-    padding-top: 5%;
-    padding-left:25%; /* 아이템 안쪽 여백 */
+    padding-top: 8%;
+    padding-left:20%; /* 아이템 안쪽 여백 */
     text-align: center; /* 텍스트 중앙 정렬 */      
     align-items: center;
 }
-
-
-
 .item2{
     padding-top: 8%;
-    padding-left:10%; /* 아이템 안쪽 여백 */
+    padding-right:20%; /* 아이템 안쪽 여백 */
     text-align: center; /* 텍스트 중앙 정렬 */  
     align-items: center;
 }
 .p1{
     text-align: left
 }
-h4 {
-    margin-top: 5px;
-    color: darkgray;
+h4{
     text-align: left;
-
 }
 h2{
-    color: steelblue;
     text-align: left;
-    margin-bottom: 10px;
 }
 .button {
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
     transition: background-color 0.01s;
 }
 
-/*리워드 선택 버튼*/
-.button.active {
-    background-color: #e7e7e7; /* 클릭된 버튼의 색깔 */
-}
-.button.inactive {
-    background-color: white; /* 기본 버튼 색깔 */
-
-
-/*후원정보*/
-}.info{
-    position: relative;
-    top: -30px;
-    left: -40px;
-} .arrow_box {
-    display: none;
-    position: absolute;
-    width: 250px;
-    padding: 8px;
-    border-radius: 8px;
-    background: #333;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-}
-
-.arrow_box:after {
-    position: absolute;
-    margin-left: -10px;
-    border: solid ;
-    border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-
-}
-.info:hover + p.arrow_box  {
-        display: block;
-}
 * {
     box-sizing: border-box;
     }
@@ -294,42 +241,12 @@ ul {
     border: 5px solid #f9f9f9;
 }
 .tabmenu input:checked ~ label {
-    background: #99bcd9;
+    background: #ccc;
 }
 .tabmenu input:checked ~ .tabCon {
     display: block;
 }
 
-/* 2.리워드안내 */
-body {
-    margin: 0;
-    padding: 20px;
-}
-.container {
-    display: flex;
-    align-items: flex-start; 
-}
-img.secondImg {
-    padding: 0;
-    width: 500px;
-    height: 450px;
-}
-.explainArea {
-    padding: 50px; 
-    height: 800px;
-    width: 800px;
-    color: rgb(77, 77, 77);
-    font-size: 13pt;
-}
-
-.reward {
-    display: flex; /* Flexbox로 아이콘과 텍스트 정렬 */
-    padding-top: 20px;
-}
-.reward img {
-    height: 60px; 
-    padding-right: 15px; /* 아이콘과 텍스트 간격 */
-}
 
 /* 3.댓글기능 */
 .comments {
@@ -344,11 +261,6 @@ img.secondImg {
     padding-left: 150px;
 }
 .comment-card img {
-    background-color: #333;
     width: 50px;
     padding-right: 15px;
-}
-body {
-    font-family: "Gowun Dodum", sans-serif;
-    font-weight: 400;
 }
