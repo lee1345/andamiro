@@ -28,7 +28,7 @@ const Gift = [
     
     //Music
     { id: 9, G_category: "Music", G_Maker: "다이나톤", G_Product_Name: "다이나톤 디지털피아노", G_Product_Sample: "./img/gift/music/gift1.jpg", 
-    G_Product_Sample_detail: "./img/gift/music/gift1_detail.jpg", G_Target_amount: 800000, G_funding_achievement: 300000, G_funding_progress: 37.5, G_head_count: 5 }, 
+    G_Product_Sample_detail: "./img/gift/music/gift1_detail.jpeg", G_Target_amount: 800000, G_funding_achievement: 300000, G_funding_progress: 37.5, G_head_count: 5 }, 
 
     { id: 10, G_category: "Music", G_Maker: "콜트", G_Product_Name: "콜트 일렉기타 G110 OPBK", G_Product_Sample: "./img/gift/music/gift2.jpg", 
     G_Product_Sample_detail: "./img/gift/music/gift2_detail.jpg", G_Target_amount: 220000, G_funding_achievement: 110000, G_funding_progress: 50, G_head_count: 10 }, 
@@ -134,8 +134,9 @@ const  Narmi= [
     함께 이 뜻깊은 일을 할 수 있도록 많은 관심과 참여 부탁드립니다! 감사합니다.`}, 
     
     //Daniel Choi
-    {id: 6, N_region: "아산시", N_city: "음봉면", N_location: "음봉면 어린이 지원 센터", N_location_img: "./img/narmi/narmi6.png", agent_name: "Daniel Choi", agent_img: "./img/narmi/agent6.png", N_Target_amount: 700000, N_funding_achievement: 700000, D_day: "0", End_date: "2024-12-01", N_funding_progress: 100, N_head_count: 10,
-    agent_Introduce: `안녕하세요 여러분! 
+    {id: 6, N_region: "아산시", N_city: "배방읍", N_location: "배방 어린이 지원 센터", N_location_img: "./img/narmi/narmi6.png", agent_name: "Daniel Choi", agent_img: "./img/narmi/agent6.png", N_Target_amount: 700000, N_funding_achievement: 700000, D_day: "0", End_date: "2024-12-01", N_funding_progress: 100, N_head_count: 10,
+    agent_Introduce: `    안녕하세요 여러분! 
+
     I’m Daniel Choi, 주한미군 취사병 
     나 American 요리 잘해요! 아이들을 좋아해요 그래서 생각해요 
     내 부대 옆에 kindergarten에서 요리할거에요 
@@ -144,4 +145,240 @@ const  Narmi= [
     하지만 이 멋진 계획 재료 필요해요. 
     여러분 도움 줘도 돼요! for kids  
     Let’s make some yummy food together!!`},
+];
+
+
+//같이 가치 데이터
+const campaign = [
+    {
+        id: 1,
+        W_region: "천안시 불당동",
+        campaing_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
+        campaomg_img: "../img/campaign/campaign1.png",
+        capaing_detail_img: "../img/campaign/campaign1.png",
+        W_Target_participants: 20,
+        W_Participant_Count: 10,
+        W_Participation_Rate: 50,
+        W_D_day: "10",
+        W_End_date: "2024-10-28",
+        activity_participation_guide: `활동 참여 안내:
+    
+    - 활동 참여를 희망하는 누구나: 개인, 가정, 학급, 동아리 등 단체 신청 가능
+    - 봉사활동이 필요한 누구나 신청 가능
+    - 어디서나 활동 가능: EM흙공을 하천에 던질 수 있는 장소 (집, 학교, 사회복지시설, 실외 등)
+    - 도심 속 하천: 경기 남부 황구지천, 오산천, 안성천, 아라천, 굴포천 등
+    - 활동 가능한 날짜에 자유롭게 진행
+    - 매월 첫째 주 목요일에 발송되는 활동 물품 수령 후 활동 시작
+    
+    - 환경 교육:
+        홈페이지에서 수질 관련 정보를 확인하고 활동 내용을 숙지
+    
+    - 환경 활동:
+        EM흙공을 직접 만들고 발효한 후 하천에 투척하는 활동 진행
+    
+    - 실천 나눔:
+        ‘우리 하천 지킴이’ 홈페이지에 활동 후기 및 사진을 자유롭게 업로드
+        - 배너 내 QR코드를 스캔하여 우측 상단의 ‘신청하기’ 버튼 클릭
+        - [www.ecowater.or.kr](http://www.ecowater.or.kr) 링크에 접속하여 우측 상단의 '신청하기' 버튼 클릭
+    
+    - 실천나눔 게시를 통해 모든 활동 과정이 확인된 경우에만 1365 자원봉사 포털을 통해 봉사활동 8시간 인증
+    - 활동 물품은 신청일로부터 1개월 이내에 발송되며, 수령 후 원하는 날짜에 자유롭게 진행 가능`
+    },
+    
+    {
+        id: 2,
+        W_region: "행복한우리복지관",
+        campaing_topic: "장애인식개선 캠페인 '우리사이 0미터'",
+        campaomg_img: "../img/campaign/campaign2.png",
+        capaing_detail_img: "../img/campaign/campaign2.png",
+        W_Target_participants: 300,
+        W_Participant_Count: 25,
+        W_Participation_Rate: 8.33,
+        W_D_day: "78",
+        W_End_date: "2024-12-31",
+        activity_participation_guide: `장애인식개선 캠페인 '우리사이 0미터' 안내사항:
+      
+      - 캠페인 목표: 
+        장애인에 대한 긍정적인 인식을 확산하고, 모든 사람의 차별 없는 소통을 촉진합니다.
+      
+      - 대상: 
+        모든 연령대의 개인 및 단체 (학교, 동아리, 기업 등)
+      
+      - 참여 가능: 
+        장애인식 개선에 관심 있는 누구나 참여 가능.
+      
+      - 활동내용:
+        - 장애인식 관련 교육 및 워크숍 진행
+        - 캠페인 홍보물 제작 및 배포
+        - 지역 사회와 함께하는 장애인식 개선 행사 개최
+      
+      - 활동 기간:
+        - 캠페인 시작일 및 종료일: 2024년 1월 1일 ~ 2024년 12월 31일
+        - 정기적인 모임 및 교육 일정 안내 예정
+      
+      - 신청방법:
+        - 온라인 신청: [www.happywelfare.org](http://www.happywelfare.org)
+        - 전화 또는 이메일을 통한 문의 가능:
+          - 전화: 010-1234-5678
+          - 이메일: info@happywelfare.org
+      
+      - 유의사항:
+        - 캠페인 참여 후, 활동 후기를 작성하고 공유하여 인증서 발급 가능
+        - 자원봉사 시간 인증을 위한 활동 내용 기록 필수
+      
+      - 기타 문의사항:
+        - 문의처: 행복한우리복지관 010-9876-5432
+        - 이메일: support@happywelfare.org`
+      },
+      
+      {
+        id: 3,
+        W_region: "지구 전역",
+        campaing_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
+        campaomg_img: "../img/campaign/campaign3.png",
+        capaing_detail_img: "../img/campaign/campaign3_detail.png",
+        W_Target_participants: 100,
+        W_Participant_Count: 15,
+        W_Participation_Rate: 15,
+        W_D_day: "8",
+        W_End_date: "2024-10-28",
+        activity_participation_guide: `활동 내용:
+        
+      - 사라져가는 꿀벌을 지키기 위해 일상생활 속 꽃씨 뿌리기  
+      
+      선발 인원:
+        
+      - 지구인 100명 (선착순 마감)  
+      
+      지원 자격:
+        
+      - 지구를 지키고 싶은 사람이라면 누구나  
+      - 쉽고 재밌게 지구를 지키고 싶은 사람  
+      - 이색적인 환경 보호 활동을 실천하고 싶은 사람  
+      - 깨끗한 물을 선물하는 나눔 활동에 동참 가능한 사람  
+      
+      신청 기간:
+        
+      - 2024. 10. 10.(목) ~ 18(금)  
+      
+      활동 기간:
+        
+      - 2024. 10. 21(월) ~ 28(금)  
+      
+      지원 방법:
+        
+      - QR코드 스캔 후 신청서 제출  
+      
+      참여 혜택:
+        
+      - 지구를 구하기 위한 지구여행 키트 제공  
+      - VMS 봉사 시간 제공  
+      - 수료증 및 굿네이버스 회원증서 발급  
+      
+      신청 링크:
+        
+      - [신청하기](https://naver.me/xnhz1E2J)  
+      
+      문의 사항:
+        
+      - 굿네이버스 경남사업본부 (전화: 055-334-1256)`
+      },
+      
+      {
+        id: 4,
+        W_region: "김제시",
+        campaing_topic: "희망나눔 음악회(행사봉사자 모집)",
+        campaomg_img: "../img/campaign/campaign4.png",
+        capaing_detail_img: "../img/campaign/campaign4.png",
+        W_Target_participants: 50,
+        W_Participant_Count: 10,
+        W_Participation_Rate: 20,
+        W_D_day: "16",
+        W_End_date: "2024-10-29",
+        activity_participation_guide: `상세내용:
+      
+      1. 행사명: 어르신 희망 나눔 음악회  
+      
+      2. 행사 일시: 2024년 10월 29일(화) 오후 13:00 ~ 오후 17시까지 (4시간)  
+      
+      3. 행사 장소: 김제시청 대강당 (전라북도 김제시 중앙로 40)  
+      
+      4. 행사 내용: 연예인 축하공연, 행운권 추첨, 선물증정 등  
+      
+      5. 봉사자 업무: 행사 질서 안내 / 봉사 도우미  
+      
+      6. 봉사자 혜택: 
+        - 자원봉사자 전원 봉사 실적 등록
+        - 우수봉사자 감사장 수여
+        - 참가봉사자 전원 선물 증정 (중식 제공)  
+      
+      7. 행사 담당자: 박해리 (전화: 010-6704-0041)  
+      
+      ※ 공지 말씀: 자원봉사 신청 후 담당자에게 필히 문자로 접수 부탁드립니다.  
+      - 담당 박해리: 010-6704-0041  
+      - 문자내용 예시: 봉사신청일자 / 성명 / 생년월일 / 직업 / 성별`
+      },
+      
+      {
+        id: 5,
+        W_region: "춘천시",
+        campaing_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
+        campaomg_img: "../img/campaign/campaign5.png",
+        capaing_detail_img: "../img/campaign/campaign5_detail.png",
+        W_Target_participants: 100,
+        W_Participant_Count: 20,
+        W_Participation_Rate: 20,
+        W_D_day: "19",
+        W_End_date: "2024-10-17",
+        activity_participation_guide: `2024 리얼스 푸르깅 크루 모집
+      
+      일상 속 넷제로를 실천할 100인의 크루원을 모집합니다!
+      
+      리얼스 푸르깅은 푸른 지구의 '푸르다'와 쓰레기를 줍는 운동 '플로깅'이 결합된 활동입니다. 북한강 고구마섬에서 쓰레기를 수거하며 탄소중립(NET-ZERO)을 함께 실천할 리얼스 푸르깅의 주인공을 찾습니다.
+      
+      모집 일정:
+      - 10월 7일(월) ~ 10월 17일(목) 자정까지  
+      
+      참가비:
+      - 무료 (*선착순 접수)  
+      
+      일시 & 장소:
+      - 2024년 11월 1일(금) 14:00  
+      - 춘천시 고구마섬  
+      - 부스 오픈: 13:00  
+      
+      셔틀 운영:
+      - 춘천역 ▶ 고구마섬  
+        - 1타임: 12:50  
+        - 2타임: 13:20  
+      - 고구마섬 ▶ 춘천역  
+        - 1타임: 16:30  
+        - 2타임: 17:00  
+      
+      주차:
+      - 고구마섬 야구장 주차장 (강원 춘천시 사농동 334-2)  
+      
+      준비물:
+      - 텀블러 (물과 커피를 마실 수 있는 다회용기)  
+      - 사용하지 않는 비닐봉투  
+      - 고장 난 우산 (행사장으로 가져오시면 새 우산으로 수리해드립니다)  
+      
+      진행 프로그램:
+      - 플로깅  
+      - 생태교란종(가시박) 제거  
+      - 정크아트  
+      
+      혜택:
+      - [공통] 플로깅 스타트 키트  
+      - [공통] 완주 비누 메달  
+      - [공통] 비건 간식, 커피 & 음료  
+      - [선택] 봉사시간(4시간)  
+      - [경품] 총 50만원 규모의 현장 경품 추첨  
+      
+      문의처:
+      - 운영국: 070-4350-5663  
+      
+      신청방법:
+      - [신청하기](https://forms.gle/yugtWPX6Fc9VhTRU8)`
+      },        
 ];
