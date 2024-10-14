@@ -1,192 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3조_안다미로</title>       
-        <link rel="stylesheet" href="../../css/mypage/myPage.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-        </style>
-    </head>
-    <body>
-<<<<<<< HEAD
-        <header id="navbar"></header>
-=======
-        <header>
-            <div id="navbar"></div>
-        </header>
-        <br>
->>>>>>> bcd89df4afb90a3f4bbe895fdac3f51641bafe72
-        <div class="container2">
-            <h1 class="h-1">마이페이지</h1>
-            <div class="info">
-                <img src="../../img/people_shadow.png" style="padding:30px 0" width="150px" height="180px">
-                <div>
-                    <h1>무명 님</h1>
-                </div>
-                <div>
-                    <p>마일리지:  1,100원</p>
-                    <p>누적후원금액: 110,000원</p>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3조_안다미로</title>       
+    <link rel="stylesheet" href="../../css/mypage/myPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        body {
+            font-family: 'Gowun Dodum', sans-serif; 
+            line-height: 1.6; 
+        }
+    </style>
+</head>
+<body>
+    <header id="navbar"></header>
+    <br>
+    <div class="container2">
+        <h1 class="h-1">마이페이지</h1>
+        <div class="info">
+            <img src="../../img/people_shadow.png" style="padding:30px 0" width="150px" height="180px">
+            <div>
+                <h1>무명 님</h1>
+            </div>
+            <div>
+                <p>마일리지:  1,100원</p>
+                <p>누적후원금액: 110,000원</p>
             </div>
         </div>
+    </div>
 
-        <div class="container3">
-            <div class="mypageContent">
-                <br>
-                <h2>1. 선물 후원 조회</h2>
-                <br>
-                <table class="gift">
-                    <tr>
-                        <th>결제날짜</th>
-                        <th>품명</th>
-                        <th>후원금액</th>
-                        <th>진행상황</th>
-                    </tr>
-                    <tr>
-                        <td>2024-10-05</td>
-                        <td style="text-align: left; display: flex; align-items: center;">
-                            <img src="../../img/gift/home_appliances/gift1.jpg">
-                            <span>삼성 TV 100인치짜리</span>
-                        </td>
-                        <td>10,000원</td>
-                        <td>진행중</td>
-                    </tr>
-                    <tr>
-                        <td>2024-10-08</td>
-                        <td style="text-align: left; display: flex; align-items: center;">
-                            <img src="../../img/gift/book/gift4.jpg">
-                            <span>추피의 생활이야기 179종 세트</span>
-                        </td>
-                        <td>20,000원</td>
-                        <td>진행중</td>
-                    </tr>
-                    <tr class="hidden" id="add">
-                        <td>2024-11-03</td>
-                        <td style="text-align: left; display: flex; align-items: center;">
-                            <img src="../../img/gift/music/gift1.jpg">
-                            <span>다이나톤 디지털피아노</span>
-                        </td>
-                        <td>50,000원</td>
-                        <td>진행중</td>
-                    </tr>
-                    <tr class="hidden" id="add">
-                        <td>2024-11-14</td>
-                        <td style="text-align: left; display: flex; align-items: center;">
-                            <img src="../../img/gift/daily_necessities/gift3.jpg">
-                            <span>일동후디스 프리미엄 산양분유</span>
-                        </td>
-                        <td>30,000원</td>
-                        <td>진행중</td>
-                    </tr>
-                </table>
-                <div style="text-align: right;">
-                    <button id="moreButton1" class="more">+ 더보기</button>
-                    <button id="closeButton1" class="more"> - 접기</button>
-                </div>
-                <br>
-                <h2> 2. 행복나르미 후원 조회</h2>
-                <br>
-                <table class="narmiPayment">
-                    <tr>
-                        <th>결제날짜</th>
-                        <th>지역</th>
-                        <th>나르미</th>
-                        <th>후원기관</th>
-                        <th>후원금액</th>
-                        <th>진행상황</th>
-                    </tr>
-                    <tr>
-                        <td>2024-07-11</td>
-                        <td>천안시 서북구</td>
-                        <td>홍남희</td>
-                        <td>희망어린이집</td>
-                        <td>20000원</td>
-                        <td>물품구매</td>
-                    </tr>
-                </table>
-                <br>
-
-                <br>
-                <h2> 3. 같이가치 참여 조회</h2>
-                <br>
-                <table class="together">
-                    <tr>
-                        <th>신청날짜</th>
-                        <th>참여일</th>
-                        <th>활동명</th>
-                        <th>진행상황</th>
-                        <th>참여상황</th>
-                    </tr>
-                    <tr>
-                        <td>2024-10-08</td>
-                        <td>2024-10-21</td>
-                        <td>우리함께 지구하자</td>
-                        <td>모집중</td>
-                        <td>신청완료</td>
-                    </tr>
-                </table>
-                <br>
-                <h2> 4. 행복나르미 신청 조회</h2>
-                <br>
-                <table class="narmi">
-                    <tr>
-                        <th>신청날짜</th>
-                        <th>승인여부</th>
-                        <th>지역</th>
-                        <th>장소</th>
-                        <th>산출금액</th>
-                        <th>진행상황</th>
-                        <th>정산내역</th>
-                        <th>영수증</th>
-                    </tr>
-                    <tr>
-                        <td>2024-06-23</td>
-                        <td>승인</td>
-                        <td>천안시 서북구</td>
-                        <td>희망어린이집</td>
-                        <td>150000원</td>
-                        <td><button type="button" class="more" onclick="step()">등록하기</button></td>
-                        <td><button type="button" class="more" onclick="settlement()">등록하기</button></td>
-                        <td><button type="button" class="more" onclick="recipt()">등록하기</button></td>
-                    </tr>
+    <div class="container3">
+        <div class="mypageContent">
+            <br>
+            <h2>1. 선물 후원 조회</h2>
+            <br>
+            <table class="gift">
+                <tr>
+                    <th>결제날짜</th>
+                    <th>품명</th>
+                    <th>후원금액</th>
+                    <th>진행상황</th>
+                </tr>
+                <tr>
+                    <td>2024-10-05</td>
+                    <td style="text-align: left; display: flex; align-items: center;">
+                        <img src="../../img/gift/home_appliances/gift1.jpg">
+                        <span>삼성 TV 100인치짜리</span>
+                    </td>
+                    <td>10,000원</td>
+                    <td>진행중</td>
+                </tr>
+                <tr>
+                    <td>2024-10-08</td>
+                    <td style="text-align: left; display: flex; align-items: center;">
+                        <img src="../../img/gift/book/gift4.jpg">
+                        <span>추피의 생활이야기 179종 세트</span>
+                    </td>
+                    <td>20,000원</td>
+                    <td>진행중</td>
+                </tr>
+                <tr class="hidden" id="add">
+                    <td>2024-11-03</td>
+                    <td style="text-align: left; display: flex; align-items: center;">
+                        <img src="../../img/gift/music/gift1.jpg">
+                        <span>다이나톤 디지털피아노</span>
+                    </td>
+                    <td>50,000원</td>
+                    <td>진행중</td>
+                </tr>
+                <tr class="hidden" id="add">
+                    <td>2024-11-14</td>
+                    <td style="text-align: left; display: flex; align-items: center;">
+                        <img src="../../img/gift/daily_necessities/gift3.jpg">
+                        <span>일동후디스 프리미엄 산양분유</span>
+                    </td>
+                    <td>30,000원</td>
+                    <td>진행중</td>
+                </tr>
+            </table>
+            <div style="text-align: right;">
+                <button id="moreButton1" class="more">+ 더보기</button>
+                <button id="closeButton1" class="more"> - 접기</button>
             </div>
+            <br>
+            <h2>2. 행복나르미 후원 조회</h2>
+            <br>
+            <table class="narmiPayment">
+                <tr>
+                    <th>결제날짜</th>
+                    <th>지역</th>
+                    <th>나르미</th>
+                    <th>후원기관</th>
+                    <th>후원금액</th>
+                    <th>진행상황</th>
+                </tr>
+                <tr>
+                    <td>2024-07-11</td>
+                    <td>천안시 서북구</td>
+                    <td>홍남희</td>
+                    <td>희망어린이집</td>
+                    <td>20,000원</td>
+                    <td>물품구매</td>
+                </tr>
+            </table>
+            <br>
+            <h2>3. 같이가치 참여 조회</h2>
+            <br>
+            <table class="together">
+                <tr>
+                    <th>신청날짜</th>
+                    <th>참여일</th>
+                    <th>활동명</th>
+                    <th>진행상황</th>
+                    <th>참여상황</th>
+                </tr>
+                <tr>
+                    <td>2024-10-08</td>
+                    <td>2024-10-21</td>
+                    <td>우리함께 지구하자</td>
+                    <td>모집중</td>
+                    <td>신청완료</td>
+                </tr>
+            </table>
+            <br>
+            <h2>4. 행복나르미 신청 조회</h2>
+            <br>
+            <table class="narmi">
+                <tr>
+                    <th>신청날짜</th>
+                    <th>승인여부</th>
+                    <th>지역</th>
+                    <th>장소</th>
+                    <th>산출금액</th>
+                    <th>진행상황</th>
+                    <th>정산내역</th>
+                    <th>영수증</th>
+                </tr>
+                <tr>
+                    <td>2024-06-23</td>
+                    <td>승인</td>
+                    <td>천안시 서북구</td>
+                    <td>희망어린이집</td>
+                    <td>150,000원</td>
+                    <td><button type="button" class="more" onclick="step()">등록하기</button></td>
+                    <td><button type="button" class="more" onclick="settlement()">등록하기</button></td>
+                    <td><button type="button" class="more" onclick="recipt()">등록하기</button></td>
+                </tr>
+            </table>
         </div>
-        <script>
-            fetch("../1.navbar/header.html")
-            .then(response => response.text())
-            .then(data => {
-                const navbar = document.getElementById('navbar');
-                navbar.innerHTML = data;
-        const header = navbar.querySelector('header');
-        header.style.height = "103px";
-        header.style.padding = "0";
-    });
-        </script>
-        <script src="../../script/myPage.js"></script>
-        <script>
-            fetch('../1.navbar/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
-            function step() {
-                window.open("step.html", "단계수정", "width=460, height=250, left=400, top=200");
-            }
+    </div>
+    <script>
+        fetch("../1.navbar/header.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+            header.style.height = "103px";
+            header.style.padding = "0";
+        });
+    </script>
+    <script src="../../script/myPage.js"></script>
+    <script>
+        fetch('../1.navbar/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+        function step() {
+            window.open("step.html", "단계수정", "width=460, height=250, left=400, top=200");
+        }
 
-            function settlement() {
-                window.open("settlement.html", "정산등록", "width=700, height=400 left=400, top=200"); 
-            }
+        function settlement() {
+            window.open("settlement.html", "정산등록", "width=700, height=400 left=400, top=200"); 
+        }
 
-            function recipt() {
-                window.open("recipt.html", "영수증등록", "width=500, height=600 left=400, top=200");
-            }
-
-        </script>
-
-    </body>
+        function recipt() {
+            window.open("recipt.html", "영수증등록", "width=500, height=600 left=400, top=200");
+        }
+    </script>
+</body>
 </html>
-
