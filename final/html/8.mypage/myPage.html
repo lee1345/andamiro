@@ -20,30 +20,8 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <h1>
-                    <img src="../../img/logo.png" style="width:180px">
-                </h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <button type="button" onclick="location.href='./gift_detail.html'">착한선물</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./together_detail.html'">같이가치</button>
-                        </li>
-                    </ul>
-                </nav>
-            <div>
-                <button>로그인</button> /
-                <button>회원가입</button>
-            </div>
-            </div>
+            <div id="navbar"></div>
         </header>
-
         <br>
         <div class="container2">
             <h1 class="h-1">마이페이지</h1>
@@ -183,6 +161,11 @@
 
         <script src="../../script/myPage.js"></script>
         <script>
+            fetch('../1.navbar/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
             function step() {
                 window.open("step.html", "단계수정", "width=460, height=250, left=400, top=200");
             }

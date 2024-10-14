@@ -20,8 +20,8 @@
             list-style: none;
         }
         header {
-            background-color: rgba(255, 255, 255, 0.9); /* 배경색과 투명도 조정 */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가  */
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1;
@@ -58,7 +58,10 @@
         }
         .btn-cr {
             display: flex;
-            align-items: center; /* 수직 정렬을 맞춤 */
+            align-items: center; 
+        }
+        .btn-cr img {
+            margin-right: 8px; 
         }
         .btn-cr span {
             margin: 0 8px; /* 슬래시 간격 조정 */
@@ -88,9 +91,10 @@
                 </ul>
             </nav>
             <div class="btn-cr">
-                <a href="#"><button>로그인</button></a>
+                <img src="../../img/그림1.png" height="30px">
+                <a href="#"><button>무명님</button></a>
                 <span>|</span>
-                <a href="#"><button>회원가입</button></a>
+                <a href="#"><button>로그아웃</button></a>
             </div>
         </div>
     </header>
