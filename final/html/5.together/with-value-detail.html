@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>3조_안다미로</title>       
+       <link rel="stylesheet" href="./css/with-value-detail.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>
+                    <img src="./img/logo.png" style="width:180px">
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <button type="button" onclick="location.href='./gift_detail.html'">착한선물</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="location.href='./together_detail.html'" class="selected">같이가치</button>
+                        </li>
+                    </ul>
+                </nav>
+            <div>
+                <button>로그인</button> /
+                <button>회원가입</button>
+            </div>
+            </div>
+            <div>
+            </div>
+        </header>
+        <div class="ctn"> 
+            <div class="item1">
+                <h4>천안시 불당동</h4>
+                <h2>사랑의 쓰레기 줍기</h2>
+                <img src="./img/trash.jpg" width="300px"> 
+            </div>
+            <div class="item2"> 
+            <h4>참여정보</h4><br>
+            <h2>10명 신청</h4>
+                <br>
+                <p class="p1">달성률 46.6%   /  목표인원 15명</p>
+                <br>
+                <p class="p1">남은기간 15일   /  2024-12-31일에 종료</p>
+                <br>
+                <button class="bigbtn" onclick="goPayment()">후원하기</button>
+                <br>
+                <br>
+                <button class="like" id="incrementBtn"><img src="./img/heart.png" alt="" width="30px"></button>
+
+                <!-- <button class="btn" id="incrementBtn">증가</button> -->
+                <span id="number" style="padding-right: 30px;">0</span>
+                
+
+                <button class="btn" id="modalBtn">공유하기</button>
+            </div>
+        </div>
+
+            <!-- 공유하기 창-->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeBtn">&times;</span><br>
+                    <h3>공유하기</h3><br>
+                    <p>이 후원을 널리 알려주세요~!</p><br>
+                    <div class="share">
+                            <img src="./img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
+                            <img src="./img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
+                            <img src="./img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
+                            <img src="./img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+            <!-- 하단 탭메뉴 -->
+            <div class="tabmenu">
+                <ul>
+                    <li id="tab1" class="btnCon"> 
+                        <input type="radio" checked name="tabmenu" id="tabmenu1" style="display: none;">
+                        <label for="tabmenu1">활동내용</label>
+                        <div class="tabCon">
+                            <img style="text-align: center;" src="./img/하천.png">
+                        </div>
+                    </li>
+                    <li id="tab2" class="btnCon">
+                        <input type="radio" name="tabmenu" id="tabmenu2" style="display: none;">
+                        <label for="tabmenu2">안내사항</label>
+                        <div class="tabCon">
+                        <h2>상세 내용</h2>
+                        <br>
+                        <pre style="text-align: left; font-size: 12pt;">
+어플라이드 머티어리얼즈 코리아와 환경실천연합회가 함께하는 수질 환경 보호 봉사활동‘우리 하천 지킴이’ 봉사활동 참여자 및 단체를 모집합니다! 
+우리 하천 지킴이는 혼자 또는 가족, 친구 등과 함께 가정, 학교, 동아리 등에서 자유롭게 참여할 수 있으며,
+모든 활동을 완료하신 경우 총 8시간의 봉사활동을 인증받을 수 있습니다.
+​봉사활동 참여를 희망하시는 경우 아래에 이어지는 안내문과 활동 소개 배너 이미지를 참고하시어 신청을 바랍니다. 
+                        </pre><br>
+
+                        <pre style="text-align: left;">
+▼ 모집 안내문
+
+[모집대상]
+참여를 희망하는 누구나(개인, 가정, 학급, 동아리 등 단체 신청도 가능)* 봉사활동이 필요한 누구나 신청 가능
+
+[활동지역]
+1. 활동 후 EM흙공을 하천에 던질 수 있다면 어디서나 활동 가능 (집, 학교, 사회복지시설, 실외 등)
+2. 도심 속 하천 어디든 (경기 남부 황구지천, 오산천, 안성천, 아라천, 굴포천 등)
+
+[활동기간]활동이 가능한 날짜에 자유롭게 활동 진행*매월 첫째주 목요일에 발송되는 활동 물품 수령 후 활동 시작
+
+[활동내용]- 환경 교육 (홈페이지에서 수질 관련 정보를 확인하고 활동 내용을 숙지)
+- 환경 활동 (EM흙공을 직접 만들고 발효한 후 하천에 투척하는 활동 진행)
+- 실천 나눔 (‘우리 하천 지킴이’ 홈페이지에 활동 후기, 활동 사진을 자유롭게 업로드)
+
+[신청방법]- 배너 내 QR코드를 인식하여 우측 상단의 ‘신청하기’ 버튼을 눌러 참여 신청 완료하기
+- www.ecowater.or.kr 링크에 접속하여 우측 상단의 ' 신청하기' 버튼을 눌러 참여 신청 완료하기
+
+[유의사항]- 실천나눔 게시를 통해 모든 활동 과정이 확인된 경우에만 1365 자원봉사 포털을 통해 봉사활동 8시간이 인증됩니다.
+- 활동 물품은 신청일로부터 1개월 이내에 발송되며, 물품을 수령한 후 활동을 희망하는 일자에 자유롭게 진행하면 됩니다.
+
+[활동문의]
+(사)환경실천연합회
+02-805-8840~2
+                        </pre>
+
+                        </div>
+                    </li>    
+                    <li id="tab3" class="btnCon">
+                        <input type="radio" name="tabmenu" id="tabmenu3" style="display: none;">
+                        <label for="tabmenu3">댓글</label>
+                        <div class="tabCon">
+                            <div>
+                                <div class="comments">
+                                </div>
+                                <form onsubmit="addComment(event)">
+                                  <input type="text" placeholder="댓글을 입력하세요" style="width:300px" maxlength="20" required >
+                                  <button type="submit">등록하기</button>
+                                </form>
+                        
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <script src="./script/with-value-detail.js"></script>
+        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+      <script>
+        Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
+      </script>
+    </body>
+</html>
