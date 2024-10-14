@@ -12,7 +12,11 @@
         </style>
     </head>
     <body>
+        <!-- 헤더 -->
 
+
+
+        
         <div class="ctn"> 
             <div class="item1">
                 <h4 id="N_region_city"></h4>
@@ -171,6 +175,11 @@
                     </li>
                 </ul>
             </div>
+            <!-- 푸터 -->
+
+
+
+
 
         <script src="../../script/narmi_detail.js"></script>
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
@@ -231,17 +240,17 @@
        
            function showTargetAmount(amount) {
                const targetAmountElement = document.getElementById('N_Target_amount');
-               targetAmountElement.textContent = `${amount.toLocaleString()}`;
+               targetAmountElement.textContent = `${amount.toLocaleString()}원`;
            }
        
            function showFundingAchievement(achievement) {
                const fundingAchievementElement = document.getElementById('N_funding_achievement');
-               fundingAchievementElement.textContent = `${achievement.toLocaleString()}`;
+               fundingAchievementElement.textContent = `${achievement.toLocaleString()}원 후원중`;
            }
        
            function showFundingProgress(progress) {
                const fundingProgressElement = document.getElementById('N_funding_progress');
-               fundingProgressElement.textContent = `${progress}`;
+               fundingProgressElement.textContent = `${progress}%`;
            }
        
            function showHeadCount(count) {
