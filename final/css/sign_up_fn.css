@@ -20,6 +20,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #808a94; /* 글자 색상 */
+    font-weight: bold; /* 글자 두껍게 */
+    transition: color 0.3s ease; /* 색상 전환 효과 */
+}
 
 html,
 body {
@@ -96,12 +102,13 @@ body {
 }
 
 .form button {
+    margin-bottom: 15px;
     cursor: pointer;
     width: 100%;
     padding: .6rem 0;
     border-radius: .5rem;
     border: none;
-    background-color: var(--primary-color);
+    background-color: #2196F3;
     color: var(--white);
     font-size: 1.2rem;
     outline: none;
@@ -180,6 +187,7 @@ body {
 }
 
 .pointer {
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -256,7 +264,7 @@ body {
     height: 100vh;
     width: 300vw;
     transform: translate(35%, 0);
-    background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: linear-gradient(-45deg, #d1ebff 0%, #d1ebff 100%);
     transition: 1s ease-in-out;
     z-index: 6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -344,4 +352,7 @@ body {
     }
 }
 
-
+.sign-ig img{
+    margin-right: 70px;
+    margin-bottom: 100px;
+}
