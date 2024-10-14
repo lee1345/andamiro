@@ -176,7 +176,7 @@ setTimeout(() => {
 }, 200)
 
 
-
+//하트 거품효과
 const heart = document.getElementById('heart');
 
 heart.addEventListener('click', (e) => {
@@ -191,4 +191,30 @@ heart.addEventListener('click', (e) => {
     bubble.addEventListener('animationend', () => {
         bubble.remove();
     });
+});
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.querySelectorAll('.item1').forEach(item => {
+//         const percentText = item.querySelector('.percent').innerText;
+//         const percentValue = parseInt(percentText.replace('%', ''));
+
+//         if (percentValue >= 90) {
+//             item.querySelector('.success-icon').style.display = 'inline'; // 아이콘 표시
+//         }
+//     });
+// });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const percentElement = document.querySelector('.percent'); // 95% 표시하는 요소
+    const percentValue = parseInt(percentElement.textContent); // 텍스트에서 숫자만 가져오기
+    const successMessage = document.querySelector('.success-message');
+    const successIcon = document.querySelector('.success-icon');
+
+    if (percentValue >= 95) {
+        successMessage.style.display = 'inline'; // 메시지 표시
+        successIcon.style.display = 'inline'; // 아이콘 표시
+    }
 });

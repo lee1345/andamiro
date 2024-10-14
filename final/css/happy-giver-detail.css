@@ -331,6 +331,7 @@ td, th {
 .invoice th:nth-child(8) { width: 100px; }
 
 /* 3. 진행상황 */
+
 .stepBox {
     display: flex;
     justify-content: center; /* 중앙 정렬 */
@@ -349,6 +350,7 @@ td, th {
     width:30px;
     height:20px;
 }
+
 
 /* 4.정산내역 */
 .settlementTable th {
