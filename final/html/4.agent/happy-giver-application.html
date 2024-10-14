@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+         body {
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: 400;
+        }
+        table {
+            width: 800px;
+            border-collapse: collapse;
+        }
+        th {
+            border: 1px solid #aba6a6;
+            background-color: #f0fbfc;
+            color: rgb(49 112 141);
+            text-align: center;
+            font-size: 12pt;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            height: 20px;
+            vertical-align: middle;
+
+        }
+        input {
+            width: 90%;
+            height: 100%;
+        }
+  
+        textarea {
+            font-size: 13pt;
+            width: 90%;
+            height: 180px;
+        }
+        #data-table {
+            width: 800px; 
+            font-size: 10pt;           
+            text-align: center;
+        }
+        #data-table td:nth-child(1) { /* 순번 */
+            width: 7%;            
+        }
+        #data-table td:nth-child(2) { /* 구분 */
+            width: 13%; 
+        }
+        #data-table td:nth-child(3) { /* 품목 */
+            width: 30%; 
+        }
+        #data-table td:nth-child(4) { /* 수량 */
+            width: 8%;
+        }
+        #data-table td:nth-child(5) { /* 단위 */
+            width: 8%;
+        }
+        #data-table td:nth-child(6) { /* 단가 */
+            width: 13%;
+        }
+        #data-table td:nth-child(7) { /* 금액 */
+            width: 13%;
+        }
+        #data-table td:nth-child(8) { /* 비고 */
+            width: 8%px; 
+        }
+        .more{
+            border:0; 
+            background-color: white; 
+            color:gray; 
+            margin-left: 740px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>행복나르미 신청하기</h2>
+    <form>
+        <table>
+            <tr>
+                <th>신청자명</th>
+                <td><input type="text" name="Name" placeholder="이름을 입력하세요"></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td><input type="email" name="Email" placeholder="이메일을 입력하세요"></td>
+            </tr>
+            <tr>
+                <th>활동지역</th>
+                <td>
+                    <select id="city" onchange="updateDistricts()">
+                        <option value="">선택하세요</option>
+                        <option value="천안">천안</option>
+                        <option value="아산">아산</option>
+                    </select>
+                    <select id="district">
+                        <option value="">선택하세요</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>기관명</th>
+                <td><input type="text" placeholder="기관명을 입력하세요"></td>
+            </tr>
+            <tr>
+                <th>활동 제목</th>
+                <td><input type="text" placeholder="제목을 입력하세요" class="long"></td>
+            </tr>
+            <tr>
+                <th>펀딩목표금액</th>
+                <td><input type="text" maxlength="10" onkeyup="inputNumberFormat(this);" placeholder="금액을 입력하세요"></td>
+            </tr>
+            <tr>
+                <th>자기소개</th>
+                <td><textarea maxlength="500" placeholder="500자 내로 간단히 입력해주세요"></textarea></td>
+            </tr>
+            <tr>
+                <th>프로필 사진</th>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+        <h2>산출내역</h2>
+        <div class="input-area">
+            <table id="data-table" >
+                <tr>
+                    <th>순번</th>
+                    <th>구분</th>
+                    <th>품목</th>
+                    <th>수량</th>
+                    <th>단위</th>
+                    <th>단가</th>
+                    <th>금액</th>
+                    <th>비고</th>                                
+                </tr>
+                <tr>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="text" maxlength="10" style="border:0;"></td>
+                </tr>
+            </table>
+            <button id="add-row" class="more">+ 행 추가</button>
+        </div>
+
+        <br>
+        <div style="padding-left: 10%;">
+            <button type="submit" style="width:200px" onclick="regist();">신청하기</button>
+            <button type="button" style="width:200px" onclick="window.close();">취소</button>
+        </div>
+    </form>
+    
+    <script>
+        function updateDistricts() {
+            const citySelect = document.getElementById("city");
+            const districtSelect = document.getElementById("district");
+
+            const districts = {
+                "천안": ["서북구", "동남구"],
+                "아산": ["탕정면", "배방읍", "음봉면"]
+            };
+
+            const selectedCity = citySelect.value;
+            districtSelect.innerHTML = '';
+
+            if (selectedCity in districts) {
+                districts[selectedCity].forEach(function(district) {
+                    const option = document.createElement("option");
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+    <script>
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        } 
+        
+        function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+    </script>
+    <script>
+        document.getElementById('add-row').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const table = document.getElementById('data-table');
+            const newRow = table.insertRow(); 
+
+            const cell1 = newRow.insertCell(0); 
+            const cell2 = newRow.insertCell(1); 
+            const cell3 = newRow.insertCell(2); 
+            const cell4 = newRow.insertCell(3); 
+            const cell5 = newRow.insertCell(4); 
+            const cell6 = newRow.insertCell(5); 
+            const cell7 = newRow.insertCell(6); 
+            const cell8 = newRow.insertCell(7); 
+
+            cell1.innerHTML = '<input type="number" style="border:0;">';
+            cell2.innerHTML = '<input type="text" style="border:0;">';
+            cell3.innerHTML = '<input type="text" style="border:0;">';
+            cell4.innerHTML = '<input type="number" style="border:0;">';
+            cell5.innerHTML = '<input type="text" style="border:0;">';
+            cell6.innerHTML = '<input type="number" style="border:0;">';
+            cell7.innerHTML = '<input type="number" style="border:0;">';
+            cell8.innerHTML = '<input type="text" maxlength="10" style="border:0;">';
+        });
+    </script>
+    <script>
+        function regist(){
+            if (confirm("제출하시겠습니까?") == true){
+                alert("제출되었습니다.");
+                window.close();
+            }else{
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
