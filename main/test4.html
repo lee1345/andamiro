@@ -54,7 +54,7 @@
                 가능합니다.</p></i></p>
             <h2 id="N_funding_achievement"> 후원중</h4>
                 <br>
-                <p class="p1">달성률 <span id="N_funding_progress"></span>    /  목표 금액 <span id="N_Target_amount">원</span></p>
+                <p class="p1">달성률 <span id="N_funding_progress">%</span>    /  목표 금액 <span id="N_Target_amount">원</span></p>
                 <br>
                 <p class="p1">남은기간 <span id="D_day"></span>   /  <span id="End_date"></span>에 종료</p>
                 <br>
@@ -268,7 +268,7 @@
         
             function showFundingProgress(progress) {
                 const fundingProgressElement = document.getElementById('N_funding_progress');
-                fundingProgressElement.textContent = `${progress}%`;
+                fundingProgressElement.textContent = `${progress}`;
             }
         
             function showHeadCount(count) {
