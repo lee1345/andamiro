@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                margin: 40px;
+                width: 500px;
+            }
+            button{
+                margin-left:10px;
+                width:100px;
+            }
+            table{
+                width: 420px;
+                border-collapse: collapse;
+                font-size: 11pt;
+            }
+            th{
+                border: 1px solid black;
+                width: 100px;
+                background-color: gray;    
+                height: 30px;
+            }
+            td{
+                padding-left: 10px;
+                border: 1px solid black;
+                width: 320px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>영수증 등록하기</h2>
+        <p>영수증은 5개까지 등록됩니다.</p>
+        <br>
+
+        <table>
+            <tr>
+                <th>영수증1</th>
+                <td><input type="file" id="recipt1"></td>
+            </tr>
+            <tr>
+                <th>영수증2</th>
+                <td><input type="file" id="recipt2"></td>
+            </tr>
+            <tr>
+                <th>영수증3</th>
+                <td><input type="file" id="recipt3"></td>
+            </tr>
+            <tr>
+                <th>영수증4</th>
+                <td><input type="file" id="recipt4"></td>
+            </tr>
+            <tr>
+                <th>영수증5</th>
+                <td><input type="file" id="recipt5"></td>
+            </tr>
+        </table>
+        <br><br>
+        <button onclick="regist()">등록</button>
+        <button onclick="window.close()">취소</button>
+        <script>
+            function regist(){
+                const question = confirm("저장하시겠습니까?");
+                if(question == true){
+                    alert("저장되었습니다.");
+                    window.close();
+                }
+            }
+
+        </script>
+    </body>
+</html>
