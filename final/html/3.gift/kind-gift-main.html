@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -6,6 +9,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
        <title>메인화면</title>       
+<<<<<<< HEAD
        <link rel="stylesheet" href="../../css/payment.css">
        <style>
           @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
@@ -44,6 +48,24 @@
         <img src="../../img/background/1. gift.png" style="width:100%">
             <br></br>
     <!-- 착한선물 카테고리-->
+=======
+       <link rel="stylesheet" href="../../css/gift_main.css">
+       <style>
+          @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        </style>
+    </head>
+    <body>
+        <!-- 헤더 -->
+
+
+        <!-- 메인이미지-->
+        <a href="#">
+            <img src="../../img/background/1. gift.png" width="100%">
+        </a>
+        <br></br>
+    <!-- 착한선물 카테고리-->
+            
+>>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
         <div class="card-area">
             <a href="#1"><h2>#100% 전달하는 착한선물, 안다미로와 함께하기</h2></a><br>
         </div>
@@ -74,6 +96,7 @@
         <h2 id="도서" class="product-title">도서 ></h2>
         <div class="new" id="books"></div>
 
+<<<<<<< HEAD
     <!--footer-->
 <div class="main-footer">
     <div>
@@ -90,6 +113,15 @@
         
     <script src="../../script/kind-gift-main.js"></script>
     <script src="../../main/script/test.js"></script>
+=======
+
+    <!-- 푸터 -->
+
+
+
+
+    <script src="../../script/data.js"></script>
+>>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const categories = {
@@ -106,7 +138,11 @@
                 Gift.forEach(gift => {
                     if (gift.G_category === category && count < 4) {
                     const item = document.createElement('a');
+<<<<<<< HEAD
                     item.href = './test2.html'; // 세부 페이지로 이동
+=======
+                    item.href = './kind-gift-detail.html'; // 세부 페이지로 이동
+>>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386
                     item.onclick = () => {
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
