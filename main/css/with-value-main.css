@@ -32,7 +32,7 @@ header nav ul li{
     padding-right: 70px;
 }
 .menu-btn:active {
-    color:skyblue;
+    color:rgb(16, 122, 212);
 }
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
@@ -290,6 +290,7 @@ li > img{
     display: flex;               /* Flexbox 사용 */
     justify-content: center;     /* 수평 중앙 정렬 */
     align-items: center; 
+    flex-wrap: wrap; /* 줄 바꿈 */
     text-align: center; /* 전체 내용 중앙 정렬 */
  
 }
@@ -494,3 +495,12 @@ li > img{
 #remember-check {
     margin-bottom: 15px; /* 원하는 간격으로 조정 */
 }
+body {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+}
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

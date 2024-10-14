@@ -1,9 +1,3 @@
-body {
-    font-family: "Gowun Dodum", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
 *{
     margin: 0;
     padding: 0;
@@ -38,7 +32,7 @@ header nav ul li{
     padding-right: 70px;
 }
 .menu-btn:active {
-    color:rgb(16, 122, 212);
+    color:skyblue;
 }
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
@@ -63,12 +57,11 @@ header button{
     font-size: 18pt;
 }
 #city, #district {
-    width: 120px;
+    width: 150px;
     height: 30px;
 }
 .search{
     width:40px;
-    border-style: none;
 }
 .search, .apply{
     border-radius: 0;
@@ -76,7 +69,6 @@ header button{
 }
 .apply{
     background-color: lightskyblue;
-    border-style: none;
 }
 .btn-cr button:focus {
     background-color: #ececec; /* 클릭 시 배경색 */
@@ -93,7 +85,10 @@ div.item{
     font-size: large;
     color: #00ab33;
 }
-
+.title{
+    margin-left: 140px;
+    margin-top: 40px;
+}
 
 .card-area {
     text-align: center;  /* 수평 중앙 정렬 */
@@ -107,10 +102,9 @@ div.item{
 }
 .select-area {
     margin-bottom: 50px;
-    margin-left: 400px;
+    margin-left: 175px;
 }
 .city-title {
-    color: #483d3d;
     margin-left: 170px;
 }
 
@@ -118,7 +112,7 @@ div.item{
     clear:both;
 }
 .new .item1{
-    border: 1px solid #e2f0ff;
+    border: 1px solid #ccc;
     margin: 40px;
     text-align:center;
     float:left;
@@ -131,43 +125,48 @@ li > img{
 
 .item1:hover {
     transform: translateY(-5px); /* 마우스 오버 시 위로 이동 */
-    box-shadow: 0 8px 20px rgba(76, 187, 235, 0.2); /* 더 강한 그림자 효과 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 더 강한 그림자 효과 */
 }
 
 .new img{
     width:250px;
     height:250px;
 }
-
-
-
+.date1, .date2, .date4{
+    margin-left: 140px;
+}
+.date3{
+    margin-left: 155px;
+}
+.date5{
+    margin-left: 140px;
+}
+.date6{
+    margin-left: 155px;
+}
 
 .new .subject{
     margin-top: -5px;
-    color: #483d3d;
+    color:black;
     padding: 10px;
     text-align: left;
 }
 .new .price, .amount{
     margin-top: -1px;
     margin-left: 10px;
-    color: #0056b3;
+    color:black;
     text-align: left;
 }
 .price > .funding{
     margin-left: 30px;
 }
 .funding-amt{
-    margin-left: 20px;
+    margin-left: 60px;
 }
 .achieved {
     text-align: left;
     padding: 10px;
     margin-top: 10px;
-    color: #8e99c4;
-}
-.date{
-    margin-left: 100px;
 }
 .achieved .progressbar{
     width: 250px;
@@ -185,7 +184,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
+    background:lightskyblue;
     animation: progress1 5s ease forwards;
   }
   #progressbar2::after{
@@ -195,7 +194,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
+    background:lightskyblue;
     animation: progress2 5s ease forwards;
   }
   #progressbar3::after{
@@ -205,7 +204,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
+    background:lightskyblue;
     animation: progress3 5s ease forwards;
   }
   #progressbar4::after{
@@ -215,7 +214,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
+    background:lightskyblue;
     animation: progress4 5s ease forwards;
   }
   #progressbar5::after{
@@ -225,7 +224,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
+    background:lightskyblue;
     animation: progress5 5s ease forwards;
   }
   #progressbar6::after{
@@ -235,32 +234,32 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:skyblue;
-    animation: progress6 5s ease forwards;
+    background:lightskyblue;
+    animation: progress5 5s ease forwards;
   }
   @keyframes progress1{
     0%{width: 0px}
-    100%{width: 83%;}
+    100%{width: 100%;}
   }
   @keyframes progress2{
     0%{width: 0px}
-    100%{width: 70%;}
+    100%{width: 40%;}
   }
   @keyframes progress3{
     0%{width: 0px}
-    100%{width: 100%;}
+    100%{width: 83%;}
   }
   @keyframes progress4{
     0%{width: 0px}
-    100%{width: 64%;}
+    100%{width: 30%;}
   }
   @keyframes progress5{
     0%{width: 0px}
-    100%{width: 25%;}
+    100%{width: 80%;}
   }
   @keyframes progress6{
     0%{width: 0px}
-    100%{width: 48%;}
+    100%{width: 75%;}
   }
   .progress{
     position: absolute;
@@ -288,9 +287,11 @@ li > img{
 }
 
 .new {
+    margin-left: 15%;
     display: flex;               /* Flexbox 사용 */
-    justify-content: center;     /* 수평 중앙 정렬 */
+    justify-content: flex;     /* 수평 중앙 정렬 */
     align-items: center; 
+    flex-wrap: wrap; /* 줄 바꿈 */
     text-align: center; /* 전체 내용 중앙 정렬 */
  
 }
@@ -456,25 +457,32 @@ li > img{
 
 
 .login-wrapper > h2{
- 
+    font-size: 35px;
     color: #6A24FE;
- 
+    margin-bottom: 20px;
 }
 #login-form > input{
-  
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border-radius: 6px;
     background-color: #F8F8F8;
 }
 #login-form > input::placeholder{
     color: #D2D2D2;
 }
 #login-form > input[type="submit"]{
-  
+    padding-bottom: 10px;
     color: #fff;
     font-size: 16px;
     background-color: #6A24FE;
     /* margin-top: 10px; */
 }
-
+.join{
+    margin-right: 20px;
+}
 .join:hover {
    
     color:  #6A24FE; /* 마우스 오버 시 색상 변경 */
@@ -485,43 +493,6 @@ li > img{
    
     color:  #6A24FE; /* 마우스 오버 시 색상 변경 */
 }
-
-.select-area {
-    margin-bottom: 50px;
-    margin-left: 450px;
-}
-
-
-.select-area h2 {
-    color: #004080; /* 다크 블루 */
-}
-
-.select-area select {
-    color: #6e7f92;
-    background-color: #e7f3ff;
-    border: 1px solid #d9e6f4;
-    border-radius: 5px;
-    font-size: 16px;
-}
-  
-
-
-.select-area select:focus {
-    border-color: #007bff; /* 포커스 시 테두리 색상 */
-    outline: none; /* 기본 아웃라인 제거 */
-}
-
-.select-area button {
-    width: 100px;
-    background-color: #0c63ba;
-    color: white; /* 흰색 글씨 */
-    border: none; /* 테두리 없음 */
-    border-radius: 5px; /* 모서리 둥글게 */
-    font-size: 16px; /* 글씨 크기 */
-    cursor: pointer; /* 포인터 커서 */
-    transition: background-color 0.3s; /* 배경 색상 변화 애니메이션 */   
-}
-
-.select-area button:hover {
-    background-color: #007bff; /* 호버 시 밝은 블루 */
+#remember-check {
+    margin-bottom: 15px; /* 원하는 간격으로 조정 */
 }

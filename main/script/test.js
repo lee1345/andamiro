@@ -69,7 +69,7 @@ const Gift = [
 const  Narmi= [ 
 
     //홍남희
-    {id: 1, N_region: "천안시", N_city: "서북구", N_location: "희망 어린이집", N_location_img: "./img/narmi/narmi1.png", agent_name: "홍남희", agent_img: "./img/narmi/agent1.png", N_Target_amount: 1175000, N_funding_achievement: 250000, D_day: 19, End_date: "2024-12-31", N_funding_progress: 21.3, N_head_count:11, 
+    {id: 1, N_region: "천안시", N_city: "서북구", N_location: "희망 어린이집", N_location_img: "./img/narmi/narmi1.png", agent_name: "홍남희", agent_img: "./img/narmi/agent1.png", N_Target_amount: 1175000, N_funding_achievement: 250000, D_day: 19, End_date: "2024-12-31", N_funding_progress: 21.3, N_head_count:11, ct:1,
     agent_Introduce:
     `    안녕하세요! 저는 19세 홍남희입니다. 
     현재 선화예고 3학년에서 바이올린을 전공하고 있습니다. 
@@ -84,7 +84,7 @@ const  Narmi= [
     여러분의 따뜻한 마음이 아이들에게 큰 힘이 될 것입니다. 많은 관심과 참여 부탁드립니다!`},
     
     //박민혁
-    {id: 2, N_region: "천안시", N_city: "서북구", N_location: "하늘 어린이집", N_location_img: "./img/narmi/narmi2.png", agent_name: "박민혁", agent_img: "./img/narmi/agent2.png", N_Target_amount: 3000000, N_funding_achievement: 500000, D_day: 30, End_date: "2024-11-30", N_funding_progress: 16.7, N_head_count: 20,  
+    {id: 2, N_region: "천안시", N_city: "서북구", N_location: "하늘 어린이집", N_location_img: "./img/narmi/narmi2.png", agent_name: "박민혁", agent_img: "./img/narmi/agent2.png", N_Target_amount: 3000000, N_funding_achievement: 500000, D_day: 30, End_date: "2024-11-30", N_funding_progress: 16.7, N_head_count: 20, ct:1,
     agent_Introduce:
     `    안녕하세요! 저는 25세 박민혁이라고 합니다. 
     컴퓨터공학과를 졸업하고 현재 취업 준비 중입니다.
@@ -96,7 +96,7 @@ const  Narmi= [
     즐거운 수업 만들어보겠습니다!`},
     
     //최민영
-    {id: 3, N_region: "천안시", N_city: "서북구", N_location: "사랑의 노인 복지센터", N_location_img: "./img/narmi/narmi3.png", agent_name: "최민영", agent_img: "./img/narmi/agent3.png", N_Target_amount: 1500000, N_funding_achievement: 150000, D_day: "45", End_date: "2025-01-01", N_funding_progress: 10, N_head_count: 30,
+    {id: 3, N_region: "천안시", N_city: "서북구", N_location: "사랑의 노인 복지센터", N_location_img: "./img/narmi/narmi3.png", agent_name: "최민영", agent_img: "./img/narmi/agent3.png", N_Target_amount: 1500000, N_funding_achievement: 150000, D_day: "45", End_date: "2025-01-01", N_funding_progress: 10, N_head_count: 30,ct:1,
     agent_Introduce:
     `    안녕하세요, 저는 최민영입니다.
     매일 지겹도록 반복되는 삶속에서 새로운 변화를 찾고 싶다는 마음이 커졌습니다. 
@@ -111,7 +111,7 @@ const  Narmi= [
     저와 함께 어르신들에게 새로움을 찾아주세요!`},
     
     //김학철
-    {id: 4, N_region: "아산시", N_city: "탕정면", N_location: "탕정도서관", N_location_img: "./img/narmi/narmi4.png", agent_name: "김학철", agent_img: "./img/narmi/agent4.png", N_Target_amount: 2000000, N_funding_achievement: 400000, D_day: "30", End_date: "2024-12-01", N_funding_progress: 20, N_head_count: 2,
+    {id: 4, N_region: "아산시", N_city: "탕정면", N_location: "탕정도서관", N_location_img: "./img/narmi/narmi4.png", agent_name: "김학철", agent_img: "./img/narmi/agent4.png", N_Target_amount: 2000000, N_funding_achievement: 400000, D_day: "30", End_date: "2024-12-01", N_funding_progress: 20, N_head_count: 2,ct:2,
     agent_Introduce:
     `    안녕하세요! 저는 65세 김학철입니다. 
     작가로서의 삶을 마무리한 후, 아이들에게 도서를 선물하고 글쓰기 재능을 나누고 싶습니다. 
@@ -122,7 +122,7 @@ const  Narmi= [
     한국에 차기 노벨 문학상을 위해 많은 관심과 후원 부탁드립니다. 감사합니다.`},   
     
     //한민숙
-    {id: 5, N_region: "아산시", N_city: "배방읍", N_location: "배방읍 어린이 지원 센터", N_location_img: "./img/narmi/narmi5.png", agent_name: "한민숙", agent_img: "./img/narmi/agent5.png", N_Target_amount: 1500000, N_funding_achievement: 300000, D_day: "30", End_date: "2024-12-01", N_funding_progress: 20, N_head_count: 5,
+    {id: 5, N_region: "아산시", N_city: "배방읍", N_location: "배방읍 어린이 지원 센터", N_location_img: "./img/narmi/narmi5.png", agent_name: "한민숙", agent_img: "./img/narmi/agent5.png", N_Target_amount: 1500000, N_funding_achievement: 300000, D_day: "30", End_date: "2024-12-01", N_funding_progress: 20, N_head_count: 5,ct:2,
     agent_Introduce:
     `    안녕하세요! 저는 57세 한민숙입니다.
     일찍 결혼해 세 남매를 이른 나이에 키우고 모두 시집 장가보내니 허전하더군요
@@ -152,10 +152,10 @@ const  Narmi= [
 const campaign = [
     {
         id: 1,
-        W_region: "천안시 불당동",
+        W_region: "천안시",
         campaing_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
-        campaomg_img: "../img/campaign/campaign1.png",
-        capaing_detail_img: "../img/campaign/campaign1.png",
+        campaomg_img: "./img/campaign/campaign1.png",
+        capaing_detail_img: "./img/campaign/campaign1.png",
         W_Target_participants: 20,
         W_Participant_Count: 10,
         W_Participation_Rate: 50,
@@ -187,10 +187,10 @@ const campaign = [
     
     {
         id: 2,
-        W_region: "행복한우리복지관",
-        campaing_topic: "장애인식개선 캠페인 '우리사이 0미터'",
-        campaomg_img: "../img/campaign/campaign2.png",
-        capaing_detail_img: "../img/campaign/campaign2.png",
+        W_region: "서울시",
+        campaing_topic: `장애인식개선 캠페인 '우리사이 0미터'`,
+        campaomg_img: "./img/campaign/campaign2.png",
+        capaing_detail_img: "./img/campaign/campaign2.png",
         W_Target_participants: 300,
         W_Participant_Count: 25,
         W_Participation_Rate: 8.33,
@@ -233,10 +233,10 @@ const campaign = [
       
       {
         id: 3,
-        W_region: "지구 전역",
+        W_region: "전지역",
         campaing_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
-        campaomg_img: "../img/campaign/campaign3.png",
-        capaing_detail_img: "../img/campaign/campaign3_detail.png",
+        campaomg_img: "./img/campaign/campaign3.png",
+        capaing_detail_img: "./img/campaign/campaign3_detail.png",
         W_Target_participants: 100,
         W_Participant_Count: 15,
         W_Participation_Rate: 15,
@@ -288,8 +288,8 @@ const campaign = [
         id: 4,
         W_region: "김제시",
         campaing_topic: "희망나눔 음악회(행사봉사자 모집)",
-        campaomg_img: "../img/campaign/campaign4.png",
-        capaing_detail_img: "../img/campaign/campaign4.png",
+        campaomg_img: "./img/campaign/campaign4.png",
+        capaing_detail_img: "./img/campaign/campaign4.png",
         W_Target_participants: 50,
         W_Participant_Count: 10,
         W_Participation_Rate: 20,
@@ -323,8 +323,8 @@ const campaign = [
         id: 5,
         W_region: "춘천시",
         campaing_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
-        campaomg_img: "../img/campaign/campaign5.png",
-        capaing_detail_img: "../img/campaign/campaign5_detail.png",
+        campaomg_img: "./img/campaign/campaign5.png",
+        capaing_detail_img: "./img/campaign/campaign5_detail.png",
         W_Target_participants: 100,
         W_Participant_Count: 20,
         W_Participation_Rate: 20,
