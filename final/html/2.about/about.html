@@ -4,21 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>안다미로 소개</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet"> -->
     <style>
-          @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        /* 슬라이드 */
+        .section input[id*="slide"]{
+            display: none;
+        }
+        .section .slidewrap{
+            max-width: 100%;
+            margin:  0 auto;
+            overflow: hidden;
+        }
+        .section .slidelist{
+            white-space: nowrap; 
+            font-size: 0;
+        }
+        .section .slidelist > li{
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        transition:all .5s;
+        }
+        .section .slidelist > li > a {
+        display: block;
+        position: relative;
+        }
+        .section .slidelist > li > a img{
+        width: 1280px;
+        height: 600px;
+        }
+        .section .slidelist label{
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform:translateY(-50%);
+            padding: 50px;
+            cursor: pointer;
+        }
+        .section .slidelist .left{
+            left: 30px;
+            background: url('../../img/left.png') center center / 100% no-repeat;
+        }
+        .section .slidelist .right{
+            right: 30px;
+            background: url('../../img/right.png') center center / 100% no-repeat;
+        }
+        .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+        .section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+        .section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+        .section [id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+
+        
+/* 슬라이드 끝*/
         body {
             font-family: "Gowun Dodum", sans-serif;
             margin: 0;
-            padding: 20px;
             color: #6e6e6e;
-            width: 1200px;
-            max-width: 100%;
-            margin: auto;
+            /* max-width: 100%; */
+            /* margin: auto; */
         }
 
         .aboutContainer{
-            margin-left: 30px;
+            margin-left: 80px;
             
         }
         h2 {
@@ -54,12 +101,49 @@
     </style>
 </head>
 <body>
-    <!-- 내비게이션바 넣기 -->
-    <div id="navbar"></div>
+    <!-- 헤더 -->
 
 
     <!-- 사진영역 -->
-    <img src="../../img/background/1. gift.png" alt="">
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li>
+                    <a href="../../img/background/0.main.png">
+                        <label for="slide04" class="left" ></label>
+                        <img src="../../img/background/0.main.png"> 
+                        <label for="slide02" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide01" class="left"></label>
+                        <img src="../../img/background/1. gift.png">
+                        <label for="slide03" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide02" class="left"></label>
+                        <img src="../../img/background/2. narmi.png">
+                        <label for="slide04" class="right"></label>
+                    </a>
+                </li>                        <li>
+                    <a>
+                        <label for="slide03" class="left"></label>
+                        <img src="../../img/background/3.together.png">
+                        <label for="slide01" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br></br>
     <!-- 내용 -->
 
     <div class="aboutContainer">
@@ -132,13 +216,20 @@
             </div>
         </div>
     </div>
+
+    <!-- 푸터 -->
     
+
+
     <script>
-        // fetch('./header.html')
-        //     .then(response => response.text())
-        //     .then(data => {
-        //         document.getElementById('navbar').innerHTML = data;
-        //     });
+        let currentSlide = 1;
+        const totalSlides = 4; // 슬라이드 개수
+
+        setInterval(() => {
+            currentSlide = (currentSlide % totalSlides) + 1; // 슬라이드 번호 변경
+            document.getElementById(`slide0${currentSlide}`).checked = true; // 체크박스 체크
+        }, 3000); //  2초
+    </script>
     </script>
 </body>
 </html>

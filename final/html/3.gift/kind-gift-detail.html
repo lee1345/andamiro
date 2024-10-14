@@ -12,8 +12,9 @@
         </style>
     </head>
     <body>
-        <!-- 헤더영역 -->
-        <header id="navbar"></header>
+        <!-- 헤더 -->
+
+
         <div class="ctn"> 
             <div class="item1">
                 <h4 id="gift_maker"></h4>
@@ -130,13 +131,6 @@
                 Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
             </script>
             <script>
-                //헤더 삽입
-                fetch('../1.navbar/header_Login.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar').innerHTML = data;
-                });
-
                 document.addEventListener('DOMContentLoaded', () => {
                     const selectedGiftId = parseInt(localStorage.getItem('selectedGiftId'), 10);
                     const gift = Gift.find(item => item.id === selectedGiftId);
