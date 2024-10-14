@@ -4,4 +4,5 @@ const Narmi = [
     {id: 3, N_region: "천안시", N_city: "서북구", N_location: "사랑의 노인 복지센터", N_location_img: "./img/narmi/narmi3.png", agent_name: "최민영", agent_img: "./img/narmi/agent3.png", N_Target_amount: 1500000, N_funding_achievement: 150000, D_day: 45, End_date: "2025-01-01", N_funding_progress: 10, N_head_count: 30},
     {id: 4, N_region: "아산시", N_city: "탕정면", N_location: "탕정도서관", agent_name: "김학철", agent_img: "./img/narmi/agent4.png", N_Target_amount: 2000000, N_funding_achievement: 400000, D_day: 30, N_funding_progress: 20},
     {id: 5, N_region: "아산시", N_city: "배방읍", N_location: "배방읍 어린이 지원 센터", agent_name: "한민숙", agent_img: "./img/narmi/agent5.png", N_Target_amount: 1500000, N_funding_achievement: 300000, D_day: 30, N_funding_progress: 20},
+    
 ];
