@@ -5,7 +5,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>3조_안다미로</title>       
-       <link rel="stylesheet" href="./css/with-value-main.css">
+       <link rel="stylesheet" href="./css/testTogether.css">
        <style>
         @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
         </style>
@@ -17,48 +17,47 @@
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const campaignContainer = document.querySelector('.new');
-        
                 let count = 0; // 출력된 항목 수를 카운트
+    
                 campaign.forEach(campaign => {
-                    if (count < 3) { // 3개만 출력
-                        const item = document.createElement('a');
-                        item.href = './test6.html'; // 세부 페이지로 이동
-                        item.onclick = () => {
-                            // 클릭한 캠페인의 ID를 localStorage에 저장
-                            localStorage.setItem('selectedCampaignId', campaign.id);
-                        };
-        
-                        item.innerHTML = `
-                            <ul class="item1">
-                                <li>
-                                    <img src="${campaign.campaomg_img}" alt="${campaign.campaing_topic}">
-                                </li>
-                                <li class="subject">
-                                    <p style="display:inline" class="city">${campaign.W_region}</p>
-                                    <h2 style="display:inline" class="date">${campaign.W_D_day}일 남음</h2><br>
-                                    <h2 style="display:inline">${campaign.campaing_topic}</h2>
-                                </li>
-                                <li class="price">
-                                    <span class="target">목표인원</span>
-                                    <span class="funding">신청인원</span>
-                                </li>
-                                <li class="amount">
-                                    <strong class="target-amt">${campaign.W_Target_participants}명</strong>
-                                    <strong class="funding-amt">${campaign.W_Participant_Count}명</strong>
-                                </li>
-                                <li class="achieved">
-                                    <span>달성률</span>
-                                    <h1>${campaign.W_Participation_Rate}%</h1>
-                                    <div class="progressbar" id="progressbar${campaign.id}">
-                                        <span class="progress" style="width: ${campaign.W_Participation_Rate}%;"></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        `;
-        
-                        campaignContainer.appendChild(item);
-                        count++; // 출력된 항목 수 증가
-                    }
+                    const item = document.createElement('a');
+                    item.href = './test6.html'; // 세부 페이지로 이동
+                    item.onclick = () => {
+                        // 클릭한 캠페인의 ID를 localStorage에 저장
+                        localStorage.setItem('selectedCampaignId', campaign.id);
+                    };
+    
+                    item.innerHTML = `
+                        <ul class="item1" style="width:400px">
+                            <li>
+                                <img src="${campaign.campaomg_img}" alt="${campaign.campaing_topic}">
+                            </li>
+                            <li class="subject">
+                                <p style="display:inline" class="city">${campaign.W_region}</p>
+                                <h2 style="display:inline" class="date">D-${campaign.W_D_day}</h2><br>
+                                <h2 style="display:inline">${campaign.campaing_topic}</h2>
+                            </li>
+                            <li class="price">
+                                <span class="target">목표인원</span>
+                                <span class="funding">신청인원</span>
+                            </li>
+                            <li class="amount">
+                                <strong class="target-amt">${campaign.W_Target_participants}명</strong>
+                                <strong class="funding-amt">${campaign.W_Participant_Count}명</strong>
+                            </li>
+                            <li class="achieved">
+                                <span>달성률</span>
+                                <h1>${campaign.W_Participation_Rate}%</h1>
+                                <div class="progressbar" id="progressbar${campaign.id}">
+                                    <span class="progress" style="width: ${campaign.W_Participation_Rate}%;"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    `;
+    
+                    campaignContainer.appendChild(item);
+                    count++; // 출력된 항목 수 증가
+
                 });
             });
         </script>

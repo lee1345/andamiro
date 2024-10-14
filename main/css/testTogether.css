@@ -287,8 +287,9 @@ li > img{
 }
 
 .new {
+    margin-left: 15%;
     display: flex;               /* Flexbox 사용 */
-    justify-content: center;     /* 수평 중앙 정렬 */
+    justify-content: flex;     /* 수평 중앙 정렬 */
     align-items: center; 
     flex-wrap: wrap; /* 줄 바꿈 */
     text-align: center; /* 전체 내용 중앙 정렬 */

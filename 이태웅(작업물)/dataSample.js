@@ -197,7 +197,7 @@ const Settlement_Report = [
 const with_value = [
         {
             id: 1,
-            W_region: "천안시 불당동",
+            W_region: "천안시",
             campaing_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
             campaomg_img: "./img/campaign/campaign1.png",
             capaing_detail_img: "./img/campaign/campaign1.png",
@@ -232,7 +232,7 @@ const with_value = [
         
         {
             id: 2,
-            W_region: "행복한우리복지관",
+            W_region: "서울시",
             campaing_topic: "장애인식개선 캠페인 '우리사이 0미터'",
             campaomg_img: "./img/campaign/campaign2.png",
             capaing_detail_img: "./img/campaign/campaign2.png",
@@ -278,7 +278,7 @@ const with_value = [
           
           {
             id: 3,
-            W_region: "지구 전역",
+            W_region: "전지역",
             campaing_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
             campaomg_img: "./img/campaign/campaign3.png",
             capaing_detail_img: "./img/campaign/campaign3_detail.png",
