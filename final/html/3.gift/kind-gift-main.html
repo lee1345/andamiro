@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -6,44 +5,22 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
        <title>메인화면</title>       
-       <link rel="stylesheet" href="../../main/css/payment.css">
+       <link rel="stylesheet" href="../../css/gift_main.css">
        <style>
           @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <a href="#"><img src="../../final/img/logo.png" style="width:180px"></a>
-                </h1>
-                <nav>
-                    <ul class="btn-cr">
-                        <li>
-                            <a href=""><button>안다미로 소개</button></a>
-                        </li>
-                        <li>
-                            <a href="#1"><button>착한선물</button></a>
-                        </li>
-                        <li>
-                            <a href="/andamiro/main/happy-giver-main.html"><button>행복나르미</button></a>
-                        </li>
-                        <li>
-                            <a href="#3"><button>같이가치</button></a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="btn-cr">
-                    <a href="../html_andamiro/login.html"><button>로그인 /</button> </a>
-                    <a href="../html_andamiro/회원가입.html"><button>회원가입</button></a>
-               </div>
-            </div>
-        </header>
+        <!-- 헤더 -->
+
+
         <!-- 메인이미지-->
-        <img src="../../final/img/background/1. gift.png" style="width:100%">
-            <br></br>
+        <a href="#">
+            <img src="../../img/background/1. gift.png" width="100%">
+        </a>
+        <br></br>
     <!-- 착한선물 카테고리-->
+            
         <div class="card-area">
             <a href="#1"><h2>#100% 전달하는 착한선물, 안다미로와 함께하기</h2></a><br>
         </div>
@@ -74,22 +51,13 @@
         <h2 id="도서" class="product-title">도서 ></h2>
         <div class="new" id="books"></div>
 
-    <!--footer-->
-<div class="main-footer">
-    <div>
-        <a href="./main.html"><img src="/andamiro/main2/img/logo.png" style="width:180px" alt=""></a>
-    </div>
-    <ul>
-        <li>대표 : 홍길동</li>
-        <li>주소 : 충남 천안시 동남구 대흥로 215, 7층 </li>
-        <li>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234 ff  </li>
-        <li>이메일 : junjuhun@naver.com </li>
-        <a href="./개인정보.html"><li>개인정보 처리방침 </li></a>
-    </ul>
-    </div>
-        
-    <script src="../../script.js"></script>
-    <script src="../../main/script/test.js"></script>
+
+    <!-- 푸터 -->
+
+
+
+
+    <script src="../../script/data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const categories = {
@@ -106,7 +74,7 @@
                 Gift.forEach(gift => {
                     if (gift.G_category === category && count < 4) {
                     const item = document.createElement('a');
-                    item.href = './test2.html'; // 세부 페이지로 이동
+                    item.href = './kind-gift-detail.html'; // 세부 페이지로 이동
                     item.onclick = () => {
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);

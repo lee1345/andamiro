@@ -12,37 +12,14 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <img src="../../img/logo.png" style="width:180px">
-                </h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <button type="button" onclick="location.href='./gift_detail.html'" class="selected">착한선물</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./together_detail.html'">같이가치</button>
-                        </li>
-                    </ul>
-                </nav>
-            <div>
-                <button>로그인</button> /
-                <button>회원가입</button>
-            </div>
-            </div>
-            <div>
-            </div>
-        </header>
+        <!-- 헤더 -->
+
+
         <div class="ctn"> 
             <div class="item1">
-                <h4>영창피아노</h4>
-                <h2>전자피아노</h2>
-                <img src="../../img/piano.jpg" width="400px" height="400px"> 
+                <h4 id="gift_maker"></h4>
+                <h2 id="gift_product_name"></h2>
+                <img id="gift_product_sample" src=""> 
                 <h4>리워드 선택</h4>
             <div class="rs">    
                 <button class="button inactive" id="button1">리워드1<br>마일리지10%</button>
@@ -55,11 +32,11 @@
                 3000원,5000원 중<br>
                 선택하여 후원이 <br>
                 가능합니다.</p></i></p>
-            <h2>70000원 후원중</h4>
+            <h2><span id="gift_funding_achievement"></span>원 후원중</h4>
                 <br>
-                <p class="p1">달성률 46.6%    목표 금액 150,000</p>
+                <p class="p1">달성률 <span id="gift_funding_progress"></span>    /  목표 금액 <span id="gift_target_amount"></span></p>
                 <br>
-                <p class="p1">참여인원:30명</p>
+                <p class="p1">참여인원: <span id="gift_head_count"></span></p>
                 <br>
                 <button class="bigbtn" onclick="goPayment()">후원하기</button>
                 <br>
@@ -77,10 +54,10 @@
                     <h3>공유하기</h3><br>
                     <p>이 후원을 널리 알려주세요~!</p><br>
                     <div class="share">
-                            <img src="./img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
-                            <img src="./img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
-                            <img src="./img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
-                            <img src="./img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
+                            <img src="../../img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
+                            <img src="../../img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
+                            <img src="../../img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
+                            <img src="../../img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
                     </div>
                 </div>
             </div>
@@ -94,7 +71,7 @@
                         <input type="radio" checked name="tabmenu" id="tabmenu1" style="display: none;">
                         <label for="tabmenu1">상품상세</label>
                         <div class="tabCon">
-                            <img style="text-align: center;" src="../../img/saga700 상세.jpg">
+                            <img style="text-align: center;" src="" id="gift_product_sample_detail">
                         </div>
                     </li>
                     <li id="tab2" class="btnCon">
@@ -143,11 +120,88 @@
                 </ul>
             </div>
 
+<<<<<<< HEAD
         <script src="../../script/kind-gift-detail.js"></script>
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
         integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
         <script>
             Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
         </script>
+=======
+            <!-- 푸터 -->
+
+
+            <script src="../../script/data.js"></script>
+            <script src="../../script/kind-gift-detail.js"></script>
+            <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+            integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+            <script>
+                Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const selectedGiftId = parseInt(localStorage.getItem('selectedGiftId'), 10);
+                    const gift = Gift.find(item => item.id === selectedGiftId);
+                    console.log('Selected Gift ID:', selectedGiftId);
+                    console.log('Gift Data:', gift);
+
+                    if (gift) { 
+                        showGiftMaker(gift.G_Maker);
+                        showGiftProductName(gift.G_Product_Name);
+                        showGiftProductSample(gift.G_Product_Sample);
+                        showGiftProductSampleDetail(gift.G_Product_Sample_detail);
+                        showGiftTargetAmount(gift.G_Target_amount);
+                        showGiftFundingAchievement(gift.G_funding_achievement);
+                        showGiftFundingProgress(gift.G_funding_progress);
+                        showGiftHeadCount(gift.G_head_count);
+    
+                    } else {
+                        console.error('오류');
+                    }
+                });
+            
+                function showGiftMaker(G_Maker) {
+                    const element = document.getElementById('gift_maker');
+                    element.textContent = G_Maker;
+                }
+
+                function showGiftProductName(G_Product_Name) {
+                    const element = document.getElementById('gift_product_name');
+                    element.textContent = G_Product_Name;
+                }
+
+                function showGiftProductSample(G_Product_Sample) {
+                    const element = document.getElementById('gift_product_sample');
+                    element.src = G_Product_Sample;
+                }
+
+                function showGiftProductSampleDetail(G_Product_Sample_detail) {
+                    const element = document.getElementById('gift_product_sample_detail');
+                    element.src = G_Product_Sample_detail;
+
+                }
+
+                function showGiftTargetAmount(G_Target_amount) {
+                    const element = document.getElementById('gift_target_amount');
+                    element.textContent = `${G_Target_amount}원`;
+                }
+
+                function showGiftFundingAchievement(G_funding_achievement) {
+                    const element = document.getElementById('gift_funding_achievement');
+                    element.textContent = G_funding_achievement;
+                }
+
+                function showGiftFundingProgress(G_funding_progress) {
+                    const element = document.getElementById('gift_funding_progress');
+                    element.textContent = `${G_funding_progress}%`;
+                }
+
+                function showGiftHeadCount(G_head_count) {
+                    const element = document.getElementById('gift_head_count');
+                    element.textContent = `${G_head_count}명`;
+                }
+
+            </script>
+>>>>>>> e4d14a408e8353284f2e00cf403cb33b09573248
     </body>
 </html>
