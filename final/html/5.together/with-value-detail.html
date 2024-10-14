@@ -12,45 +12,19 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <img src="../../img/logo.png" style="width:180px">
-                </h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <button type="button" onclick="location.href='./gift_detail.html'">착한선물</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./narmi_detail.html'">행복나르미</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./together_detail.html'" class="selected">같이가치</button>
-                        </li>
-                    </ul>
-                </nav>
-            <div>
-                <button>로그인</button> /
-                <button>회원가입</button>
-            </div>
-            </div>
-            <div>
-            </div>
-        </header>
         <div class="ctn"> 
             <div class="item1">
-                <h4>천안시 불당동</h4>
-                <h2>사랑의 쓰레기 줍기</h2>
-                <img src="../../img/trash.jpg" width="300px"> 
+                <h4 id="W_region"></h4>
+                <h2 id="campaign_topic"></h2>
+                <img src="" width="300px" id="campaomg_img"> 
             </div>
             <div class="item2"> 
             <h4>참여정보</h4><br>
-            <h2>10명 신청</h4>
+            <h2><span id="W_Participant_Count"></span></h2>
+            <br>
+                <p class="p1">달성률 <span id="W_Participation_Rate"></span>   /  목표인원 <sapn id="W_Target_participants"></sapn></p>
                 <br>
-                <p class="p1">달성률 46.6%   /  목표인원 15명</p>
-                <br>
-                <p class="p1">남은기간 15일   /  2024-12-31일에 종료</p>
+                <p class="p1">남은기간 <span id="W_D_day"></span>   /  <span id="W_End_date"></span></p>
                 <br>
                 <button class="bigbtn" onclick="goPayment()">후원하기</button>
                 <br>
@@ -89,48 +63,15 @@
                         <input type="radio" checked name="tabmenu" id="tabmenu1" style="display: none;">
                         <label for="tabmenu1">활동내용</label>
                         <div class="tabCon">
-                            <img style="text-align: center;" src="../../img/하천.png">
+                            <img style="text-align: center;" src="" id="capaing_detail_img">
                         </div>
                     </li>
                     <li id="tab2" class="btnCon">
                         <input type="radio" name="tabmenu" id="tabmenu2" style="display: none;">
                         <label for="tabmenu2">안내사항</label>
                         <div class="tabCon">
-                        <h2>상세 내용</h2>
                         <br>
-                        <pre style="text-align: left; font-size: 12pt;">
-어플라이드 머티어리얼즈 코리아와 환경실천연합회가 함께하는 수질 환경 보호 봉사활동‘우리 하천 지킴이’ 봉사활동 참여자 및 단체를 모집합니다! 
-우리 하천 지킴이는 혼자 또는 가족, 친구 등과 함께 가정, 학교, 동아리 등에서 자유롭게 참여할 수 있으며,
-모든 활동을 완료하신 경우 총 8시간의 봉사활동을 인증받을 수 있습니다.
-​봉사활동 참여를 희망하시는 경우 아래에 이어지는 안내문과 활동 소개 배너 이미지를 참고하시어 신청을 바랍니다. 
-                        </pre><br>
-
-                        <pre style="text-align: left;">
-▼ 모집 안내문
-
-[모집대상]
-참여를 희망하는 누구나(개인, 가정, 학급, 동아리 등 단체 신청도 가능)* 봉사활동이 필요한 누구나 신청 가능
-
-[활동지역]
-1. 활동 후 EM흙공을 하천에 던질 수 있다면 어디서나 활동 가능 (집, 학교, 사회복지시설, 실외 등)
-2. 도심 속 하천 어디든 (경기 남부 황구지천, 오산천, 안성천, 아라천, 굴포천 등)
-
-[활동기간]활동이 가능한 날짜에 자유롭게 활동 진행*매월 첫째주 목요일에 발송되는 활동 물품 수령 후 활동 시작
-
-[활동내용]- 환경 교육 (홈페이지에서 수질 관련 정보를 확인하고 활동 내용을 숙지)
-- 환경 활동 (EM흙공을 직접 만들고 발효한 후 하천에 투척하는 활동 진행)
-- 실천 나눔 (‘우리 하천 지킴이’ 홈페이지에 활동 후기, 활동 사진을 자유롭게 업로드)
-
-[신청방법]- 배너 내 QR코드를 인식하여 우측 상단의 ‘신청하기’ 버튼을 눌러 참여 신청 완료하기
-- www.ecowater.or.kr 링크에 접속하여 우측 상단의 ' 신청하기' 버튼을 눌러 참여 신청 완료하기
-
-[유의사항]- 실천나눔 게시를 통해 모든 활동 과정이 확인된 경우에만 1365 자원봉사 포털을 통해 봉사활동 8시간이 인증됩니다.
-- 활동 물품은 신청일로부터 1개월 이내에 발송되며, 물품을 수령한 후 활동을 희망하는 일자에 자유롭게 진행하면 됩니다.
-
-[활동문의]
-(사)환경실천연합회
-02-805-8840~2
-                        </pre>
+                        <pre style="text-align: left; font-size: 12pt;" id="activity_participation_guide"></pre>
 
                         </div>
                     </li>    
@@ -152,11 +93,85 @@
                 </ul>
             </div>
 
+
         <script src="../../script/with-value-detail.js"></script>
+        <script src="../../script/data.js"></script>
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
         integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
       <script>
         Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
       </script>
-    </body>
-</html>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const selectedCampaignId = parseInt(localStorage.getItem('selectedCampaignId'), 10);
+                const selectedCampaign = campaign.find(item => item.id === selectedCampaignId);
+                
+                console.log('Selected campaign ID:', selectedCampaignId);
+                console.log('campaign Data:', selectedCampaign);
+                
+                if (selectedCampaign) {
+                    showRegion(selectedCampaign.W_region);
+                    showTopic(selectedCampaign.campaign_topic);
+                    showCampaignImage(selectedCampaign.campaomg_img);
+                    showDetailImage(selectedCampaign.capaing_detail_img);
+                    showTargetParticipants(selectedCampaign.W_Target_participants);
+                    showParticipantCount(selectedCampaign.W_Participant_Count);
+                    showParticipationRate(selectedCampaign.W_Participation_Rate);
+                    showDaysLeft(selectedCampaign.W_D_day);
+                    showEndDate(selectedCampaign.W_End_date);
+                    showParticipationGuide(selectedCampaign.activity_participation_guide);
+                } else {
+                    console.error('오류');
+                }
+            });
+                            
+                    function showRegion(region) {
+                        const regions = document.getElementById('W_region');
+                        regions.textContent = region; 
+                    }
+
+                    function showTopic(topic) {
+                        const campaignTopic = document.getElementById('campaign_topic');
+                        campaignTopic.textContent = topic; 
+                    }
+                    function showCampaignImage(imgSrc) {
+                        const campaignImage = document.getElementById('campaomg_img'); // ID가 'campaomg_img'인 요소
+                        campaignImage.src = imgSrc; // 이미지 소스 설정
+                    }
+                    function showDetailImage(imgSrc) {
+                        const detailImageElement = document.getElementById('capaing_detail_img');
+                        detailImageElement.src = imgSrc;
+                    }
+        
+                    function showTargetParticipants(participants) {
+                        const targetAmountElement = document.getElementById('W_Target_participants');
+                        targetAmountElement.textContent = `${participants.toLocaleString()}명`;
+                    }
+        
+                    function showParticipantCount(count) {
+                        const participantCountElement = document.getElementById('W_Participant_Count');
+                        participantCountElement.textContent = `${count.toLocaleString()}명 신청`;
+                    }
+        
+                    function showParticipationRate(rate) {
+                        const participationRateElement = document.getElementById('W_Participation_Rate');
+                        participationRateElement.textContent = `${rate}%`;
+                    }
+        
+                    function showDaysLeft(days) {
+                        const daysLeftElement = document.getElementById('W_D_day');
+                        daysLeftElement.textContent = `${days}일`;
+                    }
+        
+                    function showEndDate(endDate) {
+                        const endDateElement = document.getElementById('W_End_date');
+                        endDateElement.textContent = `${endDate} 종료`;
+                    }
+        
+                    function showParticipationGuide(guide) {
+                        const guideElement = document.getElementById('activity_participation_guide');
+                        guideElement.textContent = guide;
+                    }
+                </script>
+            </body>
+        </html>

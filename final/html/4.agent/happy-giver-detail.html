@@ -12,54 +12,31 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <img src="../../img/logo.png" style="width:180px">
-                </h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <button type="button" onclick="location.href='./gift_detail.html'">착한선물</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./narmi_detail.html'" class="selected">행복나르미</button>
-                        </li>
-                        <li>
-                            <button type="button" onclick="location.href='./together_detail.html'">같이가치</button>
-                        </li>
-                    </ul>
-                </nav>
-            <div>
-                <button>로그인</button> /
-                <button>회원가입</button>
-            </div>
-            </div>
-        </header>
+
         <div class="ctn"> 
             <div class="item1">
-                <h4>불당동</h4>
-                <h2>희망어린이집</h2>
-                <img src="../../img/narmi/narmi1.PNG" width="450px"> 
+                <h4 id="N_region_city"></h4>
+                <h2 id="N_location"></h2>
+                <img id="N_location_img" src="" width="450px"> 
             </div>
             <div class="item2"> 
             <h4>후원 정보</h4>
             <p class="info"><i class="fa-solid fa-circle-info"><p class="arrow_box">후원금액은<br>
-                3000원,5000원 중<br>
+                10,000원,20,000원 중<br>
                 선택하여 후원이 <br>
                 가능합니다.</p></i></p>
-            <h2>70000원 후원중</h4>
+            <h2 id="N_funding_achievement"> 후원중</h4>
                 <br>
-                <p class="p1">달성률 46.6%    /  목표 금액 150,000</p>
+                <p class="p1">달성률 <span id="N_funding_progress">%</span>    /  목표 금액 <span id="N_Target_amount">원</span></p>
                 <br>
-                <p class="p1">남은기간 15일   /  2024-12-31에 종료</p>
+                <p class="p1">남은기간 <span id="D_day"></span>   /  <span id="End_date"></span>에 종료</p>
                 <br>
-                <p class="p1">참여인원:30명</p>
+                <p class="p1">참여인원: <span id="N_head_count"></span></p>
                 <br>
                 <button class="bigbtn" onclick="goPayment()">후원하기</button>
                 <br>
                 <br>
-                <button class="like" id="incrementBtn"><img src="../../img/heart.png" alt="" width="30px"></button>
+                <button class="like" id="incrementBtn"><img src="./img/heart.png" alt="" width="30px"></button>
                 <span id="number" style="padding-right: 30px;">0</span>
                 <button class="btn" id="modalBtn">공유하기</button>
             </div>
@@ -72,10 +49,10 @@
                     <h3>공유하기</h3><br>
                     <p>이 후원을 널리 알려주세요~!</p><br>
                     <div class="share">
-                            <img src="../../img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
-                            <img src="../../img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
-                            <img src="../../img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
-                            <img src="../../img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
+                            <img src="./img/icon/페이스북.png" class="icons" onclick="shareFacebook()"> 
+                            <img src="./img/icon/네이버밴드.png" class="icons" onclick="shareBand()"> 
+                            <img src="./img/icon/트위터.PNG" class="icons" onclick="shareTwitter()"> 
+                            <img src="./img/icon/카카오톡.PNG" class="icons" onclick="shareKakao()"> 
                     </div>
                 </div>
             </div>
@@ -90,21 +67,8 @@
                         <label for="tabmenu1">나르미 소개</label>
                         <div class="tabCon" style="padding-left: 200px;">
                             <br>
-                            <img class="agent" src="../../img/narmi/agent1.PNG" >
-                            <pre>
-
-       안녕하세요
-       봉사 지원자 홍길동입니다.
-
-       봉사를 오랜시간 하고 싶어했지만 
-       이제야 용기를 내어 도전합니다.
-    
-       아이들에게 꿈과 희망을 줄 수 있도록
-       함께해주시면 감사하겠습니다.
-    
-       이번에 아이들에게 전래동화 세트를 사가지고 갈 예정입니다.
-
-                            </pre>
+                            <img id="agent_image" src="" class="agent"> 
+                            <pre id="agent_Introduce"></pre>
                         </div>
                     </li>
                     <li id="tab2" class="btnCon">
@@ -131,20 +95,24 @@
                     <li id="tab3" class="btnCon">
                         <input type="radio" name="tabmenu" id="tabmenu3" style="display: none;">
                         <label for="tabmenu3">진행상황</label>
-                        <div class="tabCon"><br><br>
+                        <div class="tabCon"><br><br><br><br>
                             <div class="container">
                                 <div class="stepBox">
+                                    
                                     <div class="circle">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="f_start"></div>
                                         <span>모금시작</span>
                                     </div>
                                     <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="f_complete"></div>
                                         <span>모금완료</span>
                                     </div>
                                     <img src="../../img/arrow_right.PNG" class="arrowRight">
                                     <div class="circle">
+                                        <img src="../../img/confirm.png" style="width:70px;" class="confirm">
                                         <div class="step" id="purchase"></div>
                                         <span>물품구매</span>
                                     </div>
@@ -166,6 +134,8 @@
                         <input type="radio" name="tabmenu" id="tabmenu4" style="display: none;">
                         <label for="tabmenu4">정산내역</label>
                         <div class="tabCon">
+                            <button class="reciptButton" onclick="location.href='./recipt_image.html'">영수증 확인하기</button>
+
                             <div class="container">
                                 <br>
                                 <div class="container">
@@ -196,7 +166,6 @@
                                   <input type="text" placeholder="댓글을 입력하세요" style="width:300px" maxlength="20" required >
                                   <button type="submit">등록하기</button>
                                 </form>
-                        
                             </div>
                         </div>
                     </li>
@@ -209,6 +178,93 @@
         <script>
             Kakao.init('kakao'); // 사용하려는 앱의 JavaScript 키 입력
         </script>
-   
-    </body>
+       <script src="../../script/data.js"></script>
+       <script>
+           document.addEventListener('DOMContentLoaded', () => {
+               const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+               const narmi = Narmi.find(item => item.id === selectedNarmiId);
+               
+               console.log('Selected Narmi ID:', selectedNarmiId);
+               console.log('Narmi Data:', narmi);
+               
+               if (narmi) { 
+                   showAgentImage(narmi.agent_img);
+                   showLocation(narmi.N_location);
+                   showRegionAndCity(narmi.N_region, narmi.N_city); 
+                   showTargetAmount(narmi.N_Target_amount);
+                   showFundingAchievement(narmi.N_funding_achievement);
+                   showFundingProgress(narmi.N_funding_progress);
+                   showHeadCount(narmi.N_head_count);
+                   showDaysLeft(narmi.D_day);
+                   showEndDate(narmi.End_date);
+                   showAgentIntroduce(narmi.agent_Introduce);
+                   showLocationImage(narmi.N_location_img);
+
+               } else {
+                   console.error('오류');
+               }
+           });
+       
+           function showRegionAndCity(region, city) {
+               const regionCityElement = document.getElementById('N_region_city');
+               regionCityElement.textContent = `${region} ${city}`; // 공백으로 구분
+           }
+       
+           function showAgentName(name) {
+               const agentName = document.getElementById('agent_name');
+               agentName.textContent = name;
+           }
+       
+           function showAgentImage(imgSrc) {
+               const agentImage = document.getElementById('agent_image');
+               agentImage.src = imgSrc;
+           }
+           function showLocationImage(imgSrc) {
+               const locationImageElement = document.getElementById('N_location_img');
+               locationImageElement.src = imgSrc;
+           }   
+       
+           function showLocation(location) {
+               const locationElement = document.getElementById('N_location');
+               locationElement.textContent = location;
+           }
+       
+           function showTargetAmount(amount) {
+               const targetAmountElement = document.getElementById('N_Target_amount');
+               targetAmountElement.textContent = `${amount.toLocaleString()}`;
+           }
+       
+           function showFundingAchievement(achievement) {
+               const fundingAchievementElement = document.getElementById('N_funding_achievement');
+               fundingAchievementElement.textContent = `${achievement.toLocaleString()}`;
+           }
+       
+           function showFundingProgress(progress) {
+               const fundingProgressElement = document.getElementById('N_funding_progress');
+               fundingProgressElement.textContent = `${progress}`;
+           }
+       
+           function showHeadCount(count) {
+               const headCountElement = document.getElementById('N_head_count');
+               headCountElement.textContent = `${count}명`;
+           }
+       
+           function showDaysLeft(days) {
+               const daysLeftElement = document.getElementById('D_day');
+               daysLeftElement.textContent = `${days}일`;
+           }
+       
+           function showEndDate(endDate) {
+               const endDateElement = document.getElementById('End_date');
+               endDateElement.textContent = `${endDate}`;
+           }
+       
+           function showAgentIntroduce(introduce) {
+               const introduceElement = document.getElementById('agent_Introduce');
+               introduceElement.textContent = introduce;
+           }
+       </script>
+   </body>
 </html>
+
+
