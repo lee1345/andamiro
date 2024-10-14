@@ -5,7 +5,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>메인화면</title>       
-       <link rel="stylesheet" href="./css/happy-giver-main.css">
+       <link rel="stylesheet" href="../../css/happy-giver-main.css">
        <style>
       @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
@@ -15,7 +15,7 @@
         <header>
             <div class="container">
                 <h1>
-                    <a href="#"><img src="./img/logo.png" style="width: 180px;"></a>
+                    <a href="#"><img src="../../img/logo.png" style="width: 180px;"></a>
                 </h1>
                 <nav>
                     <ul class="btn-cr">
@@ -26,7 +26,7 @@
                             <a href="#2"><button class="menu-btn">행복나르미</button></a>
                         </li>
                         <li>
-                            <a href="./with-value-main.html"><button class="menu-btn">같이가치</button></a>
+                            <a href="../with-value-main.html"><button class="menu-btn">같이가치</button></a>
                         </li>
                     </ul>
                 </nav>
@@ -50,188 +50,29 @@
             </ul>
         </div>
         <br></br>
-            <div class="select-area">
-                <h2 style="display:inline">행복나르미&nbsp;</h2>
-                <select id="city" onchange="updateDistricts()">
-                    <option value="">선택하세요</option>
-                    <option value="천안">천안</option>
-                    <option value="아산">아산</option>
-                </select>
-                <select id="district">
-                    <option value=""></option>
-                </select>
-                <button value="submit" class="search">검색</button>
-                <button type="submit" class="apply">신청하기</button>
-            </div>
-                <h2 id="천안시 서북구" class="city-title">천안시 서북구</h2>
-                <div class ="new">
-                <ul class = "item1">
-                    <a href="./happy-giver-detail.html">
-                        <li>
-                            <img src = "./img/agent1.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">김길동</h2> 님
-                            <h2 style="display:inline" class="date">D-21</h2><br>
-                            <span class="area">천안보육원</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">300,000원</strong>
-                            <strong class="funding-amt">250,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>83%</h1>
-                            <div class="progressbar" id="progressbar1">
-                                <span class="progress"></span>
-                            </div>
-                        </li>
-                    </a>
-                </ul>
-                <ul class = "item1">
-                    <a href="#">
-                        <li>
-                            <img src = "./img/agent2.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">박길동</h2> 님
-                            <h2 style="display:inline" class="date">D-45</h2><br>
-                            <span class="area">성정 어린이집</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">100,000원</strong>
-                            <strong class="funding-amt">70,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>70%</h1>
-                            <div class="progressbar" id="progressbar2">
-                                <span class="progress2"></span>
-                            </div>
-                        </li>
-                    </a>
-                </ul>
-                <ul class = "item1">
-                    <a href="#">
-                        <li>
-                            <img src = "./img/agent3.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">홍길동</h2> 님
-                            <h2 style="display:inline" class="date">D-7</h2><br>
-                            <span class="area">쌍용도서관</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">300,000원</strong>
-                            <strong class="funding-amt">300,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>100%</h1>
-                            <div class="progressbar" id="progressbar3">
-                                <span class="progress3"></span>
-                            </div>
-                        </li>
-                    </a>
-                </ul>
-                    <div class ="clear"></div>
-                </div>
-                <h2 class="city-title">천안시 동남구</h2>
-                <div class="new">
-                <a href="#">
-                    <ul class = "item1">
-                        <li>
-                            <img src = "./img/agent4.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">김경철</h2> 님
-                            <h2 style="display:inline" class="date">D-16</h2><br>
-                            <span class="area">가온지역아동센터</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">250,000원</strong>
-                            <strong class="funding-amt">160,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>64%</h1>
-                            <div class="progressbar" id="progressbar4">
-                                <span class="progress4"></span>
-                            </div>
-                        </li>
-                    </ul>
-                </a>
-                <a href="#">
-                    <ul class = "item1">
-                        <li>
-                            <img src = "./img/agent5.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">박명화</h2> 님
-                            <h2 style="display:inline" class="date">D-48</h2><br>
-                            <span class="area">사랑실천복지센터</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">200,000원</strong>
-                            <strong class="funding-amt">50,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>25%</h1>
-                            <div class="progressbar" id="progressbar5">
-                                <span class="progress5"></span>
-                            </div>
-                        </li>
-                    </ul>
-                </a>
-                <a href="#">
-                    <ul class = "item1">
-                        <li>
-                            <img src = "./img/agent5.PNG">
-                        </li>
-                        <li class ="subject">
-                            <h2 style="display:inline">박명화</h2> 님
-                            <h2 style="display:inline" class="date">D-46</h2><br>
-                            <span class="area">사랑실천복지센터</span><br>
-                            
-                        </li>
-                        <li class="price">
-                            <span class="target">목표금액</span>
-                            <span class="funding">모금금액</span>
-                        </li>
-                        <li class="amount">
-                            <strong class="target-amt">270,000원</strong>
-                            <strong class="funding-amt">130,000원</strong>
-                        </li>
-                        <li class="achieved"><span>달성률</span>
-                            <h1>48%</h1>
-                            <div class="progressbar" id="progressbar6">
-                                <span class="progress6"></span>
-                            </div>
-                        </li>
-                    </ul>
-                </a>
-            </div>
+        <div class="select-area">
+            <h2 style="display:inline">행복나르미&nbsp;</h2>
+            <select id="city" onchange="updateDistricts()">
+                <option value="">선택하세요</option>
+                <option value="천안">천안</option>
+                <option value="아산">아산</option>
+            </select>
+            <select id="district">g
+                <option value=""></option>
+            </select>
+            <button value="submit" class="search">검색</button>
+            <a href="happy-giver-application.html"><button value="submit" class="apply">행복나르미 신청하기</button></a>
+        </div>
+    
+        <h2 class="city-title">천안시 서북구</h2>
+        <div class="new" id="profiles-seobuk"></div>
+    
+        <h2 class="city-title">아산시 탕정면</h2>
+        <div class="new" id="profiles-tangjeong"></div>
+    
+        <h2 class="city-title">아산시 배방읍</h2>
+        <div class="new" id="profiles-baebang"></div>
+    
     <!--footer-->
 <div class="main-footer">
     <div><img src="./img/logo.png" style="width:180px" alt=""></div>
@@ -245,27 +86,66 @@
     </ul>
 
     </div>
-
-
-
-
         </body>
 
 
         
-        <!-- 착한선물 -->
+    <script src="../../script/happy-giver-main.js"></script>
+    <script src="../../script/test.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profilesByRegion = {
+                '서북구': document.getElementById('profiles-seobuk'),
+                '탕정면': document.getElementById('profiles-tangjeong'),
+                '배방읍': document.getElementById('profiles-baebang'),
+            };
 
-        <!-- 행복나르미 -->
+            function renderProfile(narmi) {
+                const profile = document.createElement('ul');
+                profile.classList.add('item1');
 
-        <!-- 같이가치 -->
+                profile.innerHTML = `
+                            <li>
+                                <img src="${narmi.agent_img}" alt="${narmi.agent_name} 프로필 사진">
+                            </li>
+                            <li class="subject">
+                                <h2 style="display:inline">${narmi.agent_name}</h2> 님
+                                <h2 style="display:inline" class="date">D-${narmi.D_day}</h2><br>
+                                <span class="area">${narmi.N_location}</span><br>
+                            </li>
+                            <li class="price">
+                                <span class="target">목표금액</span>
+                                <span class="funding">모금금액</span>
+                            </li>
+                            <li class="amount">
+                                <strong class="target-amt">${narmi.N_Target_amount.toLocaleString()}원</strong>
+                                <strong class="funding-amt">${narmi.N_funding_achievement.toLocaleString()}원</strong>
+                            </li>
+                            <li class="achieved">
+                                <span>달성률</span>
+                                <h1>${Math.round(narmi.N_funding_progress)}%</h1>
+                                <div class="progressbar" id="progressbar${narmi.id}">
+                                    <span class="progress" style="width: ${narmi.N_funding_progress}%"></span>
+                                </div>
+                            </li>
+                `;
 
-        <!-- 로그인/회원가입 -->
-        
-        <!-- 마이페이지 -->
+                profile.onclick = () => {
+                    // 클릭한 프로필의 ID를 localStorage에 저장
+                    localStorage.setItem('selectedNarmiId', narmi.id);
+                    window.location.href = './happy-giver-detail.html'; // 세부 페이지로 이동
+                };
 
+                return profile;
+            }
 
-
-
-    <script src="./script/happy-giver-main.js"></script>
+            Narmi.forEach(narmi => {
+                const region = profilesByRegion[narmi.N_city];
+                if (region) {
+                    region.appendChild(renderProfile(narmi));
+                }
+            });
+        });
+    </script>
     </body>
 </html>

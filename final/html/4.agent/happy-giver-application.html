@@ -15,18 +15,29 @@
             border-collapse: collapse;
         }
         th {
-            border: 1px solid #aba6a6;
+            border: 1px solid #6b6868;
             background-color: #f0fbfc;
             color: rgb(49 112 141);
             text-align: center;
             font-size: 12pt;
         }
         td {
-            border: 1px solid black;
+            border: 1px solid #6b6868;
             padding: 5px;
             height: 20px;
             vertical-align: middle;
-
+        }
+        button.submit{
+            background-color: rgb(49 112 141);
+            color: #f0fbfc;
+            border: 1px solid #6b6868;
+            cursor:pointer;
+        }
+        button.cancle{
+            background-color: #f0fbfc;
+            color: rgb(49 112 141);
+            border: 1px solid #6b6868;
+            cursor:pointer;
         }
         input {
             width: 90%;
@@ -171,8 +182,8 @@
 
         <br>
         <div style="padding-left: 10%;">
-            <button type="submit" style="width:200px" onclick="regist();">신청하기</button>
-            <button type="button" style="width:200px" onclick="window.close();">취소</button>
+            <button type="submit" style="width:200px" onclick="regist();" class="submit">신청하기</button>
+            <button type="button" style="width:200px" onclick="window.close();" class="cancle">취소</button>
         </div>
     </form>
     
