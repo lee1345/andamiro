@@ -1,0 +1,190 @@
+/* 상단메뉴바  */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, a:link, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header{
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header nav ul{
+    justify-content: space-between;    
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+header nav ul li{
+    padding-right: 70px;
+}
+
+header button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    align-content: center;
+    font-size: 18pt;
+}
+.selected{
+    color:blue;
+}
+
+/* 더보기기능 */
+.hidden{
+    display: none;
+}
+
+
+/* 상부 */
+.container2{
+    width : 1000px;
+    margin: 0 auto; /* 가운데 정렬 */
+    
+}
+
+.container2 .h-1{
+    color: steelblue;
+    margin-bottom: 10px;
+}
+
+.container2 .h-1{
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  .container2 .h-1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 55px;
+    background-color: #111;
+  }
+  .container2 .h-1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 1px;
+    width: 95%;
+    background-color: #333;
+  }
+
+
+
+
+
+
+.info{
+    background-color: #f4faff;
+    border: 2px solid #dee2e4;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;/*세로정렬*/
+    justify-content: center;/*가로정렬*/
+    gap:13%;
+}
+
+
+/* 하부 */
+.container3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.container3 h2{
+    color: steelblue;
+}
+
+table{
+    width: 1000px;
+    border-collapse: collapse;
+}
+th{
+    color: #795548;
+    background-color: #d4f4f8;
+    height: 40px;
+}
+tr{
+    border-bottom: 1px solid rgb(184, 184, 184); 
+}
+td{
+    color: #3b2e2a;
+    text-align: center;
+    height: 40px; 
+}
+table.gift td{
+    height:60px;
+}
+td img{
+    width:60px;
+    margin-left: 10%;
+    margin-right: 30px;
+}
+.gift th:nth-child(1){width: 15%;}
+.gift th:nth-child(2){width: 50%;}
+.gift th:nth-child(3){width: 20%;}
+.gift th:nth-child(4){width: 15%;}
+
+/* 더보기버튼 */
+button.more {
+    cursor: pointer;
+    border: 0;
+    background-color: white ;
+    color: gray ;
+    padding-left: 10px;
+}
+.narmiPayment th:nth-child(1) { width: 15%; }
+.narmiPayment th:nth-child(2) { width: 15%; }
+.narmiPayment th:nth-child(3) { width: 25%; }
+.narmiPayment th:nth-child(4) { width: 15%; }
+.narmiPayment th:nth-child(5) { width: 15%; }
+.narmiPayment th:nth-child(6) { width: 15%; }
+
+.together th:nth-child(1) { width: 20%; }
+.together th:nth-child(1) { width: 20%; }
+.together th:nth-child(1) { width: 30%; }
+.together th:nth-child(1) { width: 15%; }
+.together th:nth-child(1) { width: 15%; }
+
+
+.narmi th:nth-child(1) { width: 14%; }
+.narmi th:nth-child(2) { width: 6%; }
+.narmi th:nth-child(3) { width: 15%; }
+.narmi th:nth-child(4) { width: 10%; }
+.narmi th:nth-child(5) { width: 10%; }
+.narmi th:nth-child(6) { width: 10%; }
+.narmi th:nth-child(7) { width: 10%; }
+.narmi th:nth-child(8) { width: 10%; }

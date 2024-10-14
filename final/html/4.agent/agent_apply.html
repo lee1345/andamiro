@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+         body {
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: 400;
+        }
         table {
             width: 800px;
             border-collapse: collapse;
         }
         th {
-            border: 1px solid black;
-            background-color: rgb(233, 233, 233);
-            color: rgb(70, 70, 70);
+            border: 1px solid #6b6868;
+            background-color: #f0fbfc;
+            color: rgb(49 112 141);
             text-align: center;
-            font-size: 12pt;            
+            font-size: 12pt;
         }
         td {
-            border: 1px solid black;
+            border: 1px solid #6b6868;
             padding: 5px;
             height: 20px;
             vertical-align: middle;
-
+        }
+        button.submit{
+            background-color: rgb(49 112 141);
+            color: #f0fbfc;
+            border: 1px solid #6b6868;
+            cursor:pointer;
+        }
+        button.cancle{
+            background-color: #f0fbfc;
+            color: rgb(49 112 141);
+            border: 1px solid #6b6868;
+            cursor:pointer;
         }
         input {
             width: 90%;
@@ -165,8 +182,8 @@
 
         <br>
         <div style="padding-left: 10%;">
-            <button type="submit" style="width:200px" onclick="regist();">신청하기</button>
-            <button type="button" style="width:200px" onclick="window.close();">취소</button>
+            <button type="submit" style="width:200px" onclick="regist();" class="submit">신청하기</button>
+            <button type="button" style="width:200px" onclick="window.close();" class="cancle">취소</button>
         </div>
     </form>
     
