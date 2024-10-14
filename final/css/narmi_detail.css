@@ -1,0 +1,425 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.confirm{
+    position: absolute; /* 절대 위치로 설정 */
+    transform: translate(-50%, -140%); /* 이미지 중심 조정 */
+}
+
+/* 상단메뉴바  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, a:link, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header{
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header nav ul{
+    justify-content: space-between;    
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+header nav ul li{
+    padding-right: 70px;
+}
+
+header button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    align-content: center;
+    font-size: 18pt;
+}
+.selected{
+    color:blue;
+}
+/* 상단 세부정보 레이아웃 */
+
+.ctn{
+    display: flex; /* Flexbox 사용 */
+    justify-content: flex-start; /* 아이템을 좌우로 균등하게 배치 */
+}div .rs{/*리워드 선택(reworld selector)*/
+    display: flex;
+    padding-top: 10px;
+}.box {
+    width: 120px; /* 박스의 너비 */
+    height: 50px; /* 박스의 높이 */
+    margin: 10px; /* 박스 간격 */
+    background-color: white; /* 박스 색상 */
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin: 0;
+    border: 1px solid black;
+}
+.btn{   
+    font-weight: bolder; 
+    color: steelblue;
+    margin-right: -40px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    width: 150px;
+    height:35px;
+}
+.like{
+    cursor:pointer;
+    width:50px;
+    border:none;
+    background-color: transparent;
+
+}
+.bigbtn{
+    font-weight: bold;
+    font-size: 15px;
+    color: steelblue;
+    border: none;
+    width: 300px;
+    height: 50px;
+}
+
+.rewardbtn{
+    width: 150px;
+    height:50px;
+    background-color: none;
+    border: solid black 1px;
+}
+.item1{
+    padding-top: 5%;
+    padding-left:15%; /* 아이템 안쪽 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */      
+    align-items: center;
+}
+.item2{
+    padding-top: 8%;
+    padding-left:5%; /* 아이템 안쪽 여백 */
+    text-align: center; /* 텍스트 중앙 정렬 */  
+    align-items: center;
+}
+.p1{
+    text-align: left
+}
+h4{
+    color: darkgray;
+    text-align: left;
+}
+h2{
+    margin-bottom: 10px;
+    color: steelblue;
+    text-align: left;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.01s;
+}
+
+/*리워드 선택 버튼*/
+.button.active {
+    background-color: rgb(152, 150, 150); /* 클릭된 버튼의 색깔 */
+}
+.button.inactive {
+    background-color: white; /* 기본 버튼 색깔 */
+
+
+/*후원정보*/
+}.info{
+    position: relative;
+    top: -30px;
+    left: -40px;
+} .arrow_box {
+    display: none;
+    position: absolute;
+    width: 250px;
+    padding: 8px;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.arrow_box:after {
+    position: absolute;
+    margin-left: -10px;
+    border: solid ;
+    border-color: rgba(51, 51, 51, 0);
+    border-bottom-color: #333;
+
+}
+.info:hover + p.arrow_box  {
+        display: block;
+}
+* {
+    box-sizing: border-box;
+    }
+    
+/*모달 기능*/
+
+.modal {
+/* 스타일 - customize */
+height:300px;
+background-color: rgba(0, 0, 0, 0.7);
+pointer-events: none;
+padding: 20px;
+
+
+/* 트랜지션 효과 */
+transition: opacity 0.3s ease-in-out;
+opacity: 0;
+
+/* 화면 전체를 덮게하는 코드 */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+/* 중앙에 오게하는 코드 */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal-content {
+/* 스타일 - customize */
+max-width: 500px;
+width: 50%;
+height: 280px;
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+text-align: center;
+
+/* 트랜지션 효과 */
+opacity: 0;
+transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+transform: scale(0.8);
+}
+
+.modal.show {
+/* 모달이 열렸을 때 보여지게 하는 코드 */
+opacity: 1;
+pointer-events: auto;
+z-index: 1;
+}
+
+.modal.show .modal-content {
+/* 모달이 열렸을 때 보여지게 하는 코드 */
+opacity: 1;
+transform: scale(1);
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover {
+color: black;
+}
+
+.share{
+    display: flex; /* Flexbox 활성화 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+
+}
+.icons {
+    width: 50px;
+    margin: 0 10px; /* 아이콘 간 간격 추가 */
+    cursor:pointer;
+}
+
+/* 페이지 하단부 */
+
+/* 탭메뉴 양식 */
+ul {
+    list-style: none;
+}
+.tabmenu { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position: relative; 
+    
+}
+.tabmenu ul {
+    position: relative;
+}
+.tabmenu ul li {
+    /* display: inline-block; */
+    width: 20%; 
+    float: left;  
+    text-align: center; 
+    background: #f9f9f9;
+    line-height: 40px;
+}
+.tabmenu label {
+    
+    display: block;
+    width: 100%; 
+    height: 40px;
+    line-height: 40px;
+}
+
+.tabCon {
+    display: none; 
+    width: 100%;
+    text-align: center; 
+    padding: 20px;
+    position: absolute; 
+    left: 0; top: 40px; 
+    box-sizing: border-box; 
+    border: 5px solid #f9f9f9;
+    justify-content: center;
+}
+.tabmenu input:checked ~ label {
+    color: white;
+    background: #99bcd9;
+
+}
+.tabmenu input:checked ~ .tabCon {
+    display: block;
+}
+/* 1. 나르미소개 */
+.agent{
+    float: left; 
+    height:auto;
+    width:220px;    
+}
+
+pre{
+    line-height: 15pt;
+    text-align: left; 
+    font-size: 12pt
+}
+/* 2.산출내역 */
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; /* 표 중앙정렬*/
+
+}
+/* 산출내역표 */
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    text-align: center;
+}
+td, th {
+    
+    border: solid 1px #9E9E9E;
+}
+.invoice th {
+    background-color: #c7def1;
+}
+.invoice th:nth-child(1) { width: 60px; }
+.invoice th:nth-child(2) { width: 80px; }
+.invoice th:nth-child(3) { width: 250px; }
+.invoice th:nth-child(4) { width: 60px; }
+.invoice th:nth-child(5) { width: 60px; }
+.invoice th:nth-child(6) { width: 100px; }
+.invoice th:nth-child(7) { width: 100px; }
+.invoice th:nth-child(8) { width: 100px; }
+
+/* 3. 진행상황 */
+.stepBox {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 50px; /* 각 요소 간 간격 */
+}
+
+.step {
+    background-color: #4A90E2; /* 푸른색 */
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;    
+    border: 1px solid #e2e2e2;
+    margin: 0 auto; /* 가운데 정렬을 위한 margin */
+}
+
+.arrowRight{
+    width:30px;
+    height:20px;
+}
+span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.arrowRight:hover {
+    opacity: 0.7; /* 호버시 투명도 변화 */
+}
+
+
+
+
+
+/* 4.정산내역 */
+.settlementTable th {
+    background-color: #c7def1;
+}
+.settlementTable th:nth-child(1) { width: 60px; }
+.settlementTable th:nth-child(2) { width: 80px; }
+.settlementTable th:nth-child(3) { width: 250px; }
+.settlementTable th:nth-child(4) { width: 60px; }
+.settlementTable th:nth-child(5) { width: 60px; }
+.settlementTable th:nth-child(6) { width: 100px; }
+.settlementTable th:nth-child(7) { width: 100px; }
+.settlementTable th:nth-child(8) { width: 100px; }
+
+/* 5.댓글기능 */
+.comments {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    text-align: left;
+}
+.comment-card {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding-left: 150px;
+}
+.comment-card img {
+    width: 50px;
+    padding-right: 15px;
+}
+

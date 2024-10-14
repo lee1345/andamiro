@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>3조_안다미로</title>       
+       <link rel="stylesheet" href="../../css/with-value-main.css">
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        </style>
+    </head>
+    <body>
+        <!-- 헤더 -->
+
+
+        
+        <!-- 메인내용 -->
+        <article>
+            <img src="../../img/background/3.together.png" width="100%">
+        </article>
+        <h2 class="title">같이가치</h2>
+        <div class="new"></div>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="main-footer">
+                <div><img src="../../img/logo.png" style="width:180px" alt=""></div>
+                <ul>
+                    <li>대표 : 홍길동</li>
+                    <li>주소 : 충남 천안시 동남구 대흥로 215, 7층 </li>
+                    <li>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234  </li>
+                    <li>이메일 : human@naver.com </li>
+                    <a href=""><li>개인정보 처리방침 </li></a>
+                </ul>
+            </div>
+        </footer>
+        
+    <script src="../../script/data.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const campaignContainer = document.querySelector('.new');
+            let count = 0; // 출력된 항목 수를 카운트
+
+            campaign.forEach(campaign => {
+                const item = document.createElement('a');
+                item.href = './with-value-detail.html'; // 세부 페이지로 이동
+                item.onclick = () => {
+                    // 클릭한 캠페인의 ID를 localStorage에 저장
+                    localStorage.setItem('selectedCampaignId', campaign.id);
+                };
+
+                item.innerHTML = `
+                    <ul class="item1" style="width:400px">
+                        <li>
+                            <img src="${campaign.campaomg_img}" alt="${campaign.campaign_topic}">
+                        </li>
+                        <li class="subject">
+                            <p style="display:inline" class="city">${campaign.W_region}</p>
+                            <h2 style="display:inline" class="date">D-${campaign.W_D_day}</h2><br>
+                            <h2 style="display:inline">${campaign.campaign_topic}</h2>
+                        </li>
+                        <li class="price">
+                            <span class="target">목표인원</span>
+                            <span class="funding">신청인원</span>
+                        </li>
+                        <li class="amount">
+                            <strong class="target-amt">${campaign.W_Target_participants}명</strong>
+                            <strong class="funding-amt">${campaign.W_Participant_Count}명</strong>
+                        </li>
+                        <li class="achieved">
+                            <span>달성률</span>
+                            <h1>${campaign.W_Participation_Rate}%</h1>
+                            <div class="progressbar" id="progressbar${campaign.id}">
+                                <span class="progress" style="width: ${campaign.W_Participation_Rate}%;"></span>
+                            </div>
+                        </li>
+                    </ul>
+                `;
+
+                campaignContainer.appendChild(item);
+                count++; // 출력된 항목 수 증가
+
+            });
+        });
+    </script>
+
+    </body>
+</html>

@@ -1,7 +1,13 @@
 body {
     margin: 0;
     padding: 20px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
+
 /* 상단메뉴바  */
 *{
     margin: 0;
@@ -69,7 +75,13 @@ header button{
     margin: 0;
     border: 1px solid black;
 }
-.btn{
+.btn{   
+    font-weight: bolder; 
+    color: steelblue;
+    margin-right: -40px;
+    border: none;
+    width: 150px;
+    height: 35px;
     width: 150px;
     height:35px;
 }
@@ -81,9 +93,14 @@ header button{
 
 }
 .bigbtn{
+    font-weight: bold;
+    font-size: 15px;
+    color: steelblue;
+    border: none;
     width: 300px;
-    height:50px;
+    height: 50px;
 }
+
 .rewardbtn{
     width: 150px;
     height:50px;
@@ -106,9 +123,12 @@ header button{
     text-align: left
 }
 h4{
+    color: darkgray;
     text-align: left;
 }
 h2{
+    margin-bottom: 10px;
+    color: steelblue;
     text-align: left;
 }
 .button {
@@ -265,6 +285,7 @@ ul {
     line-height: 40px;
 }
 .tabmenu label {
+    
     display: block;
     width: 100%; 
     height: 40px;
@@ -283,7 +304,9 @@ ul {
     justify-content: center;
 }
 .tabmenu input:checked ~ label {
-    background: #ccc;
+    color: white;
+    background: #99bcd9;
+
 }
 .tabmenu input:checked ~ .tabCon {
     display: block;
@@ -315,10 +338,11 @@ table {
     text-align: center;
 }
 td, th {
-    border: solid 1px black;
+    
+    border: solid 1px #9E9E9E;
 }
 .invoice th {
-    background-color: gray;
+    background-color: #c7def1;
 }
 .invoice th:nth-child(1) { width: 60px; }
 .invoice th:nth-child(2) { width: 80px; }
@@ -338,20 +362,37 @@ td, th {
 }
 
 .step {
+    background-color: #4A90E2; /* 푸른색 */
+    transition: background-color 0.3s;
     border-radius: 50%;
     width: 30px;
     height: 30px;    
-    border: 1px solid black;   
+    border: 1px solid #e2e2e2;
     margin: 0 auto; /* 가운데 정렬을 위한 margin */
 }
+
 .arrowRight{
     width:30px;
     height:20px;
 }
+span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.arrowRight:hover {
+    opacity: 0.7; /* 호버시 투명도 변화 */
+}
+
+
+
+
 
 /* 4.정산내역 */
 .settlementTable th {
-    background-color: gray;
+    background-color: #c7def1;
 }
 .settlementTable th:nth-child(1) { width: 60px; }
 .settlementTable th:nth-child(2) { width: 80px; }

@@ -7,7 +7,7 @@
        <title>메인화면</title>       
        <link rel="stylesheet" href="./css/happy-giver-main.css">
        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
@@ -38,39 +38,18 @@
         </header>
         <!-- 메인이미지-->
     <body>
-            
-            <div class="section">
-                <input type="radio" name="slide" id="slide01" checked>
-                <input type="radio" name="slide" id="slide02">
-                <input type="radio" name="slide" id="slide03">
-                <div class="slidewrap">
-                    <ul class="slidelist">
-                        <li>
-                            <a>
-                                <label for="slide03" class="left" ></label>
-                                <img src="./img/main.png"> 
-                                <label for="slide02" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide01" class="left"></label>
-                                <img src="./img/main2.png">
-                                <label for="slide03" class="right"></label>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <label for="slide02" class="left"></label>
-                                <img src="./img/main3.png.webp">
-                                <label for="slide01" class="right"></label>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <br></br>
-
+        <div class="section">
+            <ul class="banner">
+                <li>
+                    <a>
+                        <label for="slide03" class="left" ></label>
+                        <img src="./img/2_narmi.png"> 
+                        <label for="slide02" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br></br>
             <div class="select-area">
                 <h2 style="display:inline">행복나르미&nbsp;</h2>
                 <select id="city" onchange="updateDistricts()">
@@ -82,7 +61,7 @@
                     <option value=""></option>
                 </select>
                 <button value="submit" class="search">검색</button>
-                <a href="happy-giver-application.html"><button value="submit" class="apply">행복나르미 신청하기</button></a>
+                <button type="submit" class="apply">신청하기</button>
             </div>
                 <h2 id="천안시 서북구" class="city-title">천안시 서북구</h2>
                 <div class ="new">

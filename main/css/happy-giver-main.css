@@ -1,3 +1,9 @@
+body {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +38,7 @@ header nav ul li{
     padding-right: 70px;
 }
 .menu-btn:active {
-    color:skyblue;
+    color:rgb(16, 122, 212);
 }
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
@@ -57,7 +63,7 @@ header button{
     font-size: 18pt;
 }
 #city, #district {
-    width: 150px;
+    width: 120px;
     height: 30px;
 }
 .search{
@@ -101,9 +107,10 @@ div.item{
 }
 .select-area {
     margin-bottom: 50px;
-    margin-left: 175px;
+    margin-left: 400px;
 }
 .city-title {
+    color: #483d3d;
     margin-left: 170px;
 }
 
@@ -111,7 +118,7 @@ div.item{
     clear:both;
 }
 .new .item1{
-    border: 1px solid #ccc;
+    border: 1px solid #e2f0ff;
     margin: 40px;
     text-align:center;
     float:left;
@@ -124,7 +131,7 @@ li > img{
 
 .item1:hover {
     transform: translateY(-5px); /* 마우스 오버 시 위로 이동 */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 더 강한 그림자 효과 */
+    box-shadow: 0 8px 20px rgba(76, 187, 235, 0.2); /* 더 강한 그림자 효과 */
 }
 
 .new img{
@@ -137,14 +144,14 @@ li > img{
 
 .new .subject{
     margin-top: -5px;
-    color:black;
+    color: #483d3d;
     padding: 10px;
     text-align: left;
 }
 .new .price, .amount{
     margin-top: -1px;
     margin-left: 10px;
-    color:black;
+    color: #0056b3;
     text-align: left;
 }
 .price > .funding{
@@ -157,6 +164,7 @@ li > img{
     text-align: left;
     padding: 10px;
     margin-top: 10px;
+    color: #8e99c4;
 }
 .date{
     margin-left: 100px;
@@ -448,32 +456,25 @@ li > img{
 
 
 .login-wrapper > h2{
-    font-size: 35px;
+ 
     color: #6A24FE;
-    margin-bottom: 20px;
+ 
 }
 #login-form > input{
-    width: 100%;
-    height: 70px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    border-radius: 6px;
+  
     background-color: #F8F8F8;
 }
 #login-form > input::placeholder{
     color: #D2D2D2;
 }
 #login-form > input[type="submit"]{
-    padding-bottom: 10px;
+  
     color: #fff;
     font-size: 16px;
     background-color: #6A24FE;
     /* margin-top: 10px; */
 }
-.join{
-    margin-right: 20px;
-}
+
 .join:hover {
    
     color:  #6A24FE; /* 마우스 오버 시 색상 변경 */
@@ -484,6 +485,43 @@ li > img{
    
     color:  #6A24FE; /* 마우스 오버 시 색상 변경 */
 }
-#remember-check {
-    margin-bottom: 15px; /* 원하는 간격으로 조정 */
+
+.select-area {
+    margin-bottom: 50px;
+    margin-left: 450px;
+}
+
+
+.select-area h2 {
+    color: #004080; /* 다크 블루 */
+}
+
+.select-area select {
+    color: #6e7f92;
+    background-color: #e7f3ff;
+    border: 1px solid #d9e6f4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+
+
+.select-area select:focus {
+    border-color: #007bff; /* 포커스 시 테두리 색상 */
+    outline: none; /* 기본 아웃라인 제거 */
+}
+
+.select-area button {
+    width: 100px;
+    background-color: #0c63ba;
+    color: white; /* 흰색 글씨 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    font-size: 16px; /* 글씨 크기 */
+    cursor: pointer; /* 포인터 커서 */
+    transition: background-color 0.3s; /* 배경 색상 변화 애니메이션 */   
+}
+
+.select-area button:hover {
+    background-color: #007bff; /* 호버 시 밝은 블루 */
 }
