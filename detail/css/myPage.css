@@ -1,4 +1,12 @@
 /* 상단메뉴바  */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -59,8 +67,15 @@ header button{
     margin: 0 auto; /* 가운데 정렬 */
     
 }
+
+.container2 h1{
+    color: steelblue;
+    margin-bottom: 10px;
+}
+
 .info{
-    border: 1px solid black;
+    background-color: #f4faff;
+    border: 1px solid #dee2e4;
     width: 100%;
     height: 180px;
     display: flex;
@@ -68,26 +83,32 @@ header button{
     justify-content: center;/*가로정렬*/
     gap:13%;
 }
+
 /* 하부 */
 .container3{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto; /* 가운데 정렬 */
-
 }
+.container3 h2{
+    color: steelblue;
+}
+
 table{
     width: 1000px;
     border-collapse: collapse;
 }
 th{
-    background-color: rgb(190, 190, 190);
+    color: #795548;
+    background-color: #d4f4f8;
     height: 40px;
 }
 tr{
     border-bottom: 1px solid rgb(184, 184, 184); 
 }
 td{
+    color: #3b2e2a;
     text-align: center;
     height: 40px; 
 }
