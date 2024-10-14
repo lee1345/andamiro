@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 20px;
+    font-family: "Gowun Dodum", sans-serif;
 }
 /* 상단메뉴바  */
 *{
@@ -294,11 +295,11 @@ ul {
     height:auto;
     width:220px;    
 }
-
-pre{
+pre {
+    font-family: "Gowun Dodum", sans-serif;
     line-height: 15pt;
-    text-align: left; 
-    font-size: 12pt
+    text-align: left;
+    font-size: 12pt;
 }
 /* 2.산출내역 */
 

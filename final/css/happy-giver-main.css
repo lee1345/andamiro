@@ -105,10 +105,6 @@ div.item{
     font-family: 'Do Hyeon'; 
     padding : 30px;    /* 블록 요소가 아닌 인라인으로 설정 */
 }
-.select-area {
-    margin-bottom: 50px;
-    margin-left: 400px;
-}
 .city-title {
     color: #483d3d;
     margin-left: 170px;
