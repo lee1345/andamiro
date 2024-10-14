@@ -1,3 +1,4 @@
+//착한 선물 데이터
 const Gift = [
 
     //Home appliances
@@ -66,6 +67,7 @@ const Gift = [
     G_Product_Sample_detail: "./img/gift/dailynecessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
 ];
 
+//행복나르미 데이터
 const  Narmi= [ 
 
     //홍남희
@@ -108,6 +110,7 @@ const  Narmi= [
     여러분의 도움이 필요합니다! 작은 후원이나 재료 지원이 큰 힘이 될 거예요. 함께 아이들에게 사랑을 나눌 수 있을까요?여러분의 관심과 참여 부탁드려요! 고맙습니다! Let’s make some yummy food together!`},
 ];
 
+//행복나르미 목표액 산출내역
 const funding_breakdown = [
     {
         f_id: 1,
@@ -175,6 +178,22 @@ const funding_breakdown = [
     }
 ];
 
+//행복나르미 후원금 정산내역
+const Settlement_Report = [
+  {
+    f_id: 6,
+    list: [
+        { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공할 햄버거" },
+        { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공할 핫도그" },
+        { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공할 피자" },
+        { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공할 주스" },
+        { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+        { totalAmount: 700000 }
+    ]
+}
+];
+
+//같이 가치 데이터
 const with_value = [
         {
             id: 1,
