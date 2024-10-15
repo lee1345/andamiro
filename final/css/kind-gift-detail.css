@@ -17,12 +17,6 @@ a, a:link, a:visited{
 li{
     list-style: none;
 }
-header{
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 1rem;
-}
 header .container{
     display: flex;
     justify-content: space-between;
@@ -56,7 +50,7 @@ header button{
 
 .ctn{
     display: flex; /* Flexbox 사용 */
-    justify-content: flex-start; /* 아이템을 좌우로 균등하게 배치 */
+    justify-content: center; /* 아이템을 좌우로 균등하게 배치 */
 }div .rs{/*리워드 선택(reworld selector)*/
     display: flex;
     padding-top: 10px;
