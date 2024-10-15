@@ -352,3 +352,79 @@ header button{
     font-weight: bold; /* 글씨 두껍게 */
 
 }
+@media only screen and (max-width: 475px) {
+
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    header li{
+        font-size: 0.2rem;
+        
+    }
+    header, footer {
+        text-align: center;
+        padding: 10px 0;
+    }
+    header img{
+        max-width: 400px;
+    }
+    a img {
+        width: 200%;
+        height: auto;
+    }
+
+    .card-area h2 {
+        font-size: 1.0rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .ct-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .ct-bar .item {
+        margin: 5px 0;
+        font-size: 0.8rem;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        padding: 5px;
+        margin: 10px 0;
+    }
+
+    .new {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new .item1 {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
+
+    .subject h3 {
+        font-size: 1.1rem;
+    }
+
+    .success-complete, .success-message {
+        font-size: 0.8rem;
+    }
+
+    .complete-icon, .success-icon {
+        font-size: 1rem;
+    }
+}
