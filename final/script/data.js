@@ -28,7 +28,7 @@ const Gift = [
     
     //Music
     { id: 9, G_category: "Music", G_Maker: "다이나톤", G_Product_Name: "다이나톤 디지털피아노", G_Product_Sample: "../../img/gift/music/gift1.jpg", 
-    G_Product_Sample_detail: "../../img/gift/music/gift1_detail.jpeg", G_Target_amount: 800000, G_funding_achievement: 300000, G_funding_progress: 37.5, G_head_count: 5 }, 
+    G_Product_Sample_detail: "../../img/gift/music/gift1_detail.jpeg", G_Target_amount: 800000, G_funding_achievement: 800000, G_funding_progress: 100, G_head_count: 5 }, 
 
     { id: 10, G_category: "Music", G_Maker: "콜트", G_Product_Name: "콜트 일렉기타 G110 OPBK", G_Product_Sample: "../../img/gift/music/gift2.jpg", 
     G_Product_Sample_detail: "../../img/gift/music/gift2_detail.jpg", G_Target_amount: 220000, G_funding_achievement: 110000, G_funding_progress: 50, G_head_count: 10 }, 

@@ -116,8 +116,8 @@ header button{
 /* ----착한선물 카테고리--------- */
 
 .ct-bar .item {                       
-    background-color: white;    /* 마우스 오버 시 배경색 변경 */
-    border-radius: 60px;           /* 둥근 모서리 */
+    background-color:#faf5ff;  
+    border-radius: 40px;           /* 둥근 모서리 */
     padding: 15px 20px;   /* 내부 여백 */
    
 }
@@ -141,11 +141,12 @@ header button{
         float: left;
         margin: 0 50px;
         padding: 20px;
-        border: 1px solid #a2cef1;
+        border: 1px solid #bec5ee;
         border-radius: 26px;
         text-align: center;
         font-size: large;
         color: #3F51B5;
+        font-weight: bold;
     }
 
 
@@ -155,7 +156,8 @@ header button{
 }
 
 .card-area h2 {
-    color: #A9A9A9;
+    color: #66075e;
+    font-weight: bold;
     display: inline;
     padding : 30px;    /* 블록 요소가 아닌 인라인으로 설정 */
 }
@@ -184,7 +186,7 @@ header button{
 .new img{
     width:200px;
     height:200px;
-    border: 1px solid rgb(215 237 255);
+    border: 1px solid rgb(214, 221, 228);
 }
 
 .new .subject{
@@ -308,6 +310,12 @@ header button{
  
 
 .success-icon {
+    color: rgb(227, 61, 61);
+    margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 */
+    font-size: 1.5em; /* 아이콘 크기 */
+    animation: rotate 2s linear infinite, pulse 1s ease-in-out infinite;
+}
+.complete-icon {
     color: rgb(61, 94, 227);
     margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 */
     font-size: 1.5em; /* 아이콘 크기 */
@@ -335,7 +343,12 @@ header button{
 }
 
 .success-message {
-    color: green; /* 메시지 색상 */
+    color:rgb(255, 94, 0);
     margin-left: 5px; /* 아이콘과의 간격 */
     font-weight: bold; /* 글씨 두껍게 */
+}
+.success-complete{
+    color: green; /* 메시지 색상 */
+    font-weight: bold; /* 글씨 두껍게 */
+
 }

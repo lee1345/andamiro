@@ -5,7 +5,6 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
        <title>메인화면</title>       
-       <link rel="stylesheet" href="../../css/kind-gift-main.css">
        <link rel="stylesheet" href="../../css/gift_main.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <style>
@@ -105,10 +104,14 @@
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
                     };
-                    const isSuccess = gift.G_funding_progress >= 80 ? `
+                    const isSuccess = gift.G_funding_progress === 100 ? `
+                        <span class="success-complete">펀딩성공!!</span>
+                        <span class="complete-icon"><i class="fa-solid fa-gift"></i></span>
+                    ` : gift.G_funding_progress >= 70 ? `
                         <span class="success-message">성공임박</span>
                         <span class="success-icon"><i class="fas fa-clock"></i></span>
                     ` : '';
+                    
 
                     item.innerHTML = `
                         <ul class="item1">
