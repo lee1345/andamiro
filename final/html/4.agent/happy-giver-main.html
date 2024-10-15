@@ -15,9 +15,8 @@
          <header id="navbar"></header>
 
         <!-- 메인이미지-->
-    <body>
         <article>
-            <a href="#">
+            <a href="../2.about/about.html#huwonIntroduce">
                 <img src="../../img/background/2. narmi.png"> 
             </a>
         </article>
@@ -44,10 +43,21 @@
     
         <h2 class="city-title">아산시 배방읍</h2>
         <div class="new" id="profiles-baebang"></div>
-    <footer id="container"></footer>
-    <!--footer-->
 
-    </body>
+    <!--footer-->
+        <footer id="container"></footer>
+    
+    <script>
+        fetch("../1.navbar/header.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+
+            
+        });
+    </script>
     <script>
         fetch("../6.footer/footer.html")
         .then(response => response.text())
@@ -55,17 +65,6 @@
             const container = document.getElementById('container');
             container.innerHTML = data;
             const footer = navbar.querySelector('footer');
-
-            
-        });
-    </script>
-    <script>
-        fetch("../1.navbar/header_NoLogin.html")
-        .then(response => response.text())
-        .then(data => {
-            const navbar = document.getElementById('navbar');
-            navbar.innerHTML = data;
-            const header = navbar.querySelector('header');
 
             
         });
