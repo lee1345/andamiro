@@ -169,7 +169,7 @@
         <br><br>
 
         <!-- 메뉴 소개 -->
-        <h1>후원 방법 소개</h1>
+        <h1 id="huwonIntroduce">후원 방법 소개</h1>
         <br>
     </div>
     <div class="aboutContainer">
@@ -213,10 +213,21 @@
                 <p>함께 가치 있는 활동에 참여하여, 더 나은 세상을 만들어 가는 여정에 동참해 주세요.</p>
             </div>
         </div>
-    </div>
-    <footer id="container"></footer>
+    </div>    
     <!-- 푸터 -->
-    
+
+    <footer id="container"></footer>
+    <script>
+        fetch("../1.navbar/header.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+
+            
+        });
+    </script>
     <script>
         fetch("../6.footer/footer.html")
         .then(response => response.text())
@@ -228,17 +239,7 @@
             
         });
     </script>
-    <script>
-        fetch("../1.navbar/header_NoLogin.html")
-        .then(response => response.text())
-        .then(data => {
-            const navbar = document.getElementById('navbar');
-            navbar.innerHTML = data;
-            const header = navbar.querySelector('header');
-
-            
-        });
-    </script>
+  
     <script>
         let currentSlide = 1;
         const totalSlides = 4; // 슬라이드 개수
@@ -248,6 +249,7 @@
             document.getElementById(`slide0${currentSlide}`).checked = true; // 체크박스 체크
         }, 3000); //  2초
     </script>
-    </script>
+    
+    
 </body>
 </html>

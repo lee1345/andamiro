@@ -82,6 +82,9 @@ div.item{
 .clear{
     clear:both;
 }
+.new{
+    flex-direction: column;
+}
 .new .item1{
     border: 1px solid #ccc;
     margin: 40px;

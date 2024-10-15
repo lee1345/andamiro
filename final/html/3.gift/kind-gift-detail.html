@@ -123,20 +123,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- 푸터 -->
-            <script>
-                fetch("../6.footer/footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    const container = document.getElementById('container');
-                    container.innerHTML = data;
-                    const footer = navbar.querySelector('footer');
-        
-                    
-                });
+ 
             </script>
             <script>
-                fetch("../1.navbar/header_NoLogin.html")
+                fetch("../1.navbar/header.html")
                 .then(response => response.text())
                 .then(data => {
                     const navbar = document.getElementById('navbar');

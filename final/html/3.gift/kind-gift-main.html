@@ -6,7 +6,6 @@
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
        <title>메인화면</title>       
        <link rel="stylesheet" href="../../css/kind-gift-main.css">
-       <title>메인화면</title>     
        <link rel="stylesheet" href="../../css/gift_main.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <style>
@@ -14,38 +13,14 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <a href="#"><img src="../../img/logo.png" style="width:180px"></a>
-                </h1>
-                <nav>
-                    <ul class="btn-cr">
-                        <li>
-                            <a href=""><button>안다미로 소개</button></a>
-                        </li>
-                        <li>
-                            <a href="#1"><button>착한선물</button></a>
-                        </li>
-                        <li>
-                            <a href="/andamiro/main/happy-giver-main.html"><button>행복나르미</button></a>
-                        </li>
-                        <li>
-                            <a href="#3"><button>같이가치</button></a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="btn-cr">
-                    <a href="../../html/11.sign_up/sign_up_fn.html"><button>로그인 /</button> </a>
-                    <a href="../../html/11.sign_up/sign_up_fn.html"><button>회원가입</button></a>
-               </div>
-            </div>
-        </header>
+        <header id="navbar"></header>
+
         <!-- 메인이미지-->
-        <img src="../../img/background/1. gift.png" style="width:100%">
+        <a href="../2.about/about.html#huwonIntroduce">
+            <img src="../../img/background/1. gift.png" style="width:100%">
             <br></br>
-        <!-- 헤더 -->
-    <!-- 착한선물 카테고리-->
+        </a>
+        <!-- 착한선물 카테고리-->
             
         <div class="card-area">
             <a href="#1"><h2>#100% 전달하는 착한선물, 안다미로와 함께하기</h2></a><br>
@@ -79,14 +54,22 @@
 
     <!--footer-->
     <footer id="container"></footer>
-    <!-- 푸터 --> 
+
+
     <script src="../../script.js"></script>
     <script src="../../main/script/test.js"></script>
 
-    
-
-
     <script>
+        fetch("../1.navbar/header.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+            
+        });
+    </script>
+     <script>
         fetch("../6.footer/footer.html")
         .then(response => response.text())
         .then(data => {
@@ -96,6 +79,8 @@
 
             
         });
+    </script>
+
     </script>
     <script src="../../script/script.js"></script>
     <script src="../../script/data.js"></script>

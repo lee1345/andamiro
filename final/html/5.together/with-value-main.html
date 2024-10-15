@@ -17,7 +17,7 @@
         
         <!-- 메인내용 -->
         <article>
-            <a href="#">
+            <a href="../2.about/about.html#huwonIntroduce">
                 <img src="../../img/background/3.together.png" width="100%">
             </a>
         </article>
@@ -25,18 +25,28 @@
         <div class="new"></div>
 
         <!-- 푸터 -->
+        <div id="footer"></div>
+
+
         <script>
-            fetch("../1.navbar/header_NoLogin.html")
+            fetch("../1.navbar/header.html")
             .then(response => response.text())
             .then(data => {
                 const navbar = document.getElementById('navbar');
                 navbar.innerHTML = data;
                 const header = navbar.querySelector('header');
-
-                
             });
         </script>
-    <script src="../../script/data.js"></script>
+        <script>
+            fetch("../6.footer/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                const footer = document.getElementById('footer');
+                footer.innerHTML = data;
+                const header = footer.querySelector('footer');
+            });
+        </script>
+        <script src="../../script/data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const campaignContainer = document.querySelector('.new');
