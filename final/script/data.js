@@ -54,16 +54,16 @@ const Gift = [
 
     //Daily necessities
     { id: 17, G_category: "Daily necessities", G_Maker: "에코블링", G_Product_Name: "대형 초등 2인 책상의자세트", G_Product_Sample: "../../img/gift/daily_necessities/gift1.jpg", 
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift1_detail.jpg", G_Target_amount: 248000, G_funding_achievement: 124000, G_funding_progress: 50, G_head_count: 5 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift1_detail.jpg", G_Target_amount: 248000, G_funding_achievement: 124000, G_funding_progress: 50, G_head_count: 5 }, 
 
     { id: 18, G_category: "Daily necessities", G_Maker: "보솜이", G_Product_Name: "오가닉 소형 밴드 기저귀", G_Product_Sample: "../../img/gift/daily_necessities/gift2.jpg", 
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift2_detail.jpg", G_Target_amount: 2400000, G_funding_achievement: 2400000, G_funding_progress: 100, G_head_count: 20 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift2_detail.jpg", G_Target_amount: 2400000, G_funding_achievement: 2400000, G_funding_progress: 100, G_head_count: 20 }, 
 
     { id: 19, G_category: "Daily necessities", G_Maker: "남양", G_Product_Name: "유기농 산양분유 800g x 9캔", G_Product_Sample: "../../img/gift/daily_necessities/gift3.jpg",
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
 
     { id: 20, G_category: "Daily necessities", G_Maker: "리코코", G_Product_Name: "양면이중코팅 원피스매트", G_Product_Sample: "../../img/gift/daily_necessities/gift4.jpg",
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
 ];
 
 const  Narmi= [ 
