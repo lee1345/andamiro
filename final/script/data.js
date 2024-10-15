@@ -1,68 +1,68 @@
 const Gift = [
 
     //Home appliances
-    { id: 1, G_category: "Home appliances", G_Maker: "삼성", G_Product_Name: "75인치 4K QLED TV", G_Product_Sample: "./img/gift/home_appliances/gift1.jpg", 
+    { id: 1, G_category: "Home appliances", G_Maker: "삼성", G_Product_Name: "75인치 4K QLED TV", G_Product_Sample: "../../img/gift/home_appliances/gift1.jpg", 
     G_Product_Sample_detail: "../../img/gift/home_appliances/gift1_detail.jpg",G_Target_amount: 1900000, G_funding_achievement: 950000,G_funding_progress: 50, G_head_count: 5 },
     
-    { id: 2, G_category: "Home appliances", G_Maker: "LG전자", G_Product_Name: "디오스 오브제컬렉션", G_Product_Sample: "./img/gift/home_appliances/gift2.jpg", 
+    { id: 2, G_category: "Home appliances", G_Maker: "LG전자", G_Product_Name: "디오스 오브제컬렉션", G_Product_Sample: "../../img/gift/home_appliances/gift2.jpg", 
     G_Product_Sample_detail: "../../img/gift/home_appliances/gift2_detail.jpg", G_Target_amount: 2500000, G_funding_achievement: 2000000, G_funding_progress: 80, G_head_count: 12 },
     
-    { id: 3, G_category: "Home appliances", G_Maker: "LG전자", G_Product_Name: "세탁기 건조기", G_Product_Sample: "./img/gift/home_appliances/gift3.jpg",
+    { id: 3, G_category: "Home appliances", G_Maker: "LG전자", G_Product_Name: "세탁기 건조기", G_Product_Sample: "../../img/gift/home_appliances/gift3.jpg",
     G_Product_Sample_detail: "../../img/gift/home_appliances/gift3_detail.jpg", G_Target_amount: 2250000, G_funding_achievement: 1500000, G_funding_progress: 66, G_head_count: 8 },
     
-    { id: 4, G_category: "Home appliances", G_Maker: "Dell", G_Product_Name: "G시리즈(16GB/512GB)", G_Product_Sample: "./img/gift/home_appliances/gift4.jpg",
+    { id: 4, G_category: "Home appliances", G_Maker: "Dell", G_Product_Name: "G시리즈(16GB/512GB)", G_Product_Sample: "../../img/gift/home_appliances/gift4.jpg",
     G_Product_Sample_detail: "../../img/gift/home_appliances/gift4_detail.jpg", G_Target_amount: 1130000, G_funding_achievement: 900000, G_funding_progress: 80, G_head_count: 7 },   
 
     //TOY
-    { id: 5, G_category: "Toy", G_Maker: "교통교육사", G_Product_Name: "도로교통 학습세트", G_Product_Sample: "./img/gift/toy/gift1.jpg", 
+    { id: 5, G_category: "Toy", G_Maker: "교통교육사", G_Product_Name: "도로교통 학습세트", G_Product_Sample: "../../img/gift/toy/gift1.jpg", 
     G_Product_Sample_detail: "../../img/gift/toy/gift1_detail.jpg", G_Target_amount: 380000, G_funding_achievement: 190000, G_funding_progress: 50, G_head_count: 5 }, 
 
-    { id: 6, G_category: "Toy", G_Maker: "보드미_리빙", G_Product_Name: "어린이씽크대 키친세트", G_Product_Sample: "./img/gift/toy/gift2.jpg", 
+    { id: 6, G_category: "Toy", G_Maker: "보드미_리빙", G_Product_Name: "어린이씽크대 키친세트", G_Product_Sample: "../../img/gift/toy/gift2.jpg", 
     G_Product_Sample_detail: "../../img/gift/toy/gift2_detail.jpg", G_Target_amount: 860000, G_funding_achievement: 430000, G_funding_progress: 50, G_head_count: 10 }, 
 
-    { id: 7, G_category: "Toy", G_Maker: "오너클랜", G_Product_Name: "쿠쿠토이즈 에듀팜 빅블록", G_Product_Sample: "./img/gift/toy/gift3.jpg", 
+    { id: 7, G_category: "Toy", G_Maker: "오너클랜", G_Product_Name: "쿠쿠토이즈 에듀팜 빅블록", G_Product_Sample: "../../img/gift/toy/gift3.jpg", 
     G_Product_Sample_detail: "../../img/gift/toy/gift3_detail.jpg", G_Target_amount: 330000, G_funding_achievement: 165000, G_funding_progress: 50, G_head_count: 4 }, 
 
-    { id: 8, G_category: "Toy", G_Maker: "초이락", G_Product_Name: "헬로카봇 하이퍼캅스 세트", G_Product_Sample: "./img/gift/toy/gift4.jpg", 
+    { id: 8, G_category: "Toy", G_Maker: "초이락", G_Product_Name: "헬로카봇 하이퍼캅스 세트", G_Product_Sample: "../../img/gift/toy/gift4.jpg", 
     G_Product_Sample_detail: "../../img/gift/toy/gift4_detail.jpg", G_Target_amount: 330000, G_funding_achievement: 99000, G_funding_progress: 30, G_head_count: 3 },
     
     //Music
-    { id: 9, G_category: "Music", G_Maker: "다이나톤", G_Product_Name: "다이나톤 디지털피아노", G_Product_Sample: "./img/gift/music/gift1.jpg", 
+    { id: 9, G_category: "Music", G_Maker: "다이나톤", G_Product_Name: "다이나톤 디지털피아노", G_Product_Sample: "../../img/gift/music/gift1.jpg", 
     G_Product_Sample_detail: "../../img/gift/music/gift1_detail.jpeg", G_Target_amount: 800000, G_funding_achievement: 300000, G_funding_progress: 37.5, G_head_count: 5 }, 
 
-    { id: 10, G_category: "Music", G_Maker: "콜트", G_Product_Name: "콜트 일렉기타 G110 OPBK", G_Product_Sample: "./img/gift/music/gift2.jpg", 
+    { id: 10, G_category: "Music", G_Maker: "콜트", G_Product_Name: "콜트 일렉기타 G110 OPBK", G_Product_Sample: "../../img/gift/music/gift2.jpg", 
     G_Product_Sample_detail: "../../img/gift/music/gift2_detail.jpg", G_Target_amount: 220000, G_funding_achievement: 110000, G_funding_progress: 50, G_head_count: 10 }, 
 
-    { id: 11, G_category: "Music", G_Maker: "야마하", G_Product_Name: "야마하 플루트", G_Product_Sample: "./img/gift/music/gift3.jpg", 
+    { id: 11, G_category: "Music", G_Maker: "야마하", G_Product_Name: "야마하 플루트", G_Product_Sample: "../../img/gift/music/gift3.jpg", 
     G_Product_Sample_detail: "../../img/gift/music/gift3_detail.jpg", G_Target_amount: 112000, G_funding_achievement: 84000, G_funding_progress: 75, G_head_count: 3 }, 
 
-    { id: 12, G_category: "Music", G_Maker: "호시미", G_Product_Name: "전자드럼 패드 BX-2 MX-2", G_Product_Sample: "./img/gift/music/gift4.jpg",
+    { id: 12, G_category: "Music", G_Maker: "호시미", G_Product_Name: "전자드럼 패드 BX-2 MX-2", G_Product_Sample: "../../img/gift/music/gift4.jpg",
     G_Product_Sample_detail: "../../img/gift/music/gift4_detail.jpg", G_Target_amount: 114000, G_funding_achievement: 57000, G_funding_progress: 50, G_head_count: 4 },
 
     //Book
-    { id: 13, G_category: "Book", G_Maker: "효리원", G_Product_Name: "저학년 위인동화 60권세트", G_Product_Sample: "./img/gift/book/gift1.jpg", 
+    { id: 13, G_category: "Book", G_Maker: "효리원", G_Product_Name: "저학년 위인동화 60권세트", G_Product_Sample: "../../img/gift/book/gift1.jpg", 
     G_Product_Sample_detail: "../../img/gift/book/gift1_detail.jpg", G_Target_amount: 520000, G_funding_achievement: 300000, G_funding_progress: 57.7, G_head_count: 6 }, 
 
-    { id: 14, G_category: "Book", G_Maker: "예림당", G_Product_Name: "Why 과학만화 A~E세트", G_Product_Sample: "./img/gift/book/gift2.jpg",
+    { id: 14, G_category: "Book", G_Maker: "예림당", G_Product_Name: "Why 과학만화 A~E세트", G_Product_Sample: "../../img/gift/book/gift2.jpg",
     G_Product_Sample_detail: "../../img/gift/book/gift2_detail.jpg", G_Target_amount: 210000, G_funding_achievement: 100000, G_funding_progress: 47.6, G_head_count: 8 }, 
 
-    { id: 15, G_category: "Book", G_Maker: "천재교육", G_Product_Name: "한글,수학,명화 세트 53종", G_Product_Sample: "./img/gift/book/gift3.jpg", 
+    { id: 15, G_category: "Book", G_Maker: "천재교육", G_Product_Name: "한글,수학,명화 세트 53종", G_Product_Sample: "../../img/gift/book/gift3.jpg", 
     G_Product_Sample_detail: "../../img/gift/book/gift3_detail.jpg", G_Target_amount: 267000, G_funding_achievement: 200000, G_funding_progress: 74.8, G_head_count: 4 }, 
 
-    { id: 16, G_category: "Book", G_Maker: "계절책방", G_Product_Name: "추피의 생활이야기 179종", G_Product_Sample: "./img/gift/book/gift4.jpg", 
+    { id: 16, G_category: "Book", G_Maker: "계절책방", G_Product_Name: "추피의 생활이야기 179종", G_Product_Sample: "../../img/gift/book/gift4.jpg", 
     G_Product_Sample_detail: "../../img/gift/book/gift4_detail.jpg", G_Target_amount: 200000, G_funding_achievement: 80000, G_funding_progress: 40, G_head_count: 5 },
 
     //Daily necessities
-    { id: 17, G_category: "Daily necessities", G_Maker: "에코블링", G_Product_Name: "대형 초등 2인 책상의자세트", G_Product_Sample: "./img/gift/daily_necessities/gift1.jpg", 
+    { id: 17, G_category: "Daily necessities", G_Maker: "에코블링", G_Product_Name: "대형 초등 2인 책상의자세트", G_Product_Sample: "../../img/gift/daily_necessities/gift1.jpg", 
     G_Product_Sample_detail: "../../img/gift/dailynecessities/gift1_detail.jpg", G_Target_amount: 248000, G_funding_achievement: 124000, G_funding_progress: 50, G_head_count: 5 }, 
 
-    { id: 18, G_category: "Daily necessities", G_Maker: "보솜이", G_Product_Name: "오가닉 소형 밴드 기저귀", G_Product_Sample: "./img/gift/daily_necessities/gift2.jpg", 
+    { id: 18, G_category: "Daily necessities", G_Maker: "보솜이", G_Product_Name: "오가닉 소형 밴드 기저귀", G_Product_Sample: "../../img/gift/daily_necessities/gift2.jpg", 
     G_Product_Sample_detail: "../../img/gift/dailynecessities/gift2_detail.jpg", G_Target_amount: 2400000, G_funding_achievement: 2400000, G_funding_progress: 100, G_head_count: 20 }, 
 
-    { id: 19, G_category: "Daily necessities", G_Maker: "남양", G_Product_Name: "유기농 산양분유 800g x 9캔", G_Product_Sample: "./img/gift/daily_necessities/gift3.jpg",
+    { id: 19, G_category: "Daily necessities", G_Maker: "남양", G_Product_Name: "유기농 산양분유 800g x 9캔", G_Product_Sample: "../../img/gift/daily_necessities/gift3.jpg",
     G_Product_Sample_detail: "../../img/gift/dailynecessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
 
-    { id: 20, G_category: "Daily necessities", G_Maker: "리코코", G_Product_Name: "양면이중코팅 원피스매트", G_Product_Sample: "./img/gift/daily_necessities/gift4.jpg",
+    { id: 20, G_category: "Daily necessities", G_Maker: "리코코", G_Product_Name: "양면이중코팅 원피스매트", G_Product_Sample: "../../img/gift/daily_necessities/gift4.jpg",
     G_Product_Sample_detail: "../../img/gift/dailynecessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
 ];
 
@@ -153,9 +153,9 @@ const campaign = [
     {
         id: 1,
         W_region: "천안시",
-        campaing_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
+        campaign_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
         campaomg_img: "../../img/campaign/campaign1.png",
-        capaing_detail_img: "../../img/campaign/campaign1.png",
+        capaing_detail_img: "../../img/campaign/campaign1_detail.png",
         W_Target_participants: 20,
         W_Participant_Count: 10,
         W_Participation_Rate: 50,
@@ -188,9 +188,9 @@ const campaign = [
     {
         id: 2,
         W_region: "서울시",
-        campaing_topic: `장애인식개선 캠페인 '우리사이 0미터'`,
+        campaign_topic: `장애인식개선 캠페인 '우리사이 0미터'`,
         campaomg_img: "../../img/campaign/campaign2.png",
-        capaing_detail_img: "../../img/campaign/campaign2.png",
+        capaing_detail_img: "../../img/campaign/campaign2_detail.png",
         W_Target_participants: 300,
         W_Participant_Count: 25,
         W_Participation_Rate: 8.33,
@@ -234,7 +234,7 @@ const campaign = [
       {
         id: 3,
         W_region: "전지역",
-        campaing_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
+        campaign_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
         campaomg_img: "../../img/campaign/campaign3.png",
         capaing_detail_img: "../../img/campaign/campaign3_detail.png",
         W_Target_participants: 100,
@@ -287,9 +287,9 @@ const campaign = [
       {
         id: 4,
         W_region: "김제시",
-        campaing_topic: "희망나눔 음악회(행사봉사자 모집)",
+        campaign_topic: "희망나눔 음악회(행사봉사자 모집)",
         campaomg_img: "../../img/campaign/campaign4.png",
-        capaing_detail_img: "../../img/campaign/campaign4.png",
+        capaing_detail_img: "../../img/campaign/campaign4_detail.png",
         W_Target_participants: 50,
         W_Participant_Count: 10,
         W_Participation_Rate: 20,
@@ -322,9 +322,9 @@ const campaign = [
       {
         id: 5,
         W_region: "춘천시",
-        campaing_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
+        campaign_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
         campaomg_img: "../../img/campaign/campaign5.png",
-        capaing_detail_img: "../../img/campaign/campaign5_detail.png",
+        capaing_detail_img: "../../img/campaign/campaign5_detail_detail.png",
         W_Target_participants: 100,
         W_Participant_Count: 20,
         W_Participation_Rate: 20,

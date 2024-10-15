@@ -305,4 +305,37 @@ header button{
    
     color: darkblue; /* 마우스 오버 시 색상 변경 */
 }
+ 
 
+.success-icon {
+    color: rgb(61, 94, 227);
+    margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 */
+    font-size: 1.5em; /* 아이콘 크기 */
+    animation: rotate 2s linear infinite, pulse 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+.success-message {
+    color: green; /* 메시지 색상 */
+    margin-left: 5px; /* 아이콘과의 간격 */
+    font-weight: bold; /* 글씨 두껍게 */
+}

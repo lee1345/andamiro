@@ -110,3 +110,4 @@ incrementBtn.addEventListener('click', () => {
     count++;
     numberElement.textContent = count;
 });
+

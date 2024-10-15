@@ -6,7 +6,10 @@ body {
     font-style: normal;
 }
 
-
+.confirm{
+    position: absolute; /* 절대 위치로 설정 */
+    transform: translate(-50%, -140%); /* 이미지 중심 조정 */
+}
 
 /* 상단메뉴바  */
 *{

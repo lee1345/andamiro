@@ -1,15 +1,23 @@
+<<<<<<< HEAD
 
 
 *{
     
+=======
+*{
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 body {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
 }
+=======
+
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 a, a:link, a:visited{
     color: inherit;
     text-decoration: none;
@@ -18,9 +26,12 @@ li{
     list-style: none;
 }
 header{
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.9); /* 배경색과 투명도 조정 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가  */
     position: sticky;
+=======
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     top: 0;
     z-index: 1;
     width: 100%;
@@ -40,6 +51,7 @@ header nav ul{
 }
 header nav ul li{
     padding-right: 70px;
+<<<<<<< HEAD
 }
 
 header button{
@@ -58,6 +70,13 @@ header button{
 /* ----착한선물 카테고리--------- */
 
 .ct-bar .item {                       
+=======
+
+
+}
+
+.ct-bar .item {
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
     border-radius: 60px;           /* 둥근 모서리 */
     padding: 15px 20px;   /* 내부 여백 */
@@ -73,11 +92,34 @@ header button{
    
 }
 
+<<<<<<< HEAD
+=======
+header button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    align-content: center;
+    font-size: 18pt;
+}
+
+
+ 
+
+
+
+
+
+
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 .btn-cr button:hover {
     background-color: #ececec; /* 마우스 오버 시 배경색 */
     
 }
 
+<<<<<<< HEAD
 
     div.item {
         float: left;
@@ -89,6 +131,19 @@ header button{
         font-size: large;
         color: #3F51B5;
     }
+=======
+div.item{
+    float: left;
+    margin: 0 50px;
+    padding: 20px;
+    border: 1px solid #65db7f;
+    border-radius: 26px;
+    font-family: 'Do Hyeon';
+    text-align: center;
+    font-size: large;
+    color: #00ab33;
+}
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 
 
 .card-area {
@@ -99,6 +154,10 @@ header button{
 .card-area h2 {
     color: #A9A9A9;
     display: inline;
+<<<<<<< HEAD
+=======
+    font-family: 'Do Hyeon'; 
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     padding : 30px;    /* 블록 요소가 아닌 인라인으로 설정 */
 }
 
@@ -111,21 +170,32 @@ header button{
     margin:40px;
     text-align:center;
     float:left;
+<<<<<<< HEAD
     border-radius: 2px; /* 모서리 둥글게 */
     background-color: #fff; /* 배경색 */
     box-shadow: 10px -20px rgba(182, 225, 255, 0.3); /* 그림자 효과 */
+=======
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #fff; /* 배경색 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     
 }
 
 
 .item1:hover {
     transform: translateY(-5px); /* 마우스 오버 시 위로 이동 */
+<<<<<<< HEAD
     box-shadow: 0 8px 20px rgba(0, 0, 0, ); /* 더 강한 그림자 효과 */
+=======
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 더 강한 그림자 효과 */
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 }
 
 .new img{
     width:200px;
     height:200px;
+<<<<<<< HEAD
     border: 1px solid rgb(215 237 255);
 }
 
@@ -133,12 +203,29 @@ header button{
     margin-top: -5px;
     color: #3F51B5;
     border: 1px solid rgb(215 237 255);
+=======
+    border: 1px solid rgb(188, 182, 182) ;
+}
+
+
+
+
+
+.new .subject{
+    margin-top: -5px;
+    color:black;
+    border: 1px solid rgb(188, 182, 182) ;
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 }
 
 .new .price{
     margin-top: -1px;
     color:black;
+<<<<<<< HEAD
    border: 1px solid rgb(215 237 255);
+=======
+    border: 1px solid rgb(188, 182, 182) ;
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     
 }
 .ct-bar {
@@ -168,11 +255,22 @@ header button{
  
 }
 
+<<<<<<< HEAD
 .product-title {
     color:steelblue ;
     margin-top: 50px;
     margin-left : 100px ;
    
+=======
+
+
+
+
+.product-title {
+    margin-top: 50px;
+    margin-left : 100px ;
+    font-family: 'Do Hyeon'; 
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 }
 
 
@@ -185,12 +283,20 @@ header button{
     
 }
 .sung{
+<<<<<<< HEAD
    
     margin-right: 20px;
 }
 
 .percent {
     color: #3F51B5;
+=======
+    margin-right: 20px;
+}
+
+.percent{
+    color: #00ab33;
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 }
 
 .divider {
@@ -335,11 +441,18 @@ header button{
 
 .login-wrapper > h2{
     font-size: 35px;
+<<<<<<< HEAD
     color: #2196F3;
     margin-bottom: 20px;
 }
 #login-form > input{
     border: solid #e0dbdb;
+=======
+    color: #6A24FE;
+    margin-bottom: 20px;
+}
+#login-form > input{
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     width: 100%;
     height: 60px;
     padding: 0 10px;
@@ -355,7 +468,11 @@ header button{
     padding-bottom: 5px;
     color: #fff;
     font-size: 20px;
+<<<<<<< HEAD
     background-color:#7bc5fe;
+=======
+    background-color: #6A24FE;
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
     /* margin-top: 10px; */
 }
 .join{
@@ -411,6 +528,16 @@ header button{
 }
 
 
+<<<<<<< HEAD
+=======
+/* .right {
+    display: grid;
+    grid-template-rows: repeat(,auto); /* 3행 설정 */
+    /* gap :10px; /* 각 행 간의 간격 */
+
+
+
+>>>>>>> 084dfbc414713c7192393972ae35c668417b9cbc
 .left-item{
     margin-right: 40px;
 }

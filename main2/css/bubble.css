@@ -1,0 +1,25 @@
+
+.like {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.bubble {
+    position: absolute;
+    font-size: 24px;
+    animation: bubble-animation 1s forwards;
+    pointer-events: none;
+}
+
+@keyframes bubble-animation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) scale(0);
+        opacity: 0;
+    }
+}
