@@ -99,13 +99,13 @@ header button{
 }
 .item1{
     padding-top: 5%;
-    padding-left:15%; /* 아이템 안쪽 여백 */
+    padding-left:20%; /* 아이템 안쪽 여백 */
     text-align: center; /* 텍스트 중앙 정렬 */      
     align-items: center;
 }
 .item2{
-    padding-top: 8%;
-    padding-right:15%; /* 아이템 안쪽 여백 */
+    padding-top: 9%;
+    padding-right:20%; /* 아이템 안쪽 여백 */
     text-align: center; /* 텍스트 중앙 정렬 */  
     align-items: center;
 }

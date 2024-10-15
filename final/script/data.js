@@ -234,7 +234,7 @@ const campaign = [
       {
         id: 3,
         W_region: "전지역",
-        campaign_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
+        campaign_topic: "우리함께 지구하자(돌아온 꽃씨 뿌리기!)",
         campaomg_img: "../../img/campaign/campaign3.png",
         capaing_detail_img: "../../img/campaign/campaign3_detail.png",
         W_Target_participants: 100,
@@ -322,7 +322,7 @@ const campaign = [
       {
         id: 5,
         W_region: "춘천시",
-        campaign_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
+        campaign_topic: "2024 리얼스 푸르깅 크루 모집",
         campaomg_img: "../../img/campaign/campaign5.png",
         capaing_detail_img: "../../img/campaign/campaign5_detail_detail.png",
         W_Target_participants: 100,
