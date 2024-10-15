@@ -363,6 +363,7 @@ img.secondImg {
     display: flex;
     flex-direction: column; /* 세로로 정렬 */
     text-align: left;
+    
 }
 .comment-card {
     display: flex;
@@ -380,17 +381,38 @@ body {
     font-weight: 400;
 }
 .reply{
-    background-color: #dee2e6;
-    border:1px solid rgb(106, 106, 119);
-    border-radius: 10px;
-}
-.replyButton{
-    background-color: #2b6ba0;
-    color:rgb(255, 255, 255);
-    border:1px solid rgb(49, 59, 153);
-    border-radius: 10px;
+  
+    width: calc(100% - 100px);  /* 버튼 공간을 고려한 너비 */
+    padding: 10px;               /* 패딩 */
+    border: 1px solid #ccc;      /* 테두리 */
+    border-radius: 5px;          /* 모서리 둥글게 */
+    font-size: 14px;             /* 글자 크기 */
+    margin-right: 10px;          /* 버튼과 간격 */
 
 }
+.replyButton{
+    background-color: #1161a0;  /* 버튼 배경색 */
+    color: white;                 /* 글자색 */
+    border: none;                 /* 테두리 없음 */
+    padding: 10px 15px;          /* 패딩 */
+    border-radius: 5px;          /* 모서리 둥글게 */
+    cursor: pointer;              /* 포인터 커서 */
+    transition: background-color 0.3s; /* 호버 효과 애니메이션 */
+
+}
+.replyButton:hover {
+    background-color: #0e4773;  /* 호버 시 어두워짐 */
+}
+.comment {
+    background-color: #fff;       /* 댓글 배경색 */
+    border: 1px solid #ddd;       /* 댓글 테두리 */
+    border-radius: 5px;           /* 댓글 모서리 둥글게 */
+    padding: 8px;                 /* 댓글 패딩 */
+    margin: 5px 0;                /* 댓글 여백 */
+}
+
+
+
 /* body {
     display: flex;
     justify-content: center;
