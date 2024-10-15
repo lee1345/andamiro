@@ -153,7 +153,7 @@ const campaign = [
     {
         id: 1,
         W_region: "천안시",
-        campaign_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
+        campaign_topic: "함께 해요! 우리 하천 지킴이",
         campaomg_img: "../../img/campaign/campaign1.png",
         capaing_detail_img: "../../img/campaign/campaign1_detail.png",
         W_Target_participants: 20,
@@ -334,7 +334,8 @@ const campaign = [
       
       일상 속 넷제로를 실천할 100인의 크루원을 모집합니다!
       
-      리얼스 푸르깅은 푸른 지구의 '푸르다'와 쓰레기를 줍는 운동 '플로깅'이 결합된 활동입니다. 북한강 고구마섬에서 쓰레기를 수거하며 탄소중립(NET-ZERO)을 함께 실천할 리얼스 푸르깅의 주인공을 찾습니다.
+      리얼스 푸르깅은 푸른 지구의 '푸르다'와 쓰레기를 줍는 운동 '플로깅'이 결합된 활동입니다. 
+      북한강 고구마섬에서 쓰레기를 수거하며 탄소중립(NET-ZERO)을 함께 실천할 리얼스 푸르깅의 주인공을 찾습니다.
       
       모집 일정:
       - 10월 7일(월) ~ 10월 17일(목) 자정까지  
