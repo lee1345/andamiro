@@ -1,103 +1,3 @@
-<<<<<<< HEAD
-
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
-       <title>nav</title>       
-       <style>
-          @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            a, a:link, a:visited{
-                color: inherit;
-                text-decoration: none;
-            }
-            li{
-                list-style: none;
-            }
-            header{
-                background-color: rgba(255, 255, 255, 0.9); /* 배경색과 투명도 조정 */
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가  */
-                position: sticky; 
-                top: 0;
-                z-index: 1;
-                width: 100%;
-                height: 103px; /* 높이 명시 */
-                padding: 0; 
-            }
-            header .container{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                padding: 0 20px; 
-
-            }
-            header nav ul{
-                justify-content: space-between;    
-                display: flex;
-                justify-content: center;
-                width: 100%; 
-            }
-            header nav ul li{
-                padding-right: 70px;
-            }
-
-            header button{
-                color: #2d2c31;
-                background: transparent;
-                border: 0;
-                cursor: pointer;
-                font-family: "Gowun Dodum", sans-serif;
-                font-weight: 600;
-                font-style: normal;
-                align-content: center;
-                font-size: 18pt;
-            } 
-            header button:hover{
-                /* background-color: #d8d5e7; */
-                color: #8c8997;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1>
-                    <a href="#"><img src="../../img/logo.png" style="width:180px"></a>
-                </h1>
-                <nav>
-                    <ul class="btn-cr">
-                        <li>
-                            <a href="#"><button>안다미로 소개</button></a>
-                        </li>
-                        <li>
-                            <a href="#"><button>착한선물</button></a>
-                        </li>
-                        <li>
-                            <a href="#"><button>행복나르미</button></a>
-                        </li>
-                        <li>
-                            <a href="#"><button>같이가치</button></a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="btn-cr">
-                    <a href="#"><button>로그인</button> </a> /
-                    <a href="#"><button>회원가입</button></a>
-               </div>
-            </div>
-        </header>
-    </body>
-</html>
-=======
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -187,32 +87,52 @@
     <header>
         <div class="container">
             <h1>
-                <a href="#"><img src="../../img/logo.png" style="width:180px"></a>
+                <a href="../2.about/about.html"><img src="../../img/logo.png" style="width:180px"></a>
             </h1>
             <nav>
                 <ul class="btn-cr">
                     <li>
-                        <a href="#"><button>안다미로 소개</button></a>
+                        <a href="../2.about/about.html"><button>안다미로 소개</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>착한선물</button></a>
+                        <a href="../3.gift/kind-gift-main.html"><button>착한선물</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>행복나르미</button></a>
+                        <a href="../4.agent/happy-giver-main.html"><button>행복나르미</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>같이가치</button></a>
+                        <a href="../5.together/with-value-main.html"><button>같이가치</button></a>
                     </li>
                 </ul>
             </nav>
-            <div class="user-info">
-                <img src="../../img/그림1.png" width="30px" alt="User Icon">
-                <a href="#"><button>로그인</button></a>
+            <div class="user-info" id="user-info">
+                <a href="../7.login/login.html"><button id="login-button">로그인</button></a>
                 <span>|</span>
-                <a href="#"><button>회원가입</button></a>
+                <a href="../11.sign_up/sign_up_fn.html"><button id="signup-button">회원가입</button></a>
             </div>
         </div>
     </header>
+    <script>
+        window.onload = function() {
+            const loggedIn = localStorage.getItem("loggedIn");
+            const userInfo = document.getElementById("user-info");
+    
+            if (loggedIn === "true") {
+                userInfo.innerHTML = `
+                    <a href="../8.mypage/mypage.html">
+                        <img src="../../img/그림1.png" width="30px" alt="User Icon">
+                        <button>무명 님</button>
+                    </a>
+                    <span>|</span>
+                    <button onclick="logout()">로그아웃</button>
+                `;
+            }
+        }
+    
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.reload(); // 페이지 새로고침
+        }
+    </script>
 </body>
 </html>
->>>>>>> fc0b9de464443be9a8f7ec2967ae2adba9455386

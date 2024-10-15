@@ -54,16 +54,16 @@ const Gift = [
 
     //Daily necessities
     { id: 17, G_category: "Daily necessities", G_Maker: "에코블링", G_Product_Name: "대형 초등 2인 책상의자세트", G_Product_Sample: "../../img/gift/daily_necessities/gift1.jpg", 
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift1_detail.jpg", G_Target_amount: 248000, G_funding_achievement: 124000, G_funding_progress: 50, G_head_count: 5 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift1_detail.jpg", G_Target_amount: 248000, G_funding_achievement: 124000, G_funding_progress: 50, G_head_count: 5 }, 
 
     { id: 18, G_category: "Daily necessities", G_Maker: "보솜이", G_Product_Name: "오가닉 소형 밴드 기저귀", G_Product_Sample: "../../img/gift/daily_necessities/gift2.jpg", 
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift2_detail.jpg", G_Target_amount: 2400000, G_funding_achievement: 2400000, G_funding_progress: 100, G_head_count: 20 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift2_detail.jpg", G_Target_amount: 2400000, G_funding_achievement: 2400000, G_funding_progress: 100, G_head_count: 20 }, 
 
     { id: 19, G_category: "Daily necessities", G_Maker: "남양", G_Product_Name: "유기농 산양분유 800g x 9캔", G_Product_Sample: "../../img/gift/daily_necessities/gift3.jpg",
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
 
     { id: 20, G_category: "Daily necessities", G_Maker: "리코코", G_Product_Name: "양면이중코팅 원피스매트", G_Product_Sample: "../../img/gift/daily_necessities/gift4.jpg",
-    G_Product_Sample_detail: "../../img/gift/dailynecessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift4_detail.gif", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
 ];
 
 const  Narmi= [ 
@@ -153,7 +153,7 @@ const campaign = [
     {
         id: 1,
         W_region: "천안시",
-        campaign_topic: "수질 환경 보호 비대면 봉사활동 '우리 하천 지킴이'",
+        campaign_topic: "함께 해요! 우리 하천 지킴이",
         campaomg_img: "../../img/campaign/campaign1.png",
         capaing_detail_img: "../../img/campaign/campaign1_detail.png",
         W_Target_participants: 20,
@@ -234,7 +234,7 @@ const campaign = [
       {
         id: 3,
         W_region: "전지역",
-        campaign_topic: "우리함께 지구하자 7기 진행(돌아온 꽃씨 뿌리기!)",
+        campaign_topic: "우리함께 지구하자(돌아온 꽃씨 뿌리기!)",
         campaomg_img: "../../img/campaign/campaign3.png",
         capaing_detail_img: "../../img/campaign/campaign3_detail.png",
         W_Target_participants: 100,
@@ -322,7 +322,7 @@ const campaign = [
       {
         id: 5,
         W_region: "춘천시",
-        campaign_topic: "[기아대책X롯데마트·슈퍼] 2024 리얼스 푸르깅 크루 모집",
+        campaign_topic: "2024 리얼스 푸르깅 크루 모집",
         campaomg_img: "../../img/campaign/campaign5.png",
         capaing_detail_img: "../../img/campaign/campaign5_detail_detail.png",
         W_Target_participants: 100,
@@ -334,7 +334,8 @@ const campaign = [
       
       일상 속 넷제로를 실천할 100인의 크루원을 모집합니다!
       
-      리얼스 푸르깅은 푸른 지구의 '푸르다'와 쓰레기를 줍는 운동 '플로깅'이 결합된 활동입니다. 북한강 고구마섬에서 쓰레기를 수거하며 탄소중립(NET-ZERO)을 함께 실천할 리얼스 푸르깅의 주인공을 찾습니다.
+      리얼스 푸르깅은 푸른 지구의 '푸르다'와 쓰레기를 줍는 운동 '플로깅'이 결합된 활동입니다. 
+      북한강 고구마섬에서 쓰레기를 수거하며 탄소중립(NET-ZERO)을 함께 실천할 리얼스 푸르깅의 주인공을 찾습니다.
       
       모집 일정:
       - 10월 7일(월) ~ 10월 17일(목) 자정까지  

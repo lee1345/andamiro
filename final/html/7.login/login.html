@@ -27,6 +27,26 @@
                <a href="/andamiro/main2/html_andamiro/main.html"></a>
             </form>
         </div>
+<<<<<<< HEAD
         <script src="../../script/script.js"></script>
+=======
+        <script src="/andamiro/final/script/script.js"></script>
+        <script>
+            document.getElementById("login-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // 기본 폼 제출 동작 방지
+        
+                const username = this.userName.value;
+                const password = this.userPassword.value;
+        
+                if (username === "human1" && password === "123") {
+                    alert("로그인 성공!");
+                    localStorage.setItem("loggedIn", "true"); // 로그인 상태 저장
+                    window.location.href = "../1.navbar/header.html"; // 로그인 후 메인으로 돌아가기
+                } else {
+                    alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+                }
+            });
+        </script>
+>>>>>>> 85f7c54e72ac2901ba14457b6ad8daa3a8cf4d68
     </body>
 </html>

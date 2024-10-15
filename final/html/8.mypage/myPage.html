@@ -154,23 +154,44 @@
         </div>
     </div>
     <script>
-        fetch("../1.navbar/header_Login.html")
-        .then(response => response.text())
-        .then(data => {
-            const navbar = document.getElementById('navbar');
-            navbar.innerHTML = data;
-            const header = navbar.querySelector('header');
-            header.style.height = "103px";
-            header.style.padding = "0";
-        });
-    </script>
+        fetch("../1.navbar/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                const header = document.querySelector('header');
+                header.style.height = "103px";
+                header.style.padding = "0";
+        
+                // 로그인 상태 확인
+                const loggedIn = localStorage.getItem("loggedIn");
+        
+                // 로그인 상태에 따라 헤더 내용 변경
+                const userInfo = document.getElementById("user-info");
+                if (loggedIn === "true") {
+                    userInfo.innerHTML = `
+                        <a href="../8.mypage/mypage.html">
+                            <img src="../../img/그림1.png" width="30px" alt="User Icon">
+                            <button>무명 님</button>
+                        </a>
+                        <span>|</span>
+                        <button onclick="logout()">로그아웃</button>
+                    `;
+                } else {
+                    userInfo.innerHTML = `
+                        <a href="../7.login/login.html"><button id="login-button">로그인</button></a>
+                        <span>|</span>
+                        <a href="../11.sign_up/sign_up_fn.html"><button id="signup-button">회원가입</button></a>
+                    `;
+                }
+            });
+        
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href='../2.about/about.html'; // 
+        }
+        </script>
     <script src="../../script/myPage.js"></script>
     <script>
-        fetch('../1.navbar/header_Login.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
         function step() {
             window.open("step.html", "단계수정", "width=460, height=250, left=400, top=200");
         }
@@ -183,5 +204,6 @@
             window.open("recipt.html", "영수증등록", "width=500, height=600 left=400, top=200");
         }
     </script>
+
 </body>
 </html>
