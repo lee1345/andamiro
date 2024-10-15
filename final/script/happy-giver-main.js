@@ -3,8 +3,8 @@ function updateDistricts() {
     const districtSelect = document.getElementById("district");
 
     const districts = {
-        "천안": ["서북구", "동남구"],
-        "아산": ["탕정면", "배방읍", "음봉면"]
+        "천안": ["선택하세요","서북구"],
+        "아산": ["선택하세요","탕정면", "배방읍"]
     };
 
     const selectedCity = citySelect.value;
