@@ -146,11 +146,15 @@ h2{
 
 
 /*후원정보*/
-}.info{
+}
+
+.info{
+    color: midnightblue;
     position: relative;
-    top: -30px;
-    left: -40px;
-} .arrow_box {
+    top: -35px;
+    left: -75px;
+} 
+.arrow_box {
     display: none;
     position: absolute;
     width: 250px;

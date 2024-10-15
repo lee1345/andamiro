@@ -66,10 +66,12 @@ header button{
     border: 1px solid black;
 }
 .btn {
+    background-color: #4a8afb;
+    color: white;
+    font-family: "Gowun Dodum", sans-serif;
+    border-radius: 5px;
     margin-right: -50px;
     border: none;
-    font-weight: bold;
-    color: steelblue;
     width: 150px;
     height: 35px;
 }
@@ -81,10 +83,12 @@ header button{
 
 }
 .bigbtn {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Gowun Dodum", sans-serif;
     border: none;
-    font-weight: bold;
-    font-size: 15px;
-    color: steelblue;
+    background-color: #4a8afb;
+    color: white;
     width: 300px;
     height: 50px;
 }
@@ -110,11 +114,14 @@ header button{
     align-items: center;
 }
 .p1{
-    text-align: left
+    font-weight: 700;
+    color: #795548;
+    text-align: left;
 }
 h4 {
+
     margin-top: 5px;
-    color: darkgray;
+    color: #795548;
     text-align: left;
 
 }
@@ -124,6 +131,9 @@ h2{
     margin-bottom: 10px;
 }
 .button {
+    margin-top: -15px;
+    height: 63px;
+    border-radius: 1px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -133,18 +143,37 @@ h2{
 
 /*리워드 선택 버튼*/
 .button.active {
+    color: #795548;
+    font-weight: 600;
+    font-family: "Gowun Dodum", sans-serif;
     background-color: #e7e7e7; /* 클릭된 버튼의 색깔 */
 }
 .button.inactive {
-    background-color: white; /* 기본 버튼 색깔 */
+    border: 1px solid #d1e8f2;
+    color: #795548;
+    font-weight: 600;
+    font-family: "Gowun Dodum", sans-serif;
+    background-color: rgb(249, 248, 248); /* 기본 버튼 색깔 */
+}
+ 
+.check-icon {
+    margin-top: -60px;
+    display: inline-block;
+    margin-left: -100px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #7ac6e9;
+}
 
 
 /*후원정보*/
-}.info{
+.info {
+    color: midnightblue;
     position: relative;
-    top: -30px;
-    left: -40px;
-} .arrow_box {
+    top: -35px;
+    left: -75px;
+}
+ .arrow_box {
     display: none;
     position: absolute;
     width: 250px;
@@ -386,3 +415,5 @@ body {
         opacity: 0;
     }
 }
+
+

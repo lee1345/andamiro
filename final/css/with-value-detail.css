@@ -109,13 +109,18 @@ header button{
     text-align: center; /* 텍스트 중앙 정렬 */  
     align-items: center;
 }
-.p1{
-    text-align: left
+.p1 {
+    font-weight: 700;
+    color: #795548;
+    text-align: left;
 }
 h4{
+    color: #795548;
     text-align: left;
 }
 h2{
+    margin-bottom: 10px;
+    color: steelblue;
     text-align: left;
 }
 .button {
@@ -241,6 +246,9 @@ ul {
     line-height: 40px;
 }
 
+
+
+
 .tabCon {
     display: none; 
     width: 100%;
@@ -252,7 +260,9 @@ ul {
     border: 5px solid #f9f9f9;
 }
 .tabmenu input:checked ~ label {
-    background: steelblue;
+    font-weight: bold;
+    color: darkblue;
+    background: #afdbff;
 }
 .tabmenu input:checked ~ .tabCon {
     display: block;
