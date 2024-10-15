@@ -9,10 +9,13 @@
          body {
         font-family: "Gowun Dodum", sans-serif;
         font-weight: 400;
+        text-align: center; /* 텍스트와 인풋을 가운데 정렬 */
         }
         table {
+            margin: 0 auto; /* 테이블을 가운데 정렬 */
             width: 800px;
             border-collapse: collapse;
+            
         }
         th {
             border: 1px solid #6b6868;
@@ -32,6 +35,7 @@
             color: #f0fbfc;
             border: 1px solid #6b6868;
             cursor:pointer;
+            text-align: center;
         }
         button.cancle{
             background-color: #f0fbfc;
@@ -42,12 +46,24 @@
         input {
             width: 90%;
             height: 100%;
+            text-align: left; /* 왼쪽 정렬 */
+            margin: 0; /* 기본 여백 제거 */
+            display: block;
+            border: 0;
         }
   
         textarea {
             font-size: 13pt;
-            width: 90%;
+            width: 100%;
             height: 180px;
+            text-align: left; /* 왼쪽 정렬 */
+            margin: 0; /* 기본 여백 제거 */
+            display: block;
+            border-radius: 0;
+            border: none;
+        }
+        .left-align {
+         text-align: left; /* 왼쪽 정렬 */
         }
         #data-table {
             width: 800px; 
@@ -88,7 +104,7 @@
     </style>
 </head>
 <body>
-    <h2>행복나르미 신청하기</h2>
+    <h2 style="text-align: center;">행복나르미 신청하기</h2>
     <form>
         <table>
             <tr>
@@ -101,7 +117,7 @@
             </tr>
             <tr>
                 <th>활동지역</th>
-                <td>
+                <td class="left-align">
                     <select id="city" onchange="updateDistricts()">
                         <option value="">선택하세요</option>
                         <option value="천안">천안</option>
@@ -134,7 +150,7 @@
             </tr>
         </table>
         <h2>산출내역</h2>
-        <div class="input-area">
+        <div class="input-area" style="text-align: center;">
             <table id="data-table" >
                 <tr>
                     <th>순번</th>
@@ -181,7 +197,7 @@
         </div>
 
         <br>
-        <div style="padding-left: 10%;">
+        <div style="padding-left: 0;">
             <button type="submit" style="width:200px" onclick="regist();" class="submit">신청하기</button>
             <button type="button" style="width:200px" onclick="window.close();" class="cancle">취소</button>
         </div>
@@ -193,8 +209,8 @@
             const districtSelect = document.getElementById("district");
 
             const districts = {
-                "천안": ["서북구", "동남구"],
-                "아산": ["탕정면", "배방읍", "음봉면"]
+                "천안": ["선택하세요","서북구"],
+                "아산": ["선택하세요","탕정면", "배방읍"]
             };
 
             const selectedCity = citySelect.value;

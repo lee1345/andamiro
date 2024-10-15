@@ -82,6 +82,8 @@
             function renderProfile(narmi) {
                 const profile = document.createElement('ul');
                 profile.classList.add('item1');
+    const fundingProgress = narmi.N_funding_progress;
+    const progressClass = fundingProgress >= 100 ? 'green' : fundingProgress >= 80 ? 'orange' : '';
 
                 profile.innerHTML = `
                             <li>
@@ -126,5 +128,15 @@
             });
         });
     </script>
+    <script>
+        const fundingProgress = narmi.N_funding_progress;
+        const progressBar = profile.querySelector('.progress');
+        
+        // 게이지 색상 변경
+        if (fundingProgress >= 100) {
+            progressBar.classList.add('green');
+        } else if (fundingProgress >= 80) {
+            progressBar.classList.add('orange');
+        }</script>
     </body>
 </html>

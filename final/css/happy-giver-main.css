@@ -263,7 +263,16 @@ li > img{
     top:0;
     right:0;
     z-index:99;
+    transition: width 0.5s; 
+
   }
+  .progress.orange {
+    background: orange; /* 80% 이상일 때 주황색 */
+}
+
+  .progress.green {
+    background: green; /* 100%일 때 녹색 */
+}
 .ct-bar {
     display: flex;               /* Flexbox 사용 */
     justify-content: center;     /* 수평 중앙 정렬 */

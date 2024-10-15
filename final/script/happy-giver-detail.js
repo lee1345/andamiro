@@ -133,9 +133,17 @@ var currentStep = "activity";
 
 // 선택된 단계까지 색칠
 var steps = ['f_start', 'f_complete', 'purchase', 'activity', 'settlement'];
+var colors = [
+    'rgb(199, 221, 255)', // f_start 색상
+    'rgb(159, 197, 255)', // f_complete 색상
+    'rgb(117, 172, 255)', // purchase 색상
+    'rgb(62, 139, 255)',  // activity 색상
+    'rgb(25, 117, 255)'   // settlement 색상
+];
 for (var i = 0; i <= steps.indexOf(currentStep); i++) {
-    document.getElementById(steps[i]).style.backgroundColor = "black";
+    document.getElementById(steps[i]).style.backgroundColor = colors[i];
 }
+document.getElementById(currentStep).classList.add('blink');
 
 
 // 정산내역
