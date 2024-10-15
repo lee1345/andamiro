@@ -378,7 +378,7 @@ body {
         opacity: 1;
     }
     100% {
-        transform: translateY(-100px) scale(0); /* 올라가는 높이를 늘림 */
+        transform: translateY(-90px) scale(0); /* 올라가는 높이를 늘림 */
         opacity: 0;
     }
 }

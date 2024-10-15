@@ -218,3 +218,5 @@ document.addEventListener('DOMContentLoaded', function() {
         successIcon.style.display = 'inline'; // 아이콘 표시
     }
 });
+
+
