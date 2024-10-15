@@ -260,7 +260,7 @@ ul {
     list-style: none;
 }
 .tabmenu { 
-    max-width: 1200px; 
+    max-width: 1000px; 
     margin: 0 auto; 
     position: relative; 
 }
@@ -350,7 +350,18 @@ body {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
 }
+.reply{
+    background-color: #dee2e6;
+    border:1px solid rgb(106, 106, 119);
+    border-radius: 10px;
+}
+.replyButton{
+    background-color: #2b6ba0;
+    color:rgb(255, 255, 255);
+    border:1px solid rgb(49, 59, 153);
+    border-radius: 10px;
 
+}
 /* body {
     display: flex;
     justify-content: center;
