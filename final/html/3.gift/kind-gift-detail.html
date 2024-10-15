@@ -187,12 +187,12 @@
 
                 function showGiftTargetAmount(G_Target_amount) {
                     const element = document.getElementById('gift_target_amount');
-                    element.textContent = `${G_Target_amount}원`;
+                    element.textContent = `${G_Target_amount.toLocaleString()}원`;
                 }
 
                 function showGiftFundingAchievement(G_funding_achievement) {
                     const element = document.getElementById('gift_funding_achievement');
-                    element.textContent = G_funding_achievement;
+                    element.textContent = G_funding_achievement.toLocaleString();
                 }
 
                 function showGiftFundingProgress(G_funding_progress) {
