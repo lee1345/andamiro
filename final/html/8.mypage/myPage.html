@@ -154,23 +154,17 @@
         </div>
     </div>
     <script>
-        fetch("../1.navbar/header_Login.html")
-        .then(response => response.text())
-        .then(data => {
-            const navbar = document.getElementById('navbar');
-            navbar.innerHTML = data;
-            const header = navbar.querySelector('header');
-            header.style.height = "103px";
-            header.style.padding = "0";
-        });
+    fetch("../1.navbar/header.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const header = document.querySelector('header');
+        header.style.height = "103px";
+        header.style.padding = "0";
+    });
     </script>
     <script src="../../script/myPage.js"></script>
     <script>
-        fetch('../1.navbar/header_Login.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
         function step() {
             window.open("step.html", "단계수정", "width=460, height=250, left=400, top=200");
         }
@@ -183,5 +177,6 @@
             window.open("recipt.html", "영수증등록", "width=500, height=600 left=400, top=200");
         }
     </script>
+
 </body>
 </html>

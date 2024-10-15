@@ -112,27 +112,23 @@
             </div>
         </div>
     </header>
-    <script> 
+    <script>
         window.onload = function() {
             const loggedIn = localStorage.getItem("loggedIn");
             const userInfo = document.getElementById("user-info");
-    
+        
             if (loggedIn === "true") {
                 userInfo.innerHTML = `
                     <a href="../8.mypage/mypage.html">
                         <img src="../../img/그림1.png" width="30px" alt="User Icon">
-                    </a>
-                    <a href="#">
                         <button>무명 님</button>
                     </a>
                     <span>|</span>
-                    <a href="#" onclick="logout()">
-                        <button>로그아웃</button>
-                    </a>
+                    <button onclick="logout()">로그아웃</button>
                 `;
             }
         }
-
+        
         function logout() {
             localStorage.removeItem("loggedIn");
             window.location.reload(); // 페이지 새로고침
