@@ -7,7 +7,7 @@
        <title>후원하기</title>       
        <link rel="stylesheet" href="../../css/payment_fn.css">
        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dongle:wght@300;400;700&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
@@ -48,7 +48,7 @@
         </div>
                 <h3>결제방법</h3>
             <div id="card-area">
-            <input type="checkbox" id="credit-card" onclick="togglePaymentOptions('credit-card', 'bank-transfer')">
+            <input type="checkbox" id="credit-card" onclick="toggleCheckbox('credit-card', 'bank-transfer')">
             <span class="c-card">신용카드</span>
         </div>
             <div id="credit-card-description" class="description" style="display: none;">
@@ -61,8 +61,16 @@
                     <option value="amex">신한카드</option>
                 </select>
             </div>
+            <div id="card-info" class="options" style="display: none;">
+                <label for="card-number">카드 번호:</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required><br>
+                <label for="expiry-date">유효 기간:</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required><br>
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" placeholder="123" required><br>
+            </div>
             <div>
-            <input type="checkbox" id="bank-transfer" onclick="togglePaymentOptions('bank-transfer', 'credit-card')">
+                <input type="checkbox" id="bank-transfer" onclick="toggleCheckbox('bank-transfer', 'credit-card')">
             <span class="bn-trans">무통장입금</span>
             </div>
             <div id="bank-transfer-description" class="description" style="display: none;">

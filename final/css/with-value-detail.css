@@ -284,3 +284,20 @@ body, pre, button {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
 }
+
+.bubble {
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+@keyframes bubble-animation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-90px) scale(0); /* 올라가는 높이를 늘림 */
+        opacity: 0;
+    }
+}

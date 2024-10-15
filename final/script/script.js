@@ -45,8 +45,6 @@ function toggleCheckbox(checkedId, otherId) {
 }
 
 
-
-
 function togglePaymentOptions(selectedPayment) {
     // 각 설명 및 입력 필드 요소 가져오기
     const creditCardDescription = document.getElementById("credit-card-description");
@@ -88,16 +86,107 @@ function togglePaymentOptions(selectedPayment) {
         depositorNameContainer.style.display = 'block'; // 입금자명 입력 필드 보이기
     }   
 }
-    
+
+//카드 정보 입력창 보이기 
+function showCardFields() {
+    const cardTypeDiv = document.getElementById('card-type');
+    const cardInfoDiv = document.getElementById('card-info');
+    if (cardTypeDiv.style.display === 'block') {
+        cardInfoDiv.style.display = 'block';
+    } else {
+        cardInfoDiv.style.display = 'none';
+    }
+}
 
 
+function togglePaymentOptions(selectedPayment, otherPayment) {
+    const creditCardDescription = document.getElementById("credit-card-description");
+    const bankTransferDescription = document.getElementById("bank-transfer-description");
+    const cardType = document.getElementById("card-type");
+    const bankInfo = document.getElementById("bank-info");
+    const depositorNameContainer = document.getElementById("depositor-name-container");
+    const cardInfoDiv = document.getElementById('card-info');
 
+    // 모든 설명 및 입력 필드 숨기기
+    creditCardDescription.style.display = 'none';
+    bankTransferDescription.style.display = 'none';
+    cardType.style.display = 'none';
+    bankInfo.style.display = 'none';
+    depositorNameContainer.style.display = 'none';
+    cardInfoDiv.style.display = 'none'; // 카드 정보 입력 필드 숨기기
 
+    // 선택된 결제 방법의 설명 및 입력 필드 보이기
+    if (selectedPayment === 'credit-card' && document.getElementById("credit-card").checked) {
+        creditCardDescription.style.display = 'block';
+        cardType.style.display = 'block'; // 카드 종류 입력 필드 보이기
+        cardInfoDiv.style.display = 'block'; // 카드 정보 입력 필드 보이기
+    } else if (selectedPayment === 'bank-transfer' && document.getElementById("bank-transfer").checked) {
+        bankTransferDescription.style.display = 'block';
+        bankInfo.style.display = 'block'; // 은행 입력 필드 보이기
+        depositorNameContainer.style.display = 'block'; // 입금자명 입력 필드 보이기
+    }
+}
 
+// 카드 종류가 선택될 때 카드 정보 입력 필드를 보이도록 설정
+function showCardFields() {
+    const cardTypeDiv = document.getElementById('card-type');
+    const cardInfoDiv = document.getElementById('card-info');
+    if (cardTypeDiv.style.display === 'block') {
+        cardInfoDiv.style.display = 'block';
+    } else {
+        cardInfoDiv.style.display = 'none';
+    }
+}
 
+function toggleCheckbox(checkedId, otherId) {
+    const checkedBox = document.getElementById(checkedId);
+    const otherBox = document.getElementById(otherId);
 
+    // 체크박스가 체크되면 다른 체크박스를 해제
+    if (checkedBox.checked) {
+        otherBox.checked = false; // 다른 체크박스 해제
+        togglePaymentOptions(checkedId); // 결제 옵션 업데이트
+    }
+}
 
+function togglePaymentOptions(selectedPayment) {
+    const creditCardDescription = document.getElementById("credit-card-description");
+    const cardType = document.getElementById("card-type");
+    const bankTransferDescription = document.getElementById("bank-transfer-description");
+    const bankInfo = document.getElementById("bank-info");
+    const depositorNameContainer = document.getElementById("depositor-name-container");
+    const cardInfoDiv = document.getElementById('card-info');
 
+    // 모든 설명 및 입력 필드 숨기기
+    creditCardDescription.style.display = 'none';
+    bankTransferDescription.style.display = 'none';
+    cardType.style.display = 'none';
+    bankInfo.style.display = 'none';
+    depositorNameContainer.style.display = 'none';
+    cardInfoDiv.style.display = 'none'; // 카드 정보 입력 필드 숨기기
+
+    // 선택된 결제 방법의 설명 및 입력 필드 보이기
+    if (selectedPayment === 'credit-card' && document.getElementById("credit-card").checked) {
+        creditCardDescription.style.display = 'block';
+        cardType.style.display = 'block'; // 카드 종류 입력 필드 보이기
+        cardInfoDiv.style.display = 'block'; // 카드 정보 입력 필드 보이기
+    } else if (selectedPayment === 'bank-transfer' && document.getElementById("bank-transfer").checked) {
+        bankTransferDescription.style.display = 'block';
+        bankInfo.style.display = 'block'; // 은행 입력 필드 보이기
+        depositorNameContainer.style.display = 'block'; // 입금자명 입력 필드 보이기
+    }
+}
+
+// 카드 종류가 선택될 때 카드 정보 입력 필드를 보이도록 설정
+function showCardFields() {
+    const cardTypeDiv = document.getElementById('card-type');
+    const cardInfoDiv = document.getElementById('card-info');
+    if (cardTypeDiv.style.display === 'block') {
+        cardInfoDiv.style.display = 'block';
+    } else {
+        cardInfoDiv.style.display = 'none';
+    }
+}
 
 function toggleTerms() {
     const agreeAll = document.getElementById('agree-all');
@@ -168,36 +257,6 @@ toggle = () => {
 setTimeout(() => {
   container.classList.add('sign-in')
 }, 200)
-
-
-// //하트 거품효과
-// const heart = document.getElementById('heart');
-
-// heart.addEventListener('click', (e) => {
-//     const bubble = document.createElement('div');
-//     bubble.classList.add('bubble');
-//     bubble.textContent = '❤️';
-//     bubble.style.left = `${e.clientX - 12}px`;
-//     bubble.style.top = `${e.clientY - 12}px`;
-    
-//     document.body.appendChild(bubble);
-
-//     bubble.addEventListener('animationend', () => {
-//         bubble.remove();
-//     });
-// });
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     document.querySelectorAll('.item1').forEach(item => {
-//         const percentText = item.querySelector('.percent').innerText;
-//         const percentValue = parseInt(percentText.replace('%', ''));
-
-//         if (percentValue >= 90) {
-//             item.querySelector('.success-icon').style.display = 'inline'; // 아이콘 표시
-//         }
-//     });
-// });
 
 
 

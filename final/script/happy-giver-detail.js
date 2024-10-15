@@ -82,16 +82,14 @@ function shareKakao(){
 }
 
 
-// 좋아요 누적버튼
-let count = 0;
 
-const numberElement = document.getElementById('number');
-const incrementBtn = document.getElementById('incrementBtn');
 
-incrementBtn.addEventListener('click', () => {
-    count++;
-    numberElement.textContent = count;
-});
+
+
+
+
+
+
 
 
 // 산출내역 표  출력
@@ -181,7 +179,12 @@ window.onload = () => {
 
 
 
-//하트 클릭이벤트 시 개수 증가 
+// 좋아요 누적버튼
+let count = 0;
+
+const numberElement = document.getElementById('number');
+const incrementBtn = document.getElementById('incrementBtn');
+
 incrementBtn.addEventListener('click', (e) => {
     count++;
     numberElement.textContent = count;

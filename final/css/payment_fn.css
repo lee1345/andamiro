@@ -1,5 +1,8 @@
 /* 결제하기 */
-
+body {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+  }
 .title {
     margin-top: 80px;
     grid-column: 1 / -1; /* 제목이 전체 열을 차지하도록 설정 */
@@ -242,7 +245,7 @@ input[type="checkbox"] {
 }
 
 .options {
-    margin: 15px 0;
+    margin-top: -20px;
 }
 
 
@@ -261,7 +264,7 @@ input[type="checkbox"] {
 
 
 .payment-button {
-    margin-top: -30px;
+    margin-top: -23px;
     font-size: large;
     background-color: #2c6ce0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
