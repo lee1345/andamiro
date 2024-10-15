@@ -1,0 +1,46 @@
+
+
+section .about-self .left{
+    float:left;
+    width:50%;
+}
+section .about-self .left img{
+    width: 100%;
+}
+
+section .about-self .right{
+    float:left;
+    width:50%;
+    padding: 0 2rem;
+}
+
+section .about-self .right h3{
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+section .about-self .right h3 strong{
+    color: #ed4848;
+}
+
+section .about-self .right p{
+    font-size: 1.15rem;
+    margin: 1rem 0;
+}
+section .about-self .right .social a{
+    font-size: 2.5rem;
+    margin-right: 0.2rem;
+
+}
+
+
+/* 섹션(가장 큰틀에 스타일적용)section:nth-child 이용하여 
+짝수에만 흰배경
+ padding: 0 2rem; 위아래 0 왼쪽 오른쪽 2rem
+
+
+ section .about-self::after{
+    content: '';
+    clear: both;
+    display: block;
+} -> 부모로 상속되어있어서 높이 값이 설정이 안되어있을때 다시 찾아오는 태그 
+*/
