@@ -181,3 +181,40 @@ window.onload = () => {
 
 
 
+//하트 클릭이벤트 시 개수 증가 
+incrementBtn.addEventListener('click', (e) => {
+    count++;
+    numberElement.textContent = count;
+
+    // 여러 개의 하트 거품 생성
+    for (let i = 0; i < 10; i++) { // 원하는 개수만큼 생성 (여기서는 10개로 증가)
+        createBubble();
+    }
+});
+
+function createBubble() {
+    // 하트 거품 생성
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    bubble.innerHTML = '<img src="../../img/heart.png" alt="하트" width="20px">';
+    
+    // 하트 버튼의 위치에 맞게 거품 위치 설정
+    const rect = incrementBtn.getBoundingClientRect();
+    bubble.style.left = `${rect.left + (rect.width / 2) - 10}px`; // 중앙에 위치
+    bubble.style.top = `${rect.top - 40}px`; // 하트 위쪽에 위치
+
+    // 랜덤한 방향과 거리로 이동
+    const randomX = (Math.random() - 0.5) * 400; // -100px ~ 100px으로 변경
+    const randomY = (Math.random() - 1) * 300; // 아래로 더 멀리 이동하도록 변경
+    bubble.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+    // 애니메이션 추가
+    bubble.style.animation = `bubble-animation ${1 + Math.random()}s forwards`; // 애니메이션 시간을 랜덤으로
+
+    document.body.appendChild(bubble);
+
+    // 애니메이션이 끝난 후 거품 제거
+    bubble.addEventListener('animationend', () => {
+        bubble.remove();
+    });
+}

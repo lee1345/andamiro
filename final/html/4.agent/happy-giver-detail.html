@@ -174,9 +174,7 @@
                 </ul>
             </div>
             <!-- 푸터 -->
-
-
-
+        <script src="../../script/script.js"></script>
         <script src="../../script/happy-giver-detail.js"></script>
         <script src="../../script/narmi_detail.js"></script>
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
@@ -187,9 +185,7 @@
             .then(data => {
                 const navbar = document.getElementById('navbar');
                 navbar.innerHTML = data;
-                const header = navbar.querySelector('header');
-
-                
+                const header = navbar.querySelector('header'); 
             });
         </script>
         <script>
@@ -221,7 +217,8 @@
                    console.error('오류');
                }
            });
-       
+
+           
            function showRegionAndCity(region, city) {
                const regionCityElement = document.getElementById('N_region_city');
                regionCityElement.textContent = `${region} ${city}`; // 공백으로 구분

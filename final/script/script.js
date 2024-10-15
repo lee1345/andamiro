@@ -170,22 +170,22 @@ setTimeout(() => {
 }, 200)
 
 
-//하트 거품효과
-const heart = document.getElementById('heart');
+// //하트 거품효과
+// const heart = document.getElementById('heart');
 
-heart.addEventListener('click', (e) => {
-    const bubble = document.createElement('div');
-    bubble.classList.add('bubble');
-    bubble.textContent = '❤️';
-    bubble.style.left = `${e.clientX - 12}px`;
-    bubble.style.top = `${e.clientY - 12}px`;
+// heart.addEventListener('click', (e) => {
+//     const bubble = document.createElement('div');
+//     bubble.classList.add('bubble');
+//     bubble.textContent = '❤️';
+//     bubble.style.left = `${e.clientX - 12}px`;
+//     bubble.style.top = `${e.clientY - 12}px`;
     
-    document.body.appendChild(bubble);
+//     document.body.appendChild(bubble);
 
-    bubble.addEventListener('animationend', () => {
-        bubble.remove();
-    });
-});
+//     bubble.addEventListener('animationend', () => {
+//         bubble.remove();
+//     });
+// });
 
 
 // document.addEventListener("DOMContentLoaded", function() {
