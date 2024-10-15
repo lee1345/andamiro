@@ -68,7 +68,7 @@ function addComment(event) {
 // 후원하기 버튼 클릭 시 결제창 이동
 function goPayment(){
     if(confirm("후원하시겠습니까?")==true){
-            location.replace('./payment.html') // #에 결제창 링크 넣어주기
+            location.replace('../../payment.html') // #에 결제창 링크 넣어주기
     }
 }
 

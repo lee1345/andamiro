@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- 헤더 -->
-         
+         <header id="navbar"></header>
 
         <!-- 메인이미지-->
     <body>
@@ -44,11 +44,32 @@
     
         <h2 class="city-title">아산시 배방읍</h2>
         <div class="new" id="profiles-baebang"></div>
-    
+    <footer id="container"></footer>
     <!--footer-->
 
     </body>
-        
+    <script>
+        fetch("../6.footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            const container = document.getElementById('container');
+            container.innerHTML = data;
+            const footer = navbar.querySelector('footer');
+
+            
+        });
+    </script>
+    <script>
+        fetch("../1.navbar/header_NoLogin.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+
+            
+        });
+    </script>
     <script src="../../script/happy-giver-main.js"></script>
     <script src="../../script/data.js"></script>
     <script>

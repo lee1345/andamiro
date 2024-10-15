@@ -6,7 +6,9 @@
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
        <title>메인화면</title>       
        <link rel="stylesheet" href="../../css/kind-gift-main.css">
+       <title>메인화면</title>     
        <link rel="stylesheet" href="../../css/gift_main.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <style>
           @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
@@ -34,8 +36,8 @@
                     </ul>
                 </nav>
                 <div class="btn-cr">
-                    <a href="../html_andamiro/login.html"><button>로그인 /</button> </a>
-                    <a href="../html_andamiro/회원가입.html"><button>회원가입</button></a>
+                    <a href="../../html/11.sign_up/sign_up_fn.html"><button>로그인 /</button> </a>
+                    <a href="../../html/11.sign_up/sign_up_fn.html"><button>회원가입</button></a>
                </div>
             </div>
         </header>
@@ -76,27 +78,26 @@
         <div class="new" id="books"></div>
 
     <!--footer-->
-<div class="main-footer">
-    <div>
-        <a href="./main.html"><img src="../../img/logo.png" style="width:180px" alt=""></a>
-    </div>
-    <ul>
-        <li>대표 : 홍길동</li>
-        <li>주소 : 충남 천안시 동남구 대흥로 215, 7층 </li>
-        <li>제휴문의 : 012-444-1233 &nbsp; 대표번호 : 012-444-1234 ff  </li>
-        <li>이메일 : junjuhun@naver.com </li>
-        <a href="./개인정보.html"><li>개인정보 처리방침 </li></a>
-    </ul>
-    </div>
-        
+    <footer id="container"></footer>
+    <!-- 푸터 --> 
     <script src="../../script.js"></script>
     <script src="../../main/script/test.js"></script>
 
-    <!-- 푸터 -->
+    
 
 
+    <script>
+        fetch("../6.footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            const container = document.getElementById('container');
+            container.innerHTML = data;
+            const footer = navbar.querySelector('footer');
 
-
+            
+        });
+    </script>
+    <script src="../../script/script.js"></script>
     <script src="../../script/data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -119,6 +120,10 @@
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
                     };
+                    const isSuccess = gift.G_funding_progress >= 80 ? `
+                        <span class="success-message">성공임박</span>
+                        <span class="success-icon"><i class="fas fa-clock"></i></span>
+                    ` : '';
 
                     item.innerHTML = `
                         <ul class="item1">
@@ -134,6 +139,8 @@
                                 <span class="achieved">달성률</span><br>
                                 <strong class="sung">${gift.G_funding_achievement.toLocaleString()}원</strong>
                                 <strong class="percent">${gift.G_funding_progress}%</strong>
+                                <br>
+                                ${isSuccess} 
                             </li>
                         </ul>
                     `;
@@ -145,5 +152,6 @@
             }
         });
     </script>
+
     </body>
 </html>

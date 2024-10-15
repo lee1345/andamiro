@@ -236,27 +236,27 @@ li > img{
   }
   @keyframes progress1{
     0%{width: 0px}
-    100%{width: 83%;}
+    100%{width: 21%;}
   }
   @keyframes progress2{
     0%{width: 0px}
-    100%{width: 70%;}
+    100%{width: 17%;}
   }
   @keyframes progress3{
     0%{width: 0px}
-    100%{width: 100%;}
+    100%{width: 10%;}
   }
   @keyframes progress4{
     0%{width: 0px}
-    100%{width: 64%;}
+    100%{width: 20%;}
   }
   @keyframes progress5{
     0%{width: 0px}
-    100%{width: 25%;}
+    100%{width: 20%;}
   }
   @keyframes progress6{
     0%{width: 0px}
-    100%{width: 48%;}
+    100%{width: 100%;}
   }
   .progress{
     position: absolute;

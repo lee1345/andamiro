@@ -117,10 +117,18 @@
                     </li>
                 </ul>
             </div>
-
             <!-- 푸터 -->
-          
+            <script>
+                fetch("../6.footer/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById('container');
+                    container.innerHTML = data;
+                    const footer = navbar.querySelector('footer');
         
+                    
+                });
+            </script>
             <script>
                 fetch("../1.navbar/header_NoLogin.html")
                 .then(response => response.text())
@@ -185,12 +193,12 @@
 
                 function showGiftTargetAmount(G_Target_amount) {
                     const element = document.getElementById('gift_target_amount');
-                    element.textContent = `${G_Target_amount}원`;
+                    element.textContent = `${G_Target_amount.toLocaleString()}원`;
                 }
 
                 function showGiftFundingAchievement(G_funding_achievement) {
                     const element = document.getElementById('gift_funding_achievement');
-                    element.textContent = G_funding_achievement;
+                    element.textContent = G_funding_achievement.toLocaleString();
                 }
 
                 function showGiftFundingProgress(G_funding_progress) {
