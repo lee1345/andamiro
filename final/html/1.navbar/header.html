@@ -87,31 +87,56 @@
     <header>
         <div class="container">
             <h1>
-                <a href="#"><img src="../../img/logo.png" style="width:180px"></a>
+                <a href="../2.about/about.html"><img src="../../img/logo.png" style="width:180px"></a>
             </h1>
             <nav>
                 <ul class="btn-cr">
                     <li>
-                        <a href="#"><button>안다미로 소개</button></a>
+                        <a href="../2.about/about.html"><button>안다미로 소개</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>착한선물</button></a>
+                        <a href="../3.gift/kind-gift-main.html"><button>착한선물</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>행복나르미</button></a>
+                        <a href="../4.agent/happy-giver-main.html"><button>행복나르미</button></a>
                     </li>
                     <li>
-                        <a href="#"><button>같이가치</button></a>
+                        <a href="../5.together/with-value-main.html"><button>같이가치</button></a>
                     </li>
                 </ul>
             </nav>
-            <div class="user-info">
-                <img src="../../img/그림1.png" width="30px" alt="User Icon">
-                <a href="#"><button>로그인</button></a>
+            <div class="user-info" id="user-info">
+                <a href="../7.login/login.html"><button id="login-button">로그인</button></a>
                 <span>|</span>
-                <a href="#"><button>회원가입</button></a>
+                <a href="../11.sign_up/sign_up_fn.html"><button id="signup-button">회원가입</button></a>
             </div>
         </div>
     </header>
+    <script> 
+        window.onload = function() {
+            const loggedIn = localStorage.getItem("loggedIn");
+            const userInfo = document.getElementById("user-info");
+    
+            if (loggedIn === "true") {
+                userInfo.innerHTML = `
+                    <a href="../8.mypage/mypage.html">
+                        <img src="../../img/그림1.png" width="30px" alt="User Icon">
+                    </a>
+                    <a href="#">
+                        <button>무명 님</button>
+                    </a>
+                    <span>|</span>
+                    <a href="#" onclick="logout()">
+                        <button>로그아웃</button>
+                    </a>
+                `;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.reload(); // 페이지 새로고침
+        }
+    </script>
 </body>
 </html>
