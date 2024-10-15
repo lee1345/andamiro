@@ -63,7 +63,7 @@ const Gift = [
     G_Product_Sample_detail: "../../img/gift/daily_necessities/gift3_detail.jpg", G_Target_amount: 410000, G_funding_achievement: 205000, G_funding_progress: 50, G_head_count: 8 }, 
 
     { id: 20, G_category: "Daily necessities", G_Maker: "리코코", G_Product_Name: "양면이중코팅 원피스매트", G_Product_Sample: "../../img/gift/daily_necessities/gift4.jpg",
-    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift4_detail.jpg", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
+    G_Product_Sample_detail: "../../img/gift/daily_necessities/gift4_detail.gif", G_Target_amount: 690000, G_funding_achievement: 460000, G_funding_progress: 66.7, G_head_count: 7 }  
 ];
 
 const  Narmi= [ 
