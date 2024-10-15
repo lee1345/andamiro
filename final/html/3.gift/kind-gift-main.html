@@ -4,8 +4,9 @@
        <meta charset="UTF-8">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
-       <title>메인화면</title>       
+       <title>메인화면</title>     
        <link rel="stylesheet" href="../../css/gift_main.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
        <style>
           @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
@@ -56,7 +57,7 @@
 
 
 
-
+    <script src="../../script/script.js"></script>
     <script src="../../script/data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -79,6 +80,10 @@
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
                     };
+                    const isSuccess = gift.G_funding_progress >= 80 ? `
+                        <span class="success-message">성공임박</span>
+                        <span class="success-icon"><i class="fas fa-clock"></i></span>
+                    ` : '';
 
                     item.innerHTML = `
                         <ul class="item1">
@@ -94,6 +99,8 @@
                                 <span class="achieved">달성률</span><br>
                                 <strong class="sung">${gift.G_funding_achievement.toLocaleString()}원</strong>
                                 <strong class="percent">${gift.G_funding_progress}%</strong>
+                                <br>
+                                ${isSuccess} 
                             </li>
                         </ul>
                     `;
@@ -105,5 +112,6 @@
             }
         });
     </script>
+
     </body>
 </html>
