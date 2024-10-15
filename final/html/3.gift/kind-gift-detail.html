@@ -13,7 +13,7 @@
     </head>
     <body>
         <!-- 헤더 -->
-
+        <header id="navbar"></header>
 
         <div class="ctn"> 
             <div class="item1">
@@ -121,7 +121,19 @@
             </div>
 
             <!-- 푸터 -->
+          
+        
+            <script>
+                fetch("../1.navbar/header_NoLogin.html")
+                .then(response => response.text())
+                .then(data => {
+                    const navbar = document.getElementById('navbar');
+                    navbar.innerHTML = data;
+                    const header = navbar.querySelector('header');
 
+                    
+                });
+            </script>
 
             <script src="../../script/data.js"></script>
             <script src="../../script/kind-gift-detail.js"></script>
