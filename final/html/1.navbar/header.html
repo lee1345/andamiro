@@ -116,7 +116,7 @@
         window.onload = function() {
             const loggedIn = localStorage.getItem("loggedIn");
             const userInfo = document.getElementById("user-info");
-        
+    
             if (loggedIn === "true") {
                 userInfo.innerHTML = `
                     <a href="../8.mypage/mypage.html">
@@ -128,7 +128,7 @@
                 `;
             }
         }
-        
+    
         function logout() {
             localStorage.removeItem("loggedIn");
             window.location.reload(); // 페이지 새로고침
