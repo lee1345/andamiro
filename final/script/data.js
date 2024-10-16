@@ -69,7 +69,7 @@ const Gift = [
 const  Narmi= [ 
 
     //홍남희
-    {id: 1, N_region: "천안시", N_city: "서북구", N_location: "희망 어린이집", N_location_img: "../../img/narmi/narmi1.png", agent_name: "홍남희", agent_img: "../../img/narmi/agent1.png", N_Target_amount: 1175000, N_funding_achievement: 250000, D_day: 19, End_date: "2024-12-31", N_funding_progress: 21.3, N_head_count:11, ct:1,
+    {id: 1, N_region: "천안시", N_city: "서북구", N_location: "희망 어린이집", N_location_img: "../../img/narmi/narmi1.png", agent_name: "홍남희", agent_img: "../../img/narmi/agent1.png", N_Target_amount: 1175000, N_funding_achievement: 1175000, D_day: 19, End_date: "2024-12-31", N_funding_progress: 100, N_head_count:11, ct:1,
     agent_Introduce:
     `    안녕하세요! 저는 19세 홍남희입니다. 
     현재 선화예고 3학년에서 바이올린을 전공하고 있습니다. 
@@ -84,7 +84,7 @@ const  Narmi= [
     여러분의 따뜻한 마음이 아이들에게 큰 힘이 될 것입니다. 많은 관심과 참여 부탁드립니다!`},
     
     //박민혁
-    {id: 2, N_region: "천안시", N_city: "서북구", N_location: "하늘 어린이집", N_location_img: "../../img/narmi/narmi2.png", agent_name: "박민혁", agent_img: "../../img/narmi/agent2.png", N_Target_amount: 3000000, N_funding_achievement: 500000, D_day: 30, End_date: "2024-11-30", N_funding_progress: 16.7, N_head_count: 20, ct:1,
+    {id: 2, N_region: "천안시", N_city: "서북구", N_location: "하늘 어린이집", N_location_img: "../../img/narmi/narmi2.png", agent_name: "박민혁", agent_img: "../../img/narmi/agent2.png", N_Target_amount: 3000000, N_funding_achievement: 2100000, D_day: 30, End_date: "2024-11-30", N_funding_progress: 70, N_head_count: 20, ct:1,
     agent_Introduce:
     `    안녕하세요! 저는 25세 박민혁이라고 합니다. 
     컴퓨터공학과를 졸업하고 현재 취업 준비 중입니다.

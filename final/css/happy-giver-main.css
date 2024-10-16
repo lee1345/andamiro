@@ -166,7 +166,7 @@ li > img{
     margin-left: 100px;
 }
 .achieved .progressbar{
-    width: 250px;
+    width: 100%;
     height: 15px;
     border-radius: 10px;
     overflow:hidden;
@@ -236,11 +236,11 @@ li > img{
   }
   @keyframes progress1{
     0%{width: 0px}
-    100%{width: 21%;}
+    100%{width: 100%;}
   }
   @keyframes progress2{
     0%{width: 0px}
-    100%{width: 17%;}
+    100%{width: 70%;}
   }
   @keyframes progress3{
     0%{width: 0px}
