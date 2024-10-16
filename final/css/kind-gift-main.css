@@ -684,130 +684,101 @@ body {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
   }
-  @media screen and (max-width: 768px) {
-    /* General adjustments for smaller screens */
-    header .container {
-        flex-direction: column;
-        padding: 1rem;
+  @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
     }
 
-    header nav ul {
-        flex-direction: column;
-        padding: 0;
+    /* 메인이미지 크기 조정 */
+    img {
+        width: 100%;
+        height: auto;
     }
 
-    header nav ul li {
-        padding-right: 0;
-        padding-bottom: 10px;
+    /* 카드 및 카테고리 영역 */
+    .card-area h2 {
+        font-size: 15px;
+        text-align: center;
+        margin: -30px;
     }
 
     .ct-bar {
-        flex-direction: column;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
     }
 
     .ct-bar .item {
-        margin: 5px 0;
-        padding: 10px;
         font-size: 14px;
+        padding: 8px;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: #f0f0f0;
     }
 
-    /* Card Area */
-    .card-area {
+    /* 상품 목록 */
+    .inform-header {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .product-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .new ul.item1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 0 0 20px 0;
+    }
+
+    .new ul.item1 li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .new ul.item1 li img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .new ul.item1 li.subject h3 {
+        font-size: 16px;
         margin: 10px 0;
     }
 
-    .card-area h2 {
-        padding: 10px;
-        font-size: 18px;
+    .new ul.item1 li.price {
+        font-size: 14px;
+        margin-top: 5px;
     }
 
-    .new img {
-        width: 100px;
-        height: 100px;
+    .new ul.item1 li.price strong {
+        display: block;
     }
 
-    .new .item1 {
-        margin: 10px;
-        width: 100%;
-    }
-
-    /* Footer */
-    .main-footer {
-        padding: 20px;
-    }
-
-    /* Login Wrapper */
-    .login-wrapper > form {
-        width: 300px;
-    }
-
-    /* Payment Section */
-    .container-grid {
-        grid-template-columns: 1fr;
+    /* 푸터와 헤더 숨김 또는 재조정 */
+    header, footer {
         padding: 10px;
     }
 
-    .left, .right {
-        width: 100%;
+    /* 기타 레이아웃 관련 스타일 */
+    .inform {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
-    .amount-ot {
-        flex-direction: column;
-        align-items: flex-start;
+    .clear {
+        clear: both;
     }
 
-    /* Adjusting buttons */
-    .payment-button {
-        width: 100%;
-        font-size: medium;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Even more compact styles for small phones */
-    header .container {
-        padding: 0.5rem;
-    }
-
-    header nav ul {
-        padding: 0;
-    }
-
-    .ct-bar {
-        padding: 5px;
-    }
-
-    .ct-bar .item {
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    .new img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .new .item1 {
-        margin: 5px;
-    }
-
-    .product-info img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .login-wrapper > form {
-        width: 250px;
-    }
-
-    /* Footer */
-    .main-footer {
-        padding: 15px;
-    }
-
-    /* Compact buttons */
-    .payment-button {
-        font-size: small;
+    #line {
+        margin: 20px 0;
+        border-bottom: 1px solid #ddd;
     }
 }

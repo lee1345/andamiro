@@ -297,7 +297,7 @@ ul {
 .tabCon {
     display: none; 
     width: 100%;
-    text-align: center; 
+    text-align: center;
     padding: 20px;
     position: absolute; 
     left: 0; top: 40px; 
@@ -317,7 +317,7 @@ ul {
 .agent{
     float: left; 
     height:auto;
-    width:220px;    
+    width:220px; 
 }
 pre {
     font-family: "Gowun Dodum", sans-serif;
@@ -361,7 +361,7 @@ td, th {
 
 .stepBox {
     display: flex;
-    justify-content: center; /* 중앙 정렬 */
+    justify-content: space-evenly; /* 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     gap: 50px; /* 각 요소 간 간격 */
 }
@@ -480,4 +480,98 @@ td, th {
     0% { background-color: rgb(25, 117, 255); } /* 원래 색상 */
     50% { background-color: rgba(25, 117, 255, 0.5); } /* 반투명 색상 */
     100% { background-color: rgb(25, 117, 255); } /* 원래 색상 */
+}
+/* 모바일용 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* 글자 크기 조정 */
+        margin: 0;
+        padding: 0;
+    }
+
+    .ctn {
+        display: flex;
+        flex-direction: column; /* 모바일에서는 세로로 정렬 */
+        align-items: center;
+    }
+
+    .item1 {
+        width: 100%; /* 전체 너비로 설정 */
+        margin-bottom: 20px;
+        margin-right: 50px;
+    }
+    .item2 {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    #gift_product_sample {
+        width: 100%; /* 이미지가 화면 너비에 맞게 조정 */
+        max-width: 100%;
+        height: auto; /* 비율 유지 */
+    }
+
+    #gift_product_sample_detail {
+        width: 100%; /* 상세 이미지 너비 조정 */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .rs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button {
+        width: 48%; /* 버튼 크기 조정 */
+    }
+
+    .bigbtn, .btn {
+        width: 90%; /* 버튼 전체 너비 차지 */
+        margin-right: 50px;
+    }
+
+    .tabmenu ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabmenu ul li {
+        width: 20%;
+        overflow:hidden;
+    }
+
+    .tabCon {
+        text-align: center;
+    }
+
+    .reward img {
+        width: 50px; /* 리워드 이미지 크기 조정 */
+        height: auto;
+    }
+
+    .container {
+        align-items: flex-end;
+        text-align: center; /* 텍스트 가운데 정렬 */
+    }
+    #N_location_img{
+        width: 100%;
+    }
+    #modalBtn.btn{
+        margin-left: 0px;
+    }
+    .fa-solid.fa-circle-info{
+        margin-right: 80px;
+        margin-top: 20px;
+    }
+    
+    .like{
+        width: 50px;
+        margin-left: -10px;
+        margin-bottom: 20px;
+    }
+
+    #number{
+        margin-right: 20px;
+    }
 }

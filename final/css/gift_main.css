@@ -379,7 +379,13 @@ header button{
         width: 200%;
         height: auto;
     }
-
+    .new img {
+        width: 160px;
+        height: 160px;
+    }
+    .new .item1{
+        box-shadow: none;
+    }
     .card-area h2 {
         font-size: 1.0rem;
         text-align: center;
@@ -408,8 +414,9 @@ header button{
 
     .new {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .new .item1 {
@@ -418,9 +425,12 @@ header button{
     }
 
     .price {
+        width: 160px;
         font-size: 0.9rem;
     }
-
+    .subject {
+        width: 160px;
+    }
     .subject h3 {
         font-size: 1.1rem;
     }
