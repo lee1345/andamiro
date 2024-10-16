@@ -129,14 +129,19 @@ li > img{
     transform: translateY(-5px); /* 마우스 오버 시 위로 이동 */
     box-shadow: 0 8px 20px rgba(76, 187, 235, 0.2); /* 더 강한 그림자 효과 */
 }
+.new {
+    display: block; /* flex 대신 block으로 변경 */
+    justify-content: center; /* 수평 중앙 정렬 유지 */
+    align-items: center; 
+    text-align: center; /* 전체 내용 중앙 정렬 */
+}
+
+
 
 .new img{
     width:250px;
     height:250px;
 }
-
-
-
 
 .new .subject{
     margin-top: -5px;

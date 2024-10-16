@@ -34,7 +34,7 @@
             <select id="district">
                 <option value=""></option>
             </select>
-            <button value="submit" class="search">검색</button>
+            <button value="submit" class="search" onclick="scrollToRegion()">검색</button>
             <a href="happy-giver-application.html" target="_blank"><button value="submit" class="apply">신청하기</button></a>
         </div>
     
@@ -48,6 +48,7 @@
         <div class="new" id="profiles-baebang"></div>
 
     <!--footer-->
+    
         <footer id="container"></footer>
     
     <script>
@@ -73,6 +74,7 @@
     <script src="../../script/happy-giver-main.js"></script>
     <script src="../../script/data.js"></script>
     <script>
+        
         document.addEventListener("DOMContentLoaded", function () {
             const profilesByRegion = {
                 '서북구': document.getElementById('profiles-seobuk'),
