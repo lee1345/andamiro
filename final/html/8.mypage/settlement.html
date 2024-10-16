@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정산내역 등록하기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         body{
+            font-family: "Gowun Dodum", sans-serif;
             margin: 40px;
         }
         table{
@@ -14,7 +17,7 @@
             border-collapse: collapse;
         }
         th, td{
-            border:1px solid black;
+            border: 1px solid #795548;
         }
         td:nth-child(1){width:15%}
         td:nth-child(2){width:20%}
@@ -35,19 +38,40 @@
             cursor: pointer;
             color:gray;
         }
+        .icon {
+           margin-right: 10PX;
+           color: #83accc;
+        }
+        .fas fa-calculator {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        h1 {
+            color: #3F51B5;
+        }
+        button {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* 배경색 및 글자색 변화 */
+}
+
+
     </style>
 </head>
 <body>
-    <h1>정산내역 등록하기</h1>
+    <h1><i class="fas fa-calculator icon"></i> 정산내역 등록하기</h1>
     <table id="data-table">
-        <tr style="background-color: gray;">
-            <th>구분</th>
-            <th>품목</th>
+        <tr style="background-color: rgb(198, 238, 250);">
+            <th><i class="fas fa-tag icon"></i>구분</th>
+            <th><i class="fas fa-box icon"></i>품목</th>
             <th>수량</th>
             <th>단위</th>
             <th>단가</th>
             <th>금액</th>
-            <th>비고</th>
+            <th><i class="fas fa-comment-dots icon"></i>비고</th>
         </tr>
         <tr>
             <td><input type="text" maxlength="5"></td>
@@ -59,7 +83,7 @@
             <td><input type="text" maxlength="10"></td>
         </tr>
     </table>
-    <button class="add" onclick="addrow()"> + 행추가</button>
+    <button class="add" onclick="addrow()"><i class="fas fa-plus"></i>행 추가</button>
     <br><br>
     <button style="margin-left: 200px; width:100px" onclick="regist()">저장</button>
     <button style="width:100px" type="button" onclick="window.close()">취소</button>

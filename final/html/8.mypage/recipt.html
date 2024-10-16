@@ -4,35 +4,71 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-            body{
-                margin: 40px;
-                width: 500px;
-            }
-            button{
-                margin-left:10px;
-                width:100px;
-            }
-            table{
-                width: 420px;
-                border-collapse: collapse;
-                font-size: 11pt;
-            }
-            th{
-                border: 1px solid black;
-                width: 100px;
-                background-color: gray;    
-                height: 30px;
-            }
-            td{
-                padding-left: 10px;
-                border: 1px solid black;
-                width: 320px;
-            }
+             @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+            body {
+                
+            font-family: "Gowun Dodum", sans-serif;
+            margin: 40px;
+            width: 500px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            font-family: "Gowun Dodum", sans-serif;
+            color: steelblue;
+        }
+        button {
+            margin-right: -5px;
+            margin-left: 10px;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2196F3;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #145d9a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11pt;
+        }
+        th {
+            font-family: "Gowun Dodum", sans-serif;
+            color: #795548;
+            border: 1px solid #ccc;
+            background-color: #e0e0e0;
+            height: 40px;
+            text-align: left;
+            padding: 5px;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        input[type="file"] {
+            margin-top: 5px;
+            width: 100%;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        p {
+            font-weight: 700;
+            color: #795548;
+
+        }
         </style>
     </head>
     <body>
-        <h2>영수증 등록하기</h2>
+        <h2><i class="fas fa-receipt icon"></i>영수증 등록하기</h2>
         <p>영수증은 5개까지 등록됩니다.</p>
         <br>
 
