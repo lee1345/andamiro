@@ -192,8 +192,8 @@ const campaign = [
         campaomg_img: "../../img/campaign/campaign2.png",
         capaing_detail_img: "../../img/campaign/campaign2_detail.png",
         W_Target_participants: 300,
-        W_Participant_Count: 30,
-        W_Participation_Rate: 10,
+        W_Participant_Count: 240,
+        W_Participation_Rate: 80,
         W_D_day: "78",
         W_End_date: "2024-12-31",
         activity_participation_guide: `장애인식개선 캠페인 '우리사이 0미터' 안내사항:

@@ -156,7 +156,7 @@ li > img{
     margin-left: 50px;
 }
 .achieved .progressbar{
-    width: 250px;
+    width: 300px;
     height: 15px;
     border-radius: 10px;
     overflow:hidden;
@@ -171,7 +171,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:lightskyblue;
+    background:rgb(18, 190, 26);
     animation: progress1 5s ease forwards;
   }
   #progressbar2::after{
@@ -181,7 +181,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:lightskyblue;
+    background:rgb(18, 190, 26);
     animation: progress2 5s ease forwards;
   }
   #progressbar3::after{
@@ -191,7 +191,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:lightskyblue;
+    background:rgb(18, 190, 26);
     animation: progress3 5s ease forwards;
   }
   #progressbar4::after{
@@ -201,7 +201,7 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:lightskyblue;
+    background:rgb(18, 190, 26);
     animation: progress4 5s ease forwards;
   }
   #progressbar5::after{
@@ -211,43 +211,31 @@ li > img{
     left:0;
     height: 15px;
     width:0;
-    background:lightskyblue;
+    background:rgb(18, 190, 26);
     animation: progress5 5s ease forwards;
   }
-  #progressbar6::after{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    height: 15px;
-    width:0;
-    background:lightskyblue;
-    animation: progress5 5s ease forwards;
-  }
+
   @keyframes progress1{
     0%{width: 0px}
-    100%{width: 50%;}
+    100%{width: 100%;}
   }
   @keyframes progress2{
     0%{width: 0px}
-    100%{width: 8.3%;}
+    100%{width: 80%;}
   }
   @keyframes progress3{
     0%{width: 0px}
-    100%{width: 15%;}
+    100%{width: 45%;}
   }
   @keyframes progress4{
     0%{width: 0px}
-    100%{width: 20%;}
+    100%{width: 25%;}
   }
   @keyframes progress5{
     0%{width: 0px}
-    100%{width: 20%;}
+    100%{width: 35%;}
   }
-  @keyframes progress6{
-    0%{width: 0px}
-    100%{width: 75%;}
-  }
+
   .progress{
     position: absolute;
     top:0;
@@ -491,3 +479,43 @@ body {
     font-weight: 400;
     font-style: normal;
   }
+  .success-icon {
+    color:rgb(255, 94, 0);
+    margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 */
+    font-size: 1.5em; /* 아이콘 크기 */
+    animation: rotate 2s linear infinite, pulse 1s ease-in-out infinite;
+}
+.complete-icon {
+    color: green; 
+    margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 */
+    font-size: 1.5em; /* 아이콘 크기 */
+    animation: rotate 2s linear infinite, pulse 1s ease-in-out infinite;
+}
+.success-message {
+    color:rgb(255, 94, 0);
+    margin-left: 5px; /* 아이콘과의 간격 */
+    font-weight: bold; /* 글씨 두껍게 */
+}
+.success-complete{
+    color: green; /* 메시지 색상 */
+    font-weight: bold; /* 글씨 두껍게 */
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
