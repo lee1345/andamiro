@@ -457,11 +457,11 @@ const settlement_report = [
 {
   id: 6,
   list: [
-      { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공할 햄버거" },
-      { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공할 핫도그" },
-      { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공할 피자" },
-      { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공할 주스" },
-      { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+      { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "" },
+      { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "" },
+      { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "" },
+      { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "" },
+      { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "" },
       { totalAmount: 700000 }
   ]
 }

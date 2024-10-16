@@ -380,18 +380,18 @@ td, th {
 
 
 /* 4.정산내역 */
+
 .settlementTable th {
     background-color: #cef0ff;
 }
-.settlementTable th:nth-child(1) { width: 60px; }
-.settlementTable th:nth-child(2) { width: 80px; }
-.settlementTable th:nth-child(3) { width: 250px; }
-.settlementTable th:nth-child(4) { width: 60px; }
-.settlementTable th:nth-child(5) { width: 60px; }
-.settlementTable th:nth-child(6) { width: 100px; }
-.settlementTable th:nth-child(7) { width: 100px; }
-.settlementTable th:nth-child(8) { width: 100px; }
-
+.settlementTable th:nth-child(1) { width: 6%; } /* 순번 */
+.settlementTable th:nth-child(2) { width: 10%; }/* 구분 */
+.settlementTable th:nth-child(3) { width: 20%; }/* 품목 */
+.settlementTable th:nth-child(4) { width: 6%; }/* 수량 */
+.settlementTable th:nth-child(5) { width: 6%; }/* 단위 */
+.settlementTable th:nth-child(6) { width: 14%; }/* 단가 */
+.settlementTable th:nth-child(7) { width: 14%; }/* 금액 */
+.settlementTable th:nth-child(8) { width: 23%; }/* 비고 */
 /* 5.댓글기능 */
 
 /* 댓글 입력 필드 스타일 */

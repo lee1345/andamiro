@@ -194,20 +194,6 @@
         </script>
        <script src="../../script/data.js"></script>
        <script>
-        const invoice = [
-            {
-                id: 1,
-                list: [
-                    { index: 1, category: "악기", item: "바이올린", quantity: 5, unit: "개", unitPrice: 200000, amount: 1000000, note: "아이들에게 제공할 바이올린" },
-                    { index: 2, category: "교육 자료", item: "교재", quantity: 10, unit: "권", unitPrice: 20000, amount: 200000, note: "바이올린 교습을 위한 교재" },
-                    { index: 3, category: "기타", item: "음악 소품", quantity: 10, unit: "개", unitPrice: 5000, amount: 50000, note: "수업에 필요한 소품" },
-                    { index: 4, category: "운영비", item: "교실 대여", quantity: 1, unit: "회", unitPrice: 25000, amount: 25000, note: "수업 진행을 위한 공간 대여" },
-                    { totalAmount: 1175000 }
-                ]
-            }
-            // 다른 인보이스 데이터 추가 가능
-        ];
-
         document.addEventListener('DOMContentLoaded', () => {
             const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
             const narmi = Narmi.find(item => item.id === selectedNarmiId);

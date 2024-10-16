@@ -157,7 +157,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>    
+                    </li>  
                     <li id="tab5" class="btnCon">
                         <input type="radio" name="tabmenu" id="tabmenu5" style="display: none;">
                         <label for="tabmenu5">댓글</label>
@@ -214,7 +214,7 @@
                    showAgentIntroduce(narmi.agent_Introduce);
                    showLocationImage(narmi.N_location_img);
                    showInvoiceTable(selectedNarmiId);
-                   showSettlementTable(selectedNarmiId);
+                   showSettlementTable(selectedNarmiId); // 정산 테이블을 표시
 
                } else {
                    console.error('오류');
@@ -329,16 +329,21 @@
         }
 
 
-        function showSettlementTable(narmiId) {
-    const settlementData = settlement_report.find(item => item.id === narmiId);
-    console.log(settlementData);
+
+
+
+    function showSettlementTable(narmiId) {
+    const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+    const settlementData = settlement_report.find(item => item.id === selectedNarmiId);
+               
+    
     if (!settlementData) {
-        console.error('해당 ID의 정산 데이터가 없습니다.');
+        console.error(' ');
         return;
     }
 
-    const table = document.getElementById("settlementTable");
-    table.innerHTML = ''; // 기존 내용을 초기화
+    const settletable = document.getElementById("settlementTable");
+    settletable.innerHTML = ''; // 기존 내용을 초기화
 
     // 테이블 헤더 추가
     const headerRow = table.insertRow();
@@ -353,25 +358,23 @@
         <th>비고</th>
     `;
 
-    // 데이터 추가
     settlementData.list.forEach(item => {
-        if (item.index !== undefined) { // index가 정의된 항목만 추가
-            const row = table.insertRow(-1);
-            row.innerHTML = `
-                <td>${item.index}</td>
-                <td>${item.category}</td>
-                <td>${item.item}</td>
-                <td>${item.quantity}</td>
-                <td>${item.unit}</td>
-                <td>${item.unitPrice.toLocaleString()}</td>
-                <td>${item.amount.toLocaleString()}</td>
-                <td>${item.note || ''}</td>
-            `;
-        }
+        if (item.totalAmount) return; 
+        const row = table.insertRow(-1);
+        row.innerHTML = `
+            <td>${item.index}</td>
+            <td>${item.category}</td>
+            <td>${item.item}</td>
+            <td>${item.quantity}</td>
+            <td>${item.unit}</td>
+            <td>${item.unitPrice.toLocaleString()}</td>
+            <td>${item.amount.toLocaleString()}</td>
+            <td>${item.note || ''}</td>
+        `;
     });
 
     // 총합계 행 추가
-    const totalAmount = settlementData.list[settlementData.list.length - 1].totalAmount; // 마지막 요소에서 totalAmount 가져오기
+    const totalAmount = settlementData.list.find(item => item.totalAmount).totalAmount;
     const summaryRow = table.insertRow(-1);
     summaryRow.innerHTML = `
         <td colspan="6">합계</td>
