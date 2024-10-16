@@ -202,7 +202,7 @@ const with_value = [
             campaomg_img: "./img/campaign/campaign1.png",
             capaing_detail_img: "./img/campaign/campaign1.png",
             W_Target_participants: 20,
-            W_Participant_Count: 10,
+            W_Participant_Count: 20,
             W_Participation_Rate: 50,
             W_D_day: "10",
             W_End_date: "2024-10-28",
