@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 완료</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+           @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+         .icon {
+            font-size: 48px; /* 아이콘 크기 조절 */
+            color: #2196F3;    /* 아이콘 색상 조절 */
+            margin-bottom: 10px; /* 아이콘과 텍스트 사이 간격 */
+        }
+        .home-button {
+            margin-top: 20px; /* 버튼과 다른 요소 사이 간격 */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-family: "Gowun Dodum", sans-serif;
+            color: #0d426d;
+        }
+        .message {
+            color: #5e5a5a;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .home-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #2196F3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color:  #10548b;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">
+        <i class="fas fa-check-circle"></i> <!-- 결제 완료 아이콘 -->
+    </div>
+    <h1>결제가 완료되었습니다!</h1>
+    <div class="message">감사합니다. 귀하의 결제가 성공적으로 처리되었습니다.</div>
+    <button class="home-button" onclick="goHome()">
+        <i class="fas fa-home"></i> 홈으로 돌아가기 <!-- 집 아이콘 추가 -->
+    </button>
+
+    <script>
+        function goHome() {
+            window.location.href = '../../html/2.about/about.html'; // 원하는 홈 페이지 경로로 변경
+        }
+    </script>
+</body>
+</html>

@@ -56,7 +56,8 @@
             </div>
             <div id="card-type" class="options" style="display: none;">
                 <label for="card-selector">결제카드:</label>
-                <select id="card-selector">
+                <select id="card-selector" required>
+                    <option value="" disabled selected>카드를 선택하세요</option>
                     <option value="visa">삼성카드</option>
                     <option value="mastercard">BC카드</option>
                     <option value="amex">신한카드</option>
@@ -74,20 +75,21 @@
                 <input type="checkbox" id="bank-transfer" onclick="toggleCheckbox('bank-transfer', 'credit-card')">
                 <span class="bn-trans"><i class="fas fa-money-bill-wave"></i> 무통장입금</span>
             </div>
-            <div id="bank-transfer-description" class="description" style="display: none;">
-            </div>
+            <div id="bank-transfer-description" class="description" style="display: none;"></div>
             <div id="bank-info" class="options" style="display: none;">
                 <div id="depositor-name-container" style="display: none;">
                     <label for="depositor-name">입금자명:</label>
-                    <input type="text" id="depositor-name" size="10">
+                    <input type="text" id="depositor-name" size="10" required>
                 </div>
                 <label for="bank-name">입금은행:</label>
-                <select id="card-selector">
-                    <option value="visa">농협은행</option>
-                    <option value="mastercard">국민은행</option>
-                    <option value="amex">기업은행</option>
+                <select id="bank-name" required>
+                    <option value="" disabled selected>은행을 선택하세요</option>
+                    <option value="nh">농협은행</option>
+                    <option value="kb">국민은행</option>
+                    <option value="ibk">기업은행</option>
                 </select> 
             </div>
+            
                 <div class="right-item2">
                     <input type="checkbox" id="agree-all" onchange="toggleTerms()"> 전체 동의<br>
                     <span class="floor-symbol">&#76;</span> <input type="checkbox" size="" id="agree-terms">구매 조건 확인 및 결제진행동의

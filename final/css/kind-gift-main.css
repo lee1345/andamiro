@@ -34,6 +34,15 @@ header nav ul li{
 
 
 }
+.ct-bar {
+    position: sticky; /* 고정 위치 설정 */
+    top: 170px; /* 헤더 높이 + 메인 이미지 높이 (103px + 이미지 높이) */
+    z-index: 5; /* 헤더보다 낮게 설정 */
+    background-color: rgb(174, 18, 18); /* 배경색 설정 */
+    padding: 10px 0; /* 패딩 추가 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
 
 .ct-bar .item {
     background-color: white;    /* 마우스 오버 시 배경색 변경 */
