@@ -21,11 +21,12 @@ body {
 
 
 .left-item{
+    
     margin-right: 40px;
 }
 
 .left-item, .right-item {
-    background: #ffffff;
+    background: #f9fcff;
     padding: 30px;
     /* border-radius: 4px; */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -34,7 +35,7 @@ body {
 .left-item h3 {
     margin-top: -10px;
     padding-bottom: 3px;
-    color: #7bb1e0;
+    color: #163d83;
     margin-bottom: 10px
     
 }
@@ -43,13 +44,13 @@ body {
     margin-bottom: 20px;
     margin-right: 40px;
     width: 410px;
-    background: #ffffff;
+    background: #f9fcff;
     padding: 15px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .spe h3 {
-  color: #7bb1e0;
+  color: #163d83;
   margin-bottom: 10px;
   margin-left: 5px;
 }
@@ -278,4 +279,13 @@ input[type="checkbox"] {
 
 .payment-button:hover {
     background-color: #2c6ce0;
+}
+
+/* 아이콘 색상조정 */
+.left h3 i {
+    color: #4CAF50; /* 원하는 색상 코드로 변경 */
+}
+
+.details span i {
+    color: #9ab0e7; /* 상품 세부 정보 아이콘 색상 */
 }
