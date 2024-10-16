@@ -6,7 +6,10 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>메인화면</title>       
        <link rel="stylesheet" href="../../css/happy-giver-main.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
        <style>
+        
       @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
     </head>
@@ -65,8 +68,6 @@
             const container = document.getElementById('container');
             container.innerHTML = data;
             const footer = navbar.querySelector('footer');
-
-            
         });
     </script>
     <script src="../../script/happy-giver-main.js"></script>
@@ -79,10 +80,20 @@
                 '배방읍': document.getElementById('profiles-baebang'),
             };
 
+
             function renderProfile(narmi) {
                 const profile = document.createElement('ul');
                 profile.classList.add('item1');
-                const progressTextColor = narmi.N_funding_progress >= 80 ? 'red' : 'black'; // 80% 이상이면 빨간색
+                const progressTextColor = narmi.N_funding_progress === 100 ? 'green' : 
+                narmi.N_funding_progress >= 70 ? 'orange' : '';
+
+                const isSuccess = narmi.N_funding_progress === 100 ? `
+                <span class="success-complete">행복충전완료!!</span>
+                <span class="complete-icon"><i class="fa-solid fa-battery-full"></i></span>
+                ` : narmi.N_funding_progress >= 70 ? `
+                <span class="success-message">행복충전임박!!</span>
+                <span class="success-icon"><i class="fa-solid fa-battery-three-quarters"></i></span>
+                ` : '';
 
                 profile.innerHTML = `
                     <li>
@@ -103,9 +114,11 @@
                     </li>
                     <li class="achieved">
                         <span>달성률</span>
-                        <h1 style="color: ${progressTextColor};">${Math.round(narmi.N_funding_progress)}%</h1>
+                        <h1 style="color: ${progressTextColor};">${narmi.N_funding_progress}%</h1>
+                        ${isSuccess} 
                         <div class="progressbar" id="progressbar${narmi.id}">
                             <span class="progress" style="width: ${narmi.N_funding_progress}%"></span>
+
                         </div>
                     </li>
                 `;
@@ -117,7 +130,6 @@
 
                 return profile;
             }
-
             
             Narmi.forEach(narmi => {
                 const region = profilesByRegion[narmi.N_city];
