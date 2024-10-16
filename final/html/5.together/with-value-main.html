@@ -1,54 +1,211 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
-    <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>3조_안다미로</title>       
-       <link rel="stylesheet" href="../../css/with-value-main.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3조_안다미로</title>
+    <link rel="stylesheet" href="../../css/with-value-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-       <style>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-        </style>
-    </head>
-    <body>
-        <!-- 헤더 -->
-        <header id="navbar"></header>
+        .pagination-container {
+            display: flex;              /* Flexbox 사용 */
+            justify-content: center;    /* 중앙 정렬 */
+            margin-top: 20px;          /* 상단 여백 */
+        }
 
-        
-        <!-- 메인내용 -->
-        <article>
-            <a href="../2.about/about.html#huwonIntroduce">
-                <img src="../../img/background/3.together.png" width="100%">
-            </a>
-        </article>
-        <h2 class="title">같이가치</h2>
-        <div class="new"></div>
+        .pagination {
+            margin-top: 50px;
+            margin-left: 650px;
+            display: flex;              /* Flexbox 사용 */
+            align-items: center;        /* 수직 중앙 정렬 */
+        }
 
-        <!-- 푸터 -->
-        <div id="footer"></div>
+        .icon {
+            margin: 0 10px;            /* 버튼 간격 조절 */
+            cursor: pointer;            /* 클릭 가능한 커서 */
+        }
 
+        .page-number {
+            margin: 0 5px;             /* 페이지 번호 간격 조절 */
+            cursor: pointer;            /* 클릭 가능한 커서 */
+        }
 
-        <script>
-            fetch("../1.navbar/header.html")
-            .then(response => response.text())
-            .then(data => {
-                const navbar = document.getElementById('navbar');
-                navbar.innerHTML = data;
-                const header = navbar.querySelector('header');
+        .page-number:hover {
+            text-decoration: underline; /* 마우스 오버 시 효과 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header id="navbar"></header>
+
+    <!-- 메인내용 -->
+    <article>
+        <a href="../2.about/about.html#huwonIntroduce">
+            <img src="../../img/background/3.together.png" width="100%">
+        </a>
+    </article>
+    <h2 class="title">같이가치</h2>
+    <div class="new"></div>
+
+    <!-- 페이지네이션 -->
+    <div class="pagination">
+        <button id="prevPage" class="icon"><i class="fas fa-angle-double-left"></i></button>
+        <span id="pageNumbers"></span>
+        <button id="nextPage" class="icon"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+
+    <script>
+        fetch("../1.navbar/header.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = data;
+            const header = navbar.querySelector('header');
+        });
+    </script>
+    <script>
+        fetch("../6.footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            const footer = document.getElementById('footer');
+            footer.innerHTML = data;
+            const header = footer.querySelector('footer');
+        });
+    </script>
+    <script src="../../script/data.js"></script>
+    
+    <script>
+        //페이지네이션 
+        document.addEventListener("DOMContentLoaded", function() {
+            const campaignContainer = document.querySelector('.new');
+            const pageNumbers = document.getElementById('pageNumbers');
+            const prevPageBtn = document.getElementById('prevPage');
+            const nextPageBtn = document.getElementById('nextPage');
+
+            const itemsPerPage = 5; // 한 페이지에 표시할 항목 수
+            let currentPage = 1; // 현재 페이지
+            let totalPages = Math.ceil(campaign.length / itemsPerPage); // 총 페이지 수
+
+            function displayPage(page) {
+                campaignContainer.innerHTML = ''; // 기존 항목 제거
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const itemsToDisplay = campaign.slice(start, end);
+
+                itemsToDisplay.forEach(campaign => {
+                    const item = document.createElement('a');
+                    item.href = './with-value-detail.html'; // 세부 페이지로 이동
+                    item.onclick = () => {
+                        localStorage.setItem('selectedCampaignId', campaign.id);
+                    };
+
+                    const progressTextColor = campaign.W_Participation_Rate === 100 ? 'green' : 
+                    campaign.W_Participation_Rate >= 70 ? 'rgb(255, 94, 0)' : '';
+
+                    const isSuccess = campaign.W_Participation_Rate === 100 ? `
+                    <span class="success-complete">준비 완료!!</span>
+                    <span class="complete-icon"><i class="fa-solid fa-circle-check"></i></span>
+                    ` : campaign.W_Participation_Rate >= 70 ? `
+                    <span class="success-message">모집 임박!!</span>
+                    <span class="success-icon"><i class="fa-solid fa-bell"></i></span>
+                    ` : '';
+
+                    item.innerHTML = `
+                        <ul class="item1" style="width:800px; height:435px;">
+                            <div class="ctn">
+                                <div class="image">
+                                    <li>
+                                        <img src="${campaign.campaomg_img}" alt="${campaign.campaign_topic}" style="width:350px; height:350px;">
+                                    </li>
+                                </div>
+                                <div class="information">
+                                    <li class="subject">
+                                        <p style="display:inline" class="city">${campaign.W_region}</p>
+                                        <h2 style="display:inline" class="date">D-${campaign.W_D_day}</h2><br>
+                                        <h2 style="display:inline">${campaign.campaign_topic}</h2>
+                                    <li class="price">
+                                        <span class="target">목표인원</span>
+                                        <span class="funding">신청인원</span>
+                                    </li>
+                                    </li>
+                                    <li class="amount">
+                                        <strong class="target-amt">${campaign.W_Target_participants}명</strong>
+                                        <strong class="funding-amt">${campaign.W_Participant_Count}명</strong>
+                                    </li>
+                                    <li class="achieved">
+                                        <span>달성률</span>
+                                        <h1 style="color: ${progressTextColor};">${campaign.W_Participation_Rate}%</h1>
+                                        ${isSuccess} 
+                                        <div class="progressbar" id="progressbar${campaign.id}"></div>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    `;
+
+                    campaignContainer.appendChild(item);
+                });
+
+                updatePageNumbers(); // 페이지 번호 업데이트
+            }
+
+            function updatePageNumbers() {
+                pageNumbers.innerHTML = ''; // 기존 페이지 번호 제거
+                const maxPagesToShow = 5; // 항상 5개의 페이지 번호 표시
+
+                for (let i = 1; i <= maxPagesToShow; i++) {
+                    const pageNum = document.createElement('span');
+                    pageNum.textContent = i; // 항상 1부터 5까지 표시
+                    pageNum.classList.add('page-number');
+                    if (i === currentPage) {
+                        pageNum.style.fontWeight = 'bold'; // 현재 페이지 강조
+                    }
+                    pageNum.onclick = () => {
+                        currentPage = i; // 페이지를 클릭하면 현재 페이지 변경
+                        displayPage(currentPage);
+                        updateButtons();
+                    };
+                    pageNumbers.appendChild(pageNum);
+                    if (i < maxPagesToShow) {
+                        pageNumbers.appendChild(document.createTextNode(' ')); // 페이지 번호 사이에 공백 추가
+                    }
+                }
+            }
+
+            function updateButtons() {
+                prevPageBtn.disabled = currentPage === 1;
+                nextPageBtn.disabled = currentPage === totalPages;
+            }
+
+            prevPageBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayPage(currentPage);
+                    updateButtons();
+                }
             });
-        </script>
-        <script>
-            fetch("../6.footer/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                const footer = document.getElementById('footer');
-                footer.innerHTML = data;
-                const header = footer.querySelector('footer');
+
+            nextPageBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    displayPage(currentPage);
+                    updateButtons();
+                }
             });
-        </script>
-        <script src="../../script/data.js"></script>
+
+            displayPage(currentPage); // 초기 페이지 표시
+            updateButtons(); // 버튼 상태 업데이트
+        });
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const campaignContainer = document.querySelector('.new');
