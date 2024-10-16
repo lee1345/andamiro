@@ -9,9 +9,13 @@
        <link rel="stylesheet" href="../../css/payment_fn.css">
        <style>
        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-        
+        .right {
+            transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+        }
 
-
+        .right.move-down {
+            transform: translateY(100px); /* 아래로 100px 이동 */
+        }
         </style>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
@@ -99,6 +103,7 @@
                 </div>
                 <button class="payment-button" onclick="validateCheckboxes()">결제하기</button>
                 </div>
+                
             </div>
         </div>
         <script src="../../script/script.js"></script>
