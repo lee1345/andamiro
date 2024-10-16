@@ -428,3 +428,25 @@ header button{
         font-size: 1rem;
     }
 }
+.inform-header {
+    position: relative; /* 툴팁을 h2에 상대적으로 위치하게 함 */
+    display: inline-block; /* 툴팁을 위한 공간 확보 */
+}
+
+.inform {
+    width: 400px;
+    display: none; /* 기본적으로 숨김 */
+    border:1px solid rgb(194, 194, 194);
+    position: absolute;
+    background-color: #f2f3ff;
+    color: rgb(70, 70, 70);
+    padding: 5px;
+    border-radius: 5px;
+    top: 0%; /* h2 태그 바로 위에 위치 */
+    left: 50%; /* 가운데 정렬 */
+    z-index: 10;
+}
+
+.inform-header:hover .inform {
+    display: block;
+}

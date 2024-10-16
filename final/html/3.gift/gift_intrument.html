@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
-       <title>메인화면</title>       
-       <link rel="stylesheet" href="../../css/gift_main.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-       <style>
-          @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-        </style>
-    </head>
-    <body>
-        <header id="navbar"></header>
-
-        <h2 id="악기" class="product-title">악기 ></h2>
-        <div class="new" id="instruments"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
+    <title>악기</title>
+    <link rel="stylesheet" href="../../css/gift_main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+    </style>
+</head>
+<body>
+    <header id="navbar"></header>
+    <div id="line"></div>
+    <h2 id="악기" class="product-title">악기 ></h2>
+    <div class="new" id="instruments"></div>
 
     <!--footer-->
     <footer id="container"></footer>
-
 
     <script src="../../script.js"></script>
     <script src="../../main/script/test.js"></script>
@@ -30,49 +29,33 @@
         .then(data => {
             const navbar = document.getElementById('navbar');
             navbar.innerHTML = data;
-            const header = navbar.querySelector('header');
-            
         });
-    </script>
-     <script>
+
         fetch("../6.footer/footer.html")
         .then(response => response.text())
         .then(data => {
             const container = document.getElementById('container');
             container.innerHTML = data;
-            const footer = navbar.querySelector('footer');
-
-            
         });
     </script>
 
-    </script>
     <script src="../../script/script.js"></script>
     <script src="../../script/data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const categories = {
-                'Music': document.getElementById('instruments'), // 악기
-                'Toy': document.getElementById('toys'),         // 장난감
-                'Home appliances': document.getElementById('home-appliances'), // 가전제품
-                'Daily necessities': document.getElementById('daily-needs'),   // 생필품
-                'Book': document.getElementById('books')         // 도서
-            };
+            const instrumentsContainer = document.getElementById('instruments'); // 악기 카테고리 요소
 
-            // 각 카테고리별로 4개씩 출력
-            for (const category in categories) {
-                let count = 0;
-                Gift.forEach(gift => {
-                    if (gift.G_category === category && count < 4) {
+            // 'Music' 카테고리의 모든 상품 출력
+            Gift.forEach(gift => {
+                if (gift.G_category === 'Music') {
                     const item = document.createElement('a');
                     item.href = './kind-gift-detail.html'; // 세부 페이지로 이동
                     item.onclick = () => {
-                        // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
                     };
-                    
+
                     const progressTextColor = gift.G_funding_progress === 100 ? 'green' : 
-                    gift.G_funding_progress >= 70 ? 'rgb(255, 94, 0)' : '';
+                        gift.G_funding_progress >= 70 ? 'rgb(255, 94, 0)' : '';
 
                     const isSuccess = gift.G_funding_progress === 100 ? `
                         <span class="success-complete">펀딩성공!!</span>
@@ -81,7 +64,6 @@
                         <span class="success-message">성공임박</span>
                         <span class="success-icon"><i class="fas fa-clock"></i></span>
                     ` : '';
-                    
 
                     item.innerHTML = `
                         <ul class="item1">
@@ -103,13 +85,10 @@
                         </ul>
                     `;
 
-                    categories[category].appendChild(item);
-                    count++;
-                    }
-                });
-            }
+                    instrumentsContainer.appendChild(item);
+                }
+            });
         });
     </script>
-
-    </body>
+</body>
 </html>
