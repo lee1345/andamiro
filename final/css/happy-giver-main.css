@@ -266,11 +266,11 @@ li > img{
     transition: width 0.5s; 
 
   }
-  .progress.orange {
+  .orange {
     background: orange; /* 80% 이상일 때 주황색 */
 }
 
-  .progress.green {
+  .green {
     background: green; /* 100%일 때 녹색 */
 }
 .ct-bar {

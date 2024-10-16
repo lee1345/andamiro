@@ -20,12 +20,3 @@ function updateDistricts() {
     }
 }
 
-const fundingProgress = narmi.N_funding_progress;
-const progressBar = profile.querySelector('.progress');
-
-// 게이지 색상 변경
-if (fundingProgress >= 100) {
-    progressBar.classList.add('green');
-} else if (fundingProgress >= 80) {
-    progressBar.classList.add('orange');
-}
