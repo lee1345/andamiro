@@ -481,3 +481,33 @@ td, th {
     50% { background-color: rgba(25, 117, 255, 0.5); } /* 반투명 색상 */
     100% { background-color: rgb(25, 117, 255); } /* 원래 색상 */
 }
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* 세로 정렬 */
+        align-items: flex-start; /* 왼쪽 정렬 */
+    }
+
+    header nav ul {
+        flex-direction: column; /* 메뉴를 세로로 배치 */
+        padding: 0; /* 패딩 제거 */
+        width: 100%; /* 너비 100% */
+        margin: 0; /* 마진 제거 */
+    }
+
+    header nav ul li {
+        padding: 10px 0; /* 위아래 여백만 추가 */
+        margin: 0; /* 마진 제거 */
+    }
+
+    header button {
+        width: 100%; /* 버튼 너비 100% */
+        margin: 5px 0; /* 버튼 간 간격 추가 */
+    }
+
+    .box {
+        width: 100%; /* 박스 너비 100% */
+        margin: 10px 0; /* 수직 간격 추가 */
+    }
+}
