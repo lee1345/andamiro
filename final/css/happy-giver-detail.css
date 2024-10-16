@@ -338,6 +338,7 @@ table {
     border: solid 1px black;
     border-collapse: collapse;
     text-align: center;
+    width: 100%;
 }
 td, th {
     color: #66473c;
@@ -347,14 +348,14 @@ td, th {
     color: #66473c;
     background-color: #cef0ff;
 }
-.invoice th:nth-child(1) { width: 60px; }
-.invoice th:nth-child(2) { width: 80px; }
-.invoice th:nth-child(3) { width: 250px; }
-.invoice th:nth-child(4) { width: 60px; }
-.invoice th:nth-child(5) { width: 60px; }
-.invoice th:nth-child(6) { width: 100px; }
-.invoice th:nth-child(7) { width: 100px; }
-.invoice th:nth-child(8) { width: 100px; }
+.invoice th:nth-child(1) { width: 6%; } /* 순번 */
+.invoice th:nth-child(2) { width: 10%; }/* 구분 */
+.invoice th:nth-child(3) { width: 20%; }/* 품목 */
+.invoice th:nth-child(4) { width: 6%; }/* 수량 */
+.invoice th:nth-child(5) { width: 6%; }/* 단위 */
+.invoice th:nth-child(6) { width: 14%; }/* 단가 */
+.invoice th:nth-child(7) { width: 14%; }/* 금액 */
+.invoice th:nth-child(8) { width: 23%; }/* 비고 */
 
 /* 3. 진행상황 */
 

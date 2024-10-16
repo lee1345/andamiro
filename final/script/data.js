@@ -383,3 +383,86 @@ const campaign = [
       - [신청하기](https://forms.gle/yugtWPX6Fc9VhTRU8)`
       },        
 ];
+
+//행복나르미 목표액 산출내역
+const invoice = [
+  {
+      id: 1,
+      list: [
+          { index: 1, category: "악기", item: "바이올린", quantity: 5, unit: "개", unitPrice: 200000, amount: 1000000, note: "아이들에게 제공할 바이올린" },
+          { index: 2, category: "교육 자료", item: "교재", quantity: 10, unit: "권", unitPrice: 20000, amount: 200000, note: "바이올린 교습을 위한 교재" },
+          { index: 3, category: "기타", item: "음악 소품", quantity: 10, unit: "개", unitPrice: 5000, amount: 50000, note: "수업에 필요한 소품" },
+          { index: 4, category: "운영비", item: "교실 대여", quantity: 1, unit: "회", unitPrice: 25000, amount: 25000, note: "수업 진행을 위한 공간 대여" },
+          { totalAmount: 1175000 }
+      ]
+  },
+  {
+      id: 2,
+      list: [
+          { index: 1, category: "IT 기기", item: "노트북", quantity: 5, unit: "대", unitPrice: 500000, amount: 2500000, note: "아이들에게 제공할 노트북" },
+          { index: 2, category: "교육 자료", item: "소프트웨어", quantity: 10, unit: "개", unitPrice: 50000, amount: 500000, note: "교육용 소프트웨어 라이센스" },
+          { index: 3, category: "기타", item: "교구", quantity: 5, unit: "세트", unitPrice: 100000, amount: 500000, note: "아이들의 흥미를 끌기 위한 교구" },
+          { index: 4, category: "운영비", item: "워크숍 진행비", quantity: 1, unit: "회", unitPrice: 50000, amount: 50000, note: "워크숍 진행을 위한 비용" },
+          { index: 5, category: "기타", item: "간식", quantity: 20, unit: "팩", unitPrice: 1000, amount: 20000, note: "아이들에게 제공할 간식" },
+          { totalAmount: 3000000 }
+      ]
+  },
+  {
+      id: 3,
+      list: [
+          { index: 1, category: "생활 용품", item: "이불", quantity: 10, unit: "개", unitPrice: 30000, amount: 300000, note: "어르신들에게 제공할 이불" },
+          { index: 2, category: "식료품", item: "쌀", quantity: 20, unit: "kg", unitPrice: 2000, amount: 40000, note: "어르신들을 위한 쌀" },
+          { index: 3, category: "의료 용품", item: "진통제", quantity: 5, unit: "박스", unitPrice: 15000, amount: 75000, note: "어르신들의 건강을 위한 진통제" },
+          { index: 4, category: "운영비", item: "프로그램 진행비", quantity: 1, unit: "회", unitPrice: 100000, amount: 100000, note: "어르신 프로그램 진행 비용" },
+          { index: 5, category: "기타", item: "책자", quantity: 50, unit: "권", unitPrice: 1000, amount: 50000, note: "어르신들을 위한 책자" },
+          { totalAmount: 1500000 }
+      ]
+  },
+  {
+      id: 4,
+      list: [
+          { index: 1, category: "도서", item: "어린이 책", quantity: 100, unit: "권", unitPrice: 10000, amount: 1000000, note: "아이들에게 제공할 책" },
+          { index: 2, category: "문구류", item: "노트", quantity: 100, unit: "개", unitPrice: 5000, amount: 500000, note: "아이들을 위한 노트" },
+          { index: 3, category: "교육 자료", item: "글쓰기 워크숍 비용", quantity: 1, unit: "회", unitPrice: 400000, amount: 400000, note: "아이들을 위한 글쓰기 워크숍 진행 비용" },
+          { index: 4, category: "기타", item: "기타 소모품", quantity: 10, unit: "개", unitPrice: 5000, amount: 50000, note: "수업에 필요한 기타 소모품" },
+          { totalAmount: 2000000 }
+      ]
+  },
+  {
+      id: 5,
+      list: [
+          { index: 1, category: "생필품", item: "기저귀", quantity: 100, unit: "팩", unitPrice: 5000, amount: 500000, note: "아이들에게 제공할 기저귀" },
+          { index: 2, category: "식료품", item: "분유", quantity: 20, unit: "통", unitPrice: 20000, amount: 400000, note: "아이들을 위한 분유" },
+          { index: 3, category: "교구", item: "블록", quantity: 30, unit: "세트", unitPrice: 10000, amount: 300000, note: "아이들의 흥미를 위한 블록" },
+          { index: 4, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+          { index: 5, category: "운영비", item: "이벤트 진행비", quantity: 1, unit: "회", unitPrice: 200000, amount: 200000, note: "이벤트 진행을 위한 비용" },
+          { totalAmount: 1500000 }
+      ]
+  },
+  {
+      id: 6,
+      list: [
+          { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공할 햄버거" },
+          { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공할 핫도그" },
+          { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공할 피자" },
+          { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공할 주스" },
+          { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+          { totalAmount: 700000 }
+      ]
+  }
+];
+
+//행복나르미 후원금 정산내역
+const settlement_report = [
+{
+  id: 6,
+  list: [
+      { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공할 햄버거" },
+      { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공할 핫도그" },
+      { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공할 피자" },
+      { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공할 주스" },
+      { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+      { totalAmount: 700000 }
+  ]
+}
+];

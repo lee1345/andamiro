@@ -194,93 +194,89 @@
         </script>
        <script src="../../script/data.js"></script>
        <script>
-           document.addEventListener('DOMContentLoaded', () => {
-               const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
-               const narmi = Narmi.find(item => item.id === selectedNarmiId);
-               
-               console.log('Selected Narmi ID:', selectedNarmiId);
-               console.log('Narmi Data:', narmi);
-               
-               if (narmi) { 
-                   showAgentImage(narmi.agent_img);
-                   showLocation(narmi.N_location);
-                   showRegionAndCity(narmi.N_region, narmi.N_city); 
-                   showTargetAmount(narmi.N_Target_amount);
-                   showFundingAchievement(narmi.N_funding_achievement);
-                   showFundingProgress(narmi.N_funding_progress);
-                   showHeadCount(narmi.N_head_count);
-                   showDaysLeft(narmi.D_day);
-                   showEndDate(narmi.End_date);
-                   showAgentIntroduce(narmi.agent_Introduce);
-                   showLocationImage(narmi.N_location_img);
-                   showInvoiceTable(selectedNarmiId);
-                   showSettlementTable(selectedNarmiId);
+        const invoice = [
+            {
+                id: 1,
+                list: [
+                    { index: 1, category: "악기", item: "바이올린", quantity: 5, unit: "개", unitPrice: 200000, amount: 1000000, note: "아이들에게 제공할 바이올린" },
+                    { index: 2, category: "교육 자료", item: "교재", quantity: 10, unit: "권", unitPrice: 20000, amount: 200000, note: "바이올린 교습을 위한 교재" },
+                    { index: 3, category: "기타", item: "음악 소품", quantity: 10, unit: "개", unitPrice: 5000, amount: 50000, note: "수업에 필요한 소품" },
+                    { index: 4, category: "운영비", item: "교실 대여", quantity: 1, unit: "회", unitPrice: 25000, amount: 25000, note: "수업 진행을 위한 공간 대여" },
+                    { totalAmount: 1175000 }
+                ]
+            }
+            // 다른 인보이스 데이터 추가 가능
+        ];
 
-               } else {
-                   console.error('오류');
-               }
-           });
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+            const narmi = Narmi.find(item => item.id === selectedNarmiId);
 
-           
-           function showRegionAndCity(region, city) {
-               const regionCityElement = document.getElementById('N_region_city');
-               regionCityElement.textContent = `${region} ${city}`; // 공백으로 구분
-           }
-       
-           function showAgentName(name) {
-               const agentName = document.getElementById('agent_name');
-               agentName.textContent = name;
-           }
-       
-           function showAgentImage(imgSrc) {
-               const agentImage = document.getElementById('agent_image');
-               agentImage.src = imgSrc;
-           }
-           function showLocationImage(imgSrc) {
-               const locationImageElement = document.getElementById('N_location_img');
-               locationImageElement.src = imgSrc;
-           }   
-       
-           function showLocation(location) {
-               const locationElement = document.getElementById('N_location');
-               locationElement.textContent = location;
-           }
-       
-           function showTargetAmount(amount) {
-               const targetAmountElement = document.getElementById('N_Target_amount');
-               targetAmountElement.textContent = `${amount.toLocaleString()}원`;
-           }
-       
-           function showFundingAchievement(achievement) {
-               const fundingAchievementElement = document.getElementById('N_funding_achievement');
-               fundingAchievementElement.textContent = `${achievement.toLocaleString()}원 후원중`;
-           }
-       
-           function showFundingProgress(progress) {
-               const fundingProgressElement = document.getElementById('N_funding_progress');
-               fundingProgressElement.textContent = `${progress}%`;
-           }
-       
-           function showHeadCount(count) {
-               const headCountElement = document.getElementById('N_head_count');
-               headCountElement.textContent = `${count}명`;
-           }
-       
-           function showDaysLeft(days) {
-               const daysLeftElement = document.getElementById('D_day');
-               daysLeftElement.textContent = `${days}일`;
-           }
-       
-           function showEndDate(endDate) {
-               const endDateElement = document.getElementById('End_date');
-               endDateElement.textContent = `${endDate}`;
-           }
-       
-           function showAgentIntroduce(introduce) {
-               const introduceElement = document.getElementById('agent_Introduce');
-               introduceElement.textContent = introduce;
-           }
-           function showInvoiceTable(narmiId) {
+            if (narmi) {
+                // 기존 데이터 출력
+                showRegionAndCity(narmi.N_region, narmi.N_city); 
+                showLocation(narmi.N_location);
+                showTargetAmount(narmi.N_Target_amount);
+                showFundingAchievement(narmi.N_funding_achievement);
+                showFundingProgress(narmi.N_funding_progress);
+                showHeadCount(narmi.N_head_count);
+                showDaysLeft(narmi.D_day);
+                showEndDate(narmi.End_date);
+                showLocationImage(narmi.N_location_img);
+
+                // 인보이스 테이블 출력
+                showInvoiceTable(selectedNarmiId);
+            } else {
+                console.error('오류');
+            }
+        });
+
+        function showRegionAndCity(region, city) {
+            const regionCityElement = document.getElementById('N_region_city');
+            regionCityElement.textContent = `${region} ${city}`;
+        }
+
+        function showLocation(location) {
+            const locationElement = document.getElementById('N_location');
+            locationElement.textContent = location;
+        }
+
+        function showTargetAmount(amount) {
+            const targetAmountElement = document.getElementById('N_Target_amount');
+            targetAmountElement.textContent = `${amount.toLocaleString()}원`;
+        }
+
+        function showFundingAchievement(achievement) {
+            const fundingAchievementElement = document.getElementById('N_funding_achievement');
+            fundingAchievementElement.textContent = `${achievement.toLocaleString()}원 후원중`;
+        }
+
+        function showFundingProgress(progress) {
+            const fundingProgressElement = document.getElementById('N_funding_progress');
+            fundingProgressElement.textContent = `${progress}%`;
+        }
+
+        function showHeadCount(count) {
+            const headCountElement = document.getElementById('N_head_count');
+            headCountElement.textContent = `${count}명`;
+        }
+
+        function showDaysLeft(days) {
+            const daysLeftElement = document.getElementById('D_day');
+            daysLeftElement.textContent = `${days}일`;
+        }
+
+        function showEndDate(endDate) {
+            const endDateElement = document.getElementById('End_date');
+            endDateElement.textContent = `${endDate}`;
+        }
+
+        function showLocationImage(imageSrc) {
+            const locationImageElement = document.getElementById('N_location_img');
+            locationImageElement.src = imageSrc;
+        }
+
+        function showInvoiceTable(narmiId) {
             const invoiceData = invoice.find(item => item.id === narmiId);
             
             if (!invoiceData) {
@@ -327,59 +323,10 @@
                 <td></td>
             `;
         }
+    </script>
 
 
-        function showSettlementTable(narmiId) {
-    const settlementData = settlement_report.find(item => item.id === narmiId);
-    console.log(settlementData);
-    if (!settlementData) {
-        console.error('해당 ID의 정산 데이터가 없습니다.');
-        return;
-    }
 
-    const table = document.getElementById("settlementTable");
-    table.innerHTML = ''; // 기존 내용을 초기화
-
-    // 테이블 헤더 추가
-    const headerRow = table.insertRow();
-    headerRow.innerHTML = `
-        <th>순번</th>
-        <th>구분</th>
-        <th>품목</th>
-        <th>수량</th>
-        <th>단위</th>
-        <th>단가</th>
-        <th>금액</th>
-        <th>비고</th>
-    `;
-
-    // 데이터 추가
-    settlementData.list.forEach(item => {
-        if (item.index !== undefined) { // index가 정의된 항목만 추가
-            const row = table.insertRow(-1);
-            row.innerHTML = `
-                <td>${item.index}</td>
-                <td>${item.category}</td>
-                <td>${item.item}</td>
-                <td>${item.quantity}</td>
-                <td>${item.unit}</td>
-                <td>${item.unitPrice.toLocaleString()}</td>
-                <td>${item.amount.toLocaleString()}</td>
-                <td>${item.note || ''}</td>
-            `;
-        }
-    });
-
-    // 총합계 행 추가
-    const totalAmount = settlementData.list[settlementData.list.length - 1].totalAmount; // 마지막 요소에서 totalAmount 가져오기
-    const summaryRow = table.insertRow(-1);
-    summaryRow.innerHTML = `
-        <td colspan="6">합계</td>
-        <td>${totalAmount.toLocaleString()}</td>
-        <td></td>
-    `;
-}
-       </script>
    </body>
 </html>
 

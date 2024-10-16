@@ -82,16 +82,6 @@ function shareKakao(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // 산출내역 표  출력
 const invoiceData = [
     { no: 1, type: '구매품', product: '전래동화', quantity: 10, unit: '권', unitPrice: 10000 },
@@ -99,31 +89,32 @@ const invoiceData = [
     { no: 3, type: '교통비', product: '교통비', quantity: 1, unit: '식', unitPrice: 50000 }
 ];
 
-function invoiceTable(data) {
-    const table = document.getElementById("invoice");
+// function invoiceTable(data) {
+//     const table = document.getElementById("invoice");
     
-    data.forEach(item => {
-        const amount = item.unitPrice * item.quantity;
-        const row = table.insertRow(-1); // 마지막에 추가
-        row.innerHTML = `
-            <td>${item.no}</td>
-            <td>${item.type}</td>
-            <td>${item.product}</td>
-            <td>${item.quantity}</td>
-            <td>${item.unit}</td>
-            <td>${item.unitPrice}</td>
-            <td>${amount}</td>
-            <td></td>
-        `;
-    });
+//     data.forEach(item => {
+//         const amount = item.unitPrice * item.quantity;
+//         const row = table.insertRow(-1); // 마지막에 추가
+//         row.innerHTML = `
+//             <td>${item.no}</td>
+//             <td>${item.type}</td>
+//             <td>${item.product}</td>
+//             <td>${item.quantity}</td>
+//             <td>${item.unit}</td>
+//             <td>${item.unitPrice}</td>
+//             <td>${amount}</td>
+//             <td></td>
+//         `;
+//     });
 
-    const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
-    const summaryRow = table.insertRow(-1);
-    summaryRow.innerHTML = `
-        <td colspan="6">합계</td>
-        <td>${totalAmount}</td>
-        <td></td>`;
-}
+//     const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
+//     const summaryRow = table.insertRow(-1);
+//     summaryRow.innerHTML = `
+//         <td colspan="6">합계</td>
+//         <td>${totalAmount}</td>
+//         <td></td>`;
+// }
+
 // 출력은 아래 내용이지만 추후 정산과 함께 출력해야 둘다 출력가능
 // window.onload = () => invoiceTable(invoiceData);
 
@@ -146,44 +137,44 @@ for (var i = 0; i <= steps.indexOf(currentStep); i++) {
 document.getElementById(currentStep).classList.add('blink');
 
 
-// 정산내역
-const settlementData = [
-    { no: 1, type: '구매품', product: '전래동화', quantity: 10, unit: '권', unitPrice: 10000 },
-    { no: 2, type: '다과비', product: '카스타드', quantity: 2, unit: '봉', unitPrice: 2000 },
-    { no: 3, type: '교통비', product: '교통비', quantity: 1, unit: '식', unitPrice: 30000 }
-];
+// // 정산내역
+// const settlementData = [
+//     { no: 1, type: '구매품', product: '전래동화', quantity: 10, unit: '권', unitPrice: 10000 },
+//     { no: 2, type: '다과비', product: '카스타드', quantity: 2, unit: '봉', unitPrice: 2000 },
+//     { no: 3, type: '교통비', product: '교통비', quantity: 1, unit: '식', unitPrice: 30000 }
+// ];
 
-function settleTable(data) {
-    const table = document.getElementById("settlementTable");
+// function settleTable(data) {
+//     const table = document.getElementById("settlementTable");
     
-    data.forEach(item => {
-        const amount = item.unitPrice * item.quantity;
-        const row = table.insertRow(-1); // 마지막에 추가
-        row.innerHTML = `
-            <td>${item.no}</td>
-            <td>${item.type}</td>
-            <td>${item.product}</td>
-            <td>${item.quantity}</td>
-            <td>${item.unit}</td>
-            <td>${item.unitPrice}</td>
-            <td>${amount}</td>
-            <td></td>
-        `;
-    });
+//     data.forEach(item => {
+//         const amount = item.unitPrice * item.quantity;
+//         const row = table.insertRow(-1); // 마지막에 추가
+//         row.innerHTML = `
+//             <td>${item.no}</td>
+//             <td>${item.type}</td>
+//             <td>${item.product}</td>
+//             <td>${item.quantity}</td>
+//             <td>${item.unit}</td>
+//             <td>${item.unitPrice}</td>
+//             <td>${amount}</td>
+//             <td></td>
+//         `;
+//     });
 
-    const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
-    const summaryRow = table.insertRow(-1);
-    summaryRow.innerHTML = `
-            <td colspan="6">합계</td>
-            <td>${totalAmount}</td>
-            <td></td>`
+//     const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
+//     const summaryRow = table.insertRow(-1);
+//     summaryRow.innerHTML = `
+//             <td colspan="6">합계</td>
+//             <td>${totalAmount}</td>
+//             <td></td>`
 
-}
-//정산내역, 산출내역 모두 출력
-window.onload = () => {
-    invoiceTable(invoiceData);
-    settleTable(settlementData);
-}
+// }
+// //정산내역, 산출내역 모두 출력
+// window.onload = () => {
+//     invoiceTable(invoiceData);
+//     settleTable(settlementData);
+// }
 
 
 
