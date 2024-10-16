@@ -104,6 +104,10 @@
                         // 클릭한 선물의 ID를 localStorage에 저장
                         localStorage.setItem('selectedGiftId', gift.id);
                     };
+                    
+                    const progressTextColor = gift.G_funding_progress === 100 ? 'green' : 
+                    gift.G_funding_progress >= 70 ? 'rgb(255, 94, 0)' : '';
+
                     const isSuccess = gift.G_funding_progress === 100 ? `
                         <span class="success-complete">펀딩성공!!</span>
                         <span class="complete-icon"><i class="fa-solid fa-gift"></i></span>
@@ -126,7 +130,7 @@
                                 <span class="funding">펀딩금액</span>
                                 <span class="achieved">달성률</span><br>
                                 <strong class="sung">${gift.G_funding_achievement.toLocaleString()}원</strong>
-                                <strong class="percent">${gift.G_funding_progress}%</strong>
+                                <strong class="percent" style="color: ${progressTextColor}">${gift.G_funding_progress}%</strong>
                                 <br>
                                 ${isSuccess} 
                             </li>
