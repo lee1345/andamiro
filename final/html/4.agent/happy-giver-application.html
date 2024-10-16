@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복나르미 신청</title>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: "Gowun Dodum", sans-serif;
@@ -51,9 +51,11 @@
             text-align: center;
             border: 1px solid #cfd8dc; /* 테두리 색상 */
             border-bottom: 1px solid #31708f; /* 아래 테두리 */
-            border-top: 1px solid #31708f; /* 아래 테두리 */
+            border-top: 1px solid #31708f; /* 위 테두리 */
+            border-right: none;
+            border-left: none;
         }
-
+        
         input, textarea, select {
             font-family: "Gowun Dodum", sans-serif;
             width: calc(100% - 20px);
@@ -67,6 +69,10 @@
         }input, textarea{
             border: none;
         }
+        textarea{
+            height: 200px;
+            resize: none;
+        }
 
         input:focus, textarea:focus, select:focus {
             border-color: #31708f; /* 포커스 시 테두리 색상 변화 */
@@ -74,7 +80,7 @@
         }
 
         button {
-            background-color: #31708f; /* 버튼 색상 */
+            background-color: #336e8b; /* 버튼 색상 */
             color: white;
             border: none;
             border-radius: 5px;
@@ -116,6 +122,7 @@
             width: 800px; 
             font-size: 10pt;           
             text-align: center;
+            
         }
         #data-table td:nth-child(1) { /* 순번 */
             width: 8%;            
@@ -141,12 +148,72 @@
         #data-table td:nth-child(8) { /* 비고 */
             width: 10%; 
         }
+        #data-table th {
+            text-align: center; /* 가운데 정렬 */
+            border-right: 1px solid rgba(49, 112, 143, 0.5); /* 점선으로 변경 및 투명도 추가 */
+            border-left: 1px solid rgba(49, 112, 143, 0.5)
+        }
+
+        #data-table td {
+            padding: 0px;
+            text-align: center; /* 가운데 정렬 */
+            border: 1px solid #cfd8dc; /* 기본 테두리 색상 */
+            border-bottom: 1px solid rgba(49, 112, 143, 0.5); /* 아래 테두리 투명도 추가 */
+            border-top: 1px solid rgba(49, 112, 143, 0.5); /* 위 테두리 투명도 추가 */
+            border-right: 1px dashed rgba(49, 112, 143, 0.5); /* 점선으로 변경 및 투명도 추가 */
+            
+        }
+
+        /* 마지막 열의 오른쪽 테두리 제거 */
+        #data-table td:last-child,
+        #data-table th:last-child {
+            border-right: none; /* 마지막 열의 오른쪽 테두리 제거 */
+        }
+        .date-picker {
+        display: flex; /* Flexbox 사용 */
+        align-items: center; /* 수직 정렬 */
+        width: 30%;
+        }
+
+        .date-picker input {
+            margin: 0 5px; /* 입력 필드 간의 여백 */
+        }
+    /* 이미지 미리보기 스타일 */
+    .image-preview {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .image-preview img {
+        width: 100px; /* 정해진 너비 */
+        height: 100px; /* 정해진 높이 */
+        object-fit: cover; /* 비율 유지하면서 크기 조절 */
+        margin-right: 10px;
+        border: 1px solid #cfd8dc;
+        border-radius: 5px;
+        cursor: pointer; /* 클릭 시 포인터 표시 추가 */
+    }
+
+    .delete-image {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 8px;
+        cursor: pointer;
+    }
+
+    .delete-image:hover {
+        background-color: #d32f2f;
+    }
     </style>
 </head>
 <body>
     <div class="form-container">
         <h2>행복나르미 신청하기</h2>
-        <form>
+        <form id="activityForm">
             <table>
                 <tr>
                     <th>신청자명</th>
@@ -158,13 +225,13 @@
                 </tr>
                 <tr>
                     <th>활동지역</th>
-                    <td style="display: flex; border: 0;">
+                    <td style="display: flex; border: none;">
                         <select id="city" onchange="updateDistricts()">
                             <option value="">선택하세요</option>
                             <option value="천안">천안</option>
                             <option value="아산">아산</option>
                         </select>
-                        <select id="district" required>
+                        <select id="district" required style="display: none;">
                             <option value="">선택하세요</option>
                         </select>
                     </td>
@@ -178,6 +245,20 @@
                     <td><input type="text" placeholder="제목을 입력하세요" class="long" required></td>
                 </tr>
                 <tr>
+                    <th>활동 기간설정</th>
+                    <td>
+                        <div class="date-picker">
+                            <input type="date" name="startDate" required>
+                            <span>~</span>
+                            <input type="date" name="endDate" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>펀딩 마감일</th>
+                    <td><input type="date" name="startDate" required style="width: 45%;display: flex;margin-left: 5px;"></td>
+                </tr>
+                <tr>
                     <th>펀딩목표금액</th>
                     <td><input type="text" maxlength="10" onkeyup="inputNumberFormat(this);" placeholder="금액을 입력하세요" required></td>
                 </tr>
@@ -187,7 +268,17 @@
                 </tr>
                 <tr>
                     <th>프로필 사진</th>
-                    <td><input type="file"></td>
+                    <td>
+                        <input type="file" accept="image/*" onchange="previewImage(event, 'profilePreview')">
+                        <div class="image-preview" id="profilePreview"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>활동지역 사진</th>
+                    <td>
+                        <input type="file" accept="image/*" onchange="previewImage(event, 'locationPreview')">
+                        <div class="image-preview" id="locationPreview"></div>
+                    </td>
                 </tr>
             </table>
         </form>
@@ -211,10 +302,10 @@
                     <td><input type="number" style="border:0;"></td>
                     <td><input type="text" style="border:0;"></td>
                     <td><input type="text" style="border:0;"></td>
-                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"oninput="calculateAmount(this);"></td>
                     <td><input type="text" style="border:0;"></td>
-                    <td><input type="number" style="border:0;"></td>
-                    <td><input type="number" style="border:0;"></td>
+                    <td><input type="number" style="border:0;"oninput="calculateAmount(this);"></td>
+                    <td><input type="text" style="border:0;" readonly></td>
                     <td><input type="text" maxlength="10" style="border:0;"></td>
                 </tr>
             </table>
@@ -224,7 +315,7 @@
 
     <div style="text-align: center;">
         <button type="submit" onclick="regist();" class="submit">신청하기</button>
-        <button type="button" onclick="window.close();" class="cancle">취소</button>
+        <button type="button" onclick="confirmCancel();" class="cancle" style="background-color: rgb(116, 194, 194);">취소하기</button>
     </div>
 
     <script>
@@ -241,15 +332,19 @@
             districtSelect.innerHTML = '';
 
             if (selectedCity in districts) {
-                districts[selectedCity].forEach(function(district) {
-                    const option = document.createElement("option");
-                    option.value = district;
-                    option.textContent = district;
-                    districtSelect.appendChild(option);
-                });
+            // 선택창 보이기
+            districtSelect.style.display = 'inline'; 
+            districts[selectedCity].forEach(function(district) {
+                const option = document.createElement("option");
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+                } else {
+            // 선택창 숨기기
+            districtSelect.style.display = 'none'; 
             }
         }
-
         function comma(str) {
             str = String(str);
             return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
@@ -287,6 +382,15 @@
             cell6.innerHTML = '<input type="number" style="border:0;">';
             cell7.innerHTML = '<input type="number" style="border:0;">';
             cell8.innerHTML = '<input type="text" maxlength="10" style="border:0;">';
+            
+            cell1.innerHTML = '<input type="number" style="border:0;" oninput="calculateAmount(this);">';
+            cell2.innerHTML = '<input type="text" style="border:0;">';
+            cell3.innerHTML = '<input type="text" style="border:0;">';
+            cell4.innerHTML = '<input type="number" style="border:0;" oninput="calculateAmount(this);">';
+            cell5.innerHTML = '<input type="text" style="border:0;">';
+            cell6.innerHTML = '<input type="number" style="border:0;" oninput="calculateAmount(this);">';
+            cell7.innerHTML = '<input type="text" style="border:0;" readonly>';
+            cell8.innerHTML = '<input type="text" maxlength="10" style="border:0;">';
         });
 
         function regist() {
@@ -297,6 +401,66 @@
                 return;
             }
         }
+        function confirmCancel() {
+            if (confirm("정말 취소하겠습니다?")) {
+                window.close();
+            }
+        }
+
+            function calculateAmount(input) {
+        const row = input.closest('tr');
+
+        // 수량과 단가 입력값 가져오기
+        const quantityInput = row.cells[3].querySelector('input');
+        const unitPriceInput = row.cells[5].querySelector('input');
+        const amountInput = row.cells[6].querySelector('input');
+
+        // 숫자로 변환 (쉼표 제거)
+        const quantity = parseFloat(quantityInput.value.replace(/,/g, '')) || 0;
+        const unitPrice = parseFloat(unitPriceInput.value.replace(/,/g, '')) || 0;
+
+        // 계산
+        const amount = quantity * unitPrice;
+
+        // 금액이 유효한 경우에만 업데이트
+        if (!isNaN(amount) && amount >= 0) {
+            amountInput.value = amount.toLocaleString('ko-KR'); // 천 단위 쉼표 추가
+        } else {
+            amountInput.value = ""; // 숫자가 아닐 경우 빈 문자열로 초기화
+        }
+    }
+    //이미지 미리보기 및 삭제 기능
+
+    function previewImage(event, previewId) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById(previewId);
+        previewContainer.innerHTML = '';
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.src = e.target.result;
+                img.onclick = function() {
+                const newWindow = window.open("", "_blank"); // 새 창 열기
+                newWindow.document.write("<img src='" + img.src + "' style='max-width:100%; height:auto;'>"); // 이미지 삽입
+};
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = '삭제';
+                deleteBtn.className = 'delete-image';
+                deleteBtn.onclick = function() {
+                    event.target.value = ''; // 파일 입력 초기화
+                    previewContainer.innerHTML = ''; // 미리보기 초기화
+                };
+
+                previewContainer.appendChild(img);
+                previewContainer.appendChild(deleteBtn);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
     </script>
 </body>
 </html>
