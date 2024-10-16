@@ -296,7 +296,7 @@ input[type="checkbox"] {
 /* 미디어 쿼리 */
 
 /* 스마트폰 */
-@media (max-width: 768px) {
+@media all and (min-width:768px) and (max-width:1023px) {
     .container-grid {
         grid-template-columns: 1fr; /* 한 열로 변경 */
         padding: 10px; /* 패딩 줄이기 */
@@ -340,34 +340,10 @@ input[type="checkbox"] {
     }
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 18px; /* 제목 크기 더 줄이기 */
-    }
-
-    .left-item,
-    .right-item {
-        padding: 15px; /* 패딩 줄이기 */
-    }
-
-    .details {
-        font-size: 0.85em; /* 세부 정보 글자 크기 줄이기 */
-    }
-
-    .payment-button {
-        font-size: medium; /* 버튼 글자 크기 조정 */
-    }
-
-    /* 아이콘 크기 조정 */
-    .c-card,
-    .bn-trans {
-        font-size: 18px; /* 아이콘 크기 줄이기 */
-    }
-}
 
 
 /* 스마트폰 세로 모드에 맞춘 미디어 쿼리 */
-@media (max-width: 480px) {
+@media all and (max-width:479px) {
     .container-grid {
         grid-template-columns: 1fr; /* 한 열로 설정 */
         padding: 10px; /* 패딩 줄이기 */
