@@ -11,7 +11,7 @@ function sgshowAlert() {
     }
     
     alert('회원가입이 완료되었습니다.'); // 회원가입 완료 메시지
-    window.location.href = '../maim.html'; // 메인 화면으로 이동
+    window.location.href = '../2.about/about.html'; // 메인 화면으로 이동
     return true; // 체크되었으면 제출.
 }
 

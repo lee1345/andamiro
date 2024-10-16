@@ -330,3 +330,88 @@ img.secondImg {
     width: 50px;
     padding-right: 15px;
 }
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* 글자 크기 조정 */
+        margin: 0;
+        padding: 0;
+    }
+
+    .ctn {
+        display: flex;
+        flex-direction: column; /* 모바일에서는 세로로 정렬 */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .item1, .item2 {
+        width: 100%; /* 전체 너비로 설정 */
+        margin-bottom: 20px;
+    }
+
+    #gift_product_sample {
+        width: 100%; /* 이미지가 화면 너비에 맞게 조정 */
+        max-width: 100%;
+        height: auto; /* 비율 유지 */
+    }
+
+    #gift_product_sample_detail {
+        width: 100%; /* 상세 이미지 너비 조정 */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .rs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button {
+        width: 48%; /* 버튼 크기 조정 */
+    }
+
+    .bigbtn, .like, .btn {
+        width: 100%; /* 버튼 전체 너비 차지 */
+        margin: 10px 0;
+    }
+
+    .tabmenu ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabmenu ul li {
+        width: 100%;
+    }
+
+    .tabCon {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .reward img {
+        width: 50px; /* 리워드 이미지 크기 조정 */
+        height: auto;
+    }
+
+    .container {
+        text-align: center; /* 텍스트 가운데 정렬 */
+    }
+
+    form input.reply {
+        width: 70%; /* 댓글 입력창 너비 조정 */
+    }
+
+    form button.replyButton {
+        width: 28%; /* 댓글 버튼 너비 조정 */
+    }
+
+    .modal-content {
+        width: 90%; /* 모달창 크기 조정 */
+        max-width: 400px;
+    }
+
+    .icons {
+        width: 40px; /* 아이콘 크기 조정 */
+    }
+}
