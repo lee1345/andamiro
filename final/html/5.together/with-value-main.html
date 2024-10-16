@@ -6,6 +6,8 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>3조_안다미로</title>       
        <link rel="stylesheet" href="../../css/with-value-main.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
        <style>
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
         </style>
@@ -60,6 +62,20 @@
                     localStorage.setItem('selectedCampaignId', campaign.id);
                 };
 
+
+                const progressTextColor = campaign.W_Participation_Rate === 100 ? 'green' : 
+                campaign.W_Participation_Rate >= 70 ? 'rgb(255, 94, 0)' : '';
+
+                const isSuccess = campaign.W_Participation_Rate === 100 ? `
+                <span class="success-complete">준비 완료!!</span>
+                <span class="complete-icon"><i class="fa-solid fa-circle-check"></i></span>
+                ` : campaign.W_Participation_Rate >= 70 ? `
+                <span class="success-message">모집 임박!!</span>
+                <span class="success-icon"><i class="fa-solid fa-bell"></i></span>
+                ` : '';
+
+
+
                 item.innerHTML = `
                     <ul class="item1" style="width:800px; height:435px;">
                         <div class="ctn">
@@ -84,9 +100,10 @@
                                 </li>
                                 <li class="achieved">
                                     <span>달성률</span>
-                                    <h1>${campaign.W_Participation_Rate}%</h1>
+                                    <h1 style="color: ${progressTextColor};">${campaign.W_Participation_Rate}%</h1>
+                                    ${isSuccess} 
+
                                     <div class="progressbar" id="progressbar${campaign.id}">
-                                        <span class="progress" style="width: ${campaign.W_Participation_Rate}%;"></span>
                                     </div>
                                 </li>
                             </div>
