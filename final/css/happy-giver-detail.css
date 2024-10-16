@@ -428,7 +428,23 @@ td, th {
     padding: 8px;                 /* 댓글 패딩 */
     margin: 5px 0;                /* 댓글 여백 */
 }
-
+/* 3.댓글기능 */
+.comments {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    text-align: left;
+    
+}
+.comment-card {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding-left: 150px;
+}
+.comment-card img {
+    width: 50px;
+    padding-right: 15px;
+}
 
 .bubble {
     position: absolute;

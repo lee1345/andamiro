@@ -35,9 +35,9 @@ function addComment(event) {
     var commentDiv = document.createElement("div");
     commentDiv.className = "comment-card";
     commentDiv.innerHTML = `
-    <img src="../../img/그림1.png" alt="User Avatar">
+    <img src="../../img/그림1.png" style=width:50px;>
     <div>
-        <span>USERID <small>${date}</small></span><br>
+        <span>GUEST <small>${date}</small></span><br>
         <span>${commentText}</span>
     </div>
     `;
