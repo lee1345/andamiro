@@ -519,6 +519,73 @@ body {
         opacity: 0.7;
     }
 }
-@media screen and (max-width:768px) {
-    
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* 기본 글꼴 크기 조정 */
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        margin-left: 0;
+        justify-content: center; /* 모바일에서는 중앙에 정렬 */
+    }
+
+    .icon {
+        margin: 0 5px; /* 버튼 간격 조정 */
+    }
+
+    .page-number {
+        margin: 0 2px; /* 페이지 번호 간격 줄이기 */
+    }
+
+    .item1 {
+        width: 100%; /* 모바일에서는 가로폭 전체를 사용 */
+        height: auto; /* 자동 높이 설정 */
+        margin-bottom: 20px; /* 아이템 간의 간격 */
+    }
+
+    .ctn {
+        display: flex;
+        flex-direction: column; /* 모바일에서 세로로 나열 */
+        align-items: center; /* 중앙 정렬 */
+    }
+
+    .image img {
+        width: 100%; /* 이미지가 부모 컨테이너의 전체 너비를 차지 */
+        height: auto; /* 비율을 유지하며 자동 조정 */
+    }
+
+    .information {
+        width: 100%;
+        padding: 10px;
+        text-align: center; /* 텍스트 중앙 정렬 */
+    }
+
+    .subject h2,
+    .price,
+    .amount,
+    .achieved h1 {
+        font-size: 18px; /* 텍스트 크기 조정 */
+    }
+
+    .achieved {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 달성률과 텍스트를 중앙 정렬 */
+    }
+
+    .achieved span {
+        font-size: 16px;
+    }
+
+    .success-complete, .success-message {
+        font-size: 16px; /* 텍스트 크기 조정 */
+    }
+
+    .progressbar {
+        width: 90%; /* 진행 바의 너비를 줄여 화면에 맞춤 */
+        margin-top: 10px; /* 진행 바와 텍스트 간 간격 */
+    }
 }

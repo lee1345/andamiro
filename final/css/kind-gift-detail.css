@@ -314,8 +314,8 @@ ul {
 .tabCon {
     display: none; 
     width: 100%;
-    text-align: center; 
     padding: 20px;
+    text-align: center; 
     position: absolute; 
     left: 0; top: 40px; 
     box-sizing: border-box; 
@@ -445,7 +445,7 @@ body {
     }
 
     /* 모바일용 미디어 쿼리 */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 470px) {
         body {
             font-size: 14px; /* 글자 크기 조정 */
             margin: 0;
@@ -506,12 +506,13 @@ body {
         }
 
         .reward img {
-            width: 50px; /* 리워드 이미지 크기 조정 */
-            height: auto;
+            width: 80px; /* 리워드 이미지 크기 조정 */
+            height: 70px;
         }
 
         .container {
             text-align: center; /* 텍스트 가운데 정렬 */
+            flex-wrap: wrap;
         }
 
         form input.reply {
@@ -530,19 +531,33 @@ body {
         .icons {
             width: 40px; /* 아이콘 크기 조정 */
         }
+
         .fa-circle-info{
             margin-right: 40px;
             margin-top: 20px;
         }
+
         .fa-check-circle{
             margin-right: 60px;
             margin-top: 20px;
         }
+
         #incrementBtn, #number{
             width: 50px;
             margin-bottom: 20px;
         }
-        
+
+        .comment-card{
+        padding-left: 80px;
+        }
+
+        .reply{
+            margin-bottom: 20px;
+        }
+        #modalBtn {
+            width: 170px;
+            margin-left: 40px;
+        }
     }
 
 

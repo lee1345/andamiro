@@ -55,7 +55,7 @@ header button{
 
 .ctn{
     display: flex; /* Flexbox 사용 */
-    justify-content: space-between; /* 아이템을 좌우로 균등하게 배치 */
+    justify-content: space-evenly; /* 아이템을 좌우로 균등하게 배치 */
 }div .rs{/*리워드 선택(reworld selector)*/
     display: flex;
     padding-top: 10px;
@@ -356,7 +356,6 @@ ul {
 
 .ctn {
     display: flex;
-    flex-direction: column; /* 기본적으로 세로 정렬 */
     padding: 20px;
 }
 
@@ -370,15 +369,23 @@ ul {
     .item1, .item2 {
         width: 100%; /* 가로 폭을 100%로 */
         text-align: center; /* 가운데 정렬 */
+        padding:20px 0 20px 0;
     }
 
-    #campaomg_img {
-        width: 100%; /* 이미지 가로폭 100% */
+    #campaing_detail_img {
+
+        max-width: 100%; /* 이미지 가로폭 100% */
         height: auto; /* 비율 유지 */
     }
 
-    .bigbtn, .like, .btn {
+    .bigbtn, .like {
         width: 100%; /* 버튼 가로폭 100% */
         margin: 5px 0; /* 버튼 간격 */
+    }
+    #incrementBtn {
+        width: 50px;
+    }
+    pre{
+        white-space: pre-wrap;
     }
 }

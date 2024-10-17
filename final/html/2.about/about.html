@@ -105,7 +105,32 @@
         img {
             border-radius: 8px;
         }
-
+        /* 모바일 작은 화면용 미디어쿼리 */
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 10px;
+            }
+            .aboutContainer{
+                padding: 20px;
+                margin: 10px;
+            }
+            .container img{
+                width: 30%
+            }
+            h1, h2 {
+                margin-left: 20px;
+                font-size: 18px;
+            }
+            p {
+                font-size: 10pt;
+            }
+            .container img {
+                width: 100%;
+            }
+            .logo{
+                width: 100%
+            }
+        }
     </style>
 </head>
 <body>

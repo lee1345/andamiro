@@ -323,7 +323,7 @@ pre {
     font-family: "Gowun Dodum", sans-serif;
     line-height: 15pt;
     text-align: left;
-    font-size: 12pt;
+    font-size: 16pt;
 }
 /* 2.산출내역 */
 
@@ -483,7 +483,7 @@ td, th {
 }
 
 /* 모바일용 미디어 쿼리 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 470px) {
     body {
         font-size: 14px; /* 글자 크기 조정 */
         margin: 0;
@@ -543,7 +543,10 @@ td, th {
     }
 
     .tabCon {
+        flex-direction: column;
         text-align: center;
+        padding:0;
+        word-break: break-all;
     }
 
     .reward img {
@@ -574,5 +577,19 @@ td, th {
 
     #number{
         margin-right: 20px;
+    }
+    
+    .agent{
+        width: 100%;
+    }
+
+    pre{
+        font-size: 14px;
+        white-space: pre-wrap;
+    }
+
+    #modalBtn{
+        width: 170px;
+        margin-right: 0;
     }
 }

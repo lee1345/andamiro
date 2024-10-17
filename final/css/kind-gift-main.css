@@ -684,7 +684,7 @@ body {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 470px) {
     body {
         font-size: 14px;
         line-height: 1.5;
