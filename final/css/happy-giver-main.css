@@ -572,11 +572,8 @@ li > img{
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 /* 모바일용 미디어 쿼리 */
-<<<<<<< HEAD
-@media screen and (max-width: 470px) {
-=======
+
 @media screen and (max-width: 475px) {
->>>>>>> 8396213d4a798e511b14649cabf7899441daa5dc
     body {
         font-size: 10px; /* 기본 폰트 크기 축소 */
         margin: 0;
