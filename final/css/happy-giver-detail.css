@@ -70,6 +70,7 @@ header button{
     border: 1px solid black;
 }
 .btn{
+    cursor: pointer;  
     border-radius: 5px;
     font-size: 15px;
     margin-left: 45px;
@@ -88,6 +89,7 @@ header button{
 
 }
 .bigbtn{
+    cursor: pointer;  
     border-radius: 5px;
     font-size: 20px;
     font-family: "Gowun Dodum", sans-serif;

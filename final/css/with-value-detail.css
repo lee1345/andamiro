@@ -353,12 +353,12 @@ ul {
     padding-right: 15px;
 }
 
-
+/* 
 .ctn {
     display: flex;
-    flex-direction: column; /* 기본적으로 세로 정렬 */
+    flex-direction: column; 
     padding: 20px;
-}
+} */
 
 /* 모바일 화면 (768px 이하) */
 @media (max-width: 768px) {
