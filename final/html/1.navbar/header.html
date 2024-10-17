@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="user-scaleable=no, initial-scale=1.0,maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nav</title>       
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
@@ -22,69 +22,105 @@
         li {
             list-style: none;
         }
+
         header {
-    background-color: rgba(255, 255, 255, 0.9); /* 배경색과 투명도 조정 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-    position: sticky; 
-    top: 0;
-    z-index: 10; /* 헤더가 가장 위에 오도록 설정 */
-    width: 100%;
-    height: 100px; /* 높이 조정 */
-    padding: 0; 
-}
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky; 
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100px;
+            padding: 0; 
+        }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 20px; 
-}
+        header h1 img {
+            max-width: 180px; /* 기본 크기 설정 */
+            height: auto;
+        }
 
-header nav {
-    flex-grow: 1; /* nav가 가능한 공간을 모두 차지하도록 설정 */
-    display: flex; /* flexbox 사용 */
-    justify-content: center; /* 중앙 정렬 */
-}
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px; 
+        }
 
-header nav ul {
-    display: flex; /* 가로로 나열 */
-    padding: 0; /* 기본 패딩 제거 */
-    margin: 0; /* 기본 마진 제거 */
-}
+        header nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
 
-header nav ul li {
-    padding: 0 20px; /* 양쪽 패딩 줄임 */
-}
+        header nav ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
 
-header button {
-    color: #2d2c31;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    font-family: "Gowun Dodum", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 16pt; /* 폰트 크기 조정 */
-} 
+        header nav ul li {
+            padding: 0 20px;
+        }
 
-header button:hover {
-    color: #8c8997;
-}
+        header button {
+            color: #2d2c31;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            font-family: "Gowun Dodum", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16pt; /* 기본 폰트 크기 */
+        } 
 
-.user-info {
-    display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-}
+        header button:hover {
+            color: #8c8997;
+        }
 
-.user-info img {
-    margin-right: 5px; /* 이미지와 텍스트 사이 여백 */
-}
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
 
-.user-info span {
-    margin: 0 5px; /* 슬래시와 텍스트 사이 여백 */
-}
+        .user-info img {
+            margin-right: 5px;
+        }
+
+        .user-info span {
+            margin: 0 5px;
+        }
+
+        /* 미디어 쿼리 추가 */
+        @media (max-width: 470px) {
+            header {
+                height: auto;
+            }
+
+            header h1 img {
+                max-width: 100px;
+                height: auto;
+            }
+
+            header button {
+                font-size: 5pt;
+            }
+
+            header nav {
+                justify-content: center; 
+            }
+
+            header nav ul {
+                flex-direction: row; /* 가로 방향으로 나열 */
+                flex-wrap: wrap; 
+            }
+
+            header nav ul li {
+                padding: 10px; /* 간격 조정 */
+            }
+
+        }
 
     </style>
 </head>
@@ -92,7 +128,7 @@ header button:hover {
     <header>
         <div class="container">
             <h1>
-                <a href="../2.about/about.html"><img src="../../img/logo.png" style="width:180px"></a>
+                <a href="../2.about/about.html"><img src="../../img/logo.png"></a>
             </h1>
             <nav>
                 <ul class="btn-cr">
@@ -136,7 +172,7 @@ header button:hover {
     
         function logout() {
             localStorage.removeItem("loggedIn");
-            window.location.reload(); // 페이지 새로고침
+            window.location.reload();
         }
     </script>
 </body>
