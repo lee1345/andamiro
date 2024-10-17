@@ -387,9 +387,10 @@ header button{
         box-shadow: none;
     }
     .card-area h2 {
-        font-size: 1.0rem;
+        font-size: 12pt;
         text-align: center;
         margin: 10px 0;
+
     }
 
     .ct-bar {
@@ -426,13 +427,13 @@ header button{
 
     .price {
         width: 160px;
-        font-size: 0.9rem;
+        font-size: 10pt;
     }
     .subject {
         width: 160px;
     }
     .subject h3 {
-        font-size: 1.1rem;
+        font-size: 10pt;
     }
 
     .success-complete, .success-message {
