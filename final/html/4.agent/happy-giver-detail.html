@@ -213,8 +213,8 @@
                    showEndDate(narmi.End_date);
                    showAgentIntroduce(narmi.agent_Introduce);
                    showLocationImage(narmi.N_location_img);
-                   showInvoiceTable(selectedNarmiId);
-                   showSettlementTable(selectedNarmiId); // 정산 테이블을 표시
+                //    showInvoiceTable(selectedNarmiId);
+                //    showSettlementTable(selectedNarmiId); // 정산 테이블을 표시
 
                } else {
                    console.error('오류');
@@ -280,108 +280,108 @@
                const introduceElement = document.getElementById('agent_Introduce');
                introduceElement.textContent = introduce;
            }
-           function showInvoiceTable(narmiId) {
-            const invoiceData = invoice.find(item => item.id === narmiId);
+//            function showInvoiceTable(narmiId) {
+//             const invoiceData = invoice.find(item => item.id === narmiId);
             
-            if (!invoiceData) {
-                console.error('해당 ID의 인보이스 데이터가 없습니다.');
-                return;
-            }
+//             if (!invoiceData) {
+//                 console.error('해당 ID의 인보이스 데이터가 없습니다.');
+//                 return;
+//             }
 
-            const table = document.getElementById("invoice");
-            table.innerHTML = ''; // 기존 내용을 초기화
+//             const table = document.getElementById("invoice");
+//             table.innerHTML = ''; // 기존 내용을 초기화
 
-            // 테이블 헤더 추가
-            const headerRow = table.insertRow();
-            headerRow.innerHTML = `
-                <th>순번</th>
-                <th>구분</th>
-                <th>품목</th>
-                <th>수량</th>
-                <th>단위</th>
-                <th>단가</th>
-                <th>금액</th>
-                <th>비고</th>
-            `;
+//             // 테이블 헤더 추가
+//             const headerRow = table.insertRow();
+//             headerRow.innerHTML = `
+//                 <th>순번</th>
+//                 <th>구분</th>
+//                 <th>품목</th>
+//                 <th>수량</th>
+//                 <th>단위</th>
+//                 <th>단가</th>
+//                 <th>금액</th>
+//                 <th>비고</th>
+//             `;
 
-            invoiceData.list.forEach(item => {
-                const row = table.insertRow(-1);
-                row.innerHTML = `
-                    <td>${item.index}</td>
-                    <td>${item.category}</td>
-                    <td>${item.item}</td>
-                    <td>${item.quantity}</td>
-                    <td>${item.unit}</td>
-                    <td>${item.unitPrice.toLocaleString()}</td>
-                    <td>${item.amount.toLocaleString()}</td>
-                    <td>${item.note || ''}</td>
-                `;
-            });
+//             invoiceData.list.forEach(item => {
+//                 const row = table.insertRow(-1);
+//                 row.innerHTML = `
+//                     <td>${item.index}</td>
+//                     <td>${item.category}</td>
+//                     <td>${item.item}</td>
+//                     <td>${item.quantity}</td>
+//                     <td>${item.unit}</td>
+//                     <td>${item.unitPrice.toLocaleString()}</td>
+//                     <td>${item.amount.toLocaleString()}</td>
+//                     <td>${item.note || ''}</td>
+//                 `;
+//             });
 
-            // 총합계 행 추가
-            const totalAmount = invoiceData.list.find(item => item.totalAmount).totalAmount;
-            const summaryRow = table.insertRow(-1);
-            summaryRow.innerHTML = `
-                <td colspan="6">합계</td>
-                <td>${totalAmount.toLocaleString()}</td>
-                <td></td>
-            `;
-        }
-
-
+//             // 총합계 행 추가
+//             const totalAmount = invoiceData.list.find(item => item.totalAmount).totalAmount;
+//             const summaryRow = table.insertRow(-1);
+//             summaryRow.innerHTML = `
+//                 <td colspan="6">합계</td>
+//                 <td>${totalAmount.toLocaleString()}</td>
+//                 <td></td>
+//             `;
+//         }
 
 
 
-    function showSettlementTable(narmiId) {
-    const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
-    const settlementData = settlement_report.find(item => item.id === selectedNarmiId);
+
+
+//     function showSettlementTable(narmiId) {
+//     const selectedNarmiId = parseInt(localStorage.getItem('selectedNarmiId'), 10);
+//     const settlementData = settlement_report.find(item => item.id === selectedNarmiId);
                
     
-    if (!settlementData) {
-        console.error(' ');
-        return;
-    }
+//     if (!settlementData) {
+//         console.error(' ');
+//         return;
+//     }
 
-    const settletable = document.getElementById("settlementTable");
-    settletable.innerHTML = ''; // 기존 내용을 초기화
+//     const settletable = document.getElementById("settlementTable");
+//     settletable.innerHTML = ''; // 기존 내용을 초기화
 
-    // 테이블 헤더 추가
-    const headerRow = table.insertRow();
-    headerRow.innerHTML = `
-        <th>순번</th>
-        <th>구분</th>
-        <th>품목</th>
-        <th>수량</th>
-        <th>단위</th>
-        <th>단가</th>
-        <th>금액</th>
-        <th>비고</th>
-    `;
+//     // 테이블 헤더 추가
+//     const headerRow = table.insertRow();
+//     headerRow.innerHTML = `
+//         <th>순번</th>
+//         <th>구분</th>
+//         <th>품목</th>
+//         <th>수량</th>
+//         <th>단위</th>
+//         <th>단가</th>
+//         <th>금액</th>
+//         <th>비고</th>
+//     `;
 
-    settlementData.list.forEach(item => {
-        if (item.totalAmount) return; 
-        const row = table.insertRow(-1);
-        row.innerHTML = `
-            <td>${item.index}</td>
-            <td>${item.category}</td>
-            <td>${item.item}</td>
-            <td>${item.quantity}</td>
-            <td>${item.unit}</td>
-            <td>${item.unitPrice.toLocaleString()}</td>
-            <td>${item.amount.toLocaleString()}</td>
-            <td>${item.note || ''}</td>
-        `;
-    });
+//     settlementData.list.forEach(item => {
+//         if (item.totalAmount) return; 
+//         const row = table.insertRow(-1);
+//         row.innerHTML = `
+//             <td>${item.index}</td>
+//             <td>${item.category}</td>
+//             <td>${item.item}</td>
+//             <td>${item.quantity}</td>
+//             <td>${item.unit}</td>
+//             <td>${item.unitPrice.toLocaleString()}</td>
+//             <td>${item.amount.toLocaleString()}</td>
+//             <td>${item.note || ''}</td>
+//         `;
+//     });
 
-    // 총합계 행 추가
-    const totalAmount = settlementData.list.find(item => item.totalAmount).totalAmount;
-    const summaryRow = table.insertRow(-1);
-    summaryRow.innerHTML = `
-        <td colspan="6">합계</td>
-        <td>${totalAmount.toLocaleString()}</td>
-        <td></td>
-    `;
-}
+//     // 총합계 행 추가
+//     const totalAmount = settlementData.list.find(item => item.totalAmount).totalAmount;
+//     const summaryRow = table.insertRow(-1);
+//     summaryRow.innerHTML = `
+//         <td colspan="6">합계</td>
+//         <td>${totalAmount.toLocaleString()}</td>
+//         <td></td>
+//     `;
+// }
        </script>
    </body>
 </html>
