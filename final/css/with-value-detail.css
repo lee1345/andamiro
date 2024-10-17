@@ -101,7 +101,8 @@ header button{
     border: solid black 1px;
 }
 #modalBtn{
-    background-color: white;
+    color: white;
+    background-color:rgb(16, 122, 212);
     border-color: rgb(16, 122, 212);
     border-radius: 5px;
     margin-left: 50px;
