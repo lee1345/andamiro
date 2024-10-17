@@ -185,16 +185,16 @@ setTimeout(() => {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const percentElement = document.querySelector('.percent'); // 95% 표시하는 요소
-    const percentValue = parseInt(percentElement.textContent); // 텍스트에서 숫자만 가져오기
-    const successMessage = document.querySelector('.success-message');
-    const successIcon = document.querySelector('.success-icon');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const percentElement = document.querySelector('.percent'); // 95% 표시하는 요소
+//     const percentValue = parseInt(percentElement.textContent); // 텍스트에서 숫자만 가져오기
+//     const successMessage = document.querySelector('.success-message');
+//     const successIcon = document.querySelector('.success-icon');
 
-    if (percentValue >= 95) {
-        successMessage.style.display = 'inline'; // 메시지 표시
-        successIcon.style.display = 'inline'; // 아이콘 표시
-    }
-});
+//     if (percentValue >= 95) {
+//         successMessage.style.display = 'inline'; // 메시지 표시
+//         successIcon.style.display = 'inline'; // 아이콘 표시
+//     }
+// });
 
 
