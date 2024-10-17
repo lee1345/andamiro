@@ -324,7 +324,7 @@ const campaign = [
         W_region: "춘천시",
         campaign_topic: "2024 리얼스 푸르깅 크루 모집",
         campaomg_img: "../../img/campaign/campaign5.png",
-        capaing_detail_img: "../../img/campaign/campaign5_detail_detail.png",
+        capaing_detail_img: "../../img/campaign/campaign5_detail.png",
         W_Target_participants: 100,
         W_Participant_Count: 35,
         W_Participation_Rate: 35,

@@ -145,19 +145,25 @@ h2{
 
 /*리워드 선택 버튼*/
 .button.active {
+    background-color: #e3f2fd; /* 호버 시 배경 색상 변경 */
+    transform: translateY(-2px); /* 위로 살짝 올라가는 효과 */
+    border-radius: 5px; /* 모서리를 둥글게 */
     color: #795548;
     font-weight: 600;
     font-family: "Gowun Dodum", sans-serif;
-    background-color: #e7e7e7; /* 클릭된 버튼의 색깔 */
 }
 .button.inactive {
+    margin-right: 5px;
     border: 1px solid #d1e8f2;
     color: #795548;
     font-weight: 600;
     font-family: "Gowun Dodum", sans-serif;
-    background-color: rgb(249, 248, 248); /* 기본 버튼 색깔 */
-    
+    background-color: rgb(249, 248, 248);
+    border-radius: 5px; /* 모서리를 둥글게 */
+    padding: 10px 15px; /* 여백 추가 */
+    transition: background-color 0.3s ease, transform 0.2s; /* 부드러운 전환 효과 */
 }
+
  
 .check-icon {
     margin-top: -60px;
@@ -171,7 +177,7 @@ h2{
 
 /*후원정보*/
 .info {
-    color: midnightblue;
+    color: #3F51B5;
     position: relative;
     top: -35px;
     left: -75px;
@@ -325,7 +331,9 @@ ul {
     border: 5px solid #f9f9f9;
 }
 .tabmenu input:checked ~ label {
-    background: #99bcd9;
+    font-weight: bold;
+    color: darkblue;
+    background: #afdbff;;
 }
 .tabmenu input:checked ~ .tabCon {
     display: block;
