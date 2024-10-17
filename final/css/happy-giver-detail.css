@@ -70,6 +70,7 @@ header button{
     border: 1px solid black;
 }
 .btn{
+    cursor: pointer;  
     border-radius: 5px;
     font-size: 15px;
     margin-left: 45px;
@@ -88,6 +89,7 @@ header button{
 
 }
 .bigbtn{
+    cursor: pointer;  
     border-radius: 5px;
     font-size: 20px;
     font-family: "Gowun Dodum", sans-serif;
@@ -483,7 +485,7 @@ td, th {
 }
 
 /* 모바일용 미디어 쿼리 */
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 475px) {
     body {
         font-size: 14px; /* 글자 크기 조정 */
         margin: 0;
@@ -547,6 +549,8 @@ td, th {
         text-align: center;
         padding:0;
         word-break: break-all;
+        
+
     }
 
     .reward img {
@@ -578,6 +582,7 @@ td, th {
     #number{
         margin-right: 20px;
     }
+
     
     .agent{
         width: 100%;

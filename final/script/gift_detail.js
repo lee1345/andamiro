@@ -54,7 +54,7 @@ function addComment(event) {
     commentDiv.innerHTML = `
     <img src="../../img/그림1.png" alt="User Avatar">
     <div>
-        <span>USERID <small>${date}</small></span><br>
+        <span>GUSET <small>${date}</small></span><br>
         <span>${commentText}</span>
     </div>
     `;

@@ -84,39 +84,39 @@ function shareKakao(){
 
 // 산출내역 표  출력
 const invoiceData = [
-    { no: 1, type: '구매품', product: '전래동화', quantity: 10, unit: '권', unitPrice: 10000 },
-    { no: 2, type: '다과비', product: '카스타드', quantity: 2, unit: '봉', unitPrice: 5000 },
-    { no: 3, type: '교통비', product: '교통비', quantity: 1, unit: '식', unitPrice: 50000 }
+    { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공할 햄버거" },
+    { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공할 핫도그" },
+    { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공할 피자" },
+    { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공할 주스" },
+    { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공할 간식" },
+    { index: 6, category: "교통비", item: "교통비", quantity: 1, unit: "식", unitPrice: 50000, amount: 50000, note: "" },
 ];
 
-// function invoiceTable(data) {
-//     const table = document.getElementById("invoice");
+function invoiceTable(data) {
+    const table = document.getElementById("invoice");
     
-//     data.forEach(item => {
-//         const amount = item.unitPrice * item.quantity;
-//         const row = table.insertRow(-1); // 마지막에 추가
-//         row.innerHTML = `
-//             <td>${item.no}</td>
-//             <td>${item.type}</td>
-//             <td>${item.product}</td>
-//             <td>${item.quantity}</td>
-//             <td>${item.unit}</td>
-//             <td>${item.unitPrice}</td>
-//             <td>${amount}</td>
-//             <td></td>
-//         `;
-//     });
+    data.forEach(item => {
+        const amount = item.unitPrice * item.quantity;
+        const row = table.insertRow(-1); // 마지막에 추가
+        row.innerHTML = `
+            <td>${item.index}</td>
+            <td>${item.category}</td>
+            <td>${item.item}</td>
+            <td>${item.quantity}</td>
+            <td>${item.unit}</td>
+            <td>${item.unitPrice.toLocaleString()}원</td>
+            <td>${amount.toLocaleString()}원</td>
+            <td>${item.note}</td>
+        `;
+    });
 
-//     const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
-//     const summaryRow = table.insertRow(-1);
-//     summaryRow.innerHTML = `
-//         <td colspan="6">합계</td>
-//         <td>${totalAmount}</td>
-//         <td></td>`;
-// }
-
-// 출력은 아래 내용이지만 추후 정산과 함께 출력해야 둘다 출력가능
-// window.onload = () => invoiceTable(invoiceData);
+    const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
+    const summaryRow = table.insertRow(-1);
+    summaryRow.innerHTML = `
+        <td colspan="6">합계</td>
+        <td>${totalAmount.toLocaleString()}원</td>
+        <td></td>`;
+}
 
 // 진행상황
 // 백단에서 가져오는 현재 단계(가정)
@@ -138,44 +138,46 @@ document.getElementById(currentStep).classList.add('blink');
 
 
 // // 정산내역
-// const settlementData = [
-//     { no: 1, type: '구매품', product: '전래동화', quantity: 10, unit: '권', unitPrice: 10000 },
-//     { no: 2, type: '다과비', product: '카스타드', quantity: 2, unit: '봉', unitPrice: 2000 },
-//     { no: 3, type: '교통비', product: '교통비', quantity: 1, unit: '식', unitPrice: 30000 }
-// ];
-
-// function settleTable(data) {
-//     const table = document.getElementById("settlementTable");
+const settlementData = [
+    { index: 1, category: "식재료", item: "햄버거 재료", quantity: 20, unit: "세트", unitPrice: 10000, amount: 200000, note: "아이들에게 제공한 햄버거" },
+    { index: 2, category: "식재료", item: "핫도그 재료", quantity: 20, unit: "세트", unitPrice: 8000, amount: 160000, note: "아이들에게 제공한 핫도그" },
+    { index: 3, category: "식재료", item: "피자 재료", quantity: 15, unit: "세트", unitPrice: 12000, amount: 180000, note: "아이들에게 제공한 피자" },
+    { index: 4, category: "음료", item: "주스", quantity: 30, unit: "팩", unitPrice: 2000, amount: 60000, note: "아이들에게 제공한 주스" },
+    { index: 5, category: "간식", item: "과자", quantity: 50, unit: "팩", unitPrice: 1000, amount: 50000, note: "아이들에게 제공한 간식" },
+    { index: 6, category: "교통비", item: "교통비", quantity: 1, unit: "식", unitPrice: 50000, amount: 50000, note: "" },
+];
+function settleTable(data) {
+    const table = document.getElementById("settlementTable");
     
-//     data.forEach(item => {
-//         const amount = item.unitPrice * item.quantity;
-//         const row = table.insertRow(-1); // 마지막에 추가
-//         row.innerHTML = `
-//             <td>${item.no}</td>
-//             <td>${item.type}</td>
-//             <td>${item.product}</td>
-//             <td>${item.quantity}</td>
-//             <td>${item.unit}</td>
-//             <td>${item.unitPrice}</td>
-//             <td>${amount}</td>
-//             <td></td>
-//         `;
-//     });
+    
+    data.forEach(item => {
+        const amount = item.unitPrice * item.quantity;
+        const row = table.insertRow(-1); // 마지막에 추가
+        row.innerHTML = `
+            <td>${item.index}</td>
+            <td>${item.category}</td>
+            <td>${item.item}</td>
+            <td>${item.quantity}</td>
+            <td>${item.unit}</td>
+            <td>${item.unitPrice.toLocaleString()}원</td>
+            <td>${amount.toLocaleString()}원</td>
+            <td>${item.note}</td>
+        `;
+    });
 
-//     const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
-//     const summaryRow = table.insertRow(-1);
-//     summaryRow.innerHTML = `
-//             <td colspan="6">합계</td>
-//             <td>${totalAmount}</td>
-//             <td></td>`
+    const totalAmount = data.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0);
+    const summaryRow = table.insertRow(-1);
+    summaryRow.innerHTML = `
+            <td colspan="6">합계</td>
+            <td>${totalAmount.toLocaleString()}원</td>
+            <td></td>`
 
-// }
-// //정산내역, 산출내역 모두 출력
-// window.onload = () => {
-//     invoiceTable(invoiceData);
-//     settleTable(settlementData);
-// }
-
+}
+//정산내역, 산출내역 모두 출력
+window.onload = () => {
+    invoiceTable(invoiceData);
+    settleTable(settlementData);
+}
 
 
 // 좋아요 누적버튼
