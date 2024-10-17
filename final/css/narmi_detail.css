@@ -423,3 +423,25 @@ span {
     padding-right: 15px;
 }
 
+.tabmenu ul {
+    flex-direction: column; /* 세로로 정렬 */
+    padding: 0;
+    margin: 0;
+}
+
+.tabmenu ul li {
+    width: 100%; /* 각 탭의 너비를 100%로 설정 */
+    margin-bottom: 10px; /* 탭 간 간격 조정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.tabCon {
+    padding: 10px; /* 내용 패딩 추가 */
+    display: none; /* 기본적으로 숨김 */
+}
+
+/* 선택된 탭만 표시 */
+input[type="radio"]:checked + label + .tabCon {
+    display: block; /* 선택된 탭 내용만 표시 */
+}
+}

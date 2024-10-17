@@ -485,7 +485,7 @@ td, th {
 }
 
 /* 모바일용 미디어 쿼리 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 475px) {
     body {
         font-size: 14px; /* 글자 크기 조정 */
         margin: 0;
@@ -546,6 +546,7 @@ td, th {
 
     .tabCon {
         text-align: center;
+        
     }
 
     .reward img {
@@ -577,4 +578,6 @@ td, th {
     #number{
         margin-right: 20px;
     }
+  
+    
 }
