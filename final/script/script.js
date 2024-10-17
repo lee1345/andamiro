@@ -21,12 +21,15 @@ function sgshowAlert() {
     function showAlert() {
         // 알림창 표시
         alert("해당 이메일로 아이디를 전송하였습니다.");
-        return false; // 실제 제출 방지 
+        window.location.href = '../11.sign_up/sign_up_fn.html'; 
+        return false;
+
     }
 
     function pwshowAlert() {
         // 알림창 표시
         alert("해당 이메일로 비밀번호 변경이 가능한 링크를  전송하였습니다.");
+        window.location.href = '../11.sign_up/sign_up_fn.html'; 
         return false; // 실제 제출 방지 
     }
 
