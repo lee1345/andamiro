@@ -111,32 +111,41 @@ if (!isNaN(amount) && amount >= 0) {
 //이미지 미리보기 및 삭제 기능
 
 function previewImage(event, previewId) {
-const file = event.target.files[0];
-const previewContainer = document.getElementById(previewId);
-previewContainer.innerHTML = '';
+    const file = event.target.files[0];
+    const previewContainer = document.getElementById(previewId);
+    previewContainer.innerHTML = ''; // 기존 미리보기 초기화
 
-if (file) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const img = document.createElement('img');
-        img.src = e.target.result;
-        img.src = e.target.result;
-        img.onclick = function() {
-        const newWindow = window.open("", "_blank"); // 새 창 열기
-        newWindow.document.write("<img src='" + img.src + "' style='max-width:100%; height:auto;'>"); // 이미지 삽입
-};
+    if (file) {
+        // 파일이 이미지 파일인지 확인
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.style.maxWidth = '300px'; // 이미지 크기 조정
+                img.onclick = function() {
+                    const newWindow = window.open("", "_blank"); // 새 창 열기
+                    newWindow.document.write("<img src='" + img.src + "' style='max-width:100%; height:auto;'>"); // 이미지 삽입
+                };
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = '삭제';
-        deleteBtn.className = 'delete-image';
-        deleteBtn.onclick = function() {
-            event.target.value = ''; // 파일 입력 초기화
-            previewContainer.innerHTML = ''; // 미리보기 초기화
-        };
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = '삭제';
+                deleteBtn.className = 'delete-image';
+                deleteBtn.onclick = function() {
+                    event.target.value = ''; // 파일 입력 초기화
+                    previewContainer.innerHTML = ''; // 미리보기 초기화
+                };
 
-        previewContainer.appendChild(img);
-        previewContainer.appendChild(deleteBtn);
+                previewContainer.appendChild(img); // 미리보기 이미지 추가
+                previewContainer.appendChild(deleteBtn); // 삭제 버튼 추가
+            }
+            reader.readAsDataURL(file);
+        } else {
+            // 이미지 파일이 아닐 경우 경고 메시지
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = '이미지 파일만 업로드할 수 있습니다.';
+            errorMessage.style.color = 'red';
+            previewContainer.appendChild(errorMessage);
+        }
     }
-    reader.readAsDataURL(file);
-}
 }
