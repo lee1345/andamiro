@@ -572,9 +572,9 @@ li > img{
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 /* 모바일용 미디어 쿼리 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 475px) {
     body {
-        font-size: 14px; /* 기본 폰트 크기 축소 */
+        font-size: 10px; /* 기본 폰트 크기 축소 */
         margin: 0;
         padding: 0;
     }
@@ -614,24 +614,26 @@ li > img{
     }
 
     .inform {
-        font-size: 14px; /* 설명 글자 크기 축소 */
+        font-size: 12px; /* 설명 글자 크기 축소 */
         text-align: center;
         margin-bottom: 10px;
     }
 
     /* 상품 리스트 아이템 */
     .new {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
+        display: flex;               /* Flexbox 사용 */
+        flex-wrap: wrap;            /* 줄바꿈을 허용 */
+        justify-content: center;     /* 수평 중앙 정렬 */
+        align-items: flex-start;     /* 수직 정렬 */
+        text-align: center; /* 전체 내용 중앙 정렬 */
     }
 
     .item1 {
         display: flex;
-        flex-direction: column; /* 모바일에서 수직 정렬 */
-        margin-bottom: 20px;
-        width: 100%;
+        flex-direction: column; /* 수직 정렬 */
+        margin: 0px;          /* 간격 조정 */
+        width: calc(50% - 20px); /* 너비를 50%로 설정하고 간격 고려 */
+        max-width: 150px;      /* 최대 너비 설정 (선택 사항) */
     }
 
     .item1 img {
@@ -640,16 +642,19 @@ li > img{
     }
 
     .subject h3 {
-        font-size: 16px; /* 상품 이름 크기 조정 */
+        font-size: 15pt; /* 상품 이름 크기 조정 */
         margin-top: 10px;
     }
-
+    span.area{
+        font-size: 12pt;
+        font-weight: bold;
+    }
     .price {
-        font-size: 14px; /* 가격 섹션 글자 크기 축소 */
+        font-size: 10px; /* 가격 섹션 글자 크기 축소 */
     }
 
     .funding, .achieved {
-        font-size: 12px; /* 펀딩금액과 달성률 글자 크기 조정 */
+        font-size: 10px; /* 펀딩금액과 달성률 글자 크기 조정 */
     }
 
     /* 푸터 스타일 조정 */
@@ -669,6 +674,6 @@ li > img{
         margin-bottom: 20px;
     }
     .date{
-        margin-left: 230px;
+        margin-left: 35px;
     }
 }
