@@ -200,4 +200,36 @@ setTimeout(() => {
 //     }
 // });
 
+//가격 직접입력 코드 
+function toggleInputField() {
+    const select = document.getElementById("donation-amount");
+    const customAmountContainer = document.getElementById("custom-amount-container");
+    const customAmountInput = document.getElementById("custom-amount");
 
+    if (select.value === "custom") {
+        customAmountContainer.style.display = "block"; // 텍스트 박스 보이기
+        select.style.display = "none"; // 셀렉트 박스 숨기기
+        customAmountInput.focus(); // 텍스트 박스에 포커스
+    } else {
+        customAmountContainer.style.display = "none"; // 텍스트 박스 숨기기
+        select.style.display = "block"; // 셀렉트 박스 보이기
+    }
+}
+
+function showSelectField() {
+    const select = document.getElementById("donation-amount");
+    const customAmountContainer = document.getElementById("custom-amount-container");
+
+    if (customAmountContainer.style.display === "block") {
+        select.style.display = "block"; // 셀렉트 박스 보이기
+        customAmountContainer.style.display = "none"; // 텍스트 박스 숨기기
+        select.value = ""; // 선택된 값을 초기화
+    }
+}
+
+function formatAmount() {
+    const input = document.getElementById("custom-amount");
+    let value = input.value.replace(/[^0-9]/g, ''); // 숫자 외의 문자 제거
+    value = Number(value).toLocaleString(); // 쉼표 추가
+    input.value = value; // 입력 필드에 포맷된 값 설정
+}

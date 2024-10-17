@@ -371,9 +371,9 @@ select:focus {
     outline: none; /* 기본 포커스 아웃라인 제거 */
 }
 
-
-
-
+#custom-amount-container {
+    background-color: #2c6ce0;
+}
 
 
 
@@ -547,4 +547,7 @@ select:focus {
     .details {
         font-size: 1em; /* 세부 정보 글자 크기 조정 */
     }
+}
+#custom-amount-container {
+    background-color: transparent; /* 배경색을 투명으로 설정 */
 }

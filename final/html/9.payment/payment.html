@@ -17,6 +17,8 @@
         .right.move-down {
             transform: translateY(100px); /* 아래로 100px 이동 */
         }
+        
+
         </style>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
@@ -46,15 +48,19 @@
             </div>
             <div class="right">
                 <h3>후원금액</h3>
-        <div class="amount-ot">
-            <label for="donation-amount">금액선택</label>
-            <select id="donation-amount">
-                <option value="10000">10,000원</option>
-                <option value="20000">20,000원</option>
-                <option value="50000">50,000원</option>
-                <option value="100000">100,000원</option>
-            </select>
-        </div>
+                <div class="amount-ot">
+                    <label for="donation-amount">금액선택</label>
+                    <select id="donation-amount" onchange="toggleInputField()">
+                        <option value="10000">10,000원</option>
+                        <option value="20000">30,000원</option>
+                        <option value="50000">50,000원</option>
+                        <option value="custom">직접 입력</option> <!-- 직접 입력 옵션 추가 -->
+                    </select>
+                    <div style="display: none;" id="custom-amount-container">
+                        <input type="text" id="custom-amount" placeholder="금액입력" style="margin-top: 10px;" onblur="showSelectField()" oninput="formatAmount()">
+                        <span id="amount-display" style="margin-left: 10px;">원</span> <!-- 원 표시 추가 -->
+                    </div>
+                </div>
                 <h3>결제방법</h3>
             <div id="card-area">
             <input type="checkbox" id="credit-card" onclick="toggleCheckbox('credit-card', 'bank-transfer')">
